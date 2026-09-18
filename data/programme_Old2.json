@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-18T18:31:13.882Z",
+  "savedAt": "2026-09-18T18:26:36.261Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -2563,7 +2563,7 @@
       "id": "g_h6qdcyhmm",
       "name": "SW 11",
       "color": "#0d97c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_39c7wczpj"
     },
@@ -2571,7 +2571,7 @@
       "id": "g_tlh325uwv",
       "name": "SW 12",
       "color": "#0d97c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_39c7wczpj"
     },
@@ -4494,115 +4494,115 @@
         "tm_4hswtynvq"
       ],
       "teamId": "tm_4hswtynvq",
-      "status": "done",
-      "progress": 100,
-      "autoProgress": false,
-      "effectiveProgress": 100,
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": true,
+      "effectiveProgress": 0,
       "subtasks": [
         {
           "id": "s_wsrqzv8fx",
           "title": "Shifting of materials to work location\t0:45\t0:50",
-          "done": true
+          "done": false
         },
         {
           "id": "s_pzieiigsu",
           "title": "Removal of rail cover\t0:50\t0:55",
-          "done": true
+          "done": false
         },
         {
           "id": "s_ymxpecnhs",
           "title": "On-site Existing Module Measurements and Marking, Noise Barrier installation\t0:55\t1:15",
-          "done": true
+          "done": false
         },
         {
           "id": "s_0yruuksgr",
           "title": "Existing Rail Cutting and removal mounting stud bolt nut (Fixed End, Mov Reverse & Pivot Reverse)\t1:05\t1:15",
-          "done": true
+          "done": false
         },
         {
           "id": "s_irbsdhy26",
           "title": "Tread plate removal\t1:05\t1:15",
-          "done": true
+          "done": false
         },
         {
           "id": "s_fyp9248ls",
           "title": "Removal of exisiting module (Fixed End, Mov Reverse & Pivot Reverse)\t1:15\t1:20",
-          "done": true
+          "done": false
         },
         {
           "id": "s_2j8ppddmr",
           "title": "Cleaning and stud health check\t1:20\t1:35",
-          "done": true
+          "done": false
         },
         {
           "id": "s_mr5o8kjqp",
           "title": "Stud Welding (If required)\t1:20\t1:35",
-          "done": true
+          "done": false
         },
         {
           "id": "s_uzrtnxoyn",
           "title": "Installation of New Module including Splice joint (Fixed End, Mov Reverse & Pivot Reverse)\t1:35\t2:35",
-          "done": true
+          "done": false
         },
         {
           "id": "s_oev7n8ukh",
           "title": "Installation of Components - PF & PIN\t2:35\t3:20",
-          "done": true
+          "done": false
         },
         {
           "id": "s_d69qi4zoa",
           "title": "installation of rail cover\t3:20\t3:25",
-          "done": true
+          "done": false
         },
         {
           "id": "s_j2d6b45wv",
           "title": "Mounting bracket (torque)\t3:25\t3:35",
-          "done": true
+          "done": false
         },
         {
           "id": "s_x6x557bfh",
           "title": "Existing Rail Cutting and removal mounting stud bolt nut\t2:35\t2:45",
-          "done": true
+          "done": false
         },
         {
           "id": "s_15lx4ti3p",
           "title": "Removal of exisiting module, \t2:45\t2:55",
-          "done": true
+          "done": false
         },
         {
           "id": "s_kips6uluf",
           "title": "Cleaning and stud health check\t2:55\t3:05",
-          "done": true
+          "done": false
         },
         {
           "id": "s_zjk2szx4g",
           "title": "Stud Welding (If required)\t2:55\t3:05",
-          "done": true
+          "done": false
         },
         {
           "id": "s_hbgkaa4o8",
           "title": "Installation of New Module including Splice joint (Mov Normal & Pivot Normal)\t3:05\t3:35",
-          "done": true
+          "done": false
         },
         {
           "id": "s_eokuzc8mt",
           "title": "Installation of Components - PF & PIN\t3:35\t4:05",
-          "done": true
+          "done": false
         },
         {
           "id": "s_7f3lund8j",
           "title": "installation of rail cover\t4:05\t4:10",
-          "done": true
+          "done": false
         },
         {
           "id": "s_jh2ov7j7t",
           "title": "Mounting bracket (torque)\t4:10\t4:15",
-          "done": true
+          "done": false
         },
         {
           "id": "s_7ebvaeoi4",
           "title": "Alignment of module\t4:15\t4:30",
-          "done": true
+          "done": false
         }
       ],
       "milestone": false,
@@ -4611,7 +4611,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": "2026-09-19T02:30"
+      "completedAt": null
     },
     {
       "id": "t_0f2x7p8ao",
@@ -4757,115 +4757,115 @@
         "tm_hawztq4hg"
       ],
       "teamId": "tm_hawztq4hg",
-      "status": "done",
-      "progress": 100,
+      "status": "not-started",
+      "progress": 0,
       "autoProgress": false,
-      "effectiveProgress": 100,
+      "effectiveProgress": 0,
       "subtasks": [
         {
           "id": "s_ps7pphi16",
           "title": "Shifting of materials to work location\t8:30\t8:40",
-          "done": true
+          "done": false
         },
         {
           "id": "s_vnn75vmmg",
           "title": "Removal of rail cover\t8:40\t8:45",
-          "done": true
+          "done": false
         },
         {
           "id": "s_ucwdjrqua",
           "title": "On-site Existing Module Measurements and Marking, Noise Barrier installation\t8:45\t9:05",
-          "done": true
+          "done": false
         },
         {
           "id": "s_s1kq1sv78",
           "title": "Existing Rail Cutting and removal mounting stud bolt nut (Fixed End, Mov Reverse & Pivot Reverse)\t8:55\t9:05",
-          "done": true
+          "done": false
         },
         {
           "id": "s_d7gpx1yvn",
           "title": "Tread plate removal\t9:05\t9:05",
-          "done": true
+          "done": false
         },
         {
           "id": "s_7r757t317",
           "title": "Removal of exisiting module (Fixed End, Mov Reverse & Pivot Reverse)\t9:05\t9:10",
-          "done": true
+          "done": false
         },
         {
           "id": "s_r22th76tq",
           "title": "Cleaning and stud health check\t9:10\t9:25",
-          "done": true
+          "done": false
         },
         {
           "id": "s_0dklu4ae0",
           "title": "Stud Welding (If required)\t9:10\t9:25",
-          "done": true
+          "done": false
         },
         {
           "id": "s_341uschui",
           "title": "Installation of New Module including Splice joint (Fixed End, Mov Reverse & Pivot Reverse)\t9:25\t9:25",
-          "done": true
+          "done": false
         },
         {
           "id": "s_10spddm47",
           "title": "Installation of Components - PF & PIN\t9:25\t10:10",
-          "done": true
+          "done": false
         },
         {
           "id": "s_0hr6kprxy",
           "title": "installation of rail cover\t10:10\t10:15",
-          "done": true
+          "done": false
         },
         {
           "id": "s_5mc12evin",
           "title": "Mounting bracket (torque)\t10:15\t10:25",
-          "done": true
+          "done": false
         },
         {
           "id": "s_cctzpvz66",
           "title": "Existing Rail Cutting and removal mounting stud bolt nut\t9:25\t9:35",
-          "done": true
+          "done": false
         },
         {
           "id": "s_pcxtca2t4",
           "title": "Removal of exisiting module, \t9:35\t9:45",
-          "done": true
+          "done": false
         },
         {
           "id": "s_twcafr71x",
           "title": "Cleaning and stud health check\t9:45\t9:55",
-          "done": true
+          "done": false
         },
         {
           "id": "s_qhvmbrbo4",
           "title": "Stud Welding (If required)\t9:45\t9:55",
-          "done": true
+          "done": false
         },
         {
           "id": "s_t8ctnugkj",
           "title": "Installation of New Module including Splice joint (Mov Normal & Pivot Normal)\t9:55\t10:35",
-          "done": true
+          "done": false
         },
         {
           "id": "s_4ev2yt565",
           "title": "Installation of Components - PF & PIN\t10:35\t11:05",
-          "done": true
+          "done": false
         },
         {
           "id": "s_apc3j86el",
           "title": "installation of rail cover\t11:05\t11:10",
-          "done": true
+          "done": false
         },
         {
           "id": "s_x00bnngij",
           "title": "Mounting bracket (torque)\t11:10\t11:15",
-          "done": true
+          "done": false
         },
         {
           "id": "s_g1axyhka5",
           "title": "Alignment of module\t11:15\t11:30",
-          "done": true
+          "done": false
         }
       ],
       "milestone": false,
@@ -4874,7 +4874,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": "2026-09-19T02:30"
+      "completedAt": null
     },
     {
       "id": "t_h3glt006g",
