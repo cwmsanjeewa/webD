@@ -127,7 +127,7 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit
 .brand .sub{font-size:10.5px;color:var(--ink-3);letter-spacing:.5px;text-transform:uppercase;font-weight:600}
 .projname{
   font-size:13px;font-weight:600;color:var(--ink);background:transparent;border:1px solid transparent;
-  border-radius:var(--r-sm);padding:5px 9px;min-width:150px;width:230px;max-width:290px;
+  border-radius:var(--r-sm);padding:5px 9px;min-width:140px;width:170px;max-width:290px;
   flex:1 1 auto;transition:.15s;
 }
 .projname:hover{background:var(--surface-2);border-color:var(--line)}
@@ -1744,10 +1744,18 @@ body.colsizing{cursor:col-resize;user-select:none}
 @keyframes lIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 
 /* bars */
-.lbars{flex:1;min-height:0;display:flex;flex-direction:column;gap:7px;justify-content:center;overflow:hidden}
-.lbars.tight{gap:3px}
+/* Revision AB — the band of bars fills the screen it is given.  Centring a
+   short list left a wall display two-thirds empty with the bars huddled in
+   the middle; spreading them reads from across a platform. */
+.lbars{flex:1;min-height:0;display:flex;flex-direction:column;gap:2px;justify-content:space-evenly;overflow:hidden}
+.lbars.tight{gap:0}
 .lvbar{flex:0 0 auto;display:flex;align-items:center;gap:14px;animation:lIn .4s var(--ease)}
+/* Revision AD — one rung of indent per level on the Live screen too */
 .lvbar.sub .zn{padding-left:22px;font-weight:600;color:var(--ink-2);position:relative}
+.lvbar.sub.d2 .zn{padding-left:40px}
+.lvbar.sub.d3 .zn{padding-left:58px}
+.lvbar.sub.d4 .zn{padding-left:74px}
+.lvbar.sub.d2 .nm::before,.lvbar.sub.d3 .nm::before,.lvbar.sub.d4 .nm::before{left:auto}
 .lvbar.sub .nm::before{content:"";position:absolute;left:8px;top:50%;width:8px;height:1.5px;background:var(--line)}
 .lvbar .zn{
   width:32%;min-width:170px;font-size:15px;font-weight:700;color:var(--ink);
@@ -1763,9 +1771,134 @@ body.colsizing{cursor:col-resize;user-select:none}
 .lbars.tight .lvbar .zv{font-size:13.5px}
 .lvbar .zm{width:120px;text-align:right;font-size:12px;font-weight:700;color:var(--ink-3);font-variant-numeric:tabular-nums}
 .lvbar .m.bad{color:var(--danger)}
+/* Revision AB — the count, then the verdict, on every row of the Live screen */
+.lvbar .zq{width:96px;text-align:right;font-size:12px;font-weight:700;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.lvbar .zver{
+  width:132px;flex:none;text-align:center;padding:3px 0;border-radius:999px;
+  font-size:11.5px;font-weight:800;letter-spacing:-.1px;
+  background:var(--track);color:var(--ink-3);
+}
+.lvbar .zver.ok{background:var(--ok-soft);color:var(--ok)}
+.lvbar .zver.bad{background:var(--danger-soft);color:var(--danger)}
+.lbars.airy .lvbar .zq{font-size:13.5px;width:104px}
+.lbars.airy .lvbar .zver{font-size:13px;width:150px;padding:5px 0}
+.lbars.tight .lvbar .zq{font-size:11px;width:78px}
+.lbars.tight .lvbar .zver{font-size:10.5px;width:116px;padding:2px 0}
+
+/* ══════════ Revision AE · the closure's own two screens ══════════ */
+/* fill the screen rather than float a small block in the middle of it */
+.lsb{flex:1;min-height:0;display:flex;flex-direction:column;gap:8px;justify-content:space-evenly}
+/* the bar is the headline of this screen, so it is given real height */
+
+.lsbbar{
+  position:relative;height:52px;border-radius:26px;background:var(--track);overflow:hidden;
+  flex:none;animation:lIn .45s var(--ease);
+}
+.lsbfill{position:absolute;left:0;top:0;bottom:0;border-radius:26px;transition:width 1s var(--ease)}
+.lsbplan{position:absolute;top:-4px;bottom:-4px;width:4px;background:var(--ink);opacity:.62;border-radius:3px}
+.lsbcap{display:flex;align-items:baseline;gap:18px;flex:none}
+.lsbcap span{font-size:15px;font-weight:800;color:var(--ink)}
+.lsbcap b{font-size:14px;font-weight:700;color:var(--ink-2)}
+.lsbcap s{margin-left:auto;text-decoration:none;font-size:13px;font-weight:700;color:var(--ink-3)}
+.lsbmix{display:flex;height:14px;border-radius:7px;overflow:hidden;background:var(--track);flex:none;gap:2px}
+.lsbmix i{display:block;height:100%}
+.lsbtiles{display:flex;gap:10px;flex:none}
+.lsbtile{
+  flex:1;min-width:0;padding:12px 15px;border-radius:13px;
+  background:var(--surface-2);border:1px solid var(--line);
+}
+.lsbtile b{display:block;font-size:30px;font-weight:800;letter-spacing:-1px;color:var(--ink);
+  font-variant-numeric:tabular-nums;line-height:1.1}
+.lsbtile span{display:block;margin-top:2px;font-size:11px;font-weight:800;letter-spacing:.7px;
+  text-transform:uppercase;color:var(--ink-3)}
+.lsbtile.ok b{color:var(--ok)} .lsbtile.warn b{color:var(--warn)} .lsbtile.bad b{color:var(--danger)}
+.lsbtile.bad{background:var(--danger-soft);border-color:transparent}
+.lsbtile.wide{flex:2.4}
+.lsbtile.wide b{font-size:22px}
+.lsbnx{
+  flex:none;padding:15px 18px;border-radius:14px;background:var(--surface-2);
+  border:1px solid var(--line);animation:lIn .45s var(--ease) 120ms;
+}
+.lsbnx b{display:block;font-size:19px;font-weight:800;letter-spacing:-.3px;color:var(--ink)}
+.lsbnx span{display:block;margin-top:3px;font-size:13.5px;font-weight:600;color:var(--ink-2)}
+.lsbnx.bad{background:var(--danger-soft);border-color:transparent}
+.lsbnx.bad b{color:var(--danger)}
+.lsbnx.ok{background:var(--ok-soft);border-color:transparent}
+.lsbnx.ok b{color:var(--ok)}
+
+/* the milestone runway */
+.lrw{flex:1;min-height:0;display:flex;align-items:center;padding:0 10px}
+.lrwin{position:relative;width:100%;height:76%}
+.lrwline{position:absolute;left:0;right:0;top:50%;height:4px;margin-top:-2px;
+  background:var(--track);border-radius:2px}
+.lrwprog{position:absolute;left:0;top:50%;height:4px;margin-top:-2px;border-radius:2px;
+  background:var(--brand-2);transition:width 1.1s var(--ease)}
+.lrwdot{
+  position:absolute;top:50%;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;
+  background:var(--surface);border:4px solid var(--line-hover);z-index:2;
+  animation:lIn .4s var(--ease);
+}
+.lrwdot.done{background:var(--ok);border-color:var(--ok)}
+.lrwdot.late{background:var(--danger);border-color:var(--danger)}
+.lrwdot.next{border-color:var(--brand-2);background:var(--surface);
+  box-shadow:0 0 0 6px rgba(18,115,224,.16)}
+.lrwlab{
+  position:absolute;width:210px;margin-left:-105px;text-align:center;
+  animation:lIn .4s var(--ease);
+}
+.lrwlab.up{bottom:calc(50% + 22px)}
+.lrwlab.dn{top:calc(50% + 22px)}
+.lrwlab b{display:block;font-size:14px;font-weight:800;color:var(--ink);line-height:1.3;
+  overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+.lrwlab s{display:block;margin-top:3px;text-decoration:none;font-size:11.5px;font-weight:700;color:var(--ink-3)}
+.lrwlab.next b{color:var(--brand)}
+.lrwlab.late s{color:var(--danger)}
+.lrwlab.done s{color:var(--ok)}
+.lrwnow{position:absolute;top:8%;bottom:8%;width:2px;background:var(--danger);z-index:3;opacity:.75}
+.lrwnow span{
+  position:absolute;top:-7px;left:50%;transform:translateX(-50%);
+  padding:1px 7px;border-radius:999px;background:var(--danger);color:#fff;
+  font-size:9.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;
+}
+.lrwfoot{flex:none;display:flex;gap:10px;margin-top:6px}
+
+@media(max-width:1200px){
+  .lrwlab{width:150px;margin-left:-75px}
+  .lrwlab b{font-size:12px}
+  .lsbtile b{font-size:24px}
+}
+
+/* what is behind, named, directly under the chart */
+.lbehind{
+  flex:none;margin-top:14px;padding:12px 15px 13px;border-radius:14px;
+  background:var(--danger-soft);animation:lIn .4s var(--ease) 140ms;
+}
+.lbh{display:flex;align-items:baseline;gap:11px;margin-bottom:8px}
+.lbh b{font-size:12px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--danger)}
+.lbh span{font-size:11.5px;font-weight:600;color:var(--ink-3)}
+.lbrow{display:flex;align-items:center;gap:14px;padding:5px 0}
+.lbrow + .lbrow{border-top:1px solid rgba(208,52,44,.18)}
+.lbrow s{
+  flex:none;width:104px;text-decoration:none;text-align:center;
+  font-size:14px;font-weight:800;color:var(--danger);font-variant-numeric:tabular-nums;
+}
+.lbwho{min-width:0;flex:1}
+.lbwho b{display:block;font-size:14px;font-weight:800;color:var(--ink);letter-spacing:-.2px}
+.lbwho span{
+  display:block;font-size:11.5px;font-weight:600;color:var(--ink-2);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.lbgap{
+  flex:none;width:150px;text-align:right;font-size:12.5px;font-weight:800;
+  color:var(--danger);font-variant-numeric:tabular-nums;
+}
+@media(max-width:1100px){
+  .lvbar .zq{display:none}
+  .lbrow s{width:78px} .lbgap{width:110px}
+}
 .lmore{font-size:12.5px;font-weight:700;color:var(--ink-3);padding-top:6px}
 /* Revision AA — a short watch list should fill the wall, not float in it */
-.lbars.airy{gap:0;justify-content:space-evenly}
+.lbars.airy{gap:0}
 .lbars.airy .lvbar .ztr{height:28px;border-radius:14px}
 .lbars.airy .lvbar .zf{border-radius:14px}
 .lbars.airy .lvbar .zplan{top:-5px;bottom:-5px;width:3px}
@@ -2043,7 +2176,7 @@ body.ro .gearbtn{display:none}
 /* ══════════ Revision J · about, credit, auto-save tooltip ══════════ */
 .brand .txt .subbtn{
   display:block;background:none;border:0;padding:0;margin:1px 0 0;cursor:pointer;text-align:left;
-  font:inherit;font-size:10.5px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;
+  font:inherit;font-size:10.5px;font-weight:800;letter-spacing:.25px;text-transform:uppercase;
   color:var(--ink-3);transition:color .15s ease;
   /* Revision AA.online — the settings gear now sits beside this, so the line
      must not be allowed to wrap the brand into three rows */
@@ -2730,6 +2863,214 @@ html[data-theme="dark"] .dsort button.on{background:var(--brand);color:#08121f}
 .fpill.focus i{width:9px;height:9px;border-radius:3px;flex:none}
 .fpill.focus button{background:rgba(18,115,224,.16);color:var(--brand-ink-2)}
 .fpill.focus button:hover{background:rgba(18,115,224,.32)}
+
+/* ══════════════════════════════════════════════════════════════
+   Revision AF · the Live screen learns to move
+   ------------------------------------------------------------------
+   Four additions, all of them for a wall rather than a desk:
+     · a fifth headline box that says which closure the four beside it
+       are counting, so a scoped number never reads as a wrong one;
+     · the Dashboard's three charts at wall size, each carrying a small
+       piece of motion so a glance says "this is running", not "this is
+       a photograph of something that ran";
+     · a runway that fills itself in and keeps a pulse travelling down
+       the line towards the gate nobody has cleared yet;
+     · a map, painted full-bleed, with whatever moves on it moving.
+   Everything here is namespaced — kscope, lch, lmap, lrw — because the
+   short class names in this stylesheet were taken long ago.
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── the scope box beside the four headline numbers ───────────────
+   It has to earn its width: the top bar was already full, and the project name
+   is what loses when something new turns up in it.  So the box is narrow, and
+   while it is showing the four numbers beside it tuck in a little.         */
+body.kscoped .kpi{min-width:70px;padding:6px 9px}
+.kpi.kscope{min-width:0;max-width:122px;padding:6px 10px}
+.kpi.kscope::before{background:var(--kscope,var(--brand-2))}
+.kpi.kscope .val{
+  font-size:13px;font-weight:800;letter-spacing:-.1px;line-height:1.5;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+
+/* ── the three charts, at the size a room reads ───────────────── */
+.lchs{
+  flex:1;min-height:0;display:grid;gap:14px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.lchc{
+  min-width:0;min-height:0;display:flex;flex-direction:column;
+  padding:13px 16px 15px;border-radius:16px;
+  background:var(--surface-2);border:1px solid var(--line);
+  animation:lIn .45s var(--ease) both;
+}
+.lchc:nth-child(2){animation-delay:90ms}
+.lchc:nth-child(3){animation-delay:180ms}
+.lchh{flex:none;display:flex;align-items:baseline;gap:9px}
+.lchh b{font-size:12px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;color:var(--ink-3)}
+.lchlive{
+  margin-left:auto;display:inline-flex;align-items:center;gap:5px;
+  font-size:9.5px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;color:var(--ink-3);
+}
+.lchlive i{
+  width:7px;height:7px;border-radius:50%;background:var(--ok);
+  animation:lchblink 1.6s ease-in-out infinite;
+}
+.lchcap{flex:none;margin-top:3px;font-size:12px;font-weight:600;color:var(--ink-3);line-height:1.45}
+.lchcap b{color:var(--ink-2);font-weight:800}
+.lchb{
+  flex:1;min-height:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:space-evenly;gap:9px;padding-top:6px;
+}
+
+/* the progress ring */
+.lchring{position:relative;flex:none;display:flex;align-items:center;justify-content:center;width:100%}
+.lchring svg{width:min(100%,330px);height:auto;display:block;overflow:visible}
+.lchtrack{fill:none;stroke:var(--ring-track,var(--track));stroke-width:17}
+.lchval{
+  fill:none;stroke-width:17;stroke-linecap:round;
+  transform:rotate(-90deg);transform-origin:center;
+  transition:stroke-dashoffset 1.5s cubic-bezier(.22,.9,.24,1);
+}
+/* the dotted ring that keeps turning — the one thing that says "now" */
+.lchspin{
+  fill:none;stroke-width:3.4;stroke-linecap:round;stroke-dasharray:2.5 15;opacity:.5;
+  transform-origin:center;animation:lchspin 7s linear infinite;
+}
+.lchmid{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;pointer-events:none;
+}
+.lchbig{
+  font-size:54px;font-weight:800;letter-spacing:-2.4px;line-height:1;color:var(--ink);
+  font-variant-numeric:tabular-nums;
+}
+.lchsub{margin-top:5px;font-size:11.5px;font-weight:800;letter-spacing:.3px;color:var(--ink-3)}
+.lchvar{margin-top:7px;font-size:13px;font-weight:800}
+.lchvar.ok{color:var(--ok)} .lchvar.bad{color:var(--danger)}
+
+/* the status donut */
+.lchdo{position:relative;flex:none;display:flex;align-items:center;justify-content:center;width:100%}
+.lchdo svg{width:min(100%,300px);height:auto;display:block}
+.lchseg{
+  fill:none;stroke-width:22;
+  transition:stroke-dasharray 1.1s cubic-bezier(.22,.9,.24,1);
+}
+/* stripes marching across whatever is in progress */
+.lchmarch{
+  fill:none;stroke-width:22;stroke:rgba(255,255,255,.42);stroke-dasharray:7 12;
+  animation:lchmarch 1.05s linear infinite;
+}
+[data-theme="dark"] .lchmarch{stroke:rgba(255,255,255,.3)}
+.lchleg{flex:none;width:100%;display:flex;flex-direction:column;gap:3px}
+.lchlr{display:flex;align-items:center;gap:9px;font-size:13.5px}
+.lchlr i{width:10px;height:10px;border-radius:3px;flex:none}
+.lchlr.run i{animation:lchblink 1.4s ease-in-out infinite}
+.lchlr span{font-weight:700;color:var(--ink-2)}
+.lchlr b{margin-left:auto;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+
+/* the health gauge — the dasharray is set on the element, never here, or the
+   rule would win over it and the band would never grow */
+.lchg{position:relative;flex:none;display:flex;align-items:center;justify-content:center;width:100%}
+.lchg svg{width:min(100%,330px);height:auto;display:block}
+.lchgv{
+  fill:none;stroke-width:16;stroke-linecap:round;
+  transition:stroke-dasharray 1.3s cubic-bezier(.22,.9,.24,1);
+}
+.lchneedle{transition:transform 1.5s cubic-bezier(.34,1.32,.5,1);transform-origin:100px 92px}
+.lchverd{
+  flex:none;padding:6px 18px;border-radius:999px;font-size:16px;font-weight:800;letter-spacing:.3px;
+}
+.lchverd.ok{background:var(--ok-soft);color:var(--ok)}
+.lchverd.warn{background:var(--warn-soft,rgba(224,142,11,.14));color:var(--warn)}
+.lchverd.bad{background:var(--danger-soft);color:var(--danger);animation:lchbeat 2.1s ease-in-out infinite}
+.lchnote{flex:none;font-size:13px;font-weight:700;color:var(--ink-3);text-align:center}
+.lchnote b{color:var(--ink-2)}
+
+@keyframes lchspin{to{transform:rotate(360deg)}}
+@keyframes lchmarch{to{stroke-dashoffset:-19}}
+@keyframes lchblink{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes lchbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+
+@media(max-width:1180px){
+  .lchs{grid-template-columns:1fr;grid-auto-rows:minmax(0,1fr)}
+  .lchbig{font-size:34px}
+  .lchring svg,.lchg svg{width:min(100%,190px)}
+}
+
+/* ── the runway, now moving ───────────────────────────────────── */
+.lrwdot{animation:lrwpop .45s cubic-bezier(.3,1.4,.5,1) both}
+.lrwlab{animation:lIn .45s var(--ease) both}
+/* the head of the fill, sitting on the line, breathing */
+.lrwhead{
+  position:absolute;top:50%;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;border-radius:50%;
+  background:var(--brand-2);z-index:4;transition:left 1.1s var(--ease);
+  animation:lrwping 1.9s ease-out infinite;
+}
+/* a pulse travelling the whole line, so the eye is led towards what is next */
+.lrwspark{
+  position:absolute;top:50%;height:4px;margin-top:-2px;width:26%;border-radius:2px;z-index:1;
+  background:linear-gradient(90deg,transparent,rgba(18,115,224,.5) 46%,rgba(18,115,224,.72) 52%,transparent);
+  animation:lrwrun 3.6s linear infinite;
+}
+.lrwdot.next::after{
+  content:"";position:absolute;inset:-9px;border-radius:50%;
+  border:2.5px solid var(--brand-2);animation:lrwping2 2.1s ease-out infinite;
+}
+.lrwnow{animation:lchblink 2.6s ease-in-out infinite}
+@keyframes lrwpop{from{opacity:0;transform:scale(.3)}to{opacity:1;transform:none}}
+@keyframes lrwrun{from{left:-26%}to{left:100%}}
+@keyframes lrwping{0%{box-shadow:0 0 0 0 rgba(18,115,224,.5)}70%{box-shadow:0 0 0 14px rgba(18,115,224,0)}100%{box-shadow:0 0 0 0 rgba(18,115,224,0)}}
+@keyframes lrwping2{0%{opacity:.85;transform:scale(.6)}80%{opacity:0;transform:scale(1.5)}100%{opacity:0;transform:scale(1.5)}}
+
+/* ── a map on the wall ────────────────────────────────────────── */
+.lmap{flex:1;min-height:0;display:flex;flex-direction:column;gap:10px}
+.lmapb{
+  flex:1;min-height:0;position:relative;border-radius:16px;overflow:hidden;
+  background:#0b1220;border:1px solid var(--line);animation:lIn .45s var(--ease) both;
+}
+.lmapb svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.lmapf{flex:none;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.lmapf .lsbtile{flex:1 1 0}
+.lmapnote{
+  flex:none;padding:11px 15px;border-radius:13px;background:var(--surface-2);border:1px solid var(--line);
+  font-size:13.5px;font-weight:600;color:var(--ink-2);
+}
+.lmapempty{
+  flex:1;display:flex;align-items:center;justify-content:center;text-align:center;
+  font-size:15px;font-weight:700;color:var(--ink-3);
+}
+/* the eye marker on a map in the Maps list, so that tab says what the wall plays */
+.mapitem.wch{box-shadow:inset 3px 0 0 var(--brand-2)}
+.mapitem .wchpip{margin-top:4px}
+
+@media(prefers-reduced-motion:reduce){
+  .lchspin,.lchmarch,.lchlive i,.lchlr.run i,.lchverd.bad,
+  .lrwspark,.lrwhead,.lrwdot.next::after,.lrwnow{animation:none!important}
+  .lchval,.lchseg,.lchgv,.lchneedle,.lrwhead{transition:none!important}
+}
+
+/* Revision AF — the closure bar grows into place and keeps a slow sheen, so a
+   wall screen reads as a thing in motion rather than a printout */
+.lsbfill{overflow:hidden}
+.lsbfill::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);
+  transform:translateX(-100%);animation:lsbsheen 3.2s ease-in-out infinite;
+}
+@keyframes lsbsheen{0%{transform:translateX(-100%)}60%,100%{transform:translateX(100%)}}
+@media(prefers-reduced-motion:reduce){ .lsbfill::after{animation:none} }
+
+/* ── Revision AF.online · the refresh box on the Live bar ─────── */
+.lsecs.lref i{
+  width:7px;height:7px;border-radius:50%;background:var(--ok);flex:none;
+  animation:lchblink 1.8s ease-in-out infinite;
+}
+.lsecs.lref.off{opacity:.55}
+.lsecs.lref.off i{background:var(--ink-3);animation:none}
+.lsecs.lref input:disabled{background:var(--surface-2);color:var(--ink-3);cursor:not-allowed}
+/* a publish taken without anyone asking still has to be visible after the fact */
+.onlinebar.fresh{box-shadow:inset 0 0 0 2px var(--ok)}
+.onlinebar.fresh .dot{animation:lchblink 1s ease-in-out 3}
 </style>
 <script>
 /* Revision M — decide the theme before the first pixel is painted */
@@ -2766,7 +3107,7 @@ html[data-theme="dark"] .dsort button.on{background:var(--brand);color:#08121f}
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.1"/><path d="M19.4 14.6a1.6 1.6 0 0 0 .32 1.77l.06.06a1.9 1.9 0 1 1-2.69 2.69l-.06-.06a1.6 1.6 0 0 0-1.77-.32 1.6 1.6 0 0 0-.97 1.46V21a1.9 1.9 0 0 1-3.8 0v-.11a1.6 1.6 0 0 0-1.05-1.46 1.6 1.6 0 0 0-1.77.32l-.06.06a1.9 1.9 0 1 1-2.69-2.69l.06-.06a1.6 1.6 0 0 0 .32-1.77 1.6 1.6 0 0 0-1.46-.97H3a1.9 1.9 0 0 1 0-3.8h.11a1.6 1.6 0 0 0 1.46-1.05 1.6 1.6 0 0 0-.32-1.77l-.06-.06a1.9 1.9 0 1 1 2.69-2.69l.06.06a1.6 1.6 0 0 0 1.77.32H9a1.6 1.6 0 0 0 .97-1.46V3a1.9 1.9 0 0 1 3.8 0v.11a1.6 1.6 0 0 0 .97 1.46 1.6 1.6 0 0 0 1.77-.32l.06-.06a1.9 1.9 0 1 1 2.69 2.69l-.06.06a1.6 1.6 0 0 0-.32 1.77V9a1.6 1.6 0 0 0 1.46.97H21a1.9 1.9 0 0 1 0 3.8h-.11a1.6 1.6 0 0 0-1.46.97z"/></svg>
           <i class="gdot" id="ghDot"></i>
         </button>
-          <button class="sub subbtn" id="bAbout" type="button" title="Revision, release date and who built this">Revision AA · 16 Sep 2026</button>
+          <button class="sub subbtn" id="bAbout" type="button" title="Revision, release date and who built this">Rev AF · 18 Sep 2026</button>
         </div>
       </div>
     </div>
@@ -2824,6 +3165,8 @@ html[data-theme="dark"] .dsort button.on{background:var(--brand);color:#08121f}
       <div class="kpi k-acc act" id="cardPct" title="Open the Action Tracker, least complete first"><div class="lab">Complete</div><div class="val" id="kPct">0<small>%</small></div></div>
       <div class="kpi k-warn act" id="cardDur" title="Fit the whole window on the Gantt"><div class="lab">Duration</div><div class="val" id="kDur">0<small>d</small></div></div>
       <div class="kpi k-dang act" id="cardCrit" title="Show only the critical path"><div class="lab">Critical</div><div class="val" id="kCrit">0</div></div>
+      <!-- Revision AF · on the Live tab these four count the closure the chips have picked, and this says which -->
+      <div class="kpi kscope" id="kScope" hidden title="These four boxes are counting this closure only"><div class="lab">Counting</div><div class="val" id="kScopeV">—</div></div>
     </div>
   </div>
 
@@ -3032,6 +3375,8 @@ html[data-theme="dark"] .dsort button.on{background:var(--brand);color:#08121f}
           <button class="lbtn" id="liveNext" type="button" title="Next (→)"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
           <span class="lcount" id="liveCount"></span>
           <label class="lsecs">every <input id="liveSecs" type="number" min="4" max="120" step="1"> s</label>
+          <!-- Revision AF.online · how often this page reads the published programme again -->
+          <label class="lsecs lref" id="liveRefWrap"><i></i>refresh <input id="liveRef" type="number" min="15" max="3600" step="15"> s</label>
           <button class="lbtn wchbtn" id="liveWatch" type="button" title="Choose what plays here"></button>
           <button class="lbtn" id="liveFull" type="button" title="Full screen"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
         </div>
@@ -3048,7 +3393,7 @@ html[data-theme="dark"] .dsort button.on{background:var(--brand);color:#08121f}
         <div class="lwlist" id="liveWatchList"></div>
         <div class="lwf">
           <button class="btn sm" id="liveWatchClear" type="button">Play everything instead</button>
-          <span class="lwhint">Right-click a group, a subgroup or an activity on the Schedule to add it here.</span>
+          <span class="lwhint">Right-click a group, a subgroup or an activity on the Schedule &mdash; or a map on the Maps tab &mdash; to add it here.</span>
         </div>
       </div>
     </div>
@@ -4721,9 +5066,9 @@ const avColor=id=>'hsl('+hueOf(id)+' 52% 46%)';
    2 · STATE
    ══════════════════════════════════════════════════════════════ */
 const APP={
-  rev:'AA',
-  revDate:'2026-09-16',
-  released:'16 Sep 2026',
+  rev:'AF',
+  revDate:'2026-09-18',
+  released:'18 Sep 2026',
   product:'Gantt Studio',
   devRole:'D&IS Project Technical Manager',
   devName:'Sanjeewa Abeyrathne',
@@ -4733,8 +5078,8 @@ const APP={
 const APP_REV='Revision '+APP.rev+' · '+APP.released;
 const APP_CREDIT=APP.devRole+' · '+APP.devMail+' · '+APP.devTel;
 
-const KEY='ganttStudio.revAA';
-const KEY_PREV=['ganttStudio.revZ','ganttStudio.revY','ganttStudio.revX','ganttStudio.revW','ganttStudio.revV','ganttStudio.revU','ganttStudio.revT','ganttStudio.revS','ganttStudio.revR','ganttStudio.revQ','ganttStudio.revP','ganttStudio.revO','ganttStudio.revN','ganttStudio.revM','ganttStudio.revL','ganttStudio.revK','ganttStudio.revJ','ganttStudio.revI','ganttStudio.revH','ganttStudio.revG','ganttStudio.revF','ganttStudio.revE','ganttStudio.revD','ganttStudio.revC','ganttStudio.revA'];   // earlier revisions carry over on first open
+const KEY='ganttStudio.revAF';
+const KEY_PREV=['ganttStudio.revAE','ganttStudio.revAD','ganttStudio.revAC','ganttStudio.revAB','ganttStudio.revAA','ganttStudio.revZ','ganttStudio.revY','ganttStudio.revX','ganttStudio.revW','ganttStudio.revV','ganttStudio.revU','ganttStudio.revT','ganttStudio.revS','ganttStudio.revR','ganttStudio.revQ','ganttStudio.revP','ganttStudio.revO','ganttStudio.revN','ganttStudio.revM','ganttStudio.revL','ganttStudio.revK','ganttStudio.revJ','ganttStudio.revI','ganttStudio.revH','ganttStudio.revG','ganttStudio.revF','ganttStudio.revE','ganttStudio.revD','ganttStudio.revC','ganttStudio.revA'];   // earlier revisions carry over on first open
 let S = blank();
 
 function blank(){
@@ -4891,7 +5236,7 @@ function serialize(){
     locations:(S.locations||[]).map(l=>({id:l.id, name:l.name, color:l.color,
                                          parentId:l.parentId||null, note:l.note||''})),
     /* Revision AA — what the Live screen plays, in the order it plays it */
-    watch:watchClean().map(w=>({kind:w.kind==='g'?'group':'task', id:w.id})),
+    watch:watchClean().map(w=>({kind:w.kind==='g'?'group':(w.kind==='m'?'map':'task'), id:w.id})),
     whatsapp:{title:(S.wa&&S.wa.title)||'', to:(S.wa&&S.wa.to)||'',
               apiUrl:(S.wa&&S.wa.apiUrl)||'', phoneId:(S.wa&&S.wa.phoneId)||'',
               stage:(S.wa&&S.wa.stage)||'',
@@ -5014,8 +5359,18 @@ function hydrate(o){
   (function(){
     const byId=new Map(st.groups.map(g=>[g.id,g]));
     st.groups.forEach(g=>{
+      /* Revision AD — any depth is allowed, but a parent has to exist, cannot
+         be the group itself, and cannot sit inside the group's own branch */
       const p=g.parentId?byId.get(g.parentId):null;
-      if(!p || p.id===g.id || p.parentId) g.parentId=null;
+      if(!p || p.id===g.id){ g.parentId=null; return; }
+      const seen=new Set([g.id]);
+      let c=p, n=0;
+      while(c && n++<64){
+        if(seen.has(c.id)){ g.parentId=null; return; }
+        seen.add(c.id);
+        c=c.parentId?byId.get(c.parentId):null;
+      }
+      if(n>64) g.parentId=null;
     });
   })();
   if(!st.groups.length) st.groups.push({id:uid('g'),name:'General',color:PALETTE[0],collapsed:false,categoryId:null,parentId:null});
@@ -5094,21 +5449,6 @@ function hydrate(o){
   st.tasks.forEach(t=>{ t.deps=t.deps.filter(d=>tids.has(d)&&d!==t.id); if(t.milestone) t.e=t.s;
                         if(!lcids.has(t.locationId)) t.locationId=null; });
 
-  /* ---------- Revision AA · the live watch list ---------- */
-  {
-    const gids=new Set(st.groups.map(g=>g.id)), seen=new Set();
-    st.watch=(Array.isArray(o.watch)?o.watch:[]).map(w=>{
-      const kind=(w&&(w.kind==='group'||w.kind==='g'))?'g':'t';
-      return {kind, id:w&&w.id};
-    }).filter(w=>{
-      if(!w.id) return false;
-      if(!(w.kind==='g'?gids.has(w.id):tids.has(w.id))) return false;
-      const k=w.kind+':'+w.id;
-      if(seen.has(k)) return false;
-      seen.add(k); return true;
-    });
-  }
-
   /* ---------- Revision U · labels ---------- */
   const pids2=new Set(st.people.map(p=>p.id));
   st.labels=(Array.isArray(o.labels)?o.labels:[]).map((x,i)=>{
@@ -5146,6 +5486,26 @@ function hydrate(o){
 
   /* ---------- Revision U · maps ---------- */
   st.maps=(Array.isArray(o.maps)?o.maps:[]).map(mapIn).filter(Boolean);
+
+  /* ---------- Revision AA · the live watch list ---------- */
+  {
+    const gids=new Set(st.groups.map(g=>g.id)), seen=new Set();
+    /* Revision AF — maps can be watched too, so the register has to be checked
+       as well before an entry is believed */
+    const mids=new Set((st.maps||[]).map(m=>m.id));
+    st.watch=(Array.isArray(o.watch)?o.watch:[]).map(w=>{
+      const k=w&&w.kind;
+      const kind=(k==='group'||k==='g')?'g':((k==='map'||k==='m')?'m':'t');
+      return {kind, id:w&&w.id};
+    }).filter(w=>{
+      if(!w.id) return false;
+      if(!(w.kind==='g'?gids.has(w.id):(w.kind==='m'?mids.has(w.id):tids.has(w.id)))) return false;
+      const k=w.kind+':'+w.id;
+      if(seen.has(k)) return false;
+      seen.add(k); return true;
+    });
+  }
+
   return st;
 }
 /* ══════════════════════════════════════════════════════════════
@@ -5611,41 +5971,83 @@ function groupSortVal(g,k){
   return 0;
 }
 const cmpVal=(a,b)=>a<b?-1:a>b?1:0;
-/* ══════════ Revision Z · subgroups ══════════
-   A subgroup is a group with a parent.  Nothing else about a group
-   changes — it still owns tasks through groupId, still has a colour, a
-   category and a collapse state — so every part of the app that already
-   understood groups understands subgroups for free.  Only the order the
-   rows come out in, and how far they are indented, are new.           */
+/* ══════════ Revision AD · the group tree ══════════
+   A subgroup is a group with a parent, and a subgroup may have subgroups
+   of its own, as deep as the work needs:
+
+       C801 Activities  ›  Switch Power Rail  ›  SW11  ›  1st shift
+
+   Nothing else about a group changes — it still owns tasks through
+   groupId, still has a colour, a category and a collapse state — so every
+   part of the app that already understood groups understands the tree for
+   free.  What is new is only the order the rows come out in, how far each
+   one is indented, and the care taken that a group can never end up
+   inside itself.                                                      */
+const GDEPTH_MAX = 6;          /* deeper than this nobody can read the grid */
+
 const parentOf = g => {
   if(!g || !g.parentId) return null;
   const p=G(g.parentId);
-  return (p && p.id!==g.id && !p.parentId) ? p : null;   /* one level only */
+  return (p && p.id!==g.id) ? p : null;
 };
-const isSub   = g => !!parentOf(g);
-const subsOf  = gid => S.groups.filter(g=>g.parentId===gid && G(gid) && !G(gid).parentId);
-const groupDepth = g => isSub(g)?1:0;
-/* every task under a group, its subgroups included — what a parent's bar,
-   its per cent and its panel are really about */
-function tasksUnder(gid){
-  const g=G(gid); if(!g) return [];
-  let out=tasksOf(gid);
-  if(!g.parentId) subsOf(gid).forEach(s=>{ out=out.concat(tasksOf(s.id)); });
+const isSub = g => !!parentOf(g);
+/* the chain from the top down to this group, the group itself last */
+function ancestry(g){
+  const out=[]; const seen=new Set();
+  let c=(typeof g==='string')?G(g):g;
+  while(c && !seen.has(c.id)){ seen.add(c.id); out.unshift(c); c=parentOf(c); }
   return out;
 }
+const groupDepth = g => Math.max(0, ancestry(g).length-1);
+const groupPath  = (g,sep) => ancestry(g).map(x=>x.name).join(sep||'  \u203a  ');
+/* is b inside a? — the question every re-parent has to answer first */
+function isUnder(b,aId){
+  let c=parentOf((typeof b==='string')?G(b):b), n=0;
+  while(c && n++<64){ if(c.id===aId) return true; c=parentOf(c); }
+  return false;
+}
+const subsOf = gid => S.groups.filter(g=>g.parentId===gid && g.id!==gid);
+const topGroups = () => S.groups.filter(g=>!isSub(g));
+/* is any group above this one folded away? */
+function ancestorCollapsed(g){
+  let c=parentOf(g), n=0;
+  while(c && n++<64){ if(c.collapsed) return true; c=parentOf(c); }
+  return false;
+}
+/* every task under a group, at every level below it — what a parent's bar,
+   its per cent and its panel are really about */
+function tasksUnder(gid){
+  const out=[]; const seen=new Set();
+  (function walk(id){
+    if(seen.has(id)) return; seen.add(id);
+    tasksOf(id).forEach(t=>out.push(t));
+    subsOf(id).forEach(c=>walk(c.id));
+  })(gid);
+  return out;
+}
+const groupsUnder = gid => {
+  const out=[]; const seen=new Set();
+  (function walk(id){ subsOf(id).forEach(c=>{ if(seen.has(c.id)) return; seen.add(c.id); out.push(c); walk(c.id); }); })(gid);
+  return out;
+};
 function sortedGroups(){
   const SM=sortMode();
+  const idx=new Map(); S.groups.forEach((g,i)=>idx.set(g.id,i));
   const order = list => {
     if(SM.key==='manual') return list;
-    const idx=new Map(); S.groups.forEach((g,i)=>idx.set(g.id,i));
     return list.slice().sort((a,b)=>
       cmpVal(groupSortVal(a,SM.key),groupSortVal(b,SM.key))*SM.dir || (idx.get(a.id)-idx.get(b.id)));
   };
-  const tops=order(S.groups.filter(g=>!isSub(g)));
-  const out=[];
-  tops.forEach(g=>{ out.push(g); order(subsOf(g.id)).forEach(s=>out.push(s)); });
+  const out=[], seen=new Set();
+  (function walk(list){
+    order(list).forEach(g=>{
+      if(seen.has(g.id)) return;
+      seen.add(g.id); out.push(g);
+      walk(subsOf(g.id));
+    });
+  })(topGroups());
   /* a subgroup whose parent has gone is still a group; never lose a row */
-  S.groups.forEach(g=>{ if(out.indexOf(g)<0) out.push(g); });
+  S.groups.forEach(g=>{ if(!seen.has(g.id)){ seen.add(g.id); out.push(g); } });
   return out;
 }
 /* ══════════ Revision AA · the live watch list ══════════
@@ -5659,25 +6061,30 @@ function sortedGroups(){
 function watchList(){ if(!Array.isArray(S.watch)) S.watch=[]; return S.watch; }
 function watchHas(kind,id){ return watchList().some(w=>w.kind===kind && w.id===id); }
 function watchIndex(kind,id){ return watchList().findIndex(w=>w.kind===kind && w.id===id); }
+/* Revision AF — a map is a third thing the wall can play.  It carries no
+   activities of its own, so everything that counts tasks steps over it, and
+   everything that names things asks the map register instead.            */
+const watchThing = (kind,id) => kind==='g' ? G(id) : (kind==='m' ? MP(id) : T(id));
 function watchName(w){
-  if(w.kind==='g'){ const g=G(w.id); return g?g.name:''; }
-  const t=T(w.id); return t?t.name:'';
+  const th=watchThing(w.kind,w.id);
+  return th?(th.name||''):'';
 }
-/* an entry whose group or task has been deleted is no entry at all */
+/* an entry whose group, task or map has been deleted is no entry at all */
 function watchClean(){
   const list=watchList();
-  const keep=list.filter(w=>w.kind==='g'?!!G(w.id):!!T(w.id));
+  const keep=list.filter(w=>!!watchThing(w.kind,w.id));
   if(keep.length!==list.length) S.watch=keep;
   return S.watch;
 }
 function watchAdd(kind,id,quiet){
   if(watchHas(kind,id)) return false;
-  const thing = kind==='g'?G(id):T(id);
+  const thing = watchThing(kind,id);
   if(!thing) return false;
   watchList().push({kind,id});
   markDirty();
   if(!quiet) toast('“'+(thing.name||'')+'” added to the Live screen — it is slide '+watchList().length,'ok');
   if(S._view==='live'){ renderLive(); liveRestart(); }
+  else if(S._view==='maps') renderMaps();
   else renderSchedule();
   return true;
 }
@@ -5689,6 +6096,7 @@ function watchRemove(kind,id,quiet){
   markDirty();
   if(!quiet) toast(nm?('“'+nm+'” taken off the Live screen'):'Taken off the Live screen');
   if(S._view==='live'){ renderLive(); liveRestart(); }
+  else if(S._view==='maps') renderMaps();
   else renderSchedule();
   return true;
 }
@@ -5710,12 +6118,15 @@ function watchClear(){
 }
 /* the list, resolved and in order — what the carousel is built from */
 function watchItems(){
-  return watchClean().map(w=>w.kind==='g'
-    ? {kind:'g', id:w.id, group:G(w.id), name:G(w.id).name}
-    : {kind:'t', id:w.id, task:T(w.id),  name:T(w.id).name});
+  return watchClean().map(w=>{
+    if(w.kind==='g') return {kind:'g', id:w.id, group:G(w.id), name:G(w.id).name};
+    if(w.kind==='m') return {kind:'m', id:w.id, map:MP(w.id),  name:MP(w.id).name};
+    return {kind:'t', id:w.id, task:T(w.id), name:T(w.id).name};
+  });
 }
-/* every task a watched entry stands for */
+/* every task a watched entry stands for — a map stands for none */
 function watchTasksOf(w){
+  if(w.kind==='m') return [];
   return w.kind==='g' ? tasksUnder(w.id) : [T(w.id)].filter(Boolean);
 }
 /* the little marker a watched row carries, so the Schedule says at a glance
@@ -5772,22 +6183,29 @@ function buildRows(){
      if it, or something under it, survives the filters.                    */
   const own=new Map();
   S.groups.forEach(g=>own.set(g.id,groupOwnRows(g,q,plain)));
-  const carriesWithKids=g=>{
+  /* Revision AD — a branch is worth a row if it, or anything at any depth
+     beneath it, survives the filters.  Worked out once, bottom up. */
+  const carries=new Map();
+  const worthIt=g=>{
+    if(carries.has(g.id)) return carries.get(g.id);
+    carries.set(g.id,false);                       /* breaks a cycle safely */
     const o=own.get(g.id);
-    if(o.hidden) return false;
-    if(o.carries) return true;
-    return subsOf(g.id).some(s=>{ const so=own.get(s.id); return so && so.carries; });
+    const v = !o.hidden && (o.carries || subsOf(g.id).some(worthIt));
+    carries.set(g.id,v);
+    return v;
   };
+  S.groups.forEach(worthIt);
   sortedGroups().forEach(g=>{
-    /* a subgroup rides with its parent's collapse */
+    /* a subgroup rides with every collapse above it, at any depth */
     const par=parentOf(g);
-    if(par && (par.collapsed || own.get(par.id).hidden)) return;
+    if(par && (par.collapsed || ancestorCollapsed(g) || own.get(par.id).hidden)) return;
+    if(!worthIt(g)) return;
+    const d=Math.min(groupDepth(g),GDEPTH_MAX);
     const o=own.get(g.id);
-    if(par ? !o.carries : !carriesWithKids(g)) return;
-    ROWS.push({kind:'g',id:g.id,depth:par?1:0});
+    ROWS.push({kind:'g',id:g.id,depth:d});
     if(!g.collapsed){
-      o.labs.forEach(x=>ROWS.push({kind:'l',id:x.id,depth:par?1:0}));
-      sortTaskList(o.shown).forEach(t=>ROWS.push({kind:'t',id:t.id,depth:par?1:0}));
+      o.labs.forEach(x=>ROWS.push({kind:'l',id:x.id,depth:d}));
+      sortTaskList(o.shown).forEach(t=>ROWS.push({kind:'t',id:t.id,depth:d}));
     }
   });
   let y=0;
@@ -5931,12 +6349,14 @@ function renderGrid(){
     if(r.kind==='g'){
       const g=G(r.id), sp=groupSpan(g.id);
       const tick=groupTick(g.id);
-      const sub=isSub(g), kids=sub?[]:subsOf(g.id);
+      const sub=r.depth>0, kids=subsOf(g.id);
       const row=el('div','grow g'+(sub?' subg':'')+(S._sel&&S._sel.k==='g'&&S._sel.id===g.id?' sel':'')+(tick==='off'?' off':'')+(watchHas('g',g.id)?' wch':''));
       row.dataset.k='g'; row.dataset.id=g.id; row.style.height=r.h+'px';
+      if(r.depth) row.dataset.depth=r.depth;
       row.appendChild(tickCell(tick,'g',g.id));
       const c=el('div','cell c-name'); c.style.width=cellW('name');
-      if(sub) c.appendChild(el('div','subind'));
+      /* Revision AD — one rung of indent per level, however deep it goes */
+      for(let d=0; d<r.depth; d++) c.appendChild(el('div','subind'));
       const grip=el('div','grip'); grip.innerHTML=ICONS.grip; grip.dataset.drag='1';
       grip.title=sub?'Drag to reorder subgroup':'Drag to reorder group';
       c.appendChild(grip);
@@ -5947,7 +6367,7 @@ function renderGrid(){
       const chip=el('div','chip'); chip.style.background=g.color; c.appendChild(chip);
       c.appendChild(el('span','nm',g.name));
       if(watchHas('g',g.id)) c.appendChild(watchPip('g',g.id));
-      const nT=(sub?tasksOf(g.id):tasksUnder(g.id)).length, nL=labelsOf(g.id).length;
+      const nT=(kids.length?tasksUnder(g.id):tasksOf(g.id)).length, nL=labelsOf(g.id).length;
       const cnt=el('span',null,' ('+nT+(kids.length?(' · '+kids.length+' subgroup'+(kids.length===1?'':'s')):'')+
                                     (nL?' · '+nL+' label'+(nL===1?'':'s'):'')+')');
       cnt.style.cssText='color:var(--ink-3);font-weight:600;font-size:11px'; c.appendChild(cnt);
@@ -5971,7 +6391,7 @@ function renderGrid(){
       row.dataset.k='l'; row.dataset.id=x.id; row.style.height=r.h+'px';
       row.appendChild(el('div','cell tick'));
       const c=el('div','cell c-name'); c.style.width=cellW('name');
-      if(r.depth) c.appendChild(el('div','subind'));
+      for(let d=0; d<r.depth; d++) c.appendChild(el('div','subind'));
       c.appendChild(el('div','indent'));
       const tag=el('span','lbl-tag',LBLROLE[x.role].short);
       tag.style.background=x.color; c.appendChild(tag);
@@ -6002,7 +6422,7 @@ function renderGrid(){
       const grip=el('div','grip'); grip.innerHTML=ICONS.grip; grip.dataset.drag='1';
       grip.title='Drag to reorder, or onto a group or subgroup to move it there';
       c.appendChild(grip);
-      if(r.depth) c.appendChild(el('div','subind'));
+      for(let d=0; d<r.depth; d++) c.appendChild(el('div','subind'));
       c.appendChild(el('div','indent'));
       if(t.milestone){
         const m=el('span','mstone-ico'); m.innerHTML='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l10 10-10 10L2 12z"/></svg>'; c.appendChild(m);
@@ -6243,18 +6663,53 @@ function renderArrows(){
   });
   dom.arrowG.innerHTML=out;
 }
+/* ══════════ Revision AF · the headline boxes follow the Live chips ══════════
+   The four boxes in the top right always counted the whole programme.  On the
+   Live tab that put the wrong numbers next to the right screen — the room was
+   looking at FSC-Day 2 while the header still said how many activities the
+   programme has altogether, which reads as a contradiction rather than as two
+   different questions.  They now count whatever the chips have selected, and a
+   fifth box says out loud which closure that is, so nobody has to guess.   */
+function statScope(){
+  const all=liveTasks();
+  if(S._view==='live' && typeof detTasks==='function'){
+    const id=(typeof liveStageId==='function')?liveStageId():'';
+    const cat=id?S.categories.find(c=>c.id===id):null;
+    if(cat) return {list:detTasks(), name:cat.name, color:cat.color, on:true};
+    return {list:all, name:'Every closure', color:'', on:true};
+  }
+  return {list:all, name:'', color:'', on:false};
+}
 function renderStats(){
-  const ts=liveTasks();
-  const struck=S.tasks.length-ts.length;
+  const sc=statScope();
+  const ts=sc.list;
+  const struck=S.tasks.length-liveTasks().length;
   $('#kTasks').textContent=ts.length;
   let tot=0,don=0; ts.forEach(t=>{const d=dur(t);tot+=d;don+=d*pct(t)/100;});
   $('#kPct').innerHTML=(tot?Math.round(don/tot*100):0)+'<small>%</small>';
   if(ts.length){
-    const sp=projSpan();
-    $('#kDur').innerHTML=Math.max(1,Math.ceil(sp.hi-sp.lo))+'<small>d</small>';
+    /* scoped, the window is the scope's own window — the whole-programme span
+       would say "10 days" over a screen showing one Sunday */
+    const lo = sc.on ? Math.min(...ts.map(t=>t.s)) : projSpan().lo;
+    const hi = sc.on ? Math.max(...ts.map(t=>t.e)) : projSpan().hi;
+    $('#kDur').innerHTML=Math.max(1,Math.ceil(hi-lo))+'<small>d</small>';
   }else $('#kDur').innerHTML='0<small>d</small>';
   windowNote(struck);
   $('#kCrit').textContent=ts.filter(t=>t.critical).length;
+  {
+    const box=$('#kScope'), v=$('#kScopeV');
+    if(box && v){
+      box.hidden=!sc.on;
+      document.body.classList.toggle('kscoped', sc.on);
+      if(sc.on){
+        v.textContent=sc.name;
+        box.style.setProperty('--kscope', sc.color||'var(--brand-2)');
+        box.title='Tasks, Complete, Duration and Critical are counting '+
+                  (sc.name==='Every closure'?'every closure':('“'+sc.name+'”'))+' only, '+
+                  'because that is what the Live screen is showing.';
+      }
+    }
+  }
   const cc=$('#cardCrit'); if(cc) cc.classList.toggle('live',!!S._critOnly);
   $('#sGroups').textContent=S.groups.length;
   $('#sLinks').textContent=ts.reduce((n,t)=>n+(t.deps?t.deps.length:0),0);
@@ -6457,18 +6912,22 @@ function delGroup(id){
      back to the top level, because losing a whole work front to one click is
      never what somebody meant */
   const kids=subsOf(id);
+  const par=parentOf(g);
+  const where = par ? ('moved up under \u201c'+par.name+'\u201d') : 'moved to the top level';
   const msg = 'Delete "'+g.name+'"'+(n?(' and its '+n+' task'+(n>1?'s':'')):'')+
               (kids.length?('?  Its '+kids.length+' subgroup'+(kids.length===1?'':'s')+
-                            ' and their tasks are kept and moved to the top level.'):'?');
+                            ' and everything under them are kept and '+where+'.'):'?');
   if((n||kids.length) && !confirm(msg)) return;
   push();
   const ids=new Set(tasksOf(id).map(t=>t.id));
   S.tasks=S.tasks.filter(t=>t.groupId!==id);
   S.tasks.forEach(t=>t.deps=t.deps.filter(d=>!ids.has(d)));
-  kids.forEach(k=>{ k.parentId=null; });
+  /* Revision AD — the children rise one level rather than losing their place
+     in the tree entirely; a three-level branch stays a two-level branch */
+  kids.forEach(k=>{ k.parentId = par ? par.id : null; });
   S.groups=S.groups.filter(x=>x.id!==id);
   S._sel=null; markDirty(); refreshAll();
-  toast(kids.length?('Group deleted — '+kids.length+' subgroup'+(kids.length===1?'':'s')+' kept')
+  toast(kids.length?('Group deleted — '+kids.length+' subgroup'+(kids.length===1?'':'s')+' '+where)
                    :'Group deleted');
 }
 function delTask(id){
@@ -6713,46 +7172,87 @@ function onRowUp(){
    the group row it is dropped on, so nothing new is needed for the
    drag itself.
    ══════════════════════════════════════════════════════════════ */
+/* put a group straight after its family in the manual order, so the array
+   order and the tree order never argue with one another */
+function placeInFamily(g,parentId){
+  const p=G(parentId);
+  S.groups=S.groups.filter(x=>x.id!==g.id);
+  if(!p){ S.groups.push(g); return; }
+  const sibs=subsOf(parentId).filter(x=>x.id!==g.id);
+  /* after the last row of the last sibling's whole branch, or after the
+     parent itself when this is its first child */
+  let anchor=p;
+  if(sibs.length){
+    const last=sibs[sibs.length-1];
+    const branch=groupsUnder(last.id);
+    anchor=branch.length?branch[branch.length-1]:last;
+  }
+  const at=S.groups.indexOf(anchor);
+  S.groups.splice(at<0?S.groups.length:at+1,0,g);
+}
 function addSubgroup(parentId,name){
   if(RO_ON) return roNope();
   const p=G(parentId);
-  if(!p) return;
-  if(p.parentId){ toast('Subgroups go one level deep — add it to “'+(G(p.parentId)||{}).name+'” instead','err'); return null; }
+  if(!p) return null;
+  /* Revision AD — nesting goes as deep as the work does, stopping only where
+     the grid would stop being readable */
+  if(groupDepth(p)+1 > GDEPTH_MAX){
+    toast('That is as deep as the grid goes — '+(GDEPTH_MAX+1)+' levels','err'); return null;
+  }
   push();
   const g={id:uid('g'), name:name||('Subgroup '+(subsOf(parentId).length+1)),
            color:p.color, collapsed:false, categoryId:p.categoryId||null, parentId:parentId};
-  /* keep it next to its family in the manual order */
-  const sibs=subsOf(parentId);
-  const anchor=sibs.length?sibs[sibs.length-1]:p;
-  S.groups.splice(S.groups.indexOf(anchor)+1,0,g);
+  placeInFamily(g,parentId);
   p.collapsed=false;
   markDirty(); refreshAll();
-  toast('Subgroup “'+g.name+'” added under “'+p.name+'” — drag tasks onto it','ok');
+  toast('“'+g.name+'” added under “'+p.name+'” — drag tasks onto it','ok');
   return g;
 }
+/* one level up: to its grandparent if there is one, otherwise to the top */
 function promoteGroup(gid){
   if(RO_ON) return roNope();
-  const g=G(gid); if(!g||!g.parentId) return;
+  const g=G(gid); if(!g) return;
+  const par=parentOf(g); if(!par) return;
   push();
-  const was=(G(g.parentId)||{}).name||'';
-  g.parentId=null;
+  const up=parentOf(par);
+  const branch=[];
+  (function walk(id){ subsOf(id).forEach(c=>{ branch.push(c); walk(c.id); }); })(gid);
+  const kept=new Set(branch.map(c=>c.id));
+  S.groups=S.groups.filter(x=>!kept.has(x.id));
+  g.parentId = up ? up.id : null;
+  placeInFamily(g, g.parentId);
+  const at=S.groups.indexOf(g);
+  branch.forEach((c,i)=>S.groups.splice(at+1+i,0,c));
   markDirty(); refreshAll();
-  toast('“'+g.name+'” is a top-level group again'+(was?(' — it was under “'+was+'”'):''),'ok');
+  toast(up ? ('“'+g.name+'” moved up under “'+up.name+'”')
+           : ('“'+g.name+'” is a top-level group again — it was under “'+par.name+'”'),'ok');
 }
 function nestGroup(gid,parentId){
   if(RO_ON) return roNope();
   const g=G(gid), p=G(parentId);
-  if(!g||!p||g.id===p.id||p.parentId) return;
-  if(subsOf(gid).length){ toast('“'+g.name+'” has subgroups of its own — move those out first','err'); return; }
+  if(!g||!p||g.id===p.id) return;
+  /* a group can never be put inside its own branch, or the tree eats itself */
+  if(isUnder(p,gid)){
+    toast('“'+p.name+'” already sits inside “'+g.name+'” — that would make a loop','err'); return;
+  }
+  const deepest=groupsUnder(gid).reduce((n,x)=>Math.max(n,groupDepth(x)-groupDepth(g)),0);
+  if(groupDepth(p)+1+deepest > GDEPTH_MAX){
+    toast('That would push “'+g.name+'” past '+(GDEPTH_MAX+1)+' levels — move some of it out first','err'); return;
+  }
   push();
+  /* the branch travels with it, in order — read it out BEFORE anything moves,
+     or the descendants are looked up in an array they have just been cut from */
+  const branch=[];
+  (function walk(id){ subsOf(id).forEach(c=>{ branch.push(c); walk(c.id); }); })(gid);
+  const kept=new Set(branch.map(c=>c.id));
+  S.groups=S.groups.filter(x=>!kept.has(x.id));
   g.parentId=parentId;
-  const sibs=subsOf(parentId).filter(x=>x.id!==gid);
-  const anchor=sibs.length?sibs[sibs.length-1]:p;
-  S.groups=S.groups.filter(x=>x.id!==gid);
-  S.groups.splice(S.groups.indexOf(anchor)+1,0,g);
+  placeInFamily(g,parentId);
+  const at=S.groups.indexOf(g);
+  branch.forEach((c,i)=>S.groups.splice(at+1+i,0,c));
   p.collapsed=false;
   markDirty(); refreshAll();
-  toast('“'+g.name+'” is now a subgroup of “'+p.name+'”','ok');
+  toast('“'+g.name+'” is now under “'+p.name+'”','ok');
 }
 function moveGroup(id,target){
   const from=S.groups.findIndex(g=>g.id===id);
@@ -6762,11 +7262,16 @@ function moveGroup(id,target){
   if(at<0) at=S.groups.length-1;
   /* Rev Z — dropping a group just under a parent keeps it in that family;
      dropping it under a top-level group makes it top-level again */
+  /* Revision AD — a dropped group joins the family it was dropped into:
+     beside a sibling it becomes a sibling, just under an open parent it
+     becomes that parent's child.  It is never allowed inside its own branch. */
   const drop=G(target.id);
-  if(drop && !subsOf(g.id).length){
-    const newParent = drop.parentId ? drop.parentId
-                    : (target.pos==='after' && subsOf(drop.id).length ? drop.id : null);
-    g.parentId = (newParent && newParent!==g.id) ? newParent : null;
+  if(drop){
+    const cand = (target.pos==='after' && subsOf(drop.id).length && !drop.collapsed)
+               ? drop.id : (drop.parentId||null);
+    const ok = cand && cand!==g.id && !isUnder(G(cand),g.id) &&
+               groupDepth(G(cand))+1 <= GDEPTH_MAX;
+    g.parentId = ok ? cand : null;
   }else g.parentId=null;
   S.groups.splice(target.pos==='before'?at:at+1,0,g);
   toast((g.parentId?'Subgroup “':'Group “')+g.name+'” moved');
@@ -8408,6 +8913,9 @@ function setView(v){
   if(v!=='live') liveStop();
   if(v==='dash'){ renderDashboard(); railBind(); waBind(); }
   if(v==='live'){ liveBind(); renderLive(); liveRestart(); }
+  /* Revision AF — the four headline boxes are scoped to the Live chips, so they
+     have to be repainted whenever the tab changes in either direction */
+  renderStats();
   if(v==='schedule'){ computeRange(); renderSchedule(); syncScroll();
     if(S._needFit){ S._needFit=false; requestAnimationFrame(()=>{ fit(); }); } }
   if(v==='actions') renderActions();
@@ -9086,18 +9594,24 @@ function menuItem(m,label,fn,cls){
 function openGroupMenu(x,y,gid){
   const g=G(gid); if(!g) return;
   const m=$('#colMenu'); m.innerHTML='';
-  m.appendChild(el('div','mh',(isSub(g)?'Subgroup · ':'Group · ')+g.name));
+  /* Revision AD — the header carries the whole path, so at four levels deep
+     it is still obvious where you are */
+  const dep=groupDepth(g);
+  m.appendChild(el('div','mh',(dep?('Level '+(dep+1)+' · '):'Group · ')+groupPath(g)));
   if(!RO_ON){
-    if(!isSub(g)){
+    if(dep < GDEPTH_MAX){
       menuItem(m,'Add a subgroup',()=>{
         const sg=addSubgroup(gid);
         if(sg) setTimeout(()=>openGroup(sg.id),60);
       },'pri');
-    }else{
-      menuItem(m,'Move out to the top level',()=>promoteGroup(gid));
     }
-    if(!isSub(g) && S.groups.filter(x=>!isSub(x)&&x.id!==gid).length){
-      menuItem(m,'Make this a subgroup of…',()=>openNestPicker(gid));
+    if(dep){
+      const up=parentOf(parentOf(g));
+      menuItem(m, up ? ('Move up under \u201c'+up.name+'\u201d') : 'Move out to the top level',
+               ()=>promoteGroup(gid));
+    }
+    if(S.groups.filter(x=>x.id!==gid && !isUnder(x,gid)).length){
+      menuItem(m,'Move it under…',()=>openNestPicker(gid));
     }
     m.appendChild(el('div','msep'));
     menuItem(m,'Add a task here',()=>{
@@ -9156,26 +9670,41 @@ function watchMenuItem(m,kind,id){
 function openPicker(title,rows){
   const m=$('#colMenu'); m.innerHTML='';
   m.appendChild(el('div','mh',title));
-  rows.forEach(([lab,fn,sub])=>{
-    const i=el('div','mi plain'+(sub?' sub':''));
+  rows.forEach(([lab,fn,lvl])=>{
+    const d=(lvl===true)?1:(+lvl||0);
+    const i=el('div','mi plain'+(d?' sub':''));
+    if(d>1) i.style.paddingLeft=(14+d*13)+'px';
     i.appendChild(el('span',null,lab));
     i.onclick=()=>{ closeColMenu(); fn(); };
     m.appendChild(i);
   });
   placeMenu(m,MENUAT.x,MENUAT.y);
 }
+/* Revision AD — both pickers walk the whole tree, so any level can be chosen
+   and the indent says which level it is */
+function groupTree(skipId){
+  const out=[];
+  (function walk(list,d){
+    list.forEach(g=>{
+      if(skipId && (g.id===skipId || isUnder(g,skipId))) return;
+      out.push({g, d});
+      walk(subsOf(g.id), d+1);
+    });
+  })(topGroups(),0);
+  S.groups.forEach(g=>{ if(!out.some(x=>x.g.id===g.id) && !(skipId&&(g.id===skipId||isUnder(g,skipId)))) out.push({g,d:0}); });
+  return out;
+}
 function openNestPicker(gid){
-  const rows=S.groups.filter(g=>!isSub(g)&&g.id!==gid)
-                     .map(g=>[g.name,()=>nestGroup(gid,g.id),false]);
-  openPicker('Make it a subgroup of…',rows);
+  const g=G(gid);
+  const deepest=groupsUnder(gid).reduce((n,x)=>Math.max(n,groupDepth(x)-groupDepth(g)),0);
+  const rows=groupTree(gid)
+    .filter(x=>x.d+1+deepest<=GDEPTH_MAX)
+    .map(x=>[x.g.name,()=>nestGroup(gid,x.g.id),x.d]);
+  if(!rows.length){ toast('There is nowhere to put it that stays inside '+(GDEPTH_MAX+1)+' levels','err'); return; }
+  openPicker('Move “'+(g?g.name:'')+'” under…',rows);
 }
 function openMovePicker(tid){
-  const rows=[];
-  S.groups.filter(g=>!isSub(g)).forEach(g=>{
-    rows.push([g.name,()=>moveTaskToGroup(tid,g.id),false]);
-    subsOf(g.id).forEach(s=>rows.push([s.name,()=>moveTaskToGroup(tid,s.id),true]));
-  });
-  openPicker('Move this task to…',rows);
+  openPicker('Move this task to…', groupTree(null).map(x=>[x.g.name,()=>moveTaskToGroup(tid,x.g.id),x.d]));
 }
 function moveTaskToGroup(tid,gid){
   if(RO_ON) return roNope();
@@ -9589,8 +10118,34 @@ const XLSUB={'30min':1/48, 'hour':1/24, '2hour':1/12};
 const XLSUBLAB={'30min':'30 min','hour':'hour','2hour':'2 hour'};
 const XLCOLCAP=2200;                                  /* Excel copes, people do not */
 const XLDAYCAP=400;             /* Revision S — a year of dated columns is still readable */
-function xlScale(lo,hi,pref){
-  const d=hi-lo+1;
+/* ══════════ Revision AC · skipping the empty stretches ══════════
+   A closure filter can still leave one activity dated a week away — on this
+   programme an FSC-2 switchboard shutdown is typed against the 20th — and the
+   whole sheet used to coarsen to daily columns to span the gap, or spend two
+   hundred empty columns crossing it.  So the export finds where the work
+   actually is, keeps the fine columns over those stretches, and puts a single
+   marked break column where nothing happens.  Nothing is dropped: the far
+   activity still has its own columns and its own bar.                     */
+const XLGAPMIN = 1.5;          /* a quiet stretch has to be this long to elide */
+
+function xlClusters(list, lo, hi){
+  if(!list || !list.length) return [{s:lo, e:hi+1}];
+  const iv=list.map(t=>[Math.floor(t.s), Math.max(Math.ceil(t.e), Math.floor(t.s)+1)])
+               .sort((a,b)=>a[0]-b[0]);
+  const out=[];
+  iv.forEach(([a,b])=>{
+    const last=out[out.length-1];
+    if(last && a <= last.e + XLGAPMIN) last.e=Math.max(last.e,b);
+    else out.push({s:a, e:b});
+  });
+  out[0].s=Math.min(out[0].s, lo);
+  out[out.length-1].e=Math.max(out[out.length-1].e, hi+1);
+  return out;
+}
+const xlClusterDays = cl => cl.reduce((n,c)=>n+(c.e-c.s),0);
+
+function xlScale(lo,hi,pref,effDays){
+  const d=(effDays!=null?effDays:hi-lo+1);
   if(pref&&pref!=='auto'){                     /* an explicit choice is honoured… */
     let sc=pref;
     if(XLSUB[sc]){                             /* …until the sheet would be absurd */
@@ -9607,13 +10162,37 @@ function xlScale(lo,hi,pref){
      end and a multi-year programme at the other.  Anything in between (a Day-Zero build-up,
      a month of works, a season) keeps a column for every single date, in order, so the
      dates always step one day at a time instead of jumping a week per column. */
-  if(d<=3) return '30min';                     /* a closure day and its shoulders */
+  /* Revision AC — four occupied days is two closure nights with their
+     shoulders, which is exactly the case this export exists for */
+  if(d<=4) return '30min';                     /* a closure day and its shoulders */
   if(d<=XLDAYCAP) return 'day';
   return d<=XLDAYCAP*7?'week':'month';
 }
 const ovl=(pd,a,b)=>(a < pd.x) && (b > pd.s);        // instants vs a period [s, x)
 const pad2=v=>(v<10?'0':'')+v;
-function xlPeriods(lo,hi,scale){
+function xlPeriods(lo,hi,scale,clusters){
+  /* Revision AC — with clusters, the timeline is built one stretch at a time
+     and a single break column stands in for each quiet gap between them */
+  if(clusters && clusters.length>1){
+    let out=[];
+    clusters.forEach((c,i)=>{
+      if(i){
+        const g0=clusters[i-1].e, g1=c.s, days=Math.round(g1-g0);
+        const pa=parts(g0), pb=parts(g1-1);
+        /* the band above is one narrow column wide here, so the label has to be
+           short enough to survive it; the long form goes in the title line */
+        out.push({s:g0, e:g1-1e-9, x:g1, gap:true, edge:true, weekend:false, gapDays:days,
+                  label:days+'d', time:days+'d',
+                  full:days+' day'+(days===1?'':'s')+' with no work in this selection  ·  '+
+                       pa.d+' '+MON[pa.m]+' \u2192 '+pb.d+' '+MON[pb.m],
+                  major:'\u22ef '+days+'d \u22ef'});
+      }
+      out=out.concat(xlPeriods(c.s, c.e-1, scale));
+    });
+    out.forEach(pd=>{ pd.today = pd.gap ? false
+                     : (pd.sub ? (NOW>=pd.s && NOW<pd.x) : (TODAY>=pd.s && TODAY<=pd.e)); });
+    return out;
+  }
   const out=[];
   const step=XLSUB[scale];
   if(step){
@@ -9722,6 +10301,14 @@ async function buildWorkbook(cfg){
   const sGrpCel = st({font:{b:1,sz:10,color:XLC.ink2},fill:XLC.groupRow,align:{h:'center',v:'center'},border:BOT});
   const sGrpDt  = st({font:{b:1,sz:10,color:XLC.ink2},fill:XLC.groupRow,align:{h:'center',v:'center'},border:BOT,fmt:'dd mmm yyyy'});
   const sGrpPct = st({font:{b:1,sz:10,color:XLC.ink2},fill:XLC.groupRow,align:{h:'center',v:'center'},border:BOT,fmt:'0%'});
+  /* Revision AB — a subgroup is a group, so it keeps the group's shape; it is
+     just one step quieter and one step in, so the hierarchy is readable at a
+     glance instead of every group row looking like a peer of every other. */
+  const SUBROW='F2F5F9';
+  const sSubTxt = st({font:{b:1,sz:10,color:XLC.ink2},fill:SUBROW,align:{v:'center',indent:2},border:BOT});
+  const sSubCel = st({font:{sz:9.5,color:XLC.ink3||XLC.ink2},fill:SUBROW,align:{h:'center',v:'center'},border:BOT});
+  const sSubDt  = st({font:{sz:9.5,color:XLC.ink2},fill:SUBROW,align:{h:'center',v:'center'},border:BOT,fmt:'dd mmm yyyy'});
+  const sSubPct = st({font:{b:1,sz:9.5,color:XLC.ink2},fill:SUBROW,align:{h:'center',v:'center'},border:BOT,fmt:'0%'});
   const sGrpEmpty=st({fill:XLC.groupRow,border:B});
   const sGrpEmptyD=st({fill:XLC.groupRow,border:BD});
   const sCell   = st({border:B});
@@ -9783,24 +10370,41 @@ async function buildWorkbook(cfg){
   /* Revision V — a struck-out task is out of every export, filters or no filters */
   const passes=t=>!t.struck && (!useFilter || taskPassesFilter(t));
   const model=[];                                    // ordered [{kind,group,task}]
+  /* Revision AD — the workbook mirrors the tree exactly: one outline level per
+     level of nesting, so the sheet drills down the way the Schedule does */
+  const depthOf = g => (typeof groupDepth==='function') ? Math.min(groupDepth(g),6) : (g.parentId?1:0);
+  const kidsOf  = g => (typeof subsOf==='function') ? subsOf(g.id) : [];
   (typeof sortedGroups==='function'?sortedGroups():S.groups).forEach(g=>{
+    const d=depthOf(g), sub=d>0;
     let list=tasksOf(g.id).filter(passes);
     if(typeof sortTaskList==='function') list=sortTaskList(list);
     /* Revision U — labels ride with their group but are NEVER counted as tasks */
     const labs=(typeof labelsOf==='function'?labelsOf(g.id):[]);
-    if(!list.length && !labs.length && useFilter) return;
-    model.push({kind:'g',g});
-    labs.forEach(x=>model.push({kind:'l',x,g}));
-    list.forEach(t=>model.push({kind:'t',t,g}));
+    /* Revision AB — a branch that carries nothing of its own is still a real
+       row while something beneath it holds work */
+    const under=(kidsOf(g).length && typeof tasksUnder==='function')
+              ? tasksUnder(g.id).filter(passes) : list;
+    if(!under.length && !labs.length && useFilter) return;
+    model.push({kind:'g',g,sub,d});
+    labs.forEach(x=>model.push({kind:'l',x,g,sub,d}));
+    list.forEach(t=>model.push({kind:'t',t,g,sub,d}));
   });
   const tasksIn=model.filter(m=>m.kind==='t').map(m=>m.t);
   const labelsIn=model.filter(m=>m.kind==='l').map(m=>m.x);
   if(!tasksIn.length) throw new Error('Nothing to export with the current filters');
 
   const lo=Math.floor(Math.min(...tasksIn.map(t=>t.s))), hi=Math.ceil(Math.max(...tasksIn.map(t=>t.e)))-1;
-  const scale=xlScale(lo,hi,cfg.scale);
-  const periods=xlPeriods(lo,hi,scale);
+  /* Revision AC — judge the scale on the days that actually carry work, not on
+     the distance between the first and the last, and skip the quiet stretches */
+  const clusters=xlClusters(tasksIn,lo,hi);
+  const effDays=xlClusterDays(clusters);
+  const scale=xlScale(lo,hi,cfg.scale,effDays);
+  /* only a sub-day sheet elides: on the day scale "one column per date, every
+     date, in order" is the promise the dialog makes, and skipping weekends
+     would quietly break it */
+  const periods=xlPeriods(lo,hi,scale,XLSUB[scale]?clusters:null);
   const runs=xlSpanRuns(periods);
+  const skipped=periods.filter(p=>p.gap).length;
   const GC=11;                                       // first Gantt column on Schedule
   const lastCol=GC+periods.length-1;
 
@@ -9944,18 +10548,30 @@ async function buildWorkbook(cfg){
   /* on a sub-day scale the cell styles change at every midnight */
   const subDay = !!XLSUB[scale];
   const minorHt = subDay ? 46 : 26;
-  const pMinor = subDay
+  /* Revision AC — the break column reads as a deliberate cut, not as a column
+     somebody forgot to fill in */
+  const sGapMinor=st({font:{b:1,sz:8,color:XLC.ink2},fill:XLC.line,
+                      align:{h:'center',v:'center',rot:subDay?90:0},border:BD});
+  const sGapCell =st({fill:XLC.line,border:BD});
+  const pMinor0 = subDay
     ? (pd => pd.today ? sMinorTR : (pd.edge ? sMinorDR : sMinorR))
     : (pd => pd.today ? sMinorT : (pd.edge ? sMinorD : (pd.weekend ? sMinorW : sMinor)));
-  const pCell  = pd => pd.today ? sCellT  : (pd.edge ? sCellD  : (pd.weekend ? sCellW  : sCell));
-  const pGrpE  = pd => pd.edge ? sGrpEmptyD : sGrpEmpty;
+  const pMinor = pd => pd.gap ? sGapMinor : pMinor0(pd);
+  const pCell  = pd => pd.gap ? sGapCell
+                     : (pd.today ? sCellT  : (pd.edge ? sCellD  : (pd.weekend ? sCellW  : sCell)));
+  const pGrpE  = pd => pd.gap ? sGapCell : (pd.edge ? sGrpEmptyD : sGrpEmpty);
   const sc=book.sheet(SH.sched,{tab:XLC.band,zoom:85,freeze:[9,GC],
                                 filter:'A8:'+XLSX.colName(10)+schedLast,printTitles:'$7:$8'});
   sc.col(1,1,4.5).col(2,2,44).col(3,3,12).col(4,4,19).col(5,5,18).col(6,6,12)
     .col(7,7,12).col(8,8,12).col(9,9,6.5).col(10,10,7).col(GC,lastCol,gw);
+  /* a break column is narrow — it stands for time, not for work */
+  /* a break column is narrow on every sheet that shares this timeline */
+  const narrowGaps=(sheet,first)=>periods.forEach((pd,i)=>{ if(pd.gap) sheet.col(first+i,first+i,4.6); });
+  narrowGaps(sc,GC);
   navBand(sc,'SCHEDULE',lastCol);
   titleBlock(sc,S.name,'Programme Gantt  ·  '+fmtY(lo)+'  →  '+fmtY(hi)+'  ·  '+
-    periods.length+' × '+scaleLab+' columns'+(useFilter?'  ·  filtered':''),lastCol);
+    periods.length+' × '+scaleLab+' columns'+(useFilter?'  ·  filtered':'')+
+    (skipped?('  ·  '+periods.filter(p=>p.gap).map(p=>p.full).join('  ·  ')):''),lastCol);
   {
     let tot=0,don=0; tasksIn.forEach(t=>{const d=dur(t);tot+=d;don+=d*pct(t)/100;});
     const kpis=[['Tasks',tasksIn.length,0],['Complete',(tot?Math.round(don/tot*100):0)+'%',0],
@@ -9988,19 +10604,27 @@ async function buildWorkbook(cfg){
     const row=9+mi;
     sc.h(row,17);
     if(m.kind==='g'){
-      const g=m.g, span=(function(){
-        const list=tasksOf(g.id).filter(passes);
+      const g=m.g;
+      /* Revision AB — a parent summarises everything under it, its subgroups
+         included.  Before this a work front whose tasks all sat in subgroups
+         exported as an empty header row with no dates, no per cent and no bar. */
+      const sub = m.sub, dep = m.d||0;
+      const T2 = (kidsOf(g).length && typeof tasksUnder==='function') ? tasksUnder(g.id) : tasksOf(g.id);
+      const span=(function(){
+        const list=T2.filter(passes);
         if(!list.length) return null;
         let tot=0,don=0; list.forEach(t=>{const d=dur(t);tot+=d;don+=d*pct(t)/100;});
         return {s:Math.min(...list.map(t=>t.s)),e:Math.max(...list.map(t=>t.e)),pct:tot?don/tot:0};
       })();
-      sc.blank(row,1,sGrpCel);
-      sc.set(row,2,g.name,sGrpTxt);
-      sc.set(row,3,(catOf(g.categoryId)||{}).name||'',sGrpCel);
-      sc.blank(row,4,sGrpCel); sc.blank(row,5,sGrpCel); sc.blank(row,6,sGrpCel);
+      const cTxt = sub?sSubTxt:sGrpTxt, cCel = sub?sSubCel:sGrpCel,
+            cDt  = sub?sSubDt :sGrpDt , cPct = sub?sSubPct:sGrpPct;
+      sc.blank(row,1,cCel);
+      sc.set(row,2,(dep?'    '.repeat(dep):'')+g.name,cTxt);
+      sc.set(row,3,(catOf(g.categoryId)||{}).name||'',cCel);
+      sc.blank(row,4,cCel); sc.blank(row,5,cCel); sc.blank(row,6,cCel);
       if(span){
-        sc.set(row,7,serial(span.s),sGrpDt,'d'); sc.set(row,8,serial(Math.ceil(span.e)-1),sGrpDt,'d');
-        sc.set(row,9,+(span.e-span.s).toFixed(2),sGrpCel); sc.set(row,10,span.pct,sGrpPct,'n');
+        sc.set(row,7,serial(span.s),cDt,'d'); sc.set(row,8,serial(Math.ceil(span.e)-1),cDt,'d');
+        sc.set(row,9,+(span.e-span.s).toFixed(2),cCel); sc.set(row,10,span.pct,cPct,'n');
         const doneTo=span.s+(span.e-span.s)*span.pct;
         periods.forEach((pd,i)=>{
           const c=GC+i;
@@ -10009,9 +10633,10 @@ async function buildWorkbook(cfg){
           sc.blank(row,c,sBar(span.pct>0&&oe<=doneTo?hex(S.view.colors.done):hex(S.view.colors.group),true));
         });
       }else{
-        for(let c=7;c<=10;c++) sc.blank(row,c,sGrpCel);
+        for(let c=7;c<=10;c++) sc.blank(row,c,cCel);
         periods.forEach((pd,i)=>sc.blank(row,GC+i,pGrpE(pd)));
       }
+      if(dep) sc.lvl(row,Math.min(dep,7));   /* Excel's own outline, level by level */
       return;
     }
     if(m.kind==='l'){
@@ -10027,7 +10652,7 @@ async function buildWorkbook(cfg){
       sc.set(row,8,serial(x.e),sLblDt,'d');
       sc.set(row,9,fmtDur(x.e-x.s),sLbl);
       sc.set(row,10,'—',sLblM);
-      sc.lvl(row,1);
+      sc.lvl(row,Math.min((m.d||0)+1,7));
       let j=0;
       while(j<periods.length){
         if(!ovl(periods[j],x.s,x.e)){ sc.blank(row,GC+j,pCell(periods[j])); j++; continue; }
@@ -10055,7 +10680,7 @@ async function buildWorkbook(cfg){
     sc.set(row,8,endV,t.milestone?sDate:(isLate(t)?(t.allDay?sLate:sLateT):(t.allDay?sDate:sDateT)),'d');
     sc.set(row,9,t.milestone?0:+dur(t).toFixed(2),sNum);
     sc.set(row,10,pct(t)/100,sPct,'n');
-    sc.lvl(row,1);
+    sc.lvl(row,Math.min((m.d||0)+1,7));
 
     const paint=barPaint(t);
     const base = hex(paint.base), doneCol = hex(paint.done);
@@ -10104,7 +10729,11 @@ async function buildWorkbook(cfg){
     ac.set(row,1,i+1,sIdx);
     ac.set(row,2,(t.milestone?'◆  ':'')+t.name,sLink);
     ac.link(row,2,XLSX.linkTo(SH.sched,'B'+schedRow.get(t.id)),'Show on the Schedule');
-    ac.set(row,3,(G(t.groupId)||{}).name||'',sMuted);
+    ac.set(row,3,(function(){
+      const g=G(t.groupId); if(!g) return '';
+      /* Revision AD — the full path, however many levels deep it goes */
+      return (typeof groupPath==='function') ? groupPath(g,'  \u203a  ') : g.name;
+    })(),sMuted);
     const cat=catOf(t.categoryId);
     ac.set(row,4,cat?cat.name:'—',cat?sCat(hex(cat.color)):sMuted);
     ac.set(row,5,personName(t.ownerId)||'Unassigned',t.ownerId?sTxt:sMuted);
@@ -10182,6 +10811,7 @@ async function buildWorkbook(cfg){
   const tl=book.sheet(SH.ttl,{tab:'0F8A4A',zoom:85,freeze:[7,TG],printTitles:'$5:$6'});
   const tlLast=TG+periods.length-1;
   tl.col(1,1,34).col(2,2,19).col(3,3,12).col(4,4,12).col(5,5,7).col(TG,tlLast,gw);
+  narrowGaps(tl,TG);
   navBand(tl,'TEAM TIMELINE',tlLast);
   titleBlock(tl,'Team Timeline','One lane per team, with its assigned work beneath  ·  '+fmtY(lo)+'  →  '+fmtY(hi),tlLast);
   tl.h(5,17); tl.h(6,minorHt);
@@ -10290,6 +10920,7 @@ async function buildWorkbook(cfg){
   {
     const ck=book.sheet(SH.clock,{tab:'7A5AF5',zoom:85,freeze:[0,CK],printTitles:'$5:$6'});
     ck.col(1,1,30).col(2,2,9).col(3,3,15).col(4,4,15).col(5,5,9).col(CK,ckLast,gw);
+    narrowGaps(ck,CK);
     navBand(ck,'AGAINST THE CLOCK',ckLast);
     titleBlock(ck,'Against the Clock',
       'Every team’s activities on one line  ·  '+fmtY(lo)+'  →  '+fmtY(hi)+'  ·  '+
@@ -10349,6 +10980,7 @@ async function buildWorkbook(cfg){
     const sp=book.sheet(SH.shift,{tab:'8A242F',zoom:85,freeze:[0,CK],printTitles:'$5:$6'});
     const spLast=ckLast;
     sp.col(1,1,30).col(2,2,9).col(3,3,15).col(4,4,15).col(5,5,9).col(CK,spLast,gw);
+    narrowGaps(sp,CK);
     navBand(sp,'SHIFT PLAN',spLast);
     titleBlock(sp,'Shift Plan',
       'When each team is really on site  ·  a break of more than an hour splits the bar  ·  '+
@@ -10512,36 +11144,44 @@ async function buildWorkbook(cfg){
   /* Revision V — two more columns: where the work happens, and when it was
      actually finished.  Both go on the flat Data sheet, where a pivot table
      can reach them, rather than crowding the Gantt.                         */
-  const dc=book.sheet(SH.data,{tab:XLC.ink3,zoom:95,freeze:[5,1],filter:'A4:U'+(3+tasksIn.length)});
-  [[1,26],[2,24],[3,40],[4,13],[5,19],[6,17],[7,18],[8,26],[9,12],[10,12],[11,12],[12,13],[13,7],[14,9],[15,10],[16,10],
-   [17,10],[18,32],[19,8],[20,9],[21,40]].forEach(c=>dc.col(c[0],c[0],c[1]));
-  navBand(dc,'TASK DATA',21);
-  titleBlock(dc,'Task Data','One row per task — ready for pivot tables and filtering',21);
+  const dc=book.sheet(SH.data,{tab:XLC.ink3,zoom:95,freeze:[5,1],filter:'A4:V'+(3+tasksIn.length)});
+  [[1,26],[2,24],[3,22],[4,40],[5,13],[6,19],[7,17],[8,18],[9,26],[10,12],[11,12],[12,12],[13,13],[14,7],[15,9],[16,10],[17,10],
+   [18,10],[19,32],[20,8],[21,9],[22,40]].forEach(c=>dc.col(c[0],c[0],c[1]));
+  navBand(dc,'TASK DATA',22);
+  titleBlock(dc,'Task Data','One row per task — ready for pivot tables and filtering',22);
   dc.h(4,26);
-  ['Task ID','Group','Task','Category','Responsible','Role','Team','Work location','Status','Start','Finish','Completed',
+  /* Revision AB — the work front and the subgroup are separate columns, so a
+     pivot can group by either one without anybody unpicking a joined string */
+  ['Task ID','Work front','Subgroup path','Task','Category','Responsible','Role','Team','Work location','Status','Start','Finish','Completed',
    'Duration (d)','Progress','Sub-tasks done','Sub-tasks total','Milestone','Predecessors','Float (d)','Critical','Notes']
-   .forEach((h,i)=>dc.set(4,i+1,h,i>=9?sHdrC:sHdr));
+   .forEach((h,i)=>dc.set(4,i+1,h,i>=10?sHdrC:sHdr));
+  /* Revision AD — the work front is the top of the tree and the path is
+     everything below it, so a pivot can group at whichever level it wants */
+  const chainOf=t=>{ const g=G(t.groupId);
+                     return g ? ((typeof ancestry==='function')?ancestry(g):[g]) : []; };
+  const frontOf=t=>{ const c=chainOf(t); return c.length?c[0].name:''; };
+  const subOf2 =t=>{ const c=chainOf(t); return c.length>1?c.slice(1).map(x=>x.name).join(' \u203a '):''; };
   tasksIn.forEach((t,i)=>{
     const row=5+i; dc.h(row,16);
     const cat=catOf(t.categoryId);
-    const v=[t.id,(G(t.groupId)||{}).name||'',t.name,cat?cat.name:'',personName(t.ownerId)||'',
+    const v=[t.id,frontOf(t),subOf2(t),t.name,cat?cat.name:'',personName(t.ownerId)||'',
              (P(t.ownerId)||{}).role||'',teamNames(t)||'',
              (typeof locPath==='function'?locPath(t.locationId):'')||'',
              STATUS[t.status||'not-started'].lab];
-    v.forEach((x,j)=>dc.set(row,j+1,x,j===2?sTxt:sMuted));
-    dc.set(row,10,serial(t.s),t.allDay?sDate:sDateT,'d');
-    dc.set(row,11,t.allDay?serial(endShown(t)):serial(t.e),t.allDay?sDate:sDateT,'d');
-    if(t.doneAt!=null && isFinite(t.doneAt)) dc.set(row,12,serial(t.doneAt),sDate,'d');
-    else dc.set(row,12,'',sMuted);
-    dc.set(row,13,t.milestone?0:+dur(t).toFixed(2),sNum);
-    dc.set(row,14,pct(t)/100,sPct,'n');
-    dc.set(row,15,subDone(t),sNum);
-    dc.set(row,16,subs(t).length,sNum);
-    dc.set(row,17,t.milestone?'Yes':'No',sNum);
-    dc.set(row,18,(t.deps||[]).map(d=>(T(d)||{}).name||d).join(' | '),sMuted);
-    dc.set(row,19,+Math.max(0,t._slack||0).toFixed(2),sNum);
-    dc.set(row,20,t.critical?'Yes':'No',t.critical?st({font:{b:1,sz:10,color:XLC.crit},align:{h:'center',v:'center'},border:BOT}):sNum);
-    dc.set(row,21,t.notes||'',sNote);
+    v.forEach((x,j)=>dc.set(row,j+1,x,j===3?sTxt:sMuted));
+    dc.set(row,11,serial(t.s),t.allDay?sDate:sDateT,'d');
+    dc.set(row,12,t.allDay?serial(endShown(t)):serial(t.e),t.allDay?sDate:sDateT,'d');
+    if(t.doneAt!=null && isFinite(t.doneAt)) dc.set(row,13,serial(t.doneAt),sDate,'d');
+    else dc.set(row,13,'',sMuted);
+    dc.set(row,14,t.milestone?0:+dur(t).toFixed(2),sNum);
+    dc.set(row,15,pct(t)/100,sPct,'n');
+    dc.set(row,16,subDone(t),sNum);
+    dc.set(row,17,subs(t).length,sNum);
+    dc.set(row,18,t.milestone?'Yes':'No',sNum);
+    dc.set(row,19,(t.deps||[]).map(d=>(T(d)||{}).name||d).join(' | '),sMuted);
+    dc.set(row,20,+Math.max(0,t._slack||0).toFixed(2),sNum);
+    dc.set(row,21,t.critical?'Yes':'No',t.critical?st({font:{b:1,sz:10,color:XLC.crit},align:{h:'center',v:'center'},border:BOT}):sNum);
+    dc.set(row,22,t.notes||'',sNote);
   });
 
   if(cfg.focus) book.active(cfg.focus);
@@ -10555,7 +11195,12 @@ function openXl(){
   $('#xlBy').value=d.preparedBy||'';
   $('#xlRef').value=d.ref||'';
   $('#xlScale').value=d.scale||'auto';
-  $('#xlFilters').checked=!!d.applyFilters;
+  /* Revision AC — if the screen is filtered, the export follows the screen.
+     Exporting the whole programme while the user is looking at one closure is
+     the surprise this dialog kept springing, and nobody reads a tick box they
+     did not know they needed. */
+  $('#xlFilters').checked = (d.applyFilters!=null) ? !!d.applyFilters : anyFilter();
+  if(d.applyFilters==null && anyFilter()) toast('Export follows the filters on screen — untick Scope for the whole programme');
   updXlPreview();
   openScrim('#xlScrim');
 }
@@ -10566,13 +11211,16 @@ function updXlPreview(){
   if(!list.length){ el2.textContent='Nothing matches the current filters.'; return; }
   const lo=Math.floor(Math.min(...list.map(t=>t.s))), hi=Math.ceil(Math.max(...list.map(t=>t.e)))-1;
   const want=$('#xlScale').value;
-  const sc=xlScale(lo,hi,want);
-  const n=xlPeriods(lo,hi,sc).length;
+  const cl=xlClusters(list,lo,hi), eff=xlClusterDays(cl);
+  const sc=xlScale(lo,hi,want,eff);
+  const pds=xlPeriods(lo,hi,sc,XLSUB[sc]?cl:null);
+  const n=pds.length;
+  const gaps=pds.filter(p=>p.gap);
   const lab=XLSUBLAB[sc]||sc;
   let extra='';
   if(want!=='auto' && sc!==want)
     extra=' — <b style="color:var(--warn)">'+esc(XLSUBLAB[want]||want)+' columns would need '+
-          Math.round((hi-lo+1)/(XLSUB[want]||1))+' of them, so the export stepped up to '+esc(lab)+
+          Math.round(eff/(XLSUB[want]||1))+' of them, so the export stepped up to '+esc(lab)+
           '. Filter to one closure day for the finer scale.</b>';
   else if(XLSUB[sc])
     extra=' — the date sits on the band above each day and again in the box at every midnight'+
@@ -10584,8 +11232,15 @@ function updXlPreview(){
     extra=' — each column covers a whole '+(sc==='week'?'week':'month')+
           ', so the dates step '+(sc==='week'?'seven days':'a month')+
           ' at a time — <b>choose “one column per date” to walk the dates one by one</b>';
+  /* say plainly what was skipped, so a narrow column is never a surprise */
+  let gapNote='';
+  if(gaps.length){
+    const d2=gaps.reduce((a,g)=>a+Math.round(g.x-g.s),0);
+    gapNote=' <b>'+d2+' quiet day'+(d2===1?'':'s')+' skipped</b> in '+gaps.length+
+            ' marked break'+(gaps.length===1?'':'s')+', so the work keeps its '+esc(lab)+' columns —';
+  }
   el2.innerHTML=esc(list.length+' tasks  ·  '+fmtY(lo)+' → '+fmtY(hi)+'  ·  ')+
-    '<b>'+n+' × '+esc(lab)+' columns</b> on the Gantt'+extra;
+    '<b>'+n+' × '+esc(lab)+' columns</b> on the Gantt'+(gapNote?(' ·'+gapNote):'')+extra;
 }
 $('#xlScale').onchange=updXlPreview;
 $('#xlFilters').onchange=updXlPreview;
@@ -11696,8 +12351,11 @@ function stageOf(t){
   const g=(typeof G==='function')?G(t.groupId):null;   /* fall back to the group's */
   return (g && g.categoryId) || null;
 }
-function stageStats(id,name,color,tasks){
-  const list=tasks.filter(t=>(stageOf(t)||null)===(id||null));
+function stageStats(id,name,color,tasks,all){
+  /* Revision AE — "all" means take the list as given, which is what the Live
+     screen's All-closures chip needs; without it an empty id was read as
+     "only the tasks with no stage at all" and the board came out blank. */
+  const list = all ? tasks.slice() : tasks.filter(t=>(stageOf(t)||null)===(id||null));
   if(!list.length) return null;
   let tot=0,don=0;
   list.forEach(t=>{ const d=Math.max(dur(t),1e-6); tot+=d; don+=d*pct(t)/100; });
@@ -14464,7 +15122,7 @@ function applyReadOnly(meta){
   }
   /* the revision line explains where the copy came from */
   const ab=$('#bAbout');
-  if(ab) ab.textContent='Revision '+APP.rev+' · view-only copy';
+  if(ab) ab.textContent='Rev '+APP.rev+' · view-only copy';
 
   /* every editing modal opens as plain reading */
   RO_MODALS.forEach(id=>{ const m=$(id); if(m) roLockScrim(m); });
@@ -15036,8 +15694,11 @@ function renderMapList(){
     mi.appendChild(el('b',null,m.name));
     mi.appendChild(el('span',null,(m.els||[]).length+' item'+((m.els||[]).length===1?'':'s')+(m.bg?' · picture':'')));
     it.appendChild(th); it.appendChild(mi);
+    /* Revision AF — a map can be put on the Live screen, and the list says so */
+    if(watchHas('m',m.id)){ it.classList.add('wch'); mi.appendChild(watchPip('m',m.id)); }
     it.onclick=()=>{ S._map=m.id; MAP.sel=[]; MAP.draft=null; renderMaps(); mapFit(); };
     it.ondblclick=()=>mapRename(m.id);
+    it.oncontextmenu=e=>{ e.preventDefault(); openMapMenu(e.clientX,e.clientY,m.id); };
     box.appendChild(it);
   });
 }
@@ -15564,6 +16225,35 @@ function mapBind(){
   $('#msNext').onclick=()=>mapShowStep(1);
 
   window.addEventListener('resize',()=>{ if(S._view==='maps') renderMapCanvas(); });
+
+  /* Revision AF — right-click the map itself to put it on the Live screen */
+  svg.addEventListener('contextmenu',e=>{
+    const m=mapCur(); if(!m) return;
+    e.preventDefault();
+    openMapMenu(e.clientX,e.clientY,m.id);
+  });
+}
+
+/* ══════════ Revision AF · the map's own right-click menu ══════════
+   The Schedule has had "Add to the Live screen" on every group and activity
+   since Rev AA.  A map deserves the same line: the site picture is often the
+   one thing a room actually wants on the wall, and until now there was no way
+   to say so.  Watching is not editing, so a read-only viewer gets this too. */
+function openMapMenu(x,y,mid){
+  const m=MP(mid); if(!m) return;
+  const menu=$('#colMenu'); menu.innerHTML='';
+  menu.appendChild(el('div','mh','Map · '+m.name));
+  watchMenuItem(menu,'m',mid);
+  menu.appendChild(el('div','msep'));
+  menuItem(menu,'Play it full screen',()=>{
+    if(S._map!==mid){ S._map=mid; MAP.sel=[]; MAP.draft=null; renderMaps(); }
+    mapShowOpen();
+  });
+  if(!RO_ON){
+    menuItem(menu,'Rename…',()=>mapRename(mid));
+    menuItem(menu,'Duplicate it',()=>mapDuplicate(mid));
+  }
+  placeMenu(menu,x,y);
 }
 function mapDeleteSel(){
   if(RO_ON) return;
@@ -16652,6 +17342,21 @@ function waBuild(){
   const sid=waStageId();
   const stOf = t => (typeof stageOf==='function') ? stageOf(t) : (t.categoryId||null);
   const struck = S.tasks.filter(t=>t.struck && (!sid || stOf(t)===sid));
+
+  /* Revision AE — whatever has been put on the Live screen is what the room is
+     actually watching, so the four-hourly card carries the same list, with the
+     same reading: booked against planned, and how far apart the two are. */
+  const watch=(typeof watchItems==='function' ? watchItems() : []).map(wi=>{
+    const own=watchTasksOf(wi).filter(t=>!taskOff(t) && (!sid || stOf(t)===sid));
+    if(!own.length) return null;
+    let a=0,b2=0,pl=0;
+    own.forEach(t=>{ const d=Math.max(dur(t),1e-6); a+=d; b2+=d*pct(t)/100; pl+=d*clamp((now-t.s)/d,0,1); });
+    const p1=a?b2/a*100:0, p2=a?pl/a*100:0;
+    return {name:wi.name, pct:Math.round(p1), plan:Math.round(p2), d:Math.round(p1-p2),
+            n:own.length, done:own.filter(t=>t.status==='done').length,
+            late:own.filter(t=>t.status!=='done' && t.e<now).length,
+            color:(wi.kind==='g'&&wi.group)?wi.group.color:null};
+  }).filter(Boolean);
   const byLoc = new Map();
   running.forEach(t=>{ const k=t.locationId||'__'; byLoc.set(k,(byLoc.get(k)||0)+1); });
 
@@ -16665,7 +17370,7 @@ function waBuild(){
     soon4, after4, notBegun, lateRunning, lateNotStarted, behind,
     horizonH: Math.round(WAHORIZON*24), to4,
     onSchedule: behind===0 && blocked.length===0,
-    ms, msDone, nextMs, byLoc,
+    ms, msDone, nextMs, byLoc, watch,
     counts:{total:live.length, done:live.filter(t=>t.status==='done').length,
             open:live.filter(t=>t.status!=='done').length},
     fields:(cfg.fields||[]).filter(f=>String(f.value||'').trim()),
@@ -16812,9 +17517,14 @@ function waCard(M){
     if(rows.length>max) h+=32;
     return h+18;
   };
+  /* Revision AE — the watch list gets its own band, so the card has to be
+     tall enough for it before anything is drawn */
+  const MAX_WATCH = 6;
+  const WATCH = (M.watch||[]).slice(0,MAX_WATCH);
+  const watchH = WATCH.length ? (76 + WATCH.length*100 + ((M.watch.length>MAX_WATCH)?34:0) + 20) : 0;
   const listH = measure(ROWS_RISK,MAX_RISK)+measure(ROWS_NEXT,MAX_NEXT)+measure(ROWS_RUN,MAX_RUN);
   /* everything above the lists is about 760px; the footer takes 84 */
-  const H = clamp(Math.ceil(790+listH+96), 1350, 2100);
+  const H = clamp(Math.ceil(790+watchH+listH+96), 1350, 2400);
   cv.height=H;
   const ink='#0E1726', ink2='#41526B', ink3='#7A8AA3', line='#DCE3EC';
   c.fillStyle='#FFFFFF'; c.fillRect(0,0,W,H);
@@ -16886,6 +17596,50 @@ function waCard(M){
   c.fillStyle=sok?'#16603A':'#8E241C'; c.font=F(23,650);
   wrapText(c,sched,78,y+54,W-156,30,2);
   y+=bandH+26;
+
+  /* Revision AE — what the Live screen is watching, each with its own bar,
+     the plan marked on it, and the gap said in words */
+  if(WATCH.length){
+    y+=14;
+    c.fillStyle=ink; c.font=F(27,800);
+    c.fillText('What we are watching',56,y); y+=14;
+    c.strokeStyle=line; c.lineWidth=1.5;
+    c.beginPath(); c.moveTo(56,y); c.lineTo(W-56,y); c.stroke();
+    y+=34;
+    WATCH.forEach(wi=>{
+      const verdict = Math.abs(wi.d)<=2 ? 'on plan'
+                    : (wi.d>0 ? ('\u25B2 '+wi.d+' pts ahead') : ('\u25BC '+Math.abs(wi.d)+' pts behind'));
+      const vcol = Math.abs(wi.d)<=2 ? ink3 : (wi.d>0 ? WARAG.GREEN : WARAG.RED);
+      /* the name, then the verdict hard right on the same line */
+      c.font=F(21,700);
+      const vw=c.measureText(verdict).width;
+      c.fillStyle=ink; c.font=F(24,700);
+      c.fillText(clipTo(c,wi.name,W-112-vw-90),56,y);
+      c.fillStyle=vcol; c.font=F(21,700);
+      c.textAlign='right'; c.fillText(verdict,W-56,y); c.textAlign='left';
+      y+=20;
+      /* the bar, with the plan's position on it */
+      c.fillStyle='#EDF1F6'; roundRect(c,56,y,W-112,20,10); c.fill();
+      const fw=(W-112)*clamp(wi.pct/100,0,1);
+      if(fw>=2){
+        c.fillStyle = wi.pct>=100 ? WARAG.GREEN : (wi.late ? WARAG.RED : (wi.d<-2 ? WARAG.AMBER : rc));
+        roundRect(c,56,y,fw,20,Math.min(10,fw/2)); c.fill();
+      }
+      const pxw=56+(W-112)*clamp(wi.plan/100,0,1);
+      c.strokeStyle=ink; c.lineWidth=2.5;
+      c.beginPath(); c.moveTo(pxw,y-5); c.lineTo(pxw,y+25); c.stroke();
+      y+=46;
+      c.fillStyle=ink3; c.font=F(19,600);
+      c.fillText(wi.pct+'% booked  ·  plan '+wi.plan+'%  ·  '+wi.done+' of '+wi.n+' done'+
+                 (wi.late?('  ·  '+wi.late+' overdue'):''),56,y);
+      y+=34;
+    });
+    if(M.watch.length>WATCH.length){
+      c.fillStyle=ink3; c.font=F(21,600);
+      c.fillText('+ '+(M.watch.length-WATCH.length)+' more being watched',56,y); y+=34;
+    }
+    y+=20;
+  }
 
   /* sections */
   const section=(title,rows,col,max)=>{
@@ -17223,8 +17977,54 @@ function waBind(){
    ══════════════════════════════════════════════════════════════ */
 const ONLINE = {
   on:false, cfg:null, url:'', tag:'', savedAt:'', fetchedAt:null,
-  checkedAt:null, timer:0, pending:false, tries:0, bar:null
+  checkedAt:null, timer:0, pending:false, tries:0, bar:null,
+  /* Revision AF.online — a wall screen has nobody standing beside it to press
+     Reload, so while the Live tab is up a new publish is taken automatically */
+  auto:true
 };
+
+/* ══════════ Revision AF.online · how often this page looks again ══════════
+   The interval used to be whatever config.json said, decided once by whoever
+   set the repository up.  During a closure that is the wrong place for it: the
+   room wants ten seconds when the work is moving and five minutes when it is
+   not.  So it is a box on the Live bar, it sticks to that screen, and it beats
+   the config file — which is only ever a starting value now.               */
+const REFKEY='ganttStudio.refreshSecs';
+const REF_MIN=15, REF_MAX=3600, REF_DEF=300;
+function refStored(){
+  let v=0; try{ v=+localStorage.getItem(REFKEY)||0; }catch(e){}
+  return (v>=REF_MIN && v<=REF_MAX) ? v : 0;
+}
+function refSecs(){
+  if(ONLINE.cfg && ONLINE.cfg.refreshSeconds) return ONLINE.cfg.refreshSeconds;
+  return refStored() || REF_DEF;
+}
+function refSet(secs){
+  const v=Math.max(REF_MIN, Math.min(REF_MAX, Math.round(+secs||0) || REF_DEF));
+  try{ localStorage.setItem(REFKEY, String(v)); }catch(e){}
+  if(ONLINE.cfg) ONLINE.cfg.refreshSeconds=v;
+  if(ONLINE.on) onlineRepoll();
+  return v;
+}
+/* "every 45 s" and "every 5 minutes" are both worth saying properly */
+function refWord(v){
+  v=v||refSecs();
+  if(v<120) return 'every '+v+' s';
+  const m=Math.round(v/60);
+  return 'every '+m+' minute'+(m===1?'':'s');
+}
+function onlineRepoll(){
+  clearInterval(ONLINE.timer);
+  ONLINE.timer=setInterval(onlineTick, refSecs()*1000);
+  onlineBarPaint();
+}
+async function onlineTick(){
+  if(ONLINE.pending) return;                 /* already offering an update */
+  if(document.hidden) return;                /* a background tab can wait */
+  if(!(await onlineCheck())) return;
+  if(ONLINE.auto && S._view==='live') onlineApplyUpdate();
+  else onlineOfferUpdate();
+}
 
 /* ---------- is this a hosted copy at all? ----------
    A file:// copy opened by double-clicking stays exactly as it was — the
@@ -17262,7 +18062,11 @@ async function onlineConfig(){
     }
   }catch(e){ /* no config file is a perfectly normal set-up */ }
   if(over) cfg.dataUrl = over;
-  cfg.refreshSeconds = Math.max(30, Math.min(3600, +cfg.refreshSeconds || 300));
+  cfg.refreshSeconds = Math.max(REF_MIN, Math.min(REF_MAX, +cfg.refreshSeconds || REF_DEF));
+  /* whatever this screen was last set to wins over the file — the person at the
+     wall knows better than the repository what this hour needs */
+  const mine = refStored();
+  if(mine) cfg.refreshSeconds = mine;
   return cfg;
 }
 
@@ -17384,8 +18188,10 @@ function onlineBarPaint(){
   }
   if(c){
     c.textContent = 'checked ' + ago(ONLINE.checkedAt);
-    c.title = 'This page checks for a new version every ' +
-              Math.round(ONLINE.cfg.refreshSeconds / 60) + ' minutes';
+    c.title = 'This page checks for a new version ' + refWord() +
+              (ONLINE.auto ? ' \u2014 and while the Live tab is up it takes a new one by itself'
+                           : '') +
+              '.  Change it in the refresh box on the Live bar.';
   }
 }
 function onlineOfferUpdate(){
@@ -17407,7 +18213,9 @@ async function onlineApplyUpdate(){
     if(btn){ btn.style.display = 'none'; btn.disabled = false; btn.textContent = 'Reload'; }
     ONLINE.bar.classList.remove('stale');
     onlineBarPaint();
-    toast('Updated to the published version','ok');
+    ONLINE.bar.classList.add('fresh');
+    setTimeout(()=>{ if(ONLINE.bar) ONLINE.bar.classList.remove('fresh'); },2600);
+    if(!(ONLINE.auto && S._view==='live')) toast('Updated to the published version','ok');
   }catch(err){
     if(btn){ btn.disabled = false; btn.textContent = 'Reload'; }
     toast('Could not load the update — ' + err.message, 'err');
@@ -17497,12 +18305,8 @@ function onlineVeil(show, msg){
 function onlineReady(){
   onlineBar();
   onlineBarPaint();
-  clearInterval(ONLINE.timer);
-  ONLINE.timer = setInterval(async () => {
-    if(ONLINE.pending) return;                 /* already offering an update */
-    if(document.hidden) return;                /* a background tab can wait */
-    if(await onlineCheck()) onlineOfferUpdate();
-  }, ONLINE.cfg.refreshSeconds * 1000);
+  onlineRepoll();
+  if(typeof liveRefSync==='function') liveRefSync();
   /* a tab that has been asleep for a while checks the moment it is looked at */
   document.addEventListener('visibilitychange', async () => {
     if(document.hidden || ONLINE.pending) return;
@@ -17537,7 +18341,7 @@ async function onlineStart(){
     }
     /* the header line is tight; "live" says more here than the revision does */
     const ab = $('#bAbout');
-    if(ab){ ab.textContent = 'Revision ' + APP.rev + (editor ? ' · publishing' : ' · live');
+    if(ab){ ab.textContent = 'Rev ' + APP.rev + (editor ? ' · publishing' : ' · live');
             ab.title = 'Revision, release date and who built this'; }
     const nm = $('#projName');
     if(nm && !editor){ nm.readOnly = true;
@@ -18114,7 +18918,13 @@ function liveWatchSlides(){
     if(!inStage(t) || taskOff(t) || seen.has(t.id)) return;
     seen.add(t.id); all.push(t);
   }));
-  const out=[{kind:'overview', watch:true, title:'What we are watching', list:all, items}];
+  /* Revision AE — the closure answers for itself first: where the whole
+     stage stands, then the gates it is running at, and only then what
+     somebody has picked out to watch.  Each of those is a screen. */
+  const out=liveStageSlides();
+  /* Revision AF — a watch list can now be nothing but maps, and an opener with
+     no activities on it is a slide that says only that it is empty */
+  if(all.length) out.push({kind:'overview', watch:true, title:'What we are watching', list:all, items});
 
   /* then the list itself, in order: a group gets its own screen, and a run of
      activities rides together on one */
@@ -18131,9 +18941,18 @@ function liveWatchSlides(){
   items.forEach(w=>{
     if(w.kind==='t'){ pend.push(w); return; }
     flush();
+    /* Revision AF — a map plays whatever closure is selected: it is a picture of
+       the site, not a slice of the plan, so it is never filtered out */
+    if(w.kind==='m'){
+      if(w.map) out.push({kind:'map', title:w.map.name, map:w.map, list:[]});
+      return;
+    }
     const list=tasksUnder(w.id).filter(t=>inStage(t) && !taskOff(t));
     if(!list.length) return;                       /* nothing here this closure */
-    out.push({kind:liveKind(list), title:gclean(w.group.name), group:w.group, list});
+    /* Revision AB — one shape for every work front: its subgroups against the
+       plan.  A cabinet and a switch are subgroups now, so this is the per
+       cabinet and per switch view, and it says ahead or behind as well. */
+    out.push({kind:'group', title:gclean(w.group.name), group:w.group, list});
   });
   flush();
   return out;
@@ -18145,10 +18964,11 @@ function liveWatchSlides(){
    on the opener. */
 function liveAutoSlides(){
   const list=liveTasks2();
-  const out=[{kind:'overview', title:'Progress by work front', list}];
+  const out=liveStageSlides();
+  out.push({kind:'overview', title:'Progress by work front', list});
   if(!list.length) return out;
 
-  const tops=S.groups.filter(g=>!isSub(g));
+  const tops=topGroups();
   tops.forEach(g=>{
     const ids=new Set(tasksUnder(g.id).map(t=>t.id));
     const own=list.filter(t=>ids.has(t.id));
@@ -18160,6 +18980,30 @@ function liveAutoSlides(){
      about giving the big fronts their own screen */
   return out;
 }
+/* ══════════ Revision AE · the closure's own two screens ══════════
+   The Dashboard tab already answers "where does this closure stand" and
+   "what gates is it running at".  On a wall the same two questions come
+   first, for whichever closure the chips have selected, before anything
+   anybody chose to watch.                                            */
+function liveStage(){
+  const id=liveStageId();
+  const cat=id?S.categories.find(c=>c.id===id):null;
+  const list=liveTasks().filter(t=>!taskOff(t) && (!id || (stageOf(t)||null)===id));
+  if(!list.length) return null;
+  return stageStats(id, cat?cat.name:'Every closure', cat?cat.color:'#0D5CB6', list, !id);
+}
+function liveStageSlides(){
+  const x=liveStage();
+  if(!x) return [];
+  const gates=x.list.filter(t=>t.milestone).sort((a,b)=>a.s-b.s);
+  const out=[{kind:'stage', title:x.name, stage:x, list:x.list}];
+  /* Revision AF — the three charts the Dashboard answers the same questions
+     with, scoped to this closure and sized for the back of the room */
+  out.push({kind:'charts', title:'Progress, work and health', stage:x, list:x.list});
+  if(gates.length) out.push({kind:'gates', title:'Milestone runway', stage:x, list:gates});
+  return out;
+}
+
 function gclean(n){
   return String(n).replace(/\s*\((FSC\s?1|FSC\s?2)\)\s*$/i,'').replace(/^Day Zero - /,'');
 }
@@ -18177,6 +19021,49 @@ function liveStats(list){
     late: list.filter(isLate).length,
     s: Math.min(...list.map(t=>t.s)), e: Math.max(...list.map(t=>t.e))
   };
+}
+
+/* ══════════ Revision AB · ahead or behind, per subgroup ══════════
+   The question the room asks is never "how much of this is done" on its own —
+   it is "is this switch ahead or behind where the plan said it would be by
+   now".  So every row on the Live screen carries the same verdict, worked out
+   the same way: progress actually booked, against progress the plan implies
+   for this moment, in percentage points.                                */
+const LIVE_TOL = 2;                        /* inside two points is "on plan" */
+function liveVerdict(list){
+  const st = liveStats(list);
+  const d  = st.pct - st.plan;
+  const k  = Math.abs(d) <= LIVE_TOL ? 'on' : (d > 0 ? 'ok' : 'bad');
+  return {st, d:Math.round(d), k,
+          lab: k === 'on' ? 'on plan'
+             : (d > 0 ? ('\u25B2 ' + Math.round(d) + ' pts ahead')
+                      : ('\u25BC ' + Math.round(-d) + ' pts behind'))};
+}
+
+/* Revision AD — the rows a watched group breaks into are its DIRECT children,
+   whatever level it sits at.  Watch C801 Activities and the bars are its work
+   fronts; watch Switch Power Rail and they are SW11 to SW14; watch SW11 and
+   they are its own activities.  One rule, every level.                    */
+function liveRowsOf(f){
+  const g = f.group;
+  const out = [];
+  if(g){
+    const ids = new Set(f.list.map(t => t.id));
+    subsOf(g.id).forEach(sg => {
+      /* a child stands for everything beneath it, not just its own tasks */
+      const own = tasksUnder(sg.id).filter(t => ids.has(t.id));
+      if(own.length) out.push({name:gclean(sg.name), color:sg.color || g.color,
+                               list:own, sub:true, group:sg});
+    });
+    const direct = f.list.filter(t => t.groupId === g.id);
+    if(out.length && direct.length)
+      out.push({name:'Other ' + gclean(g.name) + ' work', color:g.color, list:direct, sub:true});
+    if(out.length) return out;
+  }
+  /* nothing below it — then the activities themselves are the unit of progress */
+  return f.list.slice().sort((a, b) => a.s - b.s).map(t => ({
+    name: t.name, color: barPaint(t).base, list: [t], task: t
+  }));
 }
 
 /* a window that crosses midnight has to say which day, or 2300 – 0800 reads
@@ -18200,7 +19087,7 @@ function renderLive(){
     b.type='button'; b.disabled=!n;
     const d=el('i'); d.style.background=c.color; b.appendChild(d);
     b.appendChild(el('span',null,c.name));
-    b.onclick=()=>{ DET.stage=c.id; LIVE.i=0; renderLive(); liveRestart(); };
+    b.onclick=()=>{ DET.stage=c.id; LIVE.i=0; renderLive(); liveRestart(); renderStats(); };
     pick.appendChild(b);
   });
   /* Revision AA — a watch list may well span both closures, so it needs a
@@ -18209,10 +19096,11 @@ function renderLive(){
     const b=el('button','dseg'+(cur?'':' on'));
     b.type='button';
     b.appendChild(el('span',null,'All closures'));
-    b.onclick=()=>{ DET.stage=''; LIVE.i=0; renderLive(); liveRestart(); };
+    b.onclick=()=>{ DET.stage=''; LIVE.i=0; renderLive(); liveRestart(); renderStats(); };
     pick.appendChild(b);
   }
   renderWatchBtn();
+  liveRefSync();
 
   const slides=liveSlides();
   LIVE.n=slides.length;
@@ -18244,6 +19132,12 @@ function renderLive(){
   requestAnimationFrame(()=>card.classList.remove('in'));
   setTimeout(()=>card.classList.remove('in'),30);
 
+  /* Revision AF — the four headline boxes are scoped to whatever this screen is
+     showing, so they are repainted from here: every path that changes the Live
+     screen goes through renderLive, and none of them should be able to leave a
+     stale number in the corner. */
+  if(typeof renderStats==='function') renderStats();
+
   const pb=$('#livePlay');
   if(pb) pb.innerHTML = LIVE.play
     ? '<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>'
@@ -18259,12 +19153,29 @@ function liveBuild(card, sl){
 
   const head=el('div','lhead');
   const l=el('div','lhl');
-  l.appendChild(el('div','lkick',(cat?cat.name:'Every closure')+
-    (sl.kind==='overview'?(watchList().length?('  ·  '+watchList().length+' on the watch list'):'')
-                         :('  ·  '+(watchList().length?'slide ':'work front ')+LIVE.i+' of '+(LIVE.n-1)))));
+  const gateHead = sl.kind==='gates';
+  const kick = sl.kind==='stage' ? 'Closure dashboard'
+             : sl.kind==='charts' ? ((cat?cat.name:'Every closure')+'  ·  progress, where the work stands and schedule health')
+             : sl.kind==='map'   ? 'Site picture'
+             : sl.kind==='gates' ? ((cat?cat.name:'Every closure')+'  ·  the gates it is running at')
+             : (cat?cat.name:'Every closure')+
+               (sl.kind==='overview'?(watchList().length?('  ·  '+watchList().length+' on the watch list'):'')
+                                    :('  ·  '+(watchList().length?'slide ':'work front ')+LIVE.i+' of '+(LIVE.n-1)));
+  l.appendChild(el('div','lkick',kick));
   l.appendChild(el('h2',null,sl.title));
   head.appendChild(l);
-  if(st){
+  if(gateHead){
+    const ms=sl.list, done=ms.filter(t=>t.status==='done').length, lateN=ms.filter(isLate).length;
+    const r=el('div','lhr');
+    const big=el('div','lbig',done+' / '+ms.length);
+    if(done>=ms.length) big.classList.add('ok');
+    else if(lateN) big.classList.add('bad');
+    r.appendChild(big);
+    r.appendChild(el('div','lvar'+(lateN?' bad':(done>=ms.length?' ok':'')),
+      lateN?(lateN+' gate'+(lateN===1?'':'s')+' overdue')
+           :(done>=ms.length?'every gate cleared':'gates cleared')));
+    head.appendChild(r);
+  }else if(st){
     const r=el('div','lhr');
     const big=el('div','lbig',st.pct+'%');
     if(st.pct>=100) big.classList.add('ok');
@@ -18277,6 +19188,15 @@ function liveBuild(card, sl){
   }
   card.appendChild(head);
 
+  /* Revision AF — a map is not a list of activities, so it answers before the
+     "nothing here" check that every other slide is measured by */
+  if(sl.kind==='map'){
+    const bodyM=el('div','lbody');
+    card.appendChild(bodyM);
+    liveMap(bodyM, sl);
+    return;
+  }
+
   if(!sl.list.length){
     card.appendChild(el('div','lempty', watchList().length
       ? 'Nothing on the watch list falls in this closure — try “All closures”.'
@@ -18288,6 +19208,17 @@ function liveBuild(card, sl){
     const body0=el('div','lbody');
     card.appendChild(body0);
     liveFocus(body0, sl.list[0]);
+    return;
+  }
+
+  /* Revision AE — these two carry their own numbers, and the strip below would
+     only say the same things again in smaller type */
+  if(sl.kind==='gates' || sl.kind==='stage' || sl.kind==='charts'){
+    const body1=el('div','lbody');
+    card.appendChild(body1);
+    if(sl.kind==='gates')       liveRunway(body1, sl);
+    else if(sl.kind==='charts') liveCharts(body1, sl);
+    else                        liveStageBoard(body1, sl);
     return;
   }
 
@@ -18306,7 +19237,11 @@ function liveBuild(card, sl){
   const body=el('div','lbody');
   card.appendChild(body);
 
-  if(sl.kind==='overview')      liveOverview(body, sl.list, sl);
+  if(sl.kind==='stage')         liveStageBoard(body, sl);
+  else if(sl.kind==='charts')   liveCharts(body, sl);
+  else if(sl.kind==='gates')    liveRunway(body, sl);
+  else if(sl.kind==='overview') liveOverview(body, sl.list, sl);
+  else if(sl.kind==='group')    liveGroupBars(body, sl);
   else if(sl.kind==='cabinets') liveCabinets(body, sl.list);
   else if(sl.kind==='switches') liveSwitches(body, sl.list);
   else                          liveTaskBars(body, sl.list);
@@ -18320,33 +19255,41 @@ function liveOverview(host, list, sl){
     /* Revision AA — one bar per thing somebody chose to watch, in their order,
        with a watched group's own subgroups underneath it */
     const ids=new Set(list.map(t=>t.id));
+    /* Revision AE — one line per watched thing and no further.  Each of them
+       gets a screen of its own a moment later, broken down properly; repeating
+       that breakdown here only made the opener a wall of bars nobody read. */
     sl.items.forEach(w=>{
       const own=watchTasksOf(w).filter(t=>ids.has(t.id));
       if(!own.length) return;
       const g = w.kind==='g' ? w.group
               : {name:w.name, color:barPaint(w.task).base};
       rows.push({g, list:own, depth:0});
-      if(w.kind==='g' && !isSub(w.group)) subsOf(w.id).forEach(sg=>{
-        const sub=own.filter(t=>t.groupId===sg.id);
-        if(sub.length) rows.push({g:sg, list:sub, depth:1});
-      });
     });
   }else{
-  S.groups.filter(g=>!isSub(g)).forEach(g=>{
-    const own=list.filter(t=>tasksUnder(g.id).some(x=>x.id===t.id));
+  const pool=new Set(list.map(t=>t.id));
+  const branch=(g,d)=>{
+    subsOf(g.id).forEach(sg=>{
+      const own=tasksUnder(sg.id).filter(t=>pool.has(t.id));
+      if(!own.length) return;
+      rows.push({g:sg, list:own, depth:Math.min(d,4)});
+      branch(sg, d+1);
+    });
+  };
+  topGroups().forEach(g=>{
+    const own=tasksUnder(g.id).filter(t=>pool.has(t.id));
     if(!own.length) return;
     rows.push({g, list:own, depth:0});
-    subsOf(g.id).forEach(sg=>{
-      const sub=list.filter(t=>t.groupId===sg.id);
-      if(sub.length) rows.push({g:sg, list:sub, depth:1});
-    });
+    branch(g,1);
   });
   }
-  const wrap=el('div','lbars'+(rows.length>9?' tight':(rows.length<=7?' airy':'')));
-  const shown=rows.slice(0,16);
+  /* Revision AB — the opener now carries every subgroup too, so it needs the
+     room for them; past twenty-two rows a wall screen stops being readable
+     and the per-front slides are where the detail belongs anyway */
+  const wrap=el('div','lbars'+(rows.length>13?' tight':(rows.length<=9?' airy':'')));
+  const shown=rows.slice(0,22);
   shown.forEach((r,i)=>{
     const st=liveStats(r.list);
-    const row=el('div','lvbar'+(r.depth?' sub':''));
+    const row=el('div','lvbar'+(r.depth?(' sub d'+r.depth):''));
     row.style.animationDelay=(40+i*28)+'ms';
     const nm=el('div','zn');
     const dot=el('i'); dot.style.background=r.g.color; nm.appendChild(dot);
@@ -18362,9 +19305,10 @@ function liveOverview(host, list, sl){
     tr.appendChild(tick);
     row.appendChild(tr);
     row.appendChild(el('div','zv',st.pct+'%'));
-    const m=el('div','zm',st.done+'/'+st.n+(st.late?('  ·  '+st.late+' late'):''));
-    if(st.late) m.classList.add('bad');
-    row.appendChild(m);
+    row.appendChild(el('div','zq',st.done+'/'+st.n+(st.late?('  ·  '+st.late+' late'):'')));
+    /* Revision AB — the opener answers the same question as every other row */
+    const v=liveVerdict(r.list);
+    row.appendChild(el('div','zver '+v.k,v.lab));
     wrap.appendChild(row);
   });
   if(rows.length>shown.length) wrap.appendChild(el('div','lmore','+ '+(rows.length-shown.length)+' more'));
@@ -18429,6 +19373,489 @@ function liveFocus(host, t){
     wrap.appendChild(el('div','lfnote',t.notes));
   }
   host.appendChild(wrap);
+}
+
+/* ── Revision AE · the closure at a glance, sized for a wall ─────────
+   The same reading as the Dashboard's stage card — booked against planned,
+   the mix of what is done and what is not, and the one line worth acting on
+   — but at the size a room can read from the back.                    */
+function liveStageBoard(host, sl){
+  const x = sl.stage, C = S.view.colors;
+  const wrap = el('div','lsb');
+
+  /* the bar, with the plan's position marked on it */
+  const barw = el('div','lsbbar');
+  const f = el('div','lsbfill');
+  f.style.width = '0%';
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{ f.style.width = clamp(x.actual,0,100)+'%'; }));
+  f.style.background = x.actual>=99.5 ? C.done
+                     : (x.late.length ? C.blocked : (x.actual>0 ? x.color : C.todo));
+  barw.appendChild(f);
+  const pk = el('div','lsbplan');
+  pk.style.left = clamp(x.planNow,0,100)+'%';
+  pk.title = 'The plan says '+Math.round(x.planNow)+'% by now';
+  barw.appendChild(pk);
+  wrap.appendChild(barw);
+
+  const cap = el('div','lsbcap');
+  cap.appendChild(el('span',null,'Booked '+Math.round(x.actual)+'%'));
+  cap.appendChild(el('b',null,'Plan says '+Math.round(x.planNow)+'% by now'));
+  cap.appendChild(el('s',null,liveWindow(x.lo,x.hi)));
+  wrap.appendChild(cap);
+
+  /* the mix, and what each colour is */
+  const segs = [[x.done,'Done',C.done],[x.prog,'Running',C.prog],
+                [x.block,'Blocked',C.blocked],[x.todo,'To go',C.todo]];
+  const mix = el('div','lsbmix');
+  segs.forEach(sg=>{ if(!sg[0]) return;
+    const b=el('i'); b.style.width=(sg[0]/x.list.length*100)+'%';
+    b.style.background=sg[2]; b.title=sg[1]+' · '+sg[0]; mix.appendChild(b); });
+  wrap.appendChild(mix);
+
+  const tiles = el('div','lsbtiles');
+  const tile=(lab,val,kind)=>{
+    const t=el('div','lsbtile'+(kind?(' '+kind):''));
+    t.appendChild(el('b',null,String(val)));
+    t.appendChild(el('span',null,lab));
+    tiles.appendChild(t);
+  };
+  tile('Complete', x.done, x.done?'ok':'');
+  tile('Running',  x.prog, x.prog?'warn':'');
+  tile('Blocked',  x.block, x.block?'bad':'');
+  tile('To go',    x.todo, '');
+  tile('Overdue',  x.late.length, x.late.length?'bad':'');
+  tile('Gates',    x.gates, '');
+  wrap.appendChild(tiles);
+
+  /* the one line anybody acts on */
+  const nx = el('div','lsbnx');
+  if(x.late.length){
+    const o=x.late.slice().sort((a,b)=>a.e-b.e)[0];
+    nx.classList.add('bad');
+    nx.appendChild(el('b',null,x.late.length+' overdue'));
+    nx.appendChild(el('span',null,'oldest: '+o.name+'  ·  was due '+HHMM(endShown(o))+' '+fmt(o.e)));
+  }else if(!x.open){
+    nx.classList.add('ok');
+    nx.appendChild(el('b',null,'Everything in this closure is closed'));
+    nx.appendChild(el('span',null,'finished '+fmt(Math.ceil(x.hi)-1)));
+  }else if(x.nextGate){
+    nx.appendChild(el('b',null,'Next gate: '+x.nextGate.name));
+    nx.appendChild(el('span',null,liveWindow(x.nextGate.s,x.nextGate.s)+'  ·  '+liveWhen(x.nextGate.s)));
+  }else if(x.next){
+    nx.appendChild(el('b',null,'Next due: '+x.next.name));
+    nx.appendChild(el('span',null,HHMM(x.next.e)+'  ·  '+liveWhen(x.next.e)));
+  }else{
+    nx.appendChild(el('b',null,'Runs '+liveWindow(x.lo,x.hi)));
+  }
+  wrap.appendChild(nx);
+  host.appendChild(wrap);
+}
+/* "in 40 min" reads better on a wall than a timestamp nobody subtracts from */
+function liveWhen(t){
+  const d=(t-NOW)*1440;
+  if(d<-1) return fmtDur((NOW-t))+' ago';
+  if(d<1)  return 'now';
+  if(d<60) return 'in '+Math.round(d)+' min';
+  return 'in '+fmtDur(t-NOW);
+}
+
+/* ══════════ Revision AF · the three charts, at wall size ══════════
+   The Dashboard answers "how far are we", "what state is the work in" and
+   "is the schedule healthy" with a ring, a donut and a gauge.  A room looking
+   at one closure wants the same three answers about that closure, so the same
+   three charts are drawn here from the selected closure's own numbers.
+
+   Each one carries a piece of motion, and each piece means something:
+     · the ring sweeps up to the figure, counts up to it, and keeps a dotted
+       inner ring turning — the turning is what says "this is now";
+     · the donut's wedges sweep out in turn, and stripes march across whatever
+       is in progress, so "running" looks like running;
+     · the gauge's band grows and the needle swings past its mark and settles,
+       the way a real one does.
+   Nothing loops for the sake of looping: a screen that is always moving is a
+   screen nobody reads.                                                     */
+function liveCharts(host, sl){
+  const x=sl.stage, C=S.view.colors;
+  const n=x.list.length;
+  const variance=Math.round(x.actual-x.planNow);
+  const wrap=el('div','lchs');
+  host.appendChild(wrap);
+
+  const card=(title,capHtml)=>{
+    const c=el('div','lchc');
+    const h=el('div','lchh');
+    h.appendChild(el('b',null,title));
+    const lv=el('span','lchlive'); lv.appendChild(el('i')); lv.appendChild(el('span',null,'live'));
+    h.appendChild(lv);
+    c.appendChild(h);
+    const cap=el('div','lchcap'); cap.innerHTML=capHtml; c.appendChild(cap);
+    const b=el('div','lchb'); c.appendChild(b);
+    wrap.appendChild(c);
+    return b;
+  };
+
+  /* ── 1 · programme progress ─────────────────────────────────── */
+  {
+    const b=card('Programme progress',
+      '<b>'+x.done+'</b> of '+n+' activities finished, weighted by duration');
+    const col = x.actual>=99.5 ? C.done : (x.late.length ? C.blocked : (x.color||C.prog));
+    const R=74, CIRC=2*Math.PI*R;
+    const box=el('div','lchring');
+    const svg=sv('svg',{viewBox:'0 0 200 200'});
+    svg.appendChild(sv('circle',{cx:100,cy:100,r:R,class:'lchtrack'}));
+    const arc=sv('circle',{cx:100,cy:100,r:R,class:'lchval',stroke:col,
+      'stroke-dasharray':CIRC.toFixed(1),'stroke-dashoffset':CIRC.toFixed(1)});
+    svg.appendChild(arc);
+    svg.appendChild(sv('circle',{cx:100,cy:100,r:R-17,class:'lchspin',stroke:col}));
+    box.appendChild(svg);
+    const mid=el('div','lchmid');
+    const big=el('div','lchbig','0%');
+    mid.appendChild(big);
+    mid.appendChild(el('div','lchsub', fmtDur(x.tot*x.actual/100)+' of '+fmtDur(x.tot)+' of work'));
+    mid.appendChild(el('div','lchvar '+(variance>=0?'ok':'bad'),
+      variance===0?'on plan':(variance>0?('▲ '+variance+' pts ahead'):('▼ '+Math.abs(variance)+' pts behind'))));
+    box.appendChild(mid);
+    b.appendChild(box);
+    b.appendChild(el('div','lchnote')).innerHTML=
+      'Plan says <b>'+Math.round(x.planNow)+'%</b> by now';
+    setTimeout(()=>{
+      arc.setAttribute('stroke-dashoffset',(CIRC*(1-clamp(x.actual,0,100)/100)).toFixed(1));
+      tween(big,Math.round(x.actual),'%',1200);
+    },150);
+  }
+
+  /* ── 2 · where the work stands ──────────────────────────────── */
+  {
+    const b=card('Where the work stands',
+      'Every activity by status — <b>'+x.open+'</b> still open');
+    const segs=[[x.done,'Complete',C.done,''],[x.prog,'Running',C.prog,'run'],
+                [x.block,'Blocked',C.blocked,''],[x.todo,'Not started',C.todo,'']];
+    const total=Math.max(1,n), DR=72, DC=2*Math.PI*DR;
+    const box=el('div','lchdo');
+    const svg=sv('svg',{viewBox:'0 0 200 200'});
+    const defs=sv('defs'); svg.appendChild(defs);
+    svg.appendChild(sv('circle',{cx:100,cy:100,r:DR,fill:'none',
+      stroke:UI.ringTrack||'#E7ECF3','stroke-width':22}));
+    LIVE.uid=(LIVE.uid||0)+1;
+    let off=0;
+    segs.forEach((sg,i)=>{
+      if(!sg[0]) return;
+      const len=DC*sg[0]/total;
+      const cc=sv('circle',{cx:100,cy:100,r:DR,class:'lchseg',stroke:sg[2],
+        'stroke-dasharray':'0 '+DC.toFixed(1),'stroke-dashoffset':(-off).toFixed(1),
+        transform:'rotate(-90 100 100)'});
+      svg.appendChild(cc);
+      setTimeout(()=>cc.setAttribute('stroke-dasharray',len.toFixed(1)+' '+(DC-len).toFixed(1)),170+i*120);
+      /* the running wedge gets stripes marching across it — the mask is what
+         keeps them on that wedge instead of all the way round the ring */
+      if(sg[3]==='run'){
+        const mid='lchm'+LIVE.uid;
+        const mk=sv('mask',{id:mid});
+        mk.appendChild(sv('circle',{cx:100,cy:100,r:DR,fill:'none',stroke:'#fff','stroke-width':22,
+          'stroke-dasharray':len.toFixed(1)+' '+(DC-len).toFixed(1),'stroke-dashoffset':(-off).toFixed(1),
+          transform:'rotate(-90 100 100)'}));
+        defs.appendChild(mk);
+        const mc=sv('circle',{cx:100,cy:100,r:DR,class:'lchmarch',mask:'url(#'+mid+')'});
+        svg.appendChild(mc);
+      }
+      off+=len;
+    });
+    box.appendChild(svg);
+    b.appendChild(box);
+    const leg=el('div','lchleg');
+    segs.forEach(sg=>{
+      const r=el('div','lchlr'+(sg[3]&&sg[0]?(' '+sg[3]):''));
+      const i2=el('i'); i2.style.background=sg[2]; r.appendChild(i2);
+      r.appendChild(el('span',null,sg[1]));
+      r.appendChild(el('b',null,sg[0]+'  ·  '+Math.round(sg[0]/total*100)+'%'));
+      leg.appendChild(r);
+    });
+    b.appendChild(leg);
+  }
+
+  /* ── 3 · schedule health ────────────────────────────────────── */
+  {
+    const b=card('Schedule health',
+      'Plan says <b>'+Math.round(x.planNow)+'%</b> by now · booked <b>'+Math.round(x.actual)+'%</b>');
+    const score=clamp(50+variance*2.4-x.late.length*6-x.block*4,0,100);
+    const verdict = score>=68?['ok','On track']:(score>=42?['warn','At risk']:['bad','Behind plan']);
+    const vcol    = score>=68?C.done:(score>=42?C.prog:C.blocked);
+    const box=el('div','lchg');
+    const svg=sv('svg',{viewBox:'0 0 200 112'});
+    const arcPath=(a0,a1,r)=>{
+      const p0=[100+r*Math.cos(Math.PI-a0*Math.PI),92-r*Math.sin(Math.PI-a0*Math.PI)];
+      const p1=[100+r*Math.cos(Math.PI-a1*Math.PI),92-r*Math.sin(Math.PI-a1*Math.PI)];
+      return 'M'+p0[0].toFixed(1)+' '+p0[1].toFixed(1)+' A'+r+' '+r+' 0 0 1 '+p1[0].toFixed(1)+' '+p1[1].toFixed(1);
+    };
+    [[0,.42,C.todo],[.42,.68,C.prog],[.68,1,C.done]].forEach(bd=>{
+      svg.appendChild(sv('path',{d:arcPath(bd[0],bd[1],74),fill:'none',stroke:bd[2],
+        'stroke-width':16,opacity:.26}));
+    });
+    /* the whole arc, revealed along its own length — one dasharray, no maths */
+    const gv=sv('path',{d:arcPath(0,1,74),class:'lchgv',stroke:vcol,pathLength:100});
+    gv.setAttribute('stroke-dasharray','0 100');
+    svg.appendChild(gv);
+    const nd=sv('g',{class:'lchneedle'});
+    nd.appendChild(sv('path',{d:'M100 92 L100 24',stroke:UI.ink||GC_.ink,'stroke-width':3.4,'stroke-linecap':'round'}));
+    nd.appendChild(sv('circle',{cx:100,cy:92,r:8,fill:UI.ink||GC_.ink}));
+    nd.setAttribute('transform','rotate(-90 100 92)');
+    svg.appendChild(nd);
+    box.appendChild(svg);
+    b.appendChild(box);
+    b.appendChild(el('div','lchverd '+verdict[0],verdict[1]));
+    const note=el('div','lchnote');
+    note.innerHTML = x.late.length
+      ? '<b>'+x.late.length+'</b> activit'+(x.late.length===1?'y':'ies')+' past due'+
+        (x.block?' · <b>'+x.block+'</b> blocked':'')
+      : (x.block ? '<b>'+x.block+'</b> blocked, nothing overdue'
+                 : 'Nothing overdue, nothing blocked');
+    b.appendChild(note);
+    setTimeout(()=>{
+      gv.setAttribute('stroke-dasharray',score.toFixed(1)+' 100');
+      nd.setAttribute('transform','rotate('+(-90+score*1.8).toFixed(1)+' 100 92)');
+    },170);
+  }
+}
+
+/* ══════════ Revision AF · a map on the wall ══════════
+   Right-click a map — on its canvas or in the Maps list — and it joins the
+   carousel like anything else.  It is painted the way the Show mode paints it,
+   full-bleed and dark, and whatever is set to move on it moves, because a
+   frozen convoy on a wall screen reads as a screen that has crashed.      */
+function liveMap(host, sl){
+  const m=sl.map;
+  const wrap=el('div','lmap');
+  host.appendChild(wrap);
+  if(!m){ wrap.appendChild(el('div','lmapempty','That map has been deleted.')); return; }
+
+  const box=el('div','lmapb');
+  const svg=document.createElementNS(MAPNS,'svg');
+  box.appendChild(svg);
+  wrap.appendChild(box);
+  paintMap(svg,m,{show:true,play:true});
+  /* its own clock, so the carousel's map runs whether or not the Maps tab has
+     ever been opened — and only one of these is ever alive at a time */
+  cancelAnimationFrame(LIVE.mraf||0);
+  const t0=performance.now();
+  const step=ts=>{
+    /* the moment this slide is gone, or the tab is, the clock stops — a hidden
+       card animating in the background is only a warm laptop */
+    if(!svg.isConnected || S._view!=='live') return;
+    MAP.t0=t0;
+    animTick(svg,m,ts);
+    LIVE.mraf=requestAnimationFrame(step);
+  };
+  LIVE.mraf=requestAnimationFrame(step);
+
+  /* what the map is about, and how the work it points at is doing */
+  const els=(m.els||[]).length;
+  /* an element pinned to an activity is what makes a map say something about
+     the work rather than only about the place */
+  const seen=new Set(), list=[];
+  (m.els||[]).forEach(e=>{
+    if(!e.taskId) return;
+    const t=T(e.taskId);
+    if(!t || taskOff(t) || seen.has(t.id)) return;
+    seen.add(t.id); list.push(t);
+  });
+  const foot=el('div','lmapf');
+  const tile=(lab,val,kind)=>{
+    const t=el('div','lsbtile'+(kind?(' '+kind):''));
+    t.appendChild(el('b',null,String(val)));
+    t.appendChild(el('span',null,lab));
+    foot.appendChild(t);
+  };
+  tile('Items on it', els, '');
+  if(list.length){
+    const v=liveVerdict(list), lateN=list.filter(isLate).length;
+    tile('Activities on it', list.length, '');
+    tile('Booked', v.st.pct+'%', v.st.pct>=99.5?'ok':'');
+    tile('Plan by now', v.st.plan+'%', '');
+    tile('Overdue', lateN, lateN?'bad':'');
+    const vt=el('div','lsbtile wide'+(v.k==='bad'?' bad':(v.k==='ok'?' ok':'')));
+    vt.appendChild(el('b',null,v.lab));
+    vt.appendChild(el('span',null,'against the plan'));
+    foot.appendChild(vt);
+  }
+  wrap.appendChild(foot);
+  if(m.note) wrap.appendChild(el('div','lmapnote',m.note));
+}
+
+/* ── Revision AE · the milestone runway for this closure ────────────
+   Every gate of the selected closure on one line, in order, with the
+   run-up filled in as far as the clock has taken it.                */
+function liveRunway(host, sl){
+  const ms = sl.list.slice().sort((a,b)=>a.s-b.s);
+  const wrap = el('div','lrw');
+  const inner = el('div','lrwin');
+  wrap.appendChild(inner);
+  inner.appendChild(el('div','lrwline'));
+  /* Revision AF — a pulse travelling the line, under the gates, so the eye is
+     carried left to right towards whatever has not been cleared yet */
+  inner.appendChild(el('div','lrwspark'));
+  const prog = el('div','lrwprog'); inner.appendChild(prog);
+
+  const n = ms.length;
+  const at = i => n===1 ? 50 : (8 + 84*i/(n-1));
+
+  /* how far along the run-up the clock has actually got */
+  const cleared = ms.filter(t=>t.status==='done' || t.s<NOW).length;
+  let fill=0;
+  if(cleared>=n) fill=100;
+  else if(cleared>0){
+    const a=at(cleared-1), b=at(cleared);
+    const span=ms[cleared].s-ms[cleared-1].s;
+    const k=span>1e-9?clamp((NOW-ms[cleared-1].s)/span,0,1):0;
+    fill=a+k*(b-a);
+  }
+  /* Revision AF — the fill grows into place rather than arriving finished: the
+     width is set on the next frame, once the slide is in the document, which is
+     what gives the CSS transition something to run from */
+  prog.style.width='0%';
+  const head = el('div','lrwhead'); head.style.left='0%'; inner.appendChild(head);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    prog.style.width=fill+'%';
+    head.style.left=fill+'%';
+  }));
+
+  const next = ms.find(t=>t.status!=='done');
+  ms.forEach((t,i)=>{
+    const L=at(i), up=i%2===0;
+    const done=t.status==='done', late=isLate(t), isNext=next&&t.id===next.id;
+    const d=el('div','lrwdot'+(done?' done':'')+(late?' late':'')+(isNext?' next':''));
+    d.style.left=L+'%';
+    d.style.animationDelay=(90+i*90)+'ms';
+    inner.appendChild(d);
+
+    const lab=el('div','lrwlab'+(up?' up':' dn')+(isNext?' next':'')+(late?' late':'')+(done?' done':''));
+    lab.style.left=L+'%';
+    lab.style.animationDelay=(140+i*90)+'ms';
+    lab.appendChild(el('b',null,t.name));
+    lab.appendChild(el('s',null,(t.allDay?fmt(t.s):(fmt(t.s)+'  '+HHMM(t.s)))+
+      '  ·  '+(done?'cleared':(late?'overdue':liveWhen(t.s)))));
+    inner.appendChild(lab);
+  });
+
+  /* where the clock is, if it is inside the run */
+  if(NOW>ms[0].s && NOW<ms[n-1].s){
+    let k=0; while(k<n-1 && ms[k+1].s<=NOW) k++;
+    const a=at(k), b=at(k+1), span=ms[k+1].s-ms[k].s;
+    const q=span>1e-9?clamp((NOW-ms[k].s)/span,0,1):0;
+    const nw=el('div','lrwnow'); nw.style.left=(a+q*(b-a))+'%';
+    nw.appendChild(el('span',null,'now'));
+    inner.appendChild(nw);
+  }
+
+  host.appendChild(wrap);
+
+  /* a plain tally under it, so the state is readable even at a glance */
+  const done=ms.filter(t=>t.status==='done').length;
+  const lateN=ms.filter(isLate).length;
+  const foot=el('div','lrwfoot');
+  const add=(lab,val,kind)=>{ const t=el('div','lsbtile'+(kind?(' '+kind):''));
+    t.appendChild(el('b',null,String(val))); t.appendChild(el('span',null,lab)); foot.appendChild(t); };
+  add('Gates', n, '');
+  add('Cleared', done, done?'ok':'');
+  add('Overdue', lateN, lateN?'bad':'');
+  add('To come', n-done, '');
+  if(next){
+    const t=el('div','lsbtile wide');
+    t.appendChild(el('b',null,liveWhen(next.s)));
+    t.appendChild(el('span',null,'next: '+next.name));
+    foot.appendChild(t);
+  }
+  host.appendChild(foot);
+}
+
+/* ── Revision AB · a work front, subgroup by subgroup, against the plan ──
+   One bar each, the plan's position marked on the track, and the verdict in
+   words at the end of the row.  Anything behind is then named again under the
+   chart, with the activity that is actually holding it up — so nobody has to
+   read the bars to find the problem.                                     */
+function liveProgressRow(host, r, i, opts){
+  const C = S.view.colors;
+  const v = liveVerdict(r.list);
+  const row = el('div', 'lvbar' + (opts && opts.tight ? ' t' : ''));
+  row.style.animationDelay = (40 + i * 26) + 'ms';
+
+  const nm = el('div', 'zn');
+  const dot = el('i'); dot.style.background = r.color; nm.appendChild(dot);
+  nm.appendChild(document.createTextNode(r.name));
+  row.appendChild(nm);
+
+  const tr = el('div', 'ztr');
+  const f = el('div', 'zf');
+  f.style.width = clamp(v.st.pct, 0, 100) + '%';
+  f.style.background = v.st.pct >= 100 ? C.done
+                     : (v.k === 'bad' ? C.blocked : (v.st.pct > 0 ? C.prog : C.todo));
+  tr.appendChild(f);
+  const tick = el('div', 'zplan');
+  tick.style.left = clamp(v.st.plan, 0, 100) + '%';
+  tick.title = 'The plan says ' + v.st.plan + '% by now';
+  tr.appendChild(tick);
+  row.appendChild(tr);
+
+  row.appendChild(el('div', 'zv', v.st.pct + '%'));
+  row.appendChild(el('div', 'zq', r.task ? liveWindow(r.st ? r.st.s : r.task.s, r.task.e)
+                                         : (v.st.done + '/' + v.st.n)));
+  row.appendChild(el('div', 'zver ' + v.k, v.lab));
+  host.appendChild(row);
+  return v;
+}
+
+function liveGroupBars(host, sl){
+  const rows = liveRowsOf(sl);
+  const wrap = el('div', 'lbars' + (rows.length > 13 ? ' tight' : (rows.length <= 9 ? ' airy' : '')));
+  const shown = rows.slice(0, 16);
+  const behind = [];
+  shown.forEach((r, i) => {
+    const v = liveProgressRow(wrap, r, i);
+    if(v.k === 'bad') behind.push({r, v});
+  });
+  if(rows.length > shown.length)
+    wrap.appendChild(el('div', 'lmore', '+ ' + (rows.length - shown.length) + ' more'));
+  host.appendChild(wrap);
+
+  /* and, directly under it, what is behind and what is holding it up */
+  if(behind.length) host.appendChild(liveBehind(behind));
+}
+
+/* the worst offender inside a row, so the strip names something actionable */
+function liveWorst(list){
+  const open = list.filter(t => t.status !== 'done' && !t.milestone);
+  if(!open.length) return null;
+  const late = open.filter(isLate);
+  const pool = late.length ? late : open.filter(t => t.s <= NOW);
+  const pick = (pool.length ? pool : open).slice().sort((a, b) => {
+    const da = pct(a) - clamp((NOW - a.s) / Math.max(dur(a), 1e-6), 0, 1) * 100;
+    const db = pct(b) - clamp((NOW - b.s) / Math.max(dur(b), 1e-6), 0, 1) * 100;
+    return da - db;
+  })[0];
+  return pick || null;
+}
+function liveBehind(behind){
+  const box = el('div', 'lbehind');
+  const h = el('div', 'lbh');
+  h.appendChild(el('b', null, 'Behind plan'));
+  h.appendChild(el('span', null, behind.length + ' of these need attention'));
+  box.appendChild(h);
+  behind.slice(0, 4).forEach(({r, v}) => {
+    const line = el('div', 'lbrow');
+    line.appendChild(el('s', null, v.lab.replace('\u25BC ', '')));
+    const who = el('div', 'lbwho');
+    who.appendChild(el('b', null, r.name));
+    const w = liveWorst(r.list);
+    who.appendChild(el('span', null, w
+      ? (isLate(w) ? 'Overdue: ' : 'Holding it up: ') + w.name +
+        '  \u00b7  ' + liveWindow(w.s, w.e) + '  \u00b7  ' + pct(w) + '%'
+      : (v.st.pct + '% booked against ' + v.st.plan + '% planned by now')));
+    line.appendChild(who);
+    line.appendChild(el('div', 'lbgap', v.st.pct + '%  vs  ' + v.st.plan + '%'));
+    box.appendChild(line);
+  });
+  if(behind.length > 4)
+    box.appendChild(el('div', 'lmore', '+ ' + (behind.length - 4) + ' more behind plan'));
+  return box;
 }
 
 /* ── the cabinet pipeline, one row a cabinet ─────────────────── */
@@ -18513,7 +19940,7 @@ function liveSwitches(host, list){
 function liveTaskBars(host, list){
   const C=S.view.colors;
   const rows=list.slice().sort((a,b)=>a.s-b.s);
-  const wrap=el('div','lbars'+(rows.length>11?' tight':(rows.length<=7?' airy':'')));
+  const wrap=el('div','lbars'+(rows.length>13?' tight':(rows.length<=9?' airy':'')));
   rows.slice(0,18).forEach((t,i)=>{
     const p=pct(t);
     const row=el('div','lvbar');
@@ -18536,6 +19963,32 @@ function liveTaskBars(host, list){
   host.appendChild(wrap);
 }
 
+/* ══════════ Revision AF.online · the refresh box ══════════
+   On a hosted copy it is live: change it and the next check comes sooner.  On a
+   desktop copy there is nothing to poll, so it says what the published page
+   would use and stays out of the way rather than pretending to work.       */
+function liveRefBind(){
+  const ref=$('#liveRef');
+  if(!ref || LIVE.refBound) return;
+  LIVE.refBound=true;
+  ref.onchange=()=>{ ref.value=refSet(ref.value); liveRefSync(); };
+  ref.addEventListener('keydown',e=>e.stopPropagation());
+}
+function liveRefSync(){
+  liveRefBind();                     /* a hosted page may never open the Live tab */
+  const wrap=$('#liveRefWrap'), ref=$('#liveRef');
+  if(!wrap||!ref) return;
+  const hosted = (typeof ONLINE!=='undefined') && ONLINE.on;
+  ref.value = (typeof refSecs==='function') ? refSecs() : 300;
+  ref.disabled = !hosted;
+  wrap.classList.toggle('off', !hosted);
+  wrap.title = hosted
+    ? ('This page reads the published programme again '+refWord(+ref.value)+
+       ', and while this tab is up it takes a new version by itself.')
+    : ('How often the published page reads the programme again. This copy is not '+
+       'hosted, so there is nothing to re-read — the setting is kept and used online.');
+}
+
 /* ══════════ Revision AA · choosing what plays ══════════ */
 function renderWatchBtn(){
   const b=$('#liveWatch'); if(!b) return;
@@ -18544,7 +19997,7 @@ function renderWatchBtn(){
   b.appendChild(el('span',null, n?('Watching '+n):'Playing everything'));
   b.classList.toggle('on', !!n);
   b.title = n ? 'Reorder or remove what this screen plays'
-              : 'This screen is playing the whole closure — right-click anything on the Schedule to pick instead';
+              : 'This screen is playing the whole closure — right-click anything on the Schedule, or a map, to pick instead';
   if($('#liveWatchPanel').classList.contains('show')) renderWatchPanel();
 }
 function renderWatchPanel(){
@@ -18557,21 +20010,27 @@ function renderWatchPanel(){
     : 'nothing picked yet';
   if(!items.length){
     host.appendChild(el('div','lwempty',
-      'The screen is playing the whole closure. Right-click a group, a subgroup or an activity on the Schedule and choose “Add to the Live screen”.'));
+      'The screen is playing the whole closure. Right-click a group, a subgroup or an activity on the Schedule — or a map on the Maps tab — and choose “Add to the Live screen”.'));
     return;
   }
   items.forEach((w,i)=>{
     const here=watchTasksOf(w).filter(t=>(!stage || (stageOf(t)||null)===stage) && !taskOff(t));
-    const r=el('div','lwrow'+(here.length?'':' none'));
+    /* a map is never "not in this closure" — it plays whatever is selected */
+    const isMap = w.kind==='m';
+    const r=el('div','lwrow'+((here.length||isMap)?'':' none'));
     r.appendChild(el('span','lwn',String(i+1)));
     const nm=el('div','lwname');
     const dot=el('i');
-    dot.style.background = w.kind==='g' ? w.group.color : barPaint(w.task).base;
+    dot.style.background = w.kind==='g' ? w.group.color
+                         : isMap ? 'var(--brand-2)' : barPaint(w.task).base;
     const ttl=el('b'); ttl.appendChild(dot); ttl.appendChild(document.createTextNode(w.name));
     nm.appendChild(ttl);
     nm.appendChild(el('s',null, w.kind==='g'
-      ? ((isSub(w.group)?'Subgroup':'Group')+'  ·  '+here.length+' of '+watchTasksOf(w).length+' here')
-      : ('Activity'+(here.length?'':'  ·  not in this closure'))));
+      ? ((groupDepth(w.group)?('Level '+(groupDepth(w.group)+1)+'  ·  '+groupPath(parentOf(w.group))):'Top level')+
+         '  ·  '+here.length+' of '+watchTasksOf(w).length+' here')
+      : isMap
+        ? ('Map  ·  '+((w.map&&w.map.els||[]).length)+' item'+(((w.map&&w.map.els||[]).length)===1?'':'s')+'  ·  plays in every closure')
+        : ('Activity'+(here.length?'':'  ·  not in this closure'))));
     r.appendChild(nm);
     const up=el('button','lwb','▲'); up.type='button'; up.title='Play it earlier';
     up.disabled=!i; up.onclick=()=>{ watchMove(i,-1); };
@@ -18619,7 +20078,10 @@ function livePlayPause(on){
   renderLive();
   liveRestart();
 }
-function liveStop(){ clearInterval(LIVE.timer); LIVE.timer=0; }
+function liveStop(){
+  clearInterval(LIVE.timer); LIVE.timer=0;
+  cancelAnimationFrame(LIVE.mraf||0); LIVE.mraf=0;    /* Revision AF — and the map's clock */
+}
 
 function liveBind(){
   if(LIVE.bound) return; LIVE.bound=true;
@@ -18631,6 +20093,11 @@ function liveBind(){
     secs.value=LIVE.secs;
     secs.onchange=()=>{ LIVE.secs=clamp(+secs.value||12,4,120); liveRestart(); };
   }
+  /* Revision AF.online — the second box on this bar is not about the carousel,
+     it is about the data: how often this page reads the published programme
+     again.  It sits here because this is the screen people stand in front of. */
+  liveRefBind();
+  liveRefSync();
   const page=$('#livePage');
   /* hovering the slide holds it — nobody should have to race the carousel */
   page.addEventListener('mouseenter',()=>{ LIVE.held=true; page.classList.add('held'); });
@@ -19342,7 +20809,23 @@ window.GanttStudio={
         play:on=>livePlayPause(on), get secs(){return LIVE.secs;},
         set secs(v){ LIVE.secs=clamp(+v||12,4,120); liveRestart(); },
         get stage(){return detStageId();}, set stage(id){ DET.stage=id||''; LIVE.i=0; renderLive(); liveRestart(); },
-        state:LIVE, stats:l=>liveStats(l)},
+        state:LIVE, stats:l=>liveStats(l),
+        /* ---------- Revision AF ---------- */
+        stageStats:()=>{ const x=liveStage(); return x?{name:x.name,n:x.list.length,
+          actual:Math.round(x.actual),plan:Math.round(x.planNow),done:x.done,prog:x.prog,
+          block:x.block,todo:x.todo,late:x.late.length,gates:x.gates}:null; },
+        refresh:{get secs(){return refSecs();}, set:v=>refSet(v), word:v=>refWord(v),
+                 sync:()=>liveRefSync(), get hosted(){return !!ONLINE.on;},
+                 get auto(){return !!ONLINE.auto;}, set auto(v){ ONLINE.auto=!!v; },
+                 repoll:()=>{ if(ONLINE.on) onlineRepoll(); }},
+        kpis:()=>{ const sc=statScope(); return {scoped:sc.on, name:sc.name, n:sc.list.length,
+          tasks:+($('#kTasks').textContent||0), pct:parseInt($('#kPct').textContent,10)||0,
+          days:parseInt($('#kDur').textContent,10)||0, crit:+($('#kCrit').textContent||0),
+          label:$('#kScope').hidden?'':$('#kScopeV').textContent}; }},
+  /* ---------- Revision AF · maps on the wall ---------- */
+  mapwatch:{menu:(x,y,mid)=>openMapMenu(x,y,mid),
+            add:mid=>watchAdd('m',mid,true), has:mid=>watchHas('m',mid),
+            list:()=>(S.maps||[]).map(m=>({id:m.id,name:m.name,on:watchHas('m',m.id)}))},
   /* ---------- Revision AA.online · publishing ---------- */
   gh:{state:GH, open:openGh, load:ghLoad, store:ghStore,
       set:o=>{ Object.keys(o||{}).forEach(k=>{ if(k in GH) GH[k]=o[k]; }); ghStore(); ghPaint(); },
@@ -19368,7 +20851,15 @@ window.GanttStudio={
        of:gid=>subsOf(gid).map(g=>({id:g.id,name:g.name})),
        isSub:gid=>isSub(G(gid)), parent:gid=>{const p=parentOf(G(gid));return p?p.id:null;},
        under:gid=>tasksUnder(gid).map(t=>t.id),
-       move:(tid,gid)=>moveTaskToGroup(tid,gid), menu:(x,y,gid)=>openGroupMenu(x,y,gid)},
+       move:(tid,gid)=>moveTaskToGroup(tid,gid), menu:(x,y,gid)=>openGroupMenu(x,y,gid),
+       /* ---------- Revision AD · the tree ---------- */
+       depth:gid=>groupDepth(G(gid)), path:(gid,sep)=>groupPath(G(gid),sep),
+       ancestry:gid=>ancestry(G(gid)).map(g=>g.id),
+       branch:gid=>groupsUnder(gid).map(g=>({id:g.id,name:g.name,depth:groupDepth(g)})),
+       isUnder:(gid,aid)=>isUnder(G(gid),aid), tops:()=>topGroups().map(g=>g.id),
+       max:GDEPTH_MAX,
+       tree:()=>sortedGroups().map(g=>({id:g.id,name:g.name,depth:groupDepth(g),
+                                        parent:g.parentId||null,kids:subsOf(g.id).length}))},
   work:{tasks:()=>detTasks(), cabinets:()=>detCabinets(detTasks()),
         switches:()=>detSwitches(detTasks()), planned:l=>detPlanned(l),
         cabOf:t=>cabOf(typeof t==='string'?T(t):t),

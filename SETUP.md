@@ -1,4 +1,4 @@
-# Gantt Studio — Revision AA.online
+# Gantt Studio — Revision AF.online
 ## Hosting it on GitHub, and publishing straight from the page
 
 Everything here is done once. After that, updating the programme everyone sees
@@ -36,7 +36,7 @@ You have them in **`BPLRT_FSC_github_repo.zip`**. Unzip it somewhere — you
 should see:
 
 ```
-index.html          ← Gantt Studio, Revision AA
+index.html          ← Gantt Studio, Revision AF
 config.json         ← what the page reads and how often
 data/programme.json ← the programme itself
 .nojekyll           ← tells GitHub Pages to serve files as they are
@@ -122,7 +122,7 @@ Press **Check connection**. It should turn green and say **Connected**, naming
 the account the token belongs to.
 
 Now **reload the page**. This time it opens *unlocked* — the header reads
-`REVISION AA · PUBLISHING`, the toolbar is live, and the green bar has a
+`REVISION AF · PUBLISHING`, the toolbar is live, and the green bar has a
 **Publish** button on it. Everyone else still gets the read-only page, because
 the unlocking is done by the token in your browser, not by anything in the
 repository.
@@ -158,6 +158,20 @@ On GitHub, open `config.json`, press the pencil, replace the contents with what
 you copied, and commit. From then on a publish reaches other people's screens
 within seconds of them checking.
 
+### 7. Set how often the wall screen looks
+
+`refreshSeconds` in `config.json` is only where a screen starts. On the **Live**
+tab there is a **refresh … s** box beside the play controls. Change it there and
+that screen checks at the new interval straight away, and remembers it the next
+time it is opened — 15 seconds during a closure, a few minutes the rest of the
+week. Anything from 15 seconds to an hour is accepted.
+
+While the Live tab is showing, a new publish is taken **automatically**: the bar
+flashes green and the screen rebuilds itself on the new data. Nobody has to be
+standing at the wall display. On the Dashboard, the Schedule and every other tab
+it behaves as it always has — it says a newer version exists and waits for
+**Reload**, so nothing moves under your hands while you are working.
+
 ---
 
 ## Using it during a closure
@@ -169,8 +183,9 @@ within seconds of them checking.
    button, and the gear grows an amber dot. That is the gap between *saved here*
    and *seen by everyone*.
 4. Press **Publish changes**.
-5. Every open tab is offered a **Reload** the next time it checks, and the
-   dashboards, the Live carousel and the schedule all rebuild on the new data.
+5. Every open tab picks it up the next time it checks — a screen on the Live tab
+   takes it by itself, and the rest are offered a **Reload**. The dashboards, the
+   Live carousel and the schedule all rebuild on the new data.
 
 Nothing is lost if you close the laptop mid-closure: your edits autosave into
 that browser, and when you come back the page notices the unpublished draft and
@@ -198,7 +213,7 @@ in the repository have drifted apart.
 
 ## What has and has not changed
 
-The file in this repository is the same `Gantt_Studio_RevAA.html` you run on
+The file in this repository is the same `Gantt_Studio_RevAF.html` you run on
 your desktop, byte for byte. Opened by double-clicking, it is the ordinary
 application, saving to that computer. Served over a web address, it becomes the
 live page. One file, two lives — there is no separate online build to keep in
