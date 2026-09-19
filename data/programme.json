@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-19T22:14:21.903Z",
+  "savedAt": "2026-09-19T23:00:40.403Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -14,7 +14,7 @@
     "applyFilters": true
   },
   "view": {
-    "ppd": 439.989,
+    "ppd": 2203.39,
     "teamPpd": 48.956,
     "locPpd": 9.673,
     "criticalPath": true,
@@ -2363,7 +2363,7 @@
       "id": "g_bvuiia2y7",
       "name": "SMRT SWITCH MAINTENANCE WORKS [FSC 1]",
       "color": "#1273e0",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2435,7 +2435,7 @@
       "id": "g_f5yeuzfkj",
       "name": "Cabinet Relocation Works (FSC1)",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -2515,7 +2515,7 @@
       "id": "g_3sv939h4o",
       "name": "BPD [ COMMS ]",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2531,7 +2531,7 @@
       "id": "g_ara6d34zn",
       "name": "BP10 [ DTS ]",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2539,7 +2539,7 @@
       "id": "g_m9bdvq1fg",
       "name": "Cabinet Power On",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2547,7 +2547,7 @@
       "id": "g_yq0foxn6s",
       "name": "Troubleshooting",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3953,10 +3953,10 @@
         "tm_psvvco9ve"
       ],
       "teamId": "tm_psvvco9ve",
-      "status": "in-progress",
-      "progress": 60,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 60,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -3964,7 +3964,7 @@
       "locationId": "lc_o56pjg60z",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T07:00"
     },
     {
       "id": "t_b2nsrmbkc",
@@ -4009,10 +4009,10 @@
         "tm_psvvco9ve"
       ],
       "teamId": "tm_psvvco9ve",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4020,7 +4020,7 @@
       "locationId": "lc_o56pjg60z",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T07:00"
     },
     {
       "id": "t_ujqol50aw",
@@ -4093,10 +4093,10 @@
         "tm_av7su60i2"
       ],
       "teamId": "tm_av7su60i2",
-      "status": "in-progress",
-      "progress": 50,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 50,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4104,7 +4104,7 @@
       "locationId": "lc_o56pjg60z",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T07:00"
     },
     {
       "id": "t_lifpthzsp",
@@ -4121,10 +4121,10 @@
         "tm_av7su60i2"
       ],
       "teamId": "tm_av7su60i2",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4132,7 +4132,7 @@
       "locationId": "lc_o56pjg60z",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T07:00"
     },
     {
       "id": "t_nhbddlh1t",
