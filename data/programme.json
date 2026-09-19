@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-19T18:20:45.619Z",
+  "savedAt": "2026-09-19T20:25:26.850Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -2137,8 +2137,8 @@
     "fields": [
       {
         "id": "wf_iw1oquxds",
-        "label": "New line",
-        "value": ""
+        "label": "SW31 Works",
+        "value": "SW31 Maintenance Works delayed, affected IR Test. Currunt SW31 progress is around 70%. "
       }
     ]
   },
@@ -2363,7 +2363,7 @@
       "id": "g_bvuiia2y7",
       "name": "SMRT SWITCH MAINTENANCE WORKS [FSC 1]",
       "color": "#1273e0",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2515,7 +2515,7 @@
       "id": "g_3sv939h4o",
       "name": "BPD [ COMMS ]",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2523,7 +2523,7 @@
       "id": "g_xwkwq5e7c",
       "name": "BPD [ RRS01 ]",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2539,7 +2539,7 @@
       "id": "g_m9bdvq1fg",
       "name": "Cabinet Power On",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2547,7 +2547,7 @@
       "id": "g_yq0foxn6s",
       "name": "Troubleshooting",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2555,7 +2555,7 @@
       "id": "g_bcfjzsqfm",
       "name": "Material Delevery & Unloading",
       "color": "#0d97c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_39c7wczpj"
     },
@@ -2563,7 +2563,7 @@
       "id": "g_h6qdcyhmm",
       "name": "SW 11",
       "color": "#0d97c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_39c7wczpj"
     },
@@ -3701,10 +3701,10 @@
         "tm_hksnio1la"
       ],
       "teamId": "tm_hksnio1la",
-      "status": "in-progress",
-      "progress": 10,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 10,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -3712,7 +3712,7 @@
       "locationId": "lc_2ipheaqcb",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T04:16"
     },
     {
       "id": "t_wf4tpi6et",
@@ -3729,10 +3729,10 @@
         "tm_hksnio1la"
       ],
       "teamId": "tm_hksnio1la",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -3740,7 +3740,7 @@
       "locationId": "lc_2ipheaqcb",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T04:16"
     },
     {
       "id": "t_gn8lp4ra5",
@@ -3757,10 +3757,10 @@
         "tm_hksnio1la"
       ],
       "teamId": "tm_hksnio1la",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 10,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 10,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -3953,10 +3953,10 @@
         "tm_psvvco9ve"
       ],
       "teamId": "tm_psvvco9ve",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 60,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 60,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4037,10 +4037,10 @@
         "tm_av7su60i2"
       ],
       "teamId": "tm_av7su60i2",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4048,7 +4048,7 @@
       "locationId": "lc_o56pjg60z",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T03:57"
     },
     {
       "id": "t_1fhtpbi6a",
@@ -4065,10 +4065,10 @@
         "tm_av7su60i2"
       ],
       "teamId": "tm_av7su60i2",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4076,7 +4076,7 @@
       "locationId": "lc_o56pjg60z",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T03:57"
     },
     {
       "id": "t_jg1cxrab4",
@@ -4093,10 +4093,10 @@
         "tm_av7su60i2"
       ],
       "teamId": "tm_av7su60i2",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 50,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 50,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4402,9 +4402,9 @@
       ],
       "teamId": "tm_c45jr3z1h",
       "status": "in-progress",
-      "progress": 10,
+      "progress": 0,
       "autoProgress": false,
-      "effectiveProgress": 10,
+      "effectiveProgress": 0,
       "subtasks": [],
       "milestone": false,
       "notes": "Depot Ladder Track",
@@ -4542,9 +4542,9 @@
       ],
       "teamId": "tm_4hswtynvq",
       "status": "in-progress",
-      "progress": 25,
+      "progress": 40,
       "autoProgress": true,
-      "effectiveProgress": 24,
+      "effectiveProgress": 38,
       "subtasks": [
         {
           "id": "s_wsrqzv8fx",
@@ -4574,17 +4574,17 @@
         {
           "id": "s_fyp9248ls",
           "title": "Removal of exisiting module (Fixed End, Mov Reverse & Pivot Reverse)\t1:15\t1:20",
-          "done": false
+          "done": true
         },
         {
           "id": "s_2j8ppddmr",
           "title": "Cleaning and stud health check\t1:20\t1:35",
-          "done": false
+          "done": true
         },
         {
           "id": "s_mr5o8kjqp",
           "title": "Stud Welding (If required)\t1:20\t1:35",
-          "done": false
+          "done": true
         },
         {
           "id": "s_uzrtnxoyn",
@@ -5515,10 +5515,10 @@
         "tm_1ucvtk1uh"
       ],
       "teamId": "tm_1ucvtk1uh",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 70,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 70,
       "subtasks": [],
       "milestone": false,
       "notes": "",
