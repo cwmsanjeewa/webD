@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-19T16:15:59.851Z",
+  "savedAt": "2026-09-19T16:27:41.479Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -14,7 +14,7 @@
     "applyFilters": true
   },
   "view": {
-    "ppd": 59.025,
+    "ppd": 134.172,
     "teamPpd": 48.956,
     "locPpd": 11.487,
     "criticalPath": true,
@@ -2203,7 +2203,7 @@
       "id": "g_4rom9sra2",
       "name": "Go/No-Go (Milestones) [FSC 1]",
       "color": "#7a5af5",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2211,7 +2211,7 @@
       "id": "g_6c2p9r599",
       "name": "C801B ACTIVITIES [FSC 1]",
       "color": "#9333c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2363,7 +2363,7 @@
       "id": "g_bvuiia2y7",
       "name": "SMRT SWITCH MAINTENANCE WORKS [FSC 1]",
       "color": "#1273e0",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2483,7 +2483,7 @@
       "id": "g_qcs2chv39",
       "name": "Pre System Check",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2491,7 +2491,7 @@
       "id": "g_w9lda4lbd",
       "name": "Cabinet Power Off",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3543,9 +3543,9 @@
       ],
       "teamId": "tm_hksnio1la",
       "status": "in-progress",
-      "progress": 5,
+      "progress": 20,
       "autoProgress": false,
-      "effectiveProgress": 5,
+      "effectiveProgress": 20,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -3570,10 +3570,10 @@
         "tm_hksnio1la"
       ],
       "teamId": "tm_hksnio1la",
-      "status": "in-progress",
-      "progress": 5,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 5,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -3581,7 +3581,7 @@
       "locationId": "lc_o56pjg60z",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T00:24"
     },
     {
       "id": "t_2f2qbgolg",
@@ -3599,10 +3599,36 @@
       ],
       "teamId": "tm_hksnio1la",
       "status": "not-started",
-      "progress": 0,
+      "progress": 25,
       "autoProgress": false,
-      "effectiveProgress": 0,
-      "subtasks": [],
+      "effectiveProgress": 25,
+      "subtasks": [
+        {
+          "id": "s_dhpxqt0lf",
+          "title": "RATC R1 shutdown",
+          "done": true
+        },
+        {
+          "id": "s_d3h318hjl",
+          "title": "Keyswitch panel",
+          "done": true
+        },
+        {
+          "id": "s_9a7dqj00e",
+          "title": "CFMS server 1 & 2",
+          "done": true
+        },
+        {
+          "id": "s_2psbr422g",
+          "title": "RRS",
+          "done": true
+        },
+        {
+          "id": "s_ulspnjf1f",
+          "title": "Ocs and CHO",
+          "done": true
+        }
+      ],
       "milestone": false,
       "notes": "",
       "predecessors": [],
@@ -3627,10 +3653,31 @@
       ],
       "teamId": "tm_hksnio1la",
       "status": "not-started",
-      "progress": 0,
+      "progress": 10,
       "autoProgress": false,
-      "effectiveProgress": 0,
-      "subtasks": [],
+      "effectiveProgress": 10,
+      "subtasks": [
+        {
+          "id": "s_8eo823cvw",
+          "title": "R4 BP10 OBC01",
+          "done": true
+        },
+        {
+          "id": "s_f1zoettih",
+          "title": "R4 BP10 OBC02",
+          "done": true
+        },
+        {
+          "id": "s_ulr5nlj6l",
+          "title": "BP10 ITT01",
+          "done": true
+        },
+        {
+          "id": "s_rpta3a0cp",
+          "title": "R4 RATC",
+          "done": true
+        }
+      ],
       "milestone": false,
       "notes": "",
       "predecessors": [],
@@ -5511,8 +5558,8 @@
       "id": "t_gzczhroj2",
       "groupId": "g_4rom9sra2",
       "name": "[FSC 1] Traction Power OFF",
-      "start": "2026-09-20T00:00",
-      "end": "2026-09-20T00:00",
+      "start": "2026-09-20T00:11",
+      "end": "2026-09-20T00:11",
       "allDay": false,
       "durationDays": 0,
       "durationLabel": "—",
@@ -5548,10 +5595,10 @@
         "tm_0osk8fb25"
       ],
       "teamId": "tm_0osk8fb25",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 15,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 15,
       "subtasks": [],
       "milestone": true,
       "notes": "",
