@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-19T17:52:19.665Z",
+  "savedAt": "2026-09-19T18:20:45.619Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -2443,7 +2443,7 @@
       "id": "g_39c7wczpj",
       "name": "Switch Power Rail Works (FSC1)",
       "color": "#0d97c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -2531,7 +2531,7 @@
       "id": "g_ara6d34zn",
       "name": "BP10 [ DTS ]",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3701,10 +3701,10 @@
         "tm_hksnio1la"
       ],
       "teamId": "tm_hksnio1la",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 10,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 10,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4323,20 +4323,20 @@
         "tm_c45jr3z1h"
       ],
       "teamId": "tm_c45jr3z1h",
-      "status": "in-progress",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [
         {
           "id": "s_8w6lcozmx",
           "title": "Turn Off TRA 1401",
-          "done": false
+          "done": true
         },
         {
           "id": "s_gw8gfi1ye",
           "title": "Turn Off TRA 1402",
-          "done": false
+          "done": true
         }
       ],
       "milestone": true,
@@ -4345,7 +4345,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T02:18"
     },
     {
       "id": "t_lxq3mtwp2",
@@ -4401,10 +4401,10 @@
         "tm_c45jr3z1h"
       ],
       "teamId": "tm_c45jr3z1h",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 10,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 10,
       "subtasks": [],
       "milestone": false,
       "notes": "Depot Ladder Track",
