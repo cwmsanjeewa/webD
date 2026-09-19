@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-19T23:04:40.169Z",
+  "savedAt": "2026-09-19T23:08:08.569Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -14,7 +14,7 @@
     "applyFilters": true
   },
   "view": {
-    "ppd": 2203.39,
+    "ppd": 334.029,
     "teamPpd": 48.956,
     "locPpd": 9.673,
     "criticalPath": true,
@@ -2435,7 +2435,7 @@
       "id": "g_f5yeuzfkj",
       "name": "Cabinet Relocation Works (FSC1)",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -2443,7 +2443,7 @@
       "id": "g_39c7wczpj",
       "name": "Switch Power Rail Works (FSC1)",
       "color": "#0d97c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -2563,7 +2563,7 @@
       "id": "g_h6qdcyhmm",
       "name": "SW 11",
       "color": "#0d97c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_39c7wczpj"
     },
@@ -4542,9 +4542,9 @@
       ],
       "teamId": "tm_4hswtynvq",
       "status": "in-progress",
-      "progress": 40,
+      "progress": 80,
       "autoProgress": true,
-      "effectiveProgress": 38,
+      "effectiveProgress": 81,
       "subtasks": [
         {
           "id": "s_wsrqzv8fx",
@@ -4589,47 +4589,47 @@
         {
           "id": "s_uzrtnxoyn",
           "title": "Installation of New Module including Splice joint (Fixed End, Mov Reverse & Pivot Reverse)\t1:35\t2:35",
-          "done": false
+          "done": true
         },
         {
           "id": "s_oev7n8ukh",
           "title": "Installation of Components - PF & PIN\t2:35\t3:20",
-          "done": false
+          "done": true
         },
         {
           "id": "s_d69qi4zoa",
           "title": "installation of rail cover\t3:20\t3:25",
-          "done": false
+          "done": true
         },
         {
           "id": "s_j2d6b45wv",
           "title": "Mounting bracket (torque)\t3:25\t3:35",
-          "done": false
+          "done": true
         },
         {
           "id": "s_x6x557bfh",
           "title": "Existing Rail Cutting and removal mounting stud bolt nut\t2:35\t2:45",
-          "done": false
+          "done": true
         },
         {
           "id": "s_15lx4ti3p",
           "title": "Removal of exisiting module, \t2:45\t2:55",
-          "done": false
+          "done": true
         },
         {
           "id": "s_kips6uluf",
           "title": "Cleaning and stud health check\t2:55\t3:05",
-          "done": false
+          "done": true
         },
         {
           "id": "s_zjk2szx4g",
           "title": "Stud Welding (If required)\t2:55\t3:05",
-          "done": false
+          "done": true
         },
         {
           "id": "s_hbgkaa4o8",
           "title": "Installation of New Module including Splice joint (Mov Normal & Pivot Normal)\t3:05\t3:35",
-          "done": false
+          "done": true
         },
         {
           "id": "s_eokuzc8mt",
