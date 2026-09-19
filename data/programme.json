@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-19T15:29:03.271Z",
+  "savedAt": "2026-09-19T16:06:36.937Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -14,7 +14,7 @@
     "applyFilters": true
   },
   "view": {
-    "ppd": 6.985,
+    "ppd": 82.186,
     "teamPpd": 48.956,
     "locPpd": 11.487,
     "criticalPath": true,
@@ -2211,7 +2211,7 @@
       "id": "g_6c2p9r599",
       "name": "C801B ACTIVITIES [FSC 1]",
       "color": "#9333c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2371,7 +2371,7 @@
       "id": "g_045dntitr",
       "name": "Day Zero - Power Rail Prep Works",
       "color": "#00a6a0",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_day0",
       "parentId": null
     },
@@ -2435,7 +2435,7 @@
       "id": "g_f5yeuzfkj",
       "name": "Cabinet Relocation Works (FSC1)",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -2483,7 +2483,7 @@
       "id": "g_qcs2chv39",
       "name": "Pre System Check",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2539,7 +2539,7 @@
       "id": "g_m9bdvq1fg",
       "name": "Cabinet Power On",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2555,7 +2555,7 @@
       "id": "g_bcfjzsqfm",
       "name": "Material Delevery & Unloading",
       "color": "#0d97c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_39c7wczpj"
     },
@@ -3542,10 +3542,10 @@
         "tm_hksnio1la"
       ],
       "teamId": "tm_hksnio1la",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 5,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 5,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -3570,10 +3570,10 @@
         "tm_hksnio1la"
       ],
       "teamId": "tm_hksnio1la",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 5,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 5,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4276,10 +4276,10 @@
         "tm_c45jr3z1h"
       ],
       "teamId": "tm_c45jr3z1h",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 10,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 10,
       "subtasks": [
         {
           "id": "s_8w6lcozmx",
@@ -4438,7 +4438,7 @@
         "tm_4hswtynvq"
       ],
       "teamId": "tm_4hswtynvq",
-      "status": "not-started",
+      "status": "in-progress",
       "progress": 0,
       "autoProgress": false,
       "effectiveProgress": 0,
@@ -5505,7 +5505,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": "2026-09-19T23:28"
+      "completedAt": "2026-09-19T23:38"
     },
     {
       "id": "t_zvfhjbkjn",
@@ -5703,7 +5703,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": "2026-09-19T22:41"
+      "completedAt": "2026-09-19T23:37"
     },
     {
       "id": "t_3jhzoe20x",
@@ -5739,7 +5739,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": "2026-09-19T23:22"
+      "completedAt": "2026-09-19T23:37"
     },
     {
       "id": "t_oiovyp7nh",
@@ -5756,10 +5756,10 @@
         "tm_vrrn1t603"
       ],
       "teamId": "tm_vrrn1t603",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "Cabinet Relocation Team 1, 3 & 4\nSwitch Power Rail Team 1 & 2\nSI Team (For IR Test)\nITC Team (Cabinet Power Down)",
@@ -5767,7 +5767,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-19T23:52"
     },
     {
       "id": "t_2zh8e4ezm",
