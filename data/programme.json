@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-19T16:06:36.937Z",
+  "savedAt": "2026-09-19T16:11:09.382Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -14,7 +14,7 @@
     "applyFilters": true
   },
   "view": {
-    "ppd": 82.186,
+    "ppd": 59.025,
     "teamPpd": 48.956,
     "locPpd": 11.487,
     "criticalPath": true,
@@ -2363,7 +2363,7 @@
       "id": "g_bvuiia2y7",
       "name": "SMRT SWITCH MAINTENANCE WORKS [FSC 1]",
       "color": "#1273e0",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2435,7 +2435,7 @@
       "id": "g_f5yeuzfkj",
       "name": "Cabinet Relocation Works (FSC1)",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -2483,7 +2483,7 @@
       "id": "g_qcs2chv39",
       "name": "Pre System Check",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2539,7 +2539,7 @@
       "id": "g_m9bdvq1fg",
       "name": "Cabinet Power On",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -4277,9 +4277,9 @@
       ],
       "teamId": "tm_c45jr3z1h",
       "status": "in-progress",
-      "progress": 10,
+      "progress": 0,
       "autoProgress": false,
-      "effectiveProgress": 10,
+      "effectiveProgress": 0,
       "subtasks": [
         {
           "id": "s_8w6lcozmx",
