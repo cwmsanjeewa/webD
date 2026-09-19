@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-19T15:22:42.300Z",
+  "savedAt": "2026-09-19T14:50:04.121Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -2195,7 +2195,7 @@
       "id": "g_x8pyxkd24",
       "name": "Tool Box Meetings/Briefing [FSC 1]",
       "color": "#e0740b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2203,7 +2203,7 @@
       "id": "g_4rom9sra2",
       "name": "Go/No-Go (Milestones) [FSC 1]",
       "color": "#7a5af5",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2211,7 +2211,7 @@
       "id": "g_6c2p9r599",
       "name": "C801B ACTIVITIES [FSC 1]",
       "color": "#9333c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2363,7 +2363,7 @@
       "id": "g_bvuiia2y7",
       "name": "SMRT SWITCH MAINTENANCE WORKS [FSC 1]",
       "color": "#1273e0",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2595,7 +2595,7 @@
       "id": "g_egmy4vfsr",
       "name": "R801A (NEC) ACTIVITIES [FSC 1]",
       "color": "#1273e0",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -5728,10 +5728,10 @@
         "tm_vrrn1t603"
       ],
       "teamId": "tm_4hswtynvq",
-      "status": "done",
-      "progress": 100,
+      "status": "not-started",
+      "progress": 0,
       "autoProgress": false,
-      "effectiveProgress": 100,
+      "effectiveProgress": 0,
       "subtasks": [],
       "milestone": false,
       "notes": "Cabinet Relocation Team 1, 3 & 4\nSwitch Power Rail Team 1 & 2\nSI Team (For IR Test)\nITC Team (Cabinet Power Down)",
@@ -5739,7 +5739,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": "2026-09-19T23:22"
+      "completedAt": null
     },
     {
       "id": "t_oiovyp7nh",
