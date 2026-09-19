@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-19T21:48:11.278Z",
+  "savedAt": "2026-09-19T22:14:21.903Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -16,7 +16,7 @@
   "view": {
     "ppd": 439.989,
     "teamPpd": 48.956,
-    "locPpd": 11.487,
+    "locPpd": 9.673,
     "criticalPath": true,
     "autoSchedule": false,
     "gridWidth": 769,
@@ -753,7 +753,7 @@
   ],
   "org": {
     "title": "",
-    "zoom": 0.927,
+    "zoom": 2.5,
     "tidy": true,
     "layout": "compact",
     "nodes": []
@@ -2451,7 +2451,7 @@
       "id": "g_me18au8ss",
       "name": "IR Test Works (FSC1)",
       "color": "#6b7a90",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -5515,10 +5515,10 @@
         "tm_1ucvtk1uh"
       ],
       "teamId": "tm_1ucvtk1uh",
-      "status": "in-progress",
-      "progress": 70,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 70,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -5526,7 +5526,7 @@
       "locationId": "lc_cssc8f4mh",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T06:14"
     },
     {
       "id": "t_bgqi30z4o",
