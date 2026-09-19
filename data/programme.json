@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-19T20:25:26.850Z",
+  "savedAt": "2026-09-19T21:48:11.278Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -14,7 +14,7 @@
     "applyFilters": true
   },
   "view": {
-    "ppd": 134.172,
+    "ppd": 439.989,
     "teamPpd": 48.956,
     "locPpd": 11.487,
     "criticalPath": true,
@@ -2515,7 +2515,7 @@
       "id": "g_3sv939h4o",
       "name": "BPD [ COMMS ]",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2523,7 +2523,7 @@
       "id": "g_xwkwq5e7c",
       "name": "BPD [ RRS01 ]",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -4402,9 +4402,9 @@
       ],
       "teamId": "tm_c45jr3z1h",
       "status": "in-progress",
-      "progress": 0,
+      "progress": 20,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 20,
       "subtasks": [],
       "milestone": false,
       "notes": "Depot Ladder Track",
@@ -4429,10 +4429,10 @@
         "tm_c45jr3z1h"
       ],
       "teamId": "tm_c45jr3z1h",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "Depot\n1. Car Wash track \n2. Storage Track\n3. Buffer end",
@@ -4440,7 +4440,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T05:46"
     },
     {
       "id": "t_x23jlmu0b",
@@ -4457,10 +4457,10 @@
         "tm_c45jr3z1h"
       ],
       "teamId": "tm_c45jr3z1h",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 20,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 20,
       "subtasks": [],
       "milestone": false,
       "notes": "Depot\n1. East Bound Lead Track.\n2. West Bound Track",
