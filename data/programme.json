@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-19T16:27:41.479Z",
+  "savedAt": "2026-09-19T17:52:19.665Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -2443,7 +2443,7 @@
       "id": "g_39c7wczpj",
       "name": "Switch Power Rail Works (FSC1)",
       "color": "#0d97c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -2451,7 +2451,7 @@
       "id": "g_me18au8ss",
       "name": "IR Test Works (FSC1)",
       "color": "#6b7a90",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -2483,7 +2483,7 @@
       "id": "g_qcs2chv39",
       "name": "Pre System Check",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2491,7 +2491,7 @@
       "id": "g_w9lda4lbd",
       "name": "Cabinet Power Off",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2563,7 +2563,7 @@
       "id": "g_h6qdcyhmm",
       "name": "SW 11",
       "color": "#0d97c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_39c7wczpj"
     },
@@ -3542,10 +3542,10 @@
         "tm_hksnio1la"
       ],
       "teamId": "tm_hksnio1la",
-      "status": "in-progress",
-      "progress": 20,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 20,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -3553,7 +3553,7 @@
       "locationId": "lc_2ipheaqcb",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T01:47"
     },
     {
       "id": "t_9322fnrct",
@@ -3581,7 +3581,7 @@
       "locationId": "lc_o56pjg60z",
       "struck": false,
       "struckNote": "",
-      "completedAt": "2026-09-20T00:24"
+      "completedAt": "2026-09-20T01:47"
     },
     {
       "id": "t_2f2qbgolg",
@@ -3598,10 +3598,10 @@
         "tm_hksnio1la"
       ],
       "teamId": "tm_hksnio1la",
-      "status": "not-started",
-      "progress": 25,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 25,
+      "effectiveProgress": 100,
       "subtasks": [
         {
           "id": "s_dhpxqt0lf",
@@ -3635,7 +3635,7 @@
       "locationId": "lc_o56pjg60z",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T01:47"
     },
     {
       "id": "t_xsm7xn244",
@@ -3652,10 +3652,10 @@
         "tm_hksnio1la"
       ],
       "teamId": "tm_hksnio1la",
-      "status": "not-started",
-      "progress": 10,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 10,
+      "effectiveProgress": 100,
       "subtasks": [
         {
           "id": "s_8eo823cvw",
@@ -3684,7 +3684,7 @@
       "locationId": "lc_2ipheaqcb",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T01:47"
     },
     {
       "id": "t_1jekgw2px",
@@ -3887,20 +3887,20 @@
       "groupId": "g_xwkwq5e7c",
       "name": "[FSC 1] BPD [ RRS01 ] - Disconnection of all the cables from PDU and Cabinet",
       "start": "2026-09-20T00:00",
-      "end": "2026-09-20T02:00",
+      "end": "2026-09-20T01:10",
       "allDay": false,
-      "durationDays": 0.0833,
-      "durationLabel": "2h",
+      "durationDays": 0.0486,
+      "durationLabel": "1h 10m",
       "categoryId": "cat_fsc1",
       "ownerId": "p_h595i0uzy",
       "teamIds": [
         "tm_psvvco9ve"
       ],
       "teamId": "tm_psvvco9ve",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -3908,7 +3908,7 @@
       "locationId": "lc_o56pjg60z",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T01:48"
     },
     {
       "id": "t_fmr33i48w",
@@ -3925,10 +3925,10 @@
         "tm_psvvco9ve"
       ],
       "teamId": "tm_psvvco9ve",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -3936,7 +3936,7 @@
       "locationId": "lc_o56pjg60z",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T01:48"
     },
     {
       "id": "t_u5w4mm6ao",
@@ -4485,10 +4485,10 @@
         "tm_4hswtynvq"
       ],
       "teamId": "tm_4hswtynvq",
-      "status": "in-progress",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4496,7 +4496,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T01:50"
     },
     {
       "id": "t_brztxeofp",
@@ -4513,10 +4513,10 @@
         "tm_4hswtynvq"
       ],
       "teamId": "tm_4hswtynvq",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4524,7 +4524,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T01:50"
     },
     {
       "id": "t_tji2t29x0",
@@ -4541,35 +4541,35 @@
         "tm_4hswtynvq"
       ],
       "teamId": "tm_4hswtynvq",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 25,
       "autoProgress": true,
-      "effectiveProgress": 0,
+      "effectiveProgress": 24,
       "subtasks": [
         {
           "id": "s_wsrqzv8fx",
           "title": "Shifting of materials to work location\t0:45\t0:50",
-          "done": false
+          "done": true
         },
         {
           "id": "s_pzieiigsu",
           "title": "Removal of rail cover\t0:50\t0:55",
-          "done": false
+          "done": true
         },
         {
           "id": "s_ymxpecnhs",
           "title": "On-site Existing Module Measurements and Marking, Noise Barrier installation\t0:55\t1:15",
-          "done": false
+          "done": true
         },
         {
           "id": "s_0yruuksgr",
           "title": "Existing Rail Cutting and removal mounting stud bolt nut (Fixed End, Mov Reverse & Pivot Reverse)\t1:05\t1:15",
-          "done": false
+          "done": true
         },
         {
           "id": "s_irbsdhy26",
           "title": "Tread plate removal\t1:05\t1:15",
-          "done": false
+          "done": true
         },
         {
           "id": "s_fyp9248ls",
