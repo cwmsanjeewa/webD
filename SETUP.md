@@ -1,4 +1,4 @@
-# Gantt Studio — Revision AH.online
+# Gantt Studio — Revision AI.online
 ## Hosting it on GitHub, and publishing straight from the page
 
 Everything here is done once. After that, updating the programme everyone sees
@@ -36,7 +36,7 @@ You have them in **`BPLRT_FSC_github_repo.zip`**. Unzip it somewhere — you
 should see:
 
 ```
-index.html          ← Gantt Studio, Revision AH
+index.html          ← Gantt Studio, Revision AI
 config.json         ← what the page reads and how often
 data/programme.json ← the programme itself
 .nojekyll           ← tells GitHub Pages to serve files as they are
@@ -122,7 +122,7 @@ Press **Check connection**. It should turn green and say **Connected**, naming
 the account the token belongs to.
 
 Now **reload the page**. This time it opens *unlocked* — the header reads
-`REVISION AH · PUBLISHING`, the toolbar is live, and the green bar has a
+`REVISION AI · PUBLISHING`, the toolbar is live, and the green bar has a
 **Publish** button on it. Everyone else still gets the read-only page, because
 the unlocking is done by the token in your browser, not by anything in the
 repository.
@@ -226,7 +226,7 @@ in the repository have drifted apart.
 
 ## What has and has not changed
 
-The file in this repository is the same `Gantt_Studio_RevAH.html` you run on
+The file in this repository is the same `Gantt_Studio_RevAI.html` you run on
 your desktop, byte for byte. Opened by double-clicking, it is the ordinary
 application, saving to that computer. Served over a web address, it becomes the
 live page. One file, two lives — there is no separate online build to keep in

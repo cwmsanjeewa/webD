@@ -3377,6 +3377,103 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
 .lwxb .wxhero{flex:1 1 30%;min-height:132px;height:auto}
 .lwxb .wxhours{flex:0 0 auto}
 .lwxb .wxsrc{display:none}
+
+/* ══════════════════════════════════════════════════════════════
+   Revision AI · a watched group, drilled down one level
+   The band at the top is the thing being watched; the rail and the
+   arrows under it are its immediate children and nothing deeper.
+   ══════════════════════════════════════════════════════════════ */
+.ldhead{
+  flex:none;padding:13px 17px 14px;border-radius:15px;margin-bottom:6px;
+  background:var(--surface-2);border:1px solid var(--line);
+  animation:lIn .42s var(--ease) both;
+}
+.ldh{display:flex;align-items:center;gap:14px}
+.ldtag{
+  flex:none;padding:4px 11px;border-radius:999px;
+  font-size:10.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;
+}
+.ldname{flex:1;min-width:0}
+.ldname b{
+  display:block;font-size:21px;font-weight:800;letter-spacing:-.4px;color:var(--ink);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:1.2;
+}
+.ldname s{
+  display:block;margin-top:2px;text-decoration:none;
+  font-size:12px;font-weight:700;color:var(--ink-3);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.ldbig{flex:none;display:flex;align-items:center;gap:13px}
+.ldbig b{font-size:30px;font-weight:800;letter-spacing:-1.4px;color:var(--ink);
+  font-variant-numeric:tabular-nums;line-height:1}
+.ldver{
+  padding:4px 13px;border-radius:999px;font-size:12px;font-weight:800;
+  background:var(--track);color:var(--ink-3);white-space:nowrap;
+}
+.ldver.ok{background:var(--ok-soft);color:var(--ok)}
+.ldver.bad{background:var(--danger-soft);color:var(--danger)}
+.ldbar{
+  position:relative;height:26px;border-radius:13px;background:var(--track);
+  overflow:hidden;margin-top:11px;
+}
+.ldfill{position:absolute;left:0;top:0;bottom:0;border-radius:13px;transition:width 1s var(--ease)}
+.ldplan{position:absolute;top:-3px;bottom:-3px;width:3px;background:var(--ink);opacity:.6;border-radius:2px}
+.ldcap{display:flex;align-items:baseline;gap:16px;margin-top:8px}
+.ldcap span{font-size:13.5px;font-weight:800;color:var(--ink)}
+.ldcap b{font-size:13px;font-weight:700;color:var(--ink-2)}
+.ldcap s{margin-left:auto;text-decoration:none;font-size:12.5px;font-weight:700;color:var(--ink-3);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* the rail, the arms and the arrows */
+.ldtree{flex:1;min-height:0;display:flex;flex-direction:column;padding-left:2px}
+/* every row takes an equal share of the height, so the rail segments meet and
+   the line runs unbroken from the band down to the last arrow */
+.ldrow{
+  flex:1 1 0;min-height:0;
+  position:relative;display:flex;align-items:center;padding:2px 0 2px 44px;
+  animation:lIn .4s var(--ease) both;
+}
+.ldrow::before{
+  content:"";position:absolute;left:15px;top:0;bottom:0;width:2px;background:var(--line-hover);
+}
+.ldrow:first-child::before{top:-8px}
+.ldrow:last-of-type::before{bottom:50%}
+.ldrow::after{
+  content:"";position:absolute;left:15px;top:50%;width:15px;height:2px;
+  margin-top:-1px;background:var(--line-hover);
+}
+.ldarm{
+  position:absolute;left:30px;top:50%;margin-top:-5px;width:0;height:0;
+  border-left:8px solid var(--line-hover);
+  border-top:5px solid transparent;border-bottom:5px solid transparent;
+}
+.ldrow .lvbar{flex:1;min-width:0}
+/* the name becomes two lines here: what it is called, and what it is */
+.ldrow .lvbar .zn,.lbars.noted .lvbar .zn{white-space:normal;line-height:1.25}
+.ldrow .lvbar .zn em,.lbars.noted .lvbar .zn em{
+  display:block;margin-top:2px;padding-left:19px;font-style:normal;
+  font-size:11.5px;font-weight:600;color:var(--ink-3);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.ldtree.airy .lvbar .zn{font-size:16px}
+.ldtree.airy .lvbar .zn em{font-size:12.5px}
+.ldtree.airy .lvbar .ztr{height:22px}
+.ldtree.airy .lvbar .zver{width:150px;font-size:13px;padding:5px 0}
+.ldtree.tight .lvbar .zn{font-size:13px}
+.ldtree.tight .lvbar .zn em{font-size:10.5px}
+.ldtree.tight .lvbar .ztr{height:15px}
+.ldtree.tight .lvbar .zv{font-size:13.5px}
+.ldtree.tight .lvbar .zver{width:118px;font-size:11px}
+.ldtree .lmore{margin-left:44px}
+/* an activity reads a shade lighter than a subgroup, so the two never blur */
+.ldrow.ist .lvbar .zn{font-weight:700;color:var(--ink-2)}
+.ldrow.isg .lvbar .zn{font-weight:800}
+
+@media(max-width:1200px){
+  .ldname b{font-size:17px}
+  .ldbig b{font-size:24px}
+}
+
 </style>
 <script>
 /* Revision M — decide the theme before the first pixel is painted */
@@ -3413,7 +3510,7 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.1"/><path d="M19.4 14.6a1.6 1.6 0 0 0 .32 1.77l.06.06a1.9 1.9 0 1 1-2.69 2.69l-.06-.06a1.6 1.6 0 0 0-1.77-.32 1.6 1.6 0 0 0-.97 1.46V21a1.9 1.9 0 0 1-3.8 0v-.11a1.6 1.6 0 0 0-1.05-1.46 1.6 1.6 0 0 0-1.77.32l-.06.06a1.9 1.9 0 1 1-2.69-2.69l.06-.06a1.6 1.6 0 0 0 .32-1.77 1.6 1.6 0 0 0-1.46-.97H3a1.9 1.9 0 0 1 0-3.8h.11a1.6 1.6 0 0 0 1.46-1.05 1.6 1.6 0 0 0-.32-1.77l-.06-.06a1.9 1.9 0 1 1 2.69-2.69l.06.06a1.6 1.6 0 0 0 1.77.32H9a1.6 1.6 0 0 0 .97-1.46V3a1.9 1.9 0 0 1 3.8 0v.11a1.6 1.6 0 0 0 .97 1.46 1.6 1.6 0 0 0 1.77-.32l.06-.06a1.9 1.9 0 1 1 2.69 2.69l-.06.06a1.6 1.6 0 0 0-.32 1.77V9a1.6 1.6 0 0 0 1.46.97H21a1.9 1.9 0 0 1 0 3.8h-.11a1.6 1.6 0 0 0-1.46.97z"/></svg>
           <i class="gdot" id="ghDot"></i>
         </button>
-          <button class="sub subbtn" id="bAbout" type="button" title="Revision, release date and who built this">Rev AH · 19 Sep 2026</button>
+          <button class="sub subbtn" id="bAbout" type="button" title="Revision, release date and who built this">Rev AI · 20 Sep 2026</button>
         </div>
       </div>
     </div>
@@ -5404,9 +5501,9 @@ const avColor=id=>'hsl('+hueOf(id)+' 52% 46%)';
    2 · STATE
    ══════════════════════════════════════════════════════════════ */
 const APP={
-  rev:'AH',
-  revDate:'2026-09-19',
-  released:'19 Sep 2026',
+  rev:'AI',
+  revDate:'2026-09-20',
+  released:'20 Sep 2026',
   product:'Gantt Studio',
   devRole:'D&IS Project Technical Manager',
   devName:'Sanjeewa Abeyrathne',
@@ -5416,8 +5513,8 @@ const APP={
 const APP_REV='Revision '+APP.rev+' · '+APP.released;
 const APP_CREDIT=APP.devRole+' · '+APP.devMail+' · '+APP.devTel;
 
-const KEY='ganttStudio.revAH';
-const KEY_PREV=['ganttStudio.revAG','ganttStudio.revAF','ganttStudio.revAE','ganttStudio.revAD','ganttStudio.revAC','ganttStudio.revAB','ganttStudio.revAA','ganttStudio.revZ','ganttStudio.revY','ganttStudio.revX','ganttStudio.revW','ganttStudio.revV','ganttStudio.revU','ganttStudio.revT','ganttStudio.revS','ganttStudio.revR','ganttStudio.revQ','ganttStudio.revP','ganttStudio.revO','ganttStudio.revN','ganttStudio.revM','ganttStudio.revL','ganttStudio.revK','ganttStudio.revJ','ganttStudio.revI','ganttStudio.revH','ganttStudio.revG','ganttStudio.revF','ganttStudio.revE','ganttStudio.revD','ganttStudio.revC','ganttStudio.revA'];   // earlier revisions carry over on first open
+const KEY='ganttStudio.revAI';
+const KEY_PREV=['ganttStudio.revAH','ganttStudio.revAG','ganttStudio.revAF','ganttStudio.revAE','ganttStudio.revAD','ganttStudio.revAC','ganttStudio.revAB','ganttStudio.revAA','ganttStudio.revZ','ganttStudio.revY','ganttStudio.revX','ganttStudio.revW','ganttStudio.revV','ganttStudio.revU','ganttStudio.revT','ganttStudio.revS','ganttStudio.revR','ganttStudio.revQ','ganttStudio.revP','ganttStudio.revO','ganttStudio.revN','ganttStudio.revM','ganttStudio.revL','ganttStudio.revK','ganttStudio.revJ','ganttStudio.revI','ganttStudio.revH','ganttStudio.revG','ganttStudio.revF','ganttStudio.revE','ganttStudio.revD','ganttStudio.revC','ganttStudio.revA'];   // earlier revisions carry over on first open
 let S = blank();
 
 function blank(){
@@ -19641,18 +19738,43 @@ function liveRowsOf(f){
     subsOf(g.id).forEach(sg => {
       /* a child stands for everything beneath it, not just its own tasks */
       const own = tasksUnder(sg.id).filter(t => ids.has(t.id));
+      /* Revision AI — and it says what it is made of, so a row on the wall can
+         be read as "a subgroup with four of its own" rather than as a bar */
       if(own.length) out.push({name:gclean(sg.name), color:sg.color || g.color,
-                               list:own, sub:true, group:sg});
+                               list:own, sub:true, group:sg,
+                               kids:subsOf(sg.id).filter(x=>tasksUnder(x.id).some(t=>ids.has(t.id))).length,
+                               acts:own.length});
     });
     const direct = f.list.filter(t => t.groupId === g.id);
     if(out.length && direct.length)
-      out.push({name:'Other ' + gclean(g.name) + ' work', color:g.color, list:direct, sub:true});
+      out.push({name:'Other ' + gclean(g.name) + ' work', color:g.color, list:direct, sub:true,
+                loose:true, kids:0, acts:direct.length});
     if(out.length) return out;
   }
   /* nothing below it — then the activities themselves are the unit of progress */
   return f.list.slice().sort((a, b) => a.s - b.s).map(t => ({
     name: t.name, color: barPaint(t).base, list: [t], task: t
   }));
+}
+
+/* ── Revision AI · what a row is, in four words ──────────────────────────
+   A bar on its own does not say whether it stands for one activity, a
+   subgroup of six, or a branch with four subgroups under it.  This line does,
+   and it is what turns a band of bars into a structure.                  */
+function liveRowNote(r){
+  if(r.task){
+    /* the parent is the band above it, so repeating it here says nothing; what
+       an activity row is short of is its state and whose it is */
+    const st=liveState(r.task);
+    const who=r.task.ownerId ? P(r.task.ownerId) : null;
+    return (r.task.milestone ? ('Gate  \u00b7  ' + st.lab) : st.lab) +
+           (who ? ('  \u00b7  ' + who.name) : '');
+  }
+  const acts = r.acts != null ? r.acts : r.list.length;
+  const a = acts + ' activit' + (acts===1?'y':'ies');
+  if(r.loose) return a + ' sitting directly in this group';
+  if(r.kids)  return r.kids + ' subgroup' + (r.kids===1?'':'s') + '  \u00b7  ' + a;
+  return a;
 }
 
 /* a window that crosses midnight has to say which day, or 2300 – 0800 reads
@@ -19752,6 +19874,9 @@ function liveBuild(card, sl){
              : sl.kind==='org'   ? 'Who is running tonight'
              : sl.kind==='weather' ? 'Weather'
              : sl.kind==='gates' ? ((cat?cat.name:'Every closure')+'  ·  the gates it is running at')
+             : sl.kind==='group' && sl.group
+               ? ((cat?cat.name:'Every closure')+'  ·  '+
+                  (groupDepth(sl.group)===0?'main group':'subgroup')+', broken down one level')
              : (cat?cat.name:'Every closure')+
                (sl.kind==='overview'?(watchList().length?('  ·  '+watchList().length+' on the watch list'):'')
                                     :('  ·  '+(watchList().length?'slide ':'work front ')+LIVE.i+' of '+(LIVE.n-1)));
@@ -19819,17 +19944,22 @@ function liveBuild(card, sl){
     return;
   }
 
-  /* the strip of numbers every slide carries */
-  const kpis=el('div','lkpis');
-  [['Activities',st.n,''],['Complete',st.done,''],['Running',st.run,st.run?'warn':''],
-   ['Overdue',st.late,st.late?'bad':''],
-   ['Window',liveWindow(st.s,st.e),'wide']].forEach(k=>{
-    const t=el('div','lkpi'+(k[2]?(' '+k[2]):''));
-    t.appendChild(el('span','zl',k[0]));
-    t.appendChild(el('b',null,String(k[1])));
-    kpis.appendChild(t);
-  });
-  card.appendChild(kpis);
+  /* the strip of numbers every slide carries.
+     Revision AI — except a drilled-down group, whose own band says all of this
+     in context a moment later; two rows of the same counts, one above the
+     other, only cost the tree the room it needs. */
+  if(sl.kind!=='group'){
+    const kpis=el('div','lkpis');
+    [['Activities',st.n,''],['Complete',st.done,''],['Running',st.run,st.run?'warn':''],
+     ['Overdue',st.late,st.late?'bad':''],
+     ['Window',liveWindow(st.s,st.e),'wide']].forEach(k=>{
+      const t=el('div','lkpi'+(k[2]?(' '+k[2]):''));
+      t.appendChild(el('span','zl',k[0]));
+      t.appendChild(el('b',null,String(k[1])));
+      kpis.appendChild(t);
+    });
+    card.appendChild(kpis);
+  }
 
   const body=el('div','lbody');
   card.appendChild(body);
@@ -19861,7 +19991,21 @@ function liveOverview(host, list, sl){
       if(!own.length) return;
       const g = w.kind==='g' ? w.group
               : {name:w.name, color:barPaint(w.task).base};
-      rows.push({g, list:own, depth:0});
+      /* Revision AI — say what each watched thing is and where it sits, so the
+         opener reads as a set of places in the plan rather than four bars */
+      let note='';
+      if(w.kind==='g'){
+        const d=groupDepth(w.group), par=parentOf(w.group);
+        const kids=subsOf(w.group.id).filter(x=>tasksUnder(x.id).some(t=>ids.has(t.id))).length;
+        note = (d===0?'Main group':(d===1?'Subgroup':('Level '+(d+1))))+
+               (par?('  \u00b7  in '+gclean(par.name)):'')+
+               (kids?('  \u00b7  '+kids+' subgroup'+(kids===1?'':'s')):
+                     ('  \u00b7  '+own.length+' activit'+(own.length===1?'y':'ies')));
+      }else{
+        const pg=G(w.task.groupId);
+        note = (w.task.milestone?'Gate':'Activity')+(pg?('  \u00b7  in '+gclean(pg.name)):'');
+      }
+      rows.push({g, list:own, depth:0, note});
     });
   }else{
   const pool=new Set(list.map(t=>t.id));
@@ -19883,7 +20027,9 @@ function liveOverview(host, list, sl){
   /* Revision AB — the opener now carries every subgroup too, so it needs the
      room for them; past twenty-two rows a wall screen stops being readable
      and the per-front slides are where the detail belongs anyway */
-  const wrap=el('div','lbars'+(rows.length>13?' tight':(rows.length<=9?' airy':'')));
+  const noted=rows.some(r=>r.note);
+  const wrap=el('div','lbars'+(noted?' noted':'')+
+              (rows.length>13?' tight':(rows.length<=9?' airy':'')));
   const shown=rows.slice(0,22);
   shown.forEach((r,i)=>{
     const st=liveStats(r.list);
@@ -19892,6 +20038,7 @@ function liveOverview(host, list, sl){
     const nm=el('div','zn');
     const dot=el('i'); dot.style.background=r.g.color; nm.appendChild(dot);
     nm.appendChild(document.createTextNode(gclean(r.g.name)));
+    if(r.note) nm.appendChild(el('em',null,r.note));
     row.appendChild(nm);
     const tr=el('div','ztr');
     const f=el('div','zf');
@@ -20175,7 +20322,10 @@ function liveCharts(host, sl){
   {
     const b=card('Schedule health',
       'Plan says <b>'+Math.round(x.planNow)+'%</b> by now · booked <b>'+Math.round(x.actual)+'%</b>');
-    const score=clamp(50+variance*2.4-x.late.length*6-x.block*4,0,100);
+    /* Revision AI — rounded once, here, so the needle and the score written
+       under it are the same number.  Pointing at 40.4 while the label says 40
+       is the kind of half-degree nobody can see and everybody can argue about. */
+    const score=Math.round(clamp(50+variance*2.4-x.late.length*6-x.block*4,0,100));
     const verdict = score>=68?['ok','On track']:(score>=42?['warn','At risk']:['bad','Behind plan']);
     const vcol    = score>=68?C.done:(score>=42?C.prog:C.blocked);
     /* ── Revision AG · a dial that can be read from the back of the room ──
@@ -20678,6 +20828,8 @@ function liveProgressRow(host, r, i, opts){
   const nm = el('div', 'zn');
   const dot = el('i'); dot.style.background = r.color; nm.appendChild(dot);
   nm.appendChild(document.createTextNode(r.name));
+  /* Revision AI — a second line saying what this row stands for */
+  if(opts && opts.note) nm.appendChild(el('em', null, opts.note));
   row.appendChild(nm);
 
   const tr = el('div', 'ztr');
@@ -20700,17 +20852,97 @@ function liveProgressRow(host, r, i, opts){
   return v;
 }
 
+/* ══════════ Revision AI · a watched group, drilled down ══════════
+   Before AI a watched group came out as a band of bars: its children, flat,
+   with the group's own figure somewhere up in the slide header.  On a wall
+   that reads as a list of unrelated things — nobody could tell what was the
+   parent, what was a subgroup of it and what was a single activity.
+
+   So the slide is a structure now.  The watched thing itself is a band across
+   the top, saying what level it sits at and where it sits, with its own bar
+   and its own verdict.  Under it, on a rail with an arrow into each one, come
+   its IMMEDIATE children — the next level down and no further — each saying
+   whether it is a subgroup (and what is inside it) or an activity.  Watch a
+   main group and you get its subgroups; watch a subgroup and you get its own
+   subgroups, or its activities when it has none.  One level at a time is the
+   whole point: the relationship is the thing being shown.               */
+function liveDrillHead(g, list, rows){
+  const C = S.view.colors;
+  const v = liveVerdict(list);
+  const d = groupDepth(g);
+  const box = el('div', 'ldhead');
+
+  const top = el('div', 'ldh');
+  const tag = el('div', 'ldtag');
+  tag.textContent = d === 0 ? 'Main group' : (d === 1 ? 'Subgroup' : ('Level ' + (d + 1)));
+  tag.style.background = (g.color || '#7C8BA1') + '22';
+  tag.style.color = g.color || 'var(--ink-2)';
+  top.appendChild(tag);
+
+  const nm = el('div', 'ldname');
+  nm.appendChild(el('b', null, gclean(g.name)));
+  const par = parentOf(g);
+  nm.appendChild(el('s', null, par
+    ? ('inside  ' + ancestry(par).map(x => gclean(x.name)).join('  \u203a  '))
+    : 'at the top level'));
+  top.appendChild(nm);
+
+  const big = el('div', 'ldbig');
+  big.appendChild(el('b', null, v.st.pct + '%'));
+  big.appendChild(el('span', 'ldver ' + v.k, v.lab));
+  top.appendChild(big);
+  box.appendChild(top);
+
+  const bar = el('div', 'ldbar');
+  const f = el('div', 'ldfill');
+  /* status, not identity: the group's own colour is on the chip and on every
+     dot below, and a pink bar over amber children reads as two scales */
+  f.style.background = v.st.pct >= 100 ? C.done
+                     : (v.k === 'bad' ? C.blocked : (v.st.pct > 0 ? C.prog : C.todo));
+  f.style.width = '0%';
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    f.style.width = clamp(v.st.pct, 0, 100) + '%';
+  }));
+  bar.appendChild(f);
+  const pk = el('div', 'ldplan');
+  pk.style.left = clamp(v.st.plan, 0, 100) + '%';
+  pk.title = 'The plan says ' + v.st.plan + '% by now';
+  bar.appendChild(pk);
+  box.appendChild(bar);
+
+  const cap = el('div', 'ldcap');
+  cap.appendChild(el('span', null, v.st.pct + '% booked'));
+  cap.appendChild(el('b', null, 'plan ' + v.st.plan + '% by now'));
+  const kids = rows.filter(r => r.group).length;
+  const bits = [v.st.done + ' of ' + v.st.n + ' activities done'];
+  if(v.st.late) bits.push(v.st.late + ' overdue');
+  bits.push(kids ? (kids + ' subgroup' + (kids === 1 ? '' : 's') + ' below it')
+                 : 'no subgroups \u2014 the activities are below it');
+  cap.appendChild(el('s', null, bits.join('  \u00b7  ')));
+  box.appendChild(cap);
+  return box;
+}
+
 function liveGroupBars(host, sl){
   const rows = liveRowsOf(sl);
-  const wrap = el('div', 'lbars' + (rows.length > 13 ? ' tight' : (rows.length <= 9 ? ' airy' : '')));
-  const shown = rows.slice(0, 16);
+  /* the watched thing itself, first, so everything under it has a parent */
+  if(sl.group) host.appendChild(liveDrillHead(sl.group, sl.list, rows));
+
+  const cap = sl.group ? 12 : 16;
+  const shown = rows.slice(0, cap);
+  const wrap = el('div', 'ldtree' + (shown.length > 9 ? ' tight' : (shown.length <= 5 ? ' airy' : '')));
   const behind = [];
   shown.forEach((r, i) => {
-    const v = liveProgressRow(wrap, r, i);
+    const row = el('div', 'ldrow' + (r.group ? ' isg' : (r.task ? ' ist' : '')));
+    const arm = el('div', 'ldarm');
+    arm.style.borderLeftColor = r.color || 'var(--line-hover)';
+    row.appendChild(arm);
+    const v = liveProgressRow(row, r, i, {note: liveRowNote(r)});
+    wrap.appendChild(row);
     if(v.k === 'bad') behind.push({r, v});
   });
   if(rows.length > shown.length)
-    wrap.appendChild(el('div', 'lmore', '+ ' + (rows.length - shown.length) + ' more'));
+    wrap.appendChild(el('div', 'lmore', '+ ' + (rows.length - shown.length) + ' more below this'));
   host.appendChild(wrap);
 
   /* and, directly under it, what is behind and what is holding it up */

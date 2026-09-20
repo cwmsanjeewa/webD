@@ -4,8 +4,14 @@ The published Gantt Studio programme for contract C801B. Anyone with the web
 link sees the current plan. It **opens on the Live carousel** — `config.json`
 says `"openOn": "live"` — and plays exactly what was set up in the desktop copy:
 the same watched groups, the same closure, the same slide timing, because all
-three now travel inside `data/programme.json`. Nothing has to be set up again at
-this end. The page checks for a new version on an interval you
+three travel inside `data/programme.json`. Nothing has to be set up again at
+this end.
+
+Each watched group gets a screen of its own that opens with the group itself —
+what level it sits at, where it sits, its own progress against plan — and then
+drills one level down: its immediate subgroups, on a rail, with an arrow into
+each. Watch a subgroup instead and the same screen drills into its own
+subgroups, or into its activities when it has none. The page checks for a new version on an interval you
 can change from the page itself — the **refresh** box on the Live bar, beside the
 play controls — and on the Live tab it takes a new version by itself, because a
 wall screen has nobody standing next to it to press Reload. On every other tab it
@@ -15,7 +21,7 @@ still asks first.
 
 | File | What it is |
 |---|---|
-| `index.html` | Gantt Studio, Revision AH. One self-contained file — no build, no dependencies, no server code. |
+| `index.html` | Gantt Studio, Revision AI. One self-contained file — no build, no dependencies, no server code. |
 | `config.json` | Where the page looks for the programme, what it calls itself, and the interval it starts on. |
 | `data/programme.json` | The programme itself. This is the file the Publish button rewrites. |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are. |
