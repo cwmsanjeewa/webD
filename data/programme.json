@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T03:22:36.549Z",
+  "savedAt": "2026-09-20T03:29:16.271Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -3108,7 +3108,7 @@
       "id": "g_egmy4vfsr",
       "name": "R801A (NEC) ACTIVITIES [FSC 1]",
       "color": "#1273e0",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3124,7 +3124,7 @@
       "id": "g_lz3ftp3wl",
       "name": "All Transformers Related Activities",
       "color": "#1273e0",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_4aw16o7nm"
     },
@@ -8439,9 +8439,9 @@
       "teamIds": [],
       "teamId": null,
       "status": "in-progress",
-      "progress": 10,
+      "progress": 30,
       "autoProgress": false,
-      "effectiveProgress": 10,
+      "effectiveProgress": 30,
       "subtasks": [
         {
           "id": "s_zrg0wjezt",
@@ -8503,9 +8503,9 @@
       "teamIds": [],
       "teamId": null,
       "status": "in-progress",
-      "progress": 5,
+      "progress": 50,
       "autoProgress": false,
-      "effectiveProgress": 5,
+      "effectiveProgress": 50,
       "subtasks": [
         {
           "id": "s_nkfi2dwz5",
