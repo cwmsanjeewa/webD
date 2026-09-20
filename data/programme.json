@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T06:55:32.724Z",
+  "savedAt": "2026-09-20T07:14:34.852Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -3142,7 +3142,7 @@
       "id": "g_egmy4vfsr",
       "name": "R801A (NEC) ACTIVITIES [FSC 1]",
       "color": "#1273e0",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3150,7 +3150,7 @@
       "id": "g_4aw16o7nm",
       "name": "R801 (COLAS RAIL) ACTIVITIES [FSC 1]",
       "color": "#e0740b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -6608,10 +6608,10 @@
         "tm_86jv8qrvn"
       ],
       "teamId": "tm_86jv8qrvn",
-      "status": "in-progress",
-      "progress": 75,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 75,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -6619,7 +6619,7 @@
       "locationId": "lc_o56pjg60z",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T15:07"
     },
     {
       "id": "t_aavscy8tr",
@@ -6636,10 +6636,10 @@
         "tm_86jv8qrvn"
       ],
       "teamId": "tm_86jv8qrvn",
-      "status": "in-progress",
-      "progress": 15,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 15,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -6647,7 +6647,7 @@
       "locationId": "lc_pa34fm2d4",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T15:12"
     },
     {
       "id": "t_8hn0z1gh3",
@@ -6664,10 +6664,10 @@
         "tm_86jv8qrvn"
       ],
       "teamId": "tm_86jv8qrvn",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -6675,7 +6675,7 @@
       "locationId": "lc_pa34fm2d4",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T15:14"
     },
     {
       "id": "t_sptnb97gn",
@@ -8784,10 +8784,10 @@
       "ownerId": null,
       "teamIds": [],
       "teamId": null,
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 25,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 25,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -8800,7 +8800,7 @@
     {
       "id": "t_llwfk45hr",
       "groupId": "g_hqqonlpl7",
-      "name": "BP13 - Rack to Rack Cabling Works (copy)",
+      "name": "BP13 - Rack to Rack Cabling Works",
       "start": "2026-09-20T16:00",
       "end": "2026-09-20T19:00",
       "allDay": false,
