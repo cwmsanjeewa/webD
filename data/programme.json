@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T09:02:31.092Z",
+  "savedAt": "2026-09-20T09:10:26.174Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -14,7 +14,7 @@
     "applyFilters": true
   },
   "view": {
-    "ppd": 384.906,
+    "ppd": 2600,
     "teamPpd": 48.956,
     "locPpd": 11.176,
     "criticalPath": true,
@@ -2751,7 +2751,7 @@
       "id": "g_x8pyxkd24",
       "name": "Tool Box Meetings/Briefing [FSC 1]",
       "color": "#e0740b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2991,7 +2991,7 @@
       "id": "g_f5yeuzfkj",
       "name": "Cabinet Relocation Works (FSC1)",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3007,7 +3007,7 @@
       "id": "g_me18au8ss",
       "name": "IR Test Works (FSC1)",
       "color": "#6b7a90",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3055,7 +3055,7 @@
       "id": "g_nxez8e2ni",
       "name": "BP10 [ RATC ]",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3063,7 +3063,7 @@
       "id": "g_erszwjd3x",
       "name": "BP10 [ CHO & OBC 2 ]",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3087,7 +3087,7 @@
       "id": "g_ara6d34zn",
       "name": "BP10 [ DTS ]",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3151,7 +3151,7 @@
       "id": "g_egmy4vfsr",
       "name": "R801A (NEC) ACTIVITIES [FSC 1]",
       "color": "#1273e0",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3159,7 +3159,7 @@
       "id": "g_4aw16o7nm",
       "name": "R801 (COLAS RAIL) ACTIVITIES [FSC 1]",
       "color": "#e0740b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3167,7 +3167,7 @@
       "id": "g_lz3ftp3wl",
       "name": "All Transformers Related Activities",
       "color": "#1273e0",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_4aw16o7nm"
     },
@@ -3175,7 +3175,7 @@
       "id": "g_hqqonlpl7",
       "name": "R801A Activities Rack-To-Rack Activities BP02, BP12, BP13(FSC1)",
       "color": "#9333c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_egmy4vfsr"
     },
@@ -4705,10 +4705,10 @@
         "tm_0osk8fb25"
       ],
       "teamId": "tm_0osk8fb25",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": true,
       "notes": "",
@@ -4716,7 +4716,7 @@
       "locationId": "lc_o56pjg60z",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T17:09"
     },
     {
       "id": "t_0n1oikzwc",
@@ -4918,20 +4918,20 @@
         "tm_c45jr3z1h"
       ],
       "teamId": "tm_c45jr3z1h",
-      "status": "in-progress",
-      "progress": 75,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 75,
+      "effectiveProgress": 100,
       "subtasks": [
         {
           "id": "s_5vmr1gwp2",
           "title": "Turn Off TRA 1401",
-          "done": false
+          "done": true
         },
         {
           "id": "s_o283cqwp2",
           "title": "Turn Off TRA 1402",
-          "done": false
+          "done": true
         }
       ],
       "milestone": true,
@@ -4940,7 +4940,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T17:08"
     },
     {
       "id": "t_f4iykeagq",
@@ -5623,11 +5623,22 @@
         "tm_0osk8fb25"
       ],
       "teamId": "tm_0osk8fb25",
-      "status": "not-started",
-      "progress": 0,
-      "autoProgress": false,
-      "effectiveProgress": 0,
-      "subtasks": [],
+      "status": "in-progress",
+      "progress": 50,
+      "autoProgress": true,
+      "effectiveProgress": 50,
+      "subtasks": [
+        {
+          "id": "s_i9rf4crdu",
+          "title": "Depot All Cabinet Power On",
+          "done": true
+        },
+        {
+          "id": "s_r5p6hixv5",
+          "title": "BP10 All Cabinet Power On",
+          "done": false
+        }
+      ],
       "milestone": false,
       "notes": "",
       "predecessors": [],
@@ -6589,10 +6600,10 @@
         "tm_vrrn1t603"
       ],
       "teamId": "tm_vrrn1t603",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "Cabinet Relocation Team 1, 3 & 4\nSwitch Power Rail Team 1 & 2\nSI Team (For IR Test)\nITC Team (Cabinet Power Down)",
@@ -6600,7 +6611,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T17:09"
     },
     {
       "id": "t_g7m5h1c9w",
