@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T06:48:57.909Z",
+  "savedAt": "2026-09-20T06:55:32.724Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -3150,7 +3150,7 @@
       "id": "g_4aw16o7nm",
       "name": "R801 (COLAS RAIL) ACTIVITIES [FSC 1]",
       "color": "#e0740b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3158,7 +3158,7 @@
       "id": "g_lz3ftp3wl",
       "name": "All Transformers Related Activities",
       "color": "#1273e0",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_4aw16o7nm"
     },
@@ -8500,15 +8500,15 @@
       "ownerId": null,
       "teamIds": [],
       "teamId": null,
-      "status": "in-progress",
-      "progress": 50,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 50,
+      "effectiveProgress": 100,
       "subtasks": [
         {
           "id": "s_zrg0wjezt",
           "title": "M105A - SSBM 1 Power supply Affected M203A – Power Rail Supply Affected",
-          "done": false
+          "done": true
         }
       ],
       "milestone": false,
@@ -8517,7 +8517,7 @@
       "locationId": "lc_5wghz7wqo",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T14:55"
     },
     {
       "id": "t_s9y139gth",
@@ -8564,15 +8564,15 @@
       "ownerId": null,
       "teamIds": [],
       "teamId": null,
-      "status": "in-progress",
-      "progress": 80,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 80,
+      "effectiveProgress": 100,
       "subtasks": [
         {
           "id": "s_nkfi2dwz5",
           "title": "During 600V Switchboard ATS Changeover House Power affected for BP08 & BP09 Change over Time : 8 sec",
-          "done": false
+          "done": true
         }
       ],
       "milestone": false,
@@ -8581,7 +8581,7 @@
       "locationId": "lc_ce4tp8u76",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T14:54"
     },
     {
       "id": "t_qyutf5zgl",
@@ -8596,10 +8596,10 @@
       "ownerId": null,
       "teamIds": [],
       "teamId": null,
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 20,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 20,
       "subtasks": [
         {
           "id": "s_5zc3w7brl",
