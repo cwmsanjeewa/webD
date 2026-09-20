@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T09:10:26.174Z",
+  "savedAt": "2026-09-20T09:48:17.320Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -2751,7 +2751,7 @@
       "id": "g_x8pyxkd24",
       "name": "Tool Box Meetings/Briefing [FSC 1]",
       "color": "#e0740b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2991,7 +2991,7 @@
       "id": "g_f5yeuzfkj",
       "name": "Cabinet Relocation Works (FSC1)",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -2999,7 +2999,7 @@
       "id": "g_39c7wczpj",
       "name": "Switch Power Rail Works (FSC1)",
       "color": "#0d97c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3007,7 +3007,7 @@
       "id": "g_me18au8ss",
       "name": "IR Test Works (FSC1)",
       "color": "#6b7a90",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3055,7 +3055,7 @@
       "id": "g_nxez8e2ni",
       "name": "BP10 [ RATC ]",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3095,7 +3095,7 @@
       "id": "g_m9bdvq1fg",
       "name": "Cabinet Power On",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3151,7 +3151,7 @@
       "id": "g_egmy4vfsr",
       "name": "R801A (NEC) ACTIVITIES [FSC 1]",
       "color": "#1273e0",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3159,7 +3159,7 @@
       "id": "g_4aw16o7nm",
       "name": "R801 (COLAS RAIL) ACTIVITIES [FSC 1]",
       "color": "#e0740b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3175,7 +3175,7 @@
       "id": "g_hqqonlpl7",
       "name": "R801A Activities Rack-To-Rack Activities BP02, BP12, BP13(FSC1)",
       "color": "#9333c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_egmy4vfsr"
     },
@@ -4369,10 +4369,10 @@
         "tm_ec1y0xa4j"
       ],
       "teamId": "tm_ec1y0xa4j",
-      "status": "in-progress",
-      "progress": 80,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 80,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4380,7 +4380,7 @@
       "locationId": "lc_2ipheaqcb",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T17:19"
     },
     {
       "id": "t_4k4u02qcg",
@@ -4717,34 +4717,6 @@
       "struck": false,
       "struckNote": "",
       "completedAt": "2026-09-20T17:09"
-    },
-    {
-      "id": "t_0n1oikzwc",
-      "groupId": "g_m9bdvq1fg",
-      "name": "[FSC 1] Cabinet Power On - BP10",
-      "start": "2026-09-20T16:00",
-      "end": "2026-09-20T16:00",
-      "allDay": false,
-      "durationDays": 0,
-      "durationLabel": "—",
-      "categoryId": "cat_fsc1",
-      "ownerId": "p_h595i0uzy",
-      "teamIds": [
-        "tm_0osk8fb25"
-      ],
-      "teamId": "tm_0osk8fb25",
-      "status": "not-started",
-      "progress": 0,
-      "autoProgress": false,
-      "effectiveProgress": 0,
-      "subtasks": [],
-      "milestone": true,
-      "notes": "",
-      "predecessors": [],
-      "locationId": "lc_2ipheaqcb",
-      "struck": false,
-      "struckNote": "",
-      "completedAt": null
     },
     {
       "id": "t_ia2wdlws3",
@@ -6260,6 +6232,34 @@
       "completedAt": null
     },
     {
+      "id": "t_55n44fx5c",
+      "groupId": "g_4rom9sra2",
+      "name": "On Access Scan Enabled - No Adverse Effect on CPU & Memory",
+      "start": "2026-09-21T03:00",
+      "end": "2026-09-21T03:00",
+      "allDay": false,
+      "durationDays": 0,
+      "durationLabel": "—",
+      "categoryId": "cat_fsc1",
+      "ownerId": "p_mvb8p9r6h",
+      "teamIds": [
+        "tm_akrrimwy5"
+      ],
+      "teamId": "tm_akrrimwy5",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": true,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
       "id": "t_okp5ywj9o",
       "groupId": "g_4rom9sra2",
       "name": "[FSC 1] Starting Bus Services (In the event of delay)",
@@ -6685,12 +6685,12 @@
       ],
       "teamId": "tm_86jv8qrvn",
       "status": "in-progress",
-      "progress": 80,
+      "progress": 95,
       "autoProgress": false,
-      "effectiveProgress": 80,
+      "effectiveProgress": 95,
       "subtasks": [],
       "milestone": false,
-      "notes": "",
+      "notes": "Outstanding is 5% office Area",
       "predecessors": [],
       "locationId": "lc_pa34fm2d4",
       "struck": false,
