@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T07:48:44.921Z",
+  "savedAt": "2026-09-20T08:34:39.168Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -31,7 +31,7 @@
     "nav": "zoom",
     "teamsMode": "cards",
     "dashSort": {
-      "phase": "az",
+      "phase": "plan",
       "team": "az"
     },
     "sort": {
@@ -56,7 +56,9 @@
       "pct": 56
     }
   },
-  "hiddenIds": [],
+  "hiddenIds": [
+    "t_qwi8ttyq0"
+  ],
   "categories": [
     {
       "id": "cat_day0",
@@ -2617,19 +2619,7 @@
   "watch": [
     {
       "kind": "group",
-      "id": "g_f5yeuzfkj"
-    },
-    {
-      "kind": "group",
-      "id": "g_egmy4vfsr"
-    },
-    {
-      "kind": "group",
-      "id": "g_4aw16o7nm"
-    },
-    {
-      "kind": "group",
-      "id": "g_kj6q9w590"
+      "id": "g_h6qdcyhmm"
     },
     {
       "kind": "group",
@@ -2638,6 +2628,10 @@
     {
       "kind": "group",
       "id": "g_0ywlmfz1y"
+    },
+    {
+      "kind": "group",
+      "id": "g_bzvinw38v"
     },
     {
       "kind": "group",
@@ -2660,8 +2654,16 @@
       "id": "g_ara6d34zn"
     },
     {
-      "kind": "weather",
-      "id": "wx_lgam5po17"
+      "kind": "group",
+      "id": "g_egmy4vfsr"
+    },
+    {
+      "kind": "group",
+      "id": "g_4aw16o7nm"
+    },
+    {
+      "kind": "group",
+      "id": "g_kj6q9w590"
     }
   ],
   "live": {
@@ -2678,18 +2680,23 @@
     "fields": [
       {
         "id": "wf_iw1oquxds",
-        "label": "IR Test",
-        "value": "All IR Tests Completed. Normalizing Brakers Are Pending."
-      },
-      {
-        "id": "wf_jqt39dydf",
-        "label": "Rain ",
-        "value": "Thundery showers expected in 30 mins."
+        "label": "Depot TRA",
+        "value": "Depot TRA Power On Pending"
       },
       {
         "id": "wf_nnbv0fpye",
-        "label": "SW14",
-        "value": "Will be considered after the completion of SW12"
+        "label": "Depot Cabinet Power",
+        "value": "Target Depot Cabinet Power on Next : 1645h"
+      },
+      {
+        "id": "wf_kuhoc8hlr",
+        "label": "BP10 Cabinet Relocation",
+        "value": "Target Complete by 1830h"
+      },
+      {
+        "id": "wf_bjnk6jq7d",
+        "label": "SW12 ",
+        "value": "Work Completed. Doing the final adjustment. Tartget 1700h"
       }
     ]
   },
@@ -2762,7 +2769,7 @@
       "id": "g_6c2p9r599",
       "name": "C801B ACTIVITIES [FSC 1]",
       "color": "#9333c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3050,7 +3057,7 @@
       "id": "g_nxez8e2ni",
       "name": "BP10 [ RATC ]",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3082,7 +3089,7 @@
       "id": "g_ara6d34zn",
       "name": "BP10 [ DTS ]",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3136,7 +3143,7 @@
     },
     {
       "id": "g_bzvinw38v",
-      "name": "SW 14",
+      "name": "SW 14 [Cancelled]",
       "color": "#0d97c4",
       "collapsed": true,
       "categoryId": "cat_fsc1",
@@ -3146,7 +3153,7 @@
       "id": "g_egmy4vfsr",
       "name": "R801A (NEC) ACTIVITIES [FSC 1]",
       "color": "#1273e0",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3170,7 +3177,7 @@
       "id": "g_hqqonlpl7",
       "name": "R801A Activities Rack-To-Rack Activities BP02, BP12, BP13(FSC1)",
       "color": "#9333c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_egmy4vfsr"
     },
@@ -4308,10 +4315,10 @@
         "tm_hksnio1la"
       ],
       "teamId": "tm_hksnio1la",
-      "status": "in-progress",
-      "progress": 85,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 85,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4319,7 +4326,7 @@
       "locationId": "lc_2ipheaqcb",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T16:19"
     },
     {
       "id": "t_2qf69jx14",
@@ -4365,9 +4372,9 @@
       ],
       "teamId": "tm_ec1y0xa4j",
       "status": "in-progress",
-      "progress": 60,
+      "progress": 75,
       "autoProgress": false,
-      "effectiveProgress": 60,
+      "effectiveProgress": 75,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4393,9 +4400,9 @@
       ],
       "teamId": "tm_ec1y0xa4j",
       "status": "in-progress",
-      "progress": 25,
+      "progress": 50,
       "autoProgress": false,
-      "effectiveProgress": 25,
+      "effectiveProgress": 50,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4420,10 +4427,10 @@
         "tm_ec1y0xa4j"
       ],
       "teamId": "tm_ec1y0xa4j",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 20,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 20,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4533,9 +4540,9 @@
       ],
       "teamId": "tm_hksnio1la",
       "status": "in-progress",
-      "progress": 5,
+      "progress": 15,
       "autoProgress": false,
-      "effectiveProgress": 5,
+      "effectiveProgress": 15,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -5355,10 +5362,10 @@
         "tm_hawztq4hg"
       ],
       "teamId": "tm_hawztq4hg",
-      "status": "in-progress",
-      "progress": 80,
+      "status": "done",
+      "progress": 100,
       "autoProgress": true,
-      "effectiveProgress": 81,
+      "effectiveProgress": 100,
       "subtasks": [
         {
           "id": "s_ps7pphi16",
@@ -5448,22 +5455,22 @@
         {
           "id": "s_4ev2yt565",
           "title": "Installation of Components - PF & PIN\t10:35\t11:05",
-          "done": false
+          "done": true
         },
         {
           "id": "s_apc3j86el",
           "title": "installation of rail cover\t11:05\t11:10",
-          "done": false
+          "done": true
         },
         {
           "id": "s_x00bnngij",
           "title": "Mounting bracket (torque)\t11:10\t11:15",
-          "done": false
+          "done": true
         },
         {
           "id": "s_g1axyhka5",
           "title": "Alignment of module\t11:15\t11:30",
-          "done": false
+          "done": true
         }
       ],
       "milestone": false,
@@ -5472,7 +5479,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T16:24"
     },
     {
       "id": "t_h3glt006g",
@@ -8336,10 +8343,10 @@
       "ownerId": null,
       "teamIds": [],
       "teamId": null,
-      "status": "in-progress",
-      "progress": 5,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 5,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -8347,7 +8354,7 @@
       "locationId": "lc_ut5rfet9y",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T16:07"
     },
     {
       "id": "t_0ekrp0pab",
@@ -8378,7 +8385,7 @@
     {
       "id": "t_vokhwt7hu",
       "groupId": "g_kj6q9w590",
-      "name": "BP06 - 600V Switchboard-1 Shutdown Maintenance",
+      "name": "BP06 - 600V Switchboard-1 Shutdown Maintenance [Cancelled]",
       "start": "2026-09-20T14:00",
       "end": "2026-09-20T18:00",
       "allDay": false,
@@ -8536,15 +8543,15 @@
       "ownerId": null,
       "teamIds": [],
       "teamId": null,
-      "status": "in-progress",
-      "progress": 90,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 90,
+      "effectiveProgress": 100,
       "subtasks": [
         {
           "id": "s_mybjqm69t",
           "title": "During 600V Switchboard ATS Changeover House Power affected for BP08 & BP09 Change over Time : 8 sec",
-          "done": false
+          "done": true
         }
       ],
       "milestone": false,
@@ -8553,7 +8560,7 @@
       "locationId": "lc_ce4tp8u76",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T16:02"
     },
     {
       "id": "t_40z9nlin1",
