@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T02:09:54.381Z",
+  "savedAt": "2026-09-20T02:12:52.648Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -14,7 +14,7 @@
     "applyFilters": true
   },
   "view": {
-    "ppd": 6.026,
+    "ppd": 315.472,
     "teamPpd": 48.956,
     "locPpd": 11.176,
     "criticalPath": true,
@@ -2724,7 +2724,7 @@
       "id": "g_6c2p9r599",
       "name": "C801B ACTIVITIES [FSC 1]",
       "color": "#9333c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2948,7 +2948,7 @@
       "id": "g_f5yeuzfkj",
       "name": "Cabinet Relocation Works (FSC1)",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3036,7 +3036,7 @@
       "id": "g_xwkwq5e7c",
       "name": "BPD [ RRS01 ]",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3108,7 +3108,7 @@
       "id": "g_egmy4vfsr",
       "name": "R801A (NEC) ACTIVITIES [FSC 1]",
       "color": "#1273e0",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -4299,9 +4299,9 @@
       ],
       "teamId": "tm_ec1y0xa4j",
       "status": "in-progress",
-      "progress": 0,
+      "progress": 5,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 5,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4494,10 +4494,10 @@
         "tm_hksnio1la"
       ],
       "teamId": "tm_hksnio1la",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 5,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 5,
       "subtasks": [],
       "milestone": false,
       "notes": "",
