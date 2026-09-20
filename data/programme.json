@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T07:14:34.852Z",
+  "savedAt": "2026-09-20T07:29:03.591Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -14,7 +14,7 @@
     "applyFilters": true
   },
   "view": {
-    "ppd": 315.472,
+    "ppd": 340.881,
     "teamPpd": 48.956,
     "locPpd": 11.176,
     "criticalPath": true,
@@ -2658,6 +2658,10 @@
     {
       "kind": "group",
       "id": "g_ara6d34zn"
+    },
+    {
+      "kind": "weather",
+      "id": "wx_lgam5po17"
     }
   ],
   "live": {
@@ -2982,7 +2986,7 @@
       "id": "g_f5yeuzfkj",
       "name": "Cabinet Relocation Works (FSC1)",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3046,7 +3050,7 @@
       "id": "g_nxez8e2ni",
       "name": "BP10 [ RATC ]",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3142,7 +3146,7 @@
       "id": "g_egmy4vfsr",
       "name": "R801A (NEC) ACTIVITIES [FSC 1]",
       "color": "#1273e0",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -4332,10 +4336,10 @@
         "tm_ec1y0xa4j"
       ],
       "teamId": "tm_ec1y0xa4j",
-      "status": "in-progress",
-      "progress": 25,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 25,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4343,7 +4347,7 @@
       "locationId": "lc_2fgr09n7h",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T15:27"
     },
     {
       "id": "t_7cfzqowig",
@@ -4361,9 +4365,9 @@
       ],
       "teamId": "tm_ec1y0xa4j",
       "status": "in-progress",
-      "progress": 40,
+      "progress": 60,
       "autoProgress": false,
-      "effectiveProgress": 40,
+      "effectiveProgress": 60,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4388,10 +4392,10 @@
         "tm_ec1y0xa4j"
       ],
       "teamId": "tm_ec1y0xa4j",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 25,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 25,
       "subtasks": [],
       "milestone": false,
       "notes": "",
