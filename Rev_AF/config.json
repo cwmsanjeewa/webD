@@ -3,7 +3,7 @@
   "title": "BPLRT Full Sunday Closure — live programme",
   "owner": "Sanjeewa Abeyrathne · D&IS Project Technical Manager",
   "note": "Contract C801B · published from Gantt Studio",
-  "openOn": "live",
+  "openOn": "dash",
   "refreshSeconds": 60,
   "allowExports": true
 }

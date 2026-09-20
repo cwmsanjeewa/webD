@@ -1,11 +1,7 @@
 # BPLRT Full Sunday Closure — live programme
 
 The published Gantt Studio programme for contract C801B. Anyone with the web
-link sees the current plan. It **opens on the Live carousel** — `config.json`
-says `"openOn": "live"` — and plays exactly what was set up in the desktop copy:
-the same watched groups, the same closure, the same slide timing, because all
-three now travel inside `data/programme.json`. Nothing has to be set up again at
-this end. The page checks for a new version on an interval you
+link sees the current plan. The page checks for a new version on an interval you
 can change from the page itself — the **refresh** box on the Live bar, beside the
 play controls — and on the Live tab it takes a new version by itself, because a
 wall screen has nobody standing next to it to press Reload. On every other tab it
@@ -15,7 +11,7 @@ still asks first.
 
 | File | What it is |
 |---|---|
-| `index.html` | Gantt Studio, Revision AH. One self-contained file — no build, no dependencies, no server code. |
+| `index.html` | Gantt Studio, Revision AF. One self-contained file — no build, no dependencies, no server code. |
 | `config.json` | Where the page looks for the programme, what it calls itself, and the interval it starts on. |
 | `data/programme.json` | The programme itself. This is the file the Publish button rewrites. |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are. |
@@ -45,26 +41,6 @@ Live tab there is a **refresh … s** box next to the play controls: change it a
 that screen checks at the new interval from then on, and remembers the setting in
 that browser. Anything from 15 seconds to an hour is allowed — 15 to 30 seconds
 during a closure, a few minutes the rest of the week.
-
-## Weather boards
-
-A weather board reads the met service from the viewer's own browser, so a
-published page keeps its forecast current without anything server-side. Three
-addresses need to be reachable from wherever the page is opened:
-
-```
-api.open-meteo.com
-air-quality-api.open-meteo.com
-geocoding-api.open-meteo.com
-```
-
-They need no key and no account. If a network blocks them the board falls back
-to the last reading stored in `data/programme.json` and says how old it is.
-
-A board reports the forecast and nothing else: the chance of rain, how much,
-whether there is lightning in the window and when, the strongest gust, the lowest
-visibility and the temperature range. What that means for the night's work is the
-shift manager's call, not the screen's.
 
 ## A note on visibility
 

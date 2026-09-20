@@ -2971,12 +2971,10 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
 /* the health gauge — the dasharray is set on the element, never here, or the
    rule would win over it and the band would never grow */
 .lchg{position:relative;flex:none;display:flex;align-items:center;justify-content:center;width:100%}
-.lchg svg{width:min(100%,330px);height:auto;display:block;overflow:visible}
-.lchmark{transition:cx 1.5s cubic-bezier(.34,1.32,.5,1),cy 1.5s cubic-bezier(.34,1.32,.5,1)}
-.lchscore{
-  font-family:inherit;font-size:12px;font-weight:800;fill:var(--ink-3);
-  font-variant-numeric:tabular-nums;letter-spacing:.2px;
-  paint-order:stroke;stroke:var(--surface-2);stroke-width:5px;stroke-linejoin:round;
+.lchg svg{width:min(100%,330px);height:auto;display:block}
+.lchgv{
+  fill:none;stroke-width:16;stroke-linecap:round;
+  transition:stroke-dasharray 1.3s cubic-bezier(.22,.9,.24,1);
 }
 .lchneedle{transition:transform 1.5s cubic-bezier(.34,1.32,.5,1);transform-origin:100px 92px}
 .lchverd{
@@ -3048,7 +3046,7 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
 @media(prefers-reduced-motion:reduce){
   .lchspin,.lchmarch,.lchlive i,.lchlr.run i,.lchverd.bad,
   .lrwspark,.lrwhead,.lrwdot.next::after,.lrwnow{animation:none!important}
-  .lchval,.lchseg,.lchmark,.lchneedle,.lrwhead{transition:none!important}
+  .lchval,.lchseg,.lchgv,.lchneedle,.lrwhead{transition:none!important}
 }
 
 /* Revision AF — the closure bar grows into place and keeps a slow sheen, so a
@@ -3073,310 +3071,6 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
 /* a publish taken without anyone asking still has to be visible after the fact */
 .onlinebar.fresh{box-shadow:inset 0 0 0 2px var(--ok)}
 .onlinebar.fresh .dot{animation:lchblink 1s ease-in-out 3}
-
-/* ── Revision AG · the plan against the ground ────────────────── */
-.lcv{flex:1;min-height:0;display:flex;flex-direction:column;gap:10px}
-.lcvbox{flex:1;min-height:0;position:relative}
-.lcvsvg{width:100%;height:100%;display:block;overflow:visible}
-.lcvgrid{stroke:var(--line);stroke-width:1;opacity:.85}
-.lcvgrid.v{opacity:.4;stroke-dasharray:3 6}
-.lcvax{font-family:inherit;font-size:12px;font-weight:700;fill:var(--ink-3)}
-.lcvplan{                                  /* the dasharray lives on the element —
-                                              a rule here would beat it and the
-                                              line would never draw itself in */
-  stroke-width:3;stroke-linecap:round;opacity:.85;
-  transition:stroke-dasharray 1.5s cubic-bezier(.22,.9,.24,1);
-}
-.lcvact{
-  stroke-width:5;stroke-linecap:round;stroke-linejoin:round;
-  transition:stroke-dasharray 1.6s cubic-bezier(.22,.9,.24,1) 180ms;
-}
-.lcvdot{opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.3);
-  transition:opacity .4s ease 1.5s,transform .5s cubic-bezier(.3,1.5,.5,1) 1.5s}
-.lcvdot.on{opacity:1;transform:none}
-/* Revision AH — the booked line gets a halo so it still reads when it is lying
-   on the zero grid line, and the figure at this moment is always marked */
-.lcvhalo{stroke:var(--surface);stroke-width:11;stroke-linecap:round;stroke-linejoin:round}
-.lcvgapline{stroke:var(--ink-3);stroke-width:2;stroke-dasharray:4 4;opacity:.75}
-.lcvplandot{opacity:.9}
-.lcvnum{
-  font-family:inherit;font-size:19px;font-weight:800;fill:var(--ink);
-  font-variant-numeric:tabular-nums;letter-spacing:-.3px;
-  paint-order:stroke;stroke:var(--surface);stroke-width:5px;stroke-linejoin:round;
-}
-.lcvnow{stroke:var(--danger);stroke-width:2;opacity:.8;stroke-dasharray:5 5}
-.lcvnowlab{
-  font-family:inherit;font-size:11px;font-weight:800;fill:var(--danger);
-  letter-spacing:.7px;text-transform:uppercase;
-}
-.lcvfoot{flex:none;display:flex;align-items:center;gap:20px}
-.lcvkey{display:flex;gap:26px;flex-wrap:wrap}
-.lcvkr{display:flex;align-items:center;gap:9px;font-size:14px}
-.lcvkr i{width:22px;height:5px;border-radius:3px;flex:none}
-.lcvkr.plan i{opacity:.85;height:3px}
-.lcvkr span{font-weight:700;color:var(--ink-2)}
-.lcvkr b{font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
-.lcvgap{
-  margin-left:auto;text-align:right;padding:8px 18px;border-radius:13px;
-  background:var(--surface-2);border:1px solid var(--line);
-}
-.lcvgap b{display:block;font-size:20px;font-weight:800;letter-spacing:-.3px}
-.lcvgap span{display:block;margin-top:2px;font-size:12px;font-weight:700;color:var(--ink-3)}
-.lcvgap.ok{background:var(--ok-soft);border-color:transparent}
-.lcvgap.ok b{color:var(--ok)}
-.lcvgap.bad{background:var(--danger-soft);border-color:transparent}
-.lcvgap.bad b{color:var(--danger)}
-.lcvnote{flex:none;font-size:11.5px;font-weight:600;color:var(--ink-3);line-height:1.45}
-@media(prefers-reduced-motion:reduce){
-  .lcvplan,.lcvact,.lcvdot{transition:none!important}
-}
-
-/* ── Revision AG · the chart chips on the Org tab ─────────────── */
-.octabs{
-  flex:none;display:flex;gap:7px;flex-wrap:wrap;align-items:center;
-  padding:0 0 10px;
-}
-.octab{
-  display:inline-flex;align-items:center;gap:8px;height:30px;padding:0 13px;
-  border-radius:999px;border:1px solid var(--line);background:var(--surface);
-  color:var(--ink-2);font-family:inherit;font-size:12.5px;font-weight:700;cursor:pointer;
-  transition:.14s;position:relative;
-}
-.octab:hover{border-color:var(--line-hover);color:var(--ink)}
-.octab.on{background:var(--sel);border-color:var(--sel-line);color:var(--brand-ink-2)}
-.octab em{
-  font-style:normal;font-size:10.5px;font-weight:800;color:var(--ink-3);
-  background:var(--surface-2);border-radius:999px;padding:1px 7px;
-}
-.octab.on em{background:rgba(18,115,224,.16);color:var(--brand-ink-2)}
-.octab.wch::before{
-  content:"";width:7px;height:7px;border-radius:50%;background:var(--brand-2);flex:none;
-}
-.octab.add{border-style:dashed;color:var(--ink-3);font-weight:700}
-.octab.add:hover{color:var(--brand);border-color:var(--brand-2)}
-.octab.add:disabled{opacity:.45;cursor:not-allowed}
-
-/* an org chart on the wall */
-.lorg{flex:1;min-height:0;display:flex;flex-direction:column;gap:10px}
-.lorgb{
-  flex:1;min-height:0;position:relative;border-radius:16px;overflow:hidden;
-  background:var(--surface-2);border:1px solid var(--line);animation:lIn .45s var(--ease) both;
-}
-.lorgb svg{position:absolute;inset:0;width:100%;height:100%;display:block}
-.lorgnode rect{stroke:var(--line);stroke-width:1.5}
-.lorgnode .nm{font-family:inherit;font-weight:800;fill:var(--ink)}
-.lorgnode .rl{font-family:inherit;font-weight:700;fill:var(--ink-3)}
-.lorglink{fill:none;stroke:var(--line-hover);stroke-width:2.4}
-.lorgfoot{flex:none;display:flex;gap:8px;flex-wrap:wrap}
-.lorgfoot .lsbtile{flex:1 1 0}
-.lorgempty{
-  flex:1;display:flex;align-items:center;justify-content:center;text-align:center;
-  font-size:15px;font-weight:700;color:var(--ink-3);
-}
-
-/* ══════════════════════════════════════════════════════════════
-   Revision AG · the Weather tab
-   Everything here is namespaced wx*, and the motion is deliberately
-   slow: a sky that hurries reads as a screensaver, and this one has
-   to sit behind numbers people are trying to read.
-   ══════════════════════════════════════════════════════════════ */
-.wxwrap{flex:1;min-height:0;overflow:auto;padding-bottom:22px}
-.wxplace{
-  flex:none;display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;
-  padding:12px 14px;border-radius:14px;background:var(--surface-2);
-  border:1px solid var(--line);margin-bottom:14px;position:relative;
-}
-.wxf{display:flex;flex-direction:column;gap:4px}
-.wxf span{font-size:10px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;color:var(--ink-3)}
-.wxf input{
-  height:32px;width:190px;border-radius:9px;border:1px solid var(--line);
-  background:var(--surface);color:var(--ink);font-family:inherit;font-size:13px;font-weight:600;
-  padding:0 11px;
-}
-.wxf input:focus{outline:none;border-color:var(--brand-2);box-shadow:0 0 0 3px rgba(18,115,224,.14)}
-.wxplacenote{flex:1 1 220px;font-size:12px;font-weight:600;color:var(--ink-3);padding-bottom:7px}
-.wxplacenote b{color:var(--ink-2);font-weight:800}
-.wxgeo{
-  position:absolute;left:14px;top:calc(100% - 6px);z-index:40;
-  display:flex;flex-direction:column;gap:2px;padding:8px;border-radius:12px;
-  background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow-lg);
-  min-width:300px;max-height:320px;overflow:auto;
-}
-.wxgeo>b{font-size:10.5px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;color:var(--ink-3);padding:2px 6px 5px}
-.wxgeor{
-  display:flex;flex-direction:column;align-items:flex-start;gap:1px;padding:7px 9px;border-radius:9px;
-  border:none;background:none;cursor:pointer;text-align:left;font-family:inherit;width:100%;
-}
-.wxgeor:hover{background:var(--hover)}
-.wxgeor b{font-size:13px;font-weight:800;color:var(--ink)}
-.wxgeor span{font-size:11.5px;font-weight:600;color:var(--ink-3)}
-.wxgeox{
-  position:absolute;right:6px;top:6px;width:24px;height:24px;border-radius:7px;border:none;
-  background:none;color:var(--ink-3);font-size:16px;cursor:pointer;
-}
-.wxgeox:hover{background:var(--hover);color:var(--ink)}
-
-.wxboard{display:flex;flex-direction:column;gap:14px}
-.wxempty{
-  padding:46px 26px;text-align:center;border-radius:16px;
-  background:var(--surface-2);border:1px dashed var(--line);
-}
-.wxempty h3{font-size:18px;font-weight:800;color:var(--ink);margin:0 0 6px}
-.wxempty p{font-size:13.5px;color:var(--ink-3);margin:0 0 14px;line-height:1.55}
-.wxempty p.err{color:var(--danger);font-weight:700}
-.wxempty p.hint{font-size:12px;color:var(--ink-3);margin-bottom:16px}
-.wxempty code{
-  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;
-  background:var(--surface-3,var(--surface));border:1px solid var(--line);
-  border-radius:5px;padding:1px 5px;
-}
-
-/* ── the sky ── */
-.wxhero{
-  position:relative;flex:none;height:210px;border-radius:18px;overflow:hidden;
-  border:1px solid var(--line);
-}
-.wxboard.big .wxhero{height:270px}
-.wxart,.wxart .wxsvg{position:absolute;inset:0;width:100%;height:100%;display:block}
-.wxover{
-  position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:space-between;
-  gap:20px;padding:20px 24px;
-  background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.42) 100%);
-}
-.wxnow{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.45)}
-.wxtemp{display:flex;align-items:flex-start;gap:3px;line-height:.92}
-.wxtemp b{font-size:62px;font-weight:800;letter-spacing:-3px;font-variant-numeric:tabular-nums}
-.wxtemp i{font-style:normal;font-size:22px;font-weight:700;margin-top:6px;opacity:.9}
-.wxboard.big .wxtemp b{font-size:82px}
-.wxword{margin-top:6px;font-size:19px;font-weight:800;letter-spacing:-.2px}
-.wxfeels{margin-top:2px;font-size:13px;font-weight:700;opacity:.88}
-.wxwhere{text-align:right;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.45)}
-.wxwhere b{display:block;font-size:17px;font-weight:800}
-.wxwhere span{display:block;margin-top:2px;font-size:12px;font-weight:700;opacity:.82}
-
-@keyframes wxdrift{from{transform:translateX(-120px)}to{transform:translateX(460px)}}
-@keyframes wxfall{from{transform:translateY(-24px)}to{transform:translateY(204px)}}
-@keyframes wxflakefall{from{transform:translate(0,-20px)}to{transform:translate(18px,200px)}}
-@keyframes wxspin{to{transform:rotate(360deg)}}
-@keyframes wxtwinkle{0%,100%{opacity:.25}50%{opacity:1}}
-@keyframes wxboltf{0%,88%,100%{opacity:0}90%,94%{opacity:1}92%{opacity:.25}}
-@keyframes wxflashf{0%,89%,100%{opacity:0}90%{opacity:.5}93%{opacity:.18}}
-.wxsun{animation:wxspin 70s linear infinite;transform-origin:316px 52px;transform-box:view-box}
-.wxcloud{animation:wxdrift 34s linear infinite}
-.wxdrop{animation:wxfall .9s linear infinite}
-.wxflake{animation:wxflakefall 5s linear infinite}
-.wxstar{animation:wxtwinkle 3.4s ease-in-out infinite}
-.wxbolt{animation:wxboltf 4.5s linear infinite}
-.wxflash{animation:wxflashf 4.5s linear infinite}
-.wxfog{animation:wxdrift 22s linear infinite}
-@media(prefers-reduced-motion:reduce){
-  .wxsun,.wxcloud,.wxdrop,.wxflake,.wxstar,.wxbolt,.wxflash,.wxfog,.wxarrow{animation:none!important}
-}
-
-/* ── Revision AH · the next twelve hours, stated plainly ──
-   No verdict colours here.  The panel used to shade itself red or amber
-   according to what it thought the weather meant for the work; it now
-   reports the forecast and leaves the judgement to the room. */
-.wxout{
-  flex:none;padding:13px 16px 15px;border-radius:15px;
-  background:var(--surface-2);border:1px solid var(--line);
-}
-.wxouth{display:flex;align-items:baseline;gap:11px;margin-bottom:10px}
-.wxouth b{font-size:12px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--ink-3)}
-.wxouth span{font-size:11.5px;font-weight:600;color:var(--ink-3)}
-.wxoutr{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
-.wxoutc{
-  min-width:0;padding:11px 13px 12px;border-radius:13px;
-  background:var(--surface);border:1px solid var(--line);
-  animation:lIn .4s var(--ease) both;position:relative;
-}
-.wxog{position:absolute;right:9px;top:9px;width:22px;height:22px;opacity:.55}
-.wxoutc .v{display:flex;align-items:baseline;gap:3px;padding-right:22px}
-.wxoutc .v b{font-size:25px;font-weight:800;letter-spacing:-1px;color:var(--ink);
-  font-variant-numeric:tabular-nums;line-height:1.1}
-.wxoutc .v i{font-style:normal;font-size:12px;font-weight:700;color:var(--ink-3)}
-.wxoutc .l{margin-top:3px;font-size:10.5px;font-weight:800;letter-spacing:.7px;
-  text-transform:uppercase;color:var(--ink-3)}
-.wxoutc .s{margin-top:3px;font-size:11.5px;font-weight:600;color:var(--ink-2)}
-.wxboard.big .wxoutc .v b{font-size:34px}
-.wxboard.big .wxoutc .s{font-size:13px}
-@media(max-width:1200px){ .wxoutr{grid-template-columns:repeat(3,minmax(0,1fr))} }
-
-/* ── the numbers ── */
-.wxtiles{flex:none;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
-.wxtile{
-  position:relative;padding:13px 15px;border-radius:14px;
-  background:var(--surface-2);border:1px solid var(--line);overflow:hidden;
-  animation:lIn .4s var(--ease) both;
-}
-.wxtile .v{display:flex;align-items:baseline;gap:3px}
-.wxtile .v b{font-size:26px;font-weight:800;letter-spacing:-1px;color:var(--ink);font-variant-numeric:tabular-nums}
-.wxtile .v i{font-style:normal;font-size:12px;font-weight:700;color:var(--ink-3)}
-.wxtile .l{margin-top:3px;font-size:10.5px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;color:var(--ink-3)}
-.wxtile .s{margin-top:4px;font-size:11.5px;font-weight:600;color:var(--ink-2);line-height:1.35}
-.wxtile.warn{background:var(--warn-soft);border-color:transparent}
-.wxtile.warn .v b{color:var(--warn)}
-.wxtile.bad{background:var(--danger-soft);border-color:transparent}
-.wxtile.bad .v b{color:var(--danger)}
-.wxboard.big .wxtile .v b{font-size:38px}
-.wxboard.big .wxtile .s{font-size:13px}
-.wxwind{position:absolute;right:10px;top:10px;width:34px;height:34px;color:var(--ink-3);opacity:.75}
-.wxwind svg{width:100%;height:100%;display:block}
-.wxarrow{transition:transform 1.2s var(--ease)}
-
-/* ── the hours ── */
-.wxhours,.wxdays{
-  flex:none;padding:14px 16px 12px;border-radius:15px;
-  background:var(--surface-2);border:1px solid var(--line);
-}
-.wxsh{display:flex;align-items:baseline;gap:11px;margin-bottom:8px}
-.wxsh b{font-size:12px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--ink-3)}
-.wxsh span{font-size:11.5px;font-weight:600;color:var(--ink-3)}
-.wxhsvg{width:100%;height:150px;display:block}
-.wxpop{fill:var(--brand-2);opacity:.22}
-.wxtline{stroke:var(--warn);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;
-  transition:stroke-dasharray 1.4s cubic-bezier(.22,.9,.24,1)}
-.wxtdot{fill:var(--warn);stroke:var(--surface);stroke-width:3}
-.wxhlabs{display:flex;margin-top:2px}
-.wxhlabs span{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:1px}
-.wxhlabs b{font-size:10.5px;font-weight:800;color:var(--ink-3);font-variant-numeric:tabular-nums}
-.wxhlabs i{font-style:normal;font-size:12px;font-weight:800;color:var(--ink)}
-.wxhlabs s{text-decoration:none;font-size:10px;font-weight:700;color:var(--brand)}
-.wxboard.big .wxhsvg{height:148px}
-.wxboard.big .wxhlabs i{font-size:14px}
-
-/* ── the week ── */
-.wxday{
-  display:flex;align-items:center;gap:14px;padding:7px 0;
-  animation:lIn .4s var(--ease) both;
-}
-.wxday + .wxday{border-top:1px solid var(--line)}
-.wxday b{flex:none;width:58px;font-size:13px;font-weight:800;color:var(--ink)}
-.wxdi{flex:none;width:26px;height:26px;display:block}
-.wxdi svg{width:100%;height:100%;display:block}
-.wxday s{flex:none;width:44px;text-decoration:none;font-size:11.5px;font-weight:800;color:var(--brand)}
-.wxdbar{flex:1;min-width:0;height:9px;border-radius:5px;background:var(--track);position:relative}
-.wxdbar i{
-  position:absolute;top:0;bottom:0;border-radius:5px;
-  background:linear-gradient(90deg,#4A90D9,#F5A623);
-}
-.wxday em{flex:none;width:104px;text-align:right;font-style:normal;font-size:13px;font-weight:800;
-  color:var(--ink-2);font-variant-numeric:tabular-nums}
-.wxboard.big .wxday b,.wxboard.big .wxday em{font-size:16px}
-.wxsrc{flex:none;font-size:11px;font-weight:600;color:var(--ink-3);text-align:right}
-
-@media(max-width:1200px){
-  .wxtiles{grid-template-columns:repeat(3,minmax(0,1fr))}
-}
-
-/* ── a weather board on the wall ──
-   Named lwxb, not lwx: .lwx was taken in Rev AA by the watch panel's close
-   button, and a 26px square button rule quietly squashed the whole board. */
-.lwxb{flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden}
-.lwxb .wxboard{flex:1;min-height:0;gap:11px}
-.lwxb .wxhero{flex:1 1 30%;min-height:132px;height:auto}
-.lwxb .wxhours{flex:0 0 auto}
-.lwxb .wxsrc{display:none}
 </style>
 <script>
 /* Revision M — decide the theme before the first pixel is painted */
@@ -3413,7 +3107,7 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.1"/><path d="M19.4 14.6a1.6 1.6 0 0 0 .32 1.77l.06.06a1.9 1.9 0 1 1-2.69 2.69l-.06-.06a1.6 1.6 0 0 0-1.77-.32 1.6 1.6 0 0 0-.97 1.46V21a1.9 1.9 0 0 1-3.8 0v-.11a1.6 1.6 0 0 0-1.05-1.46 1.6 1.6 0 0 0-1.77.32l-.06.06a1.9 1.9 0 1 1-2.69-2.69l.06-.06a1.6 1.6 0 0 0 .32-1.77 1.6 1.6 0 0 0-1.46-.97H3a1.9 1.9 0 0 1 0-3.8h.11a1.6 1.6 0 0 0 1.46-1.05 1.6 1.6 0 0 0-.32-1.77l-.06-.06a1.9 1.9 0 1 1 2.69-2.69l.06.06a1.6 1.6 0 0 0 1.77.32H9a1.6 1.6 0 0 0 .97-1.46V3a1.9 1.9 0 0 1 3.8 0v.11a1.6 1.6 0 0 0 .97 1.46 1.6 1.6 0 0 0 1.77-.32l.06-.06a1.9 1.9 0 1 1 2.69 2.69l-.06.06a1.6 1.6 0 0 0-.32 1.77V9a1.6 1.6 0 0 0 1.46.97H21a1.9 1.9 0 0 1 0 3.8h-.11a1.6 1.6 0 0 0-1.46.97z"/></svg>
           <i class="gdot" id="ghDot"></i>
         </button>
-          <button class="sub subbtn" id="bAbout" type="button" title="Revision, release date and who built this">Rev AH · 19 Sep 2026</button>
+          <button class="sub subbtn" id="bAbout" type="button" title="Revision, release date and who built this">Rev AF · 18 Sep 2026</button>
         </div>
       </div>
     </div>
@@ -3451,11 +3145,6 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
       <button class="tab" data-view="org">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2.5" width="6" height="5" rx="1.4"/><rect x="2.5" y="16.5" width="6" height="5" rx="1.4"/><rect x="15.5" y="16.5" width="6" height="5" rx="1.4"/><path d="M12 7.5v4.5M5.5 16.5V12h13v4.5"/></svg>
         Org Chart
-      </button>
-      <!-- Revision AG · the sky over the worksite -->
-      <button class="tab" data-view="weather">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18h9.5a3.5 3.5 0 0 0 .4-7A5 5 0 0 0 7.6 9.4 3.8 3.8 0 0 0 7 18z"/><path d="M9 21l-.7 1.4M13 21l-.7 1.4M17 21l-.7 1.4"/></svg>
-        Weather
       </button>
     </div>
 
@@ -3910,27 +3599,6 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
 
   <!-- ================= VIEW · ORG CHART ================= -->
 
-  <!-- ================= VIEW · WEATHER  (Revision AG) ================= -->
-  <div class="view" id="viewWeather">
-    <div class="page" style="padding-bottom:0;display:flex;flex-direction:column;overflow:hidden">
-      <div class="pagehead">
-        <div><h2>Weather</h2><p>A board for each place the work touches. Type a town and a country and it reads the forecast, the wind, the air and the visibility straight from the met service — the chance of rain, how much, whether there is lightning in the window and when. Right-click a board to rename it, copy it, delete it or put it on the Live screen.</p></div>
-        <div style="margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end">
-          <button class="btn rw" id="wxNew" title="Add a board for another place">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-            New board
-          </button>
-          <button class="btn" id="wxRefresh" title="Read the forecast again now">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 1 0-.6 4"/><path d="M20 4v7h-7"/></svg>
-            Refresh
-          </button>
-        </div>
-      </div>
-      <div class="octabs" id="wxTabs"></div>
-      <div class="wxwrap" id="wxWrap"></div>
-    </div>
-  </div>
-
   <!-- ================= VIEW · LOCATIONS  (Revision V) ================= -->
   <div class="view" id="viewLocs">
     <div class="page" style="padding-bottom:0;display:flex;flex-direction:column;overflow:hidden">
@@ -4070,7 +3738,7 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
   <div class="view" id="viewOrg">
     <div class="page" style="padding-bottom:0;display:flex;flex-direction:column;overflow:hidden">
       <div class="pagehead">
-        <div><h2>Organisation Charts</h2><p>Who reports to whom. Drag a card to move it, drag from its handle onto another card to set the reporting line, then press Process to tidy the whole structure. Keep as many charts as you need — right-click one to rename it, copy it, delete it or put it on the Live screen.</p></div>
+        <div><h2>Organisation Chart</h2><p>Who reports to whom. Drag a card to move it, drag from its handle onto another card to set the reporting line, then press Process to tidy the whole structure.</p></div>
         <div style="margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end">
           <button class="btn rw" id="orgAddNew" title="Add a blank box, a person from the directory, or a whole team">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
@@ -4096,9 +3764,6 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
           </button>
         </div>
       </div>
-
-      <!-- Revision AG · the charts in this file -->
-      <div class="octabs" id="orgCharts"></div>
 
       <div class="orgwrap">
         <div class="orgside">
@@ -5213,9 +4878,6 @@ const SELF_SRC = (function(){
   catch(e){ return ''; }
 })();
 const SHARE_TAG = 'gsShare';
-/* every tab this build has, in one place — three separate copies of this list
-   had already drifted apart by Revision AG */
-const TABS = ['dash','live','schedule','actions','teams','locs','maps','org','weather'];
 
 /* ══════════════════════════════════════════════════════════════
    1 · UTILITIES
@@ -5404,9 +5066,9 @@ const avColor=id=>'hsl('+hueOf(id)+' 52% 46%)';
    2 · STATE
    ══════════════════════════════════════════════════════════════ */
 const APP={
-  rev:'AH',
-  revDate:'2026-09-19',
-  released:'19 Sep 2026',
+  rev:'AF',
+  revDate:'2026-09-18',
+  released:'18 Sep 2026',
   product:'Gantt Studio',
   devRole:'D&IS Project Technical Manager',
   devName:'Sanjeewa Abeyrathne',
@@ -5416,25 +5078,19 @@ const APP={
 const APP_REV='Revision '+APP.rev+' · '+APP.released;
 const APP_CREDIT=APP.devRole+' · '+APP.devMail+' · '+APP.devTel;
 
-const KEY='ganttStudio.revAH';
-const KEY_PREV=['ganttStudio.revAG','ganttStudio.revAF','ganttStudio.revAE','ganttStudio.revAD','ganttStudio.revAC','ganttStudio.revAB','ganttStudio.revAA','ganttStudio.revZ','ganttStudio.revY','ganttStudio.revX','ganttStudio.revW','ganttStudio.revV','ganttStudio.revU','ganttStudio.revT','ganttStudio.revS','ganttStudio.revR','ganttStudio.revQ','ganttStudio.revP','ganttStudio.revO','ganttStudio.revN','ganttStudio.revM','ganttStudio.revL','ganttStudio.revK','ganttStudio.revJ','ganttStudio.revI','ganttStudio.revH','ganttStudio.revG','ganttStudio.revF','ganttStudio.revE','ganttStudio.revD','ganttStudio.revC','ganttStudio.revA'];   // earlier revisions carry over on first open
+const KEY='ganttStudio.revAF';
+const KEY_PREV=['ganttStudio.revAE','ganttStudio.revAD','ganttStudio.revAC','ganttStudio.revAB','ganttStudio.revAA','ganttStudio.revZ','ganttStudio.revY','ganttStudio.revX','ganttStudio.revW','ganttStudio.revV','ganttStudio.revU','ganttStudio.revT','ganttStudio.revS','ganttStudio.revR','ganttStudio.revQ','ganttStudio.revP','ganttStudio.revO','ganttStudio.revN','ganttStudio.revM','ganttStudio.revL','ganttStudio.revK','ganttStudio.revJ','ganttStudio.revI','ganttStudio.revH','ganttStudio.revG','ganttStudio.revF','ganttStudio.revE','ganttStudio.revD','ganttStudio.revC','ganttStudio.revA'];   // earlier revisions carry over on first open
 let S = blank();
 
 function blank(){
-  const st = {
+  return {
     name:'Untitled Programme',
     categories:[], people:[], teams:[], groups:[], tasks:[],
     labels:[],                                   /* Revision U — banners on the chart, never tasks */
     maps:[], _map:null,                          /* Revision U — the Maps tab */
     locations:[],                                /* Revision V — where the work happens */
-    weather:[], _wx:null,                        /* Revision AG — the sky over each worksite */
     watch:[],                                    /* Revision AA — what the Live screen plays */
-    live:{stage:'', secs:12},                    /* Revision AG — and how it plays it */
-    /* Revision AG — there can be many charts now; S.org is always a reference
-       to whichever one is selected, so every function that reads S.org.nodes
-       goes on working untouched. */
-    orgs:[{id:'oc_main', name:'Organisation Chart', note:'', title:'', nodes:[], zoom:1, tidy:true, layout:'compact'}],
-    _org:'oc_main',
+    org:{title:'', nodes:[], zoom:1, tidy:true, layout:'compact'},
     view:{ppd:14, tppd:6, lppd:6, crit:true, gridW:718, wrap:true, hideUnticked:false, colsOff:[], lastTab:'dash',
           nav:'zoom', teamsMode:'cards', dashSort:{phase:'plan', team:'load'},
           sort:{key:'manual', dir:1},
@@ -5446,13 +5102,9 @@ function blank(){
     _sel:null, _filter:'', _cats:null, _stat:null, _critOnly:false, _ownerF:'', _teamF:'', _focus:null, _view:'schedule',
     _teamQ:'',                                   /* Revision U — the Teams search box */
     _locF:'', _showStruck:true,                  /* Revision V — location filter, struck-out rows */
-    wa:{title:'', to:'', apiUrl:'', token:'', phoneId:'', fields:[], stage:'__live', last:null},
+    wa:{title:'', to:'', apiUrl:'', token:'', phoneId:'', fields:[], stage:'', last:null},
     _act:{status:['open'],owner:'',team:'',cat:'',group:'none',q:'',sort:'due',dir:1}
   };
-  /* Revision AG — S.org is a reference into S.orgs, never a copy of it */
-  st.org = st.orgs[0];
-  st._org = st.org.id;
-  return st;
 }
 const G  = id => S.groups.find(g=>g.id===id);
 const T  = id => S.tasks.find(t=>t.id===id);
@@ -5564,12 +5216,12 @@ function serialize(){
                             phone:p.phone||'', email:p.email||'', location:p.location||'', notes:p.notes||''})),
     teams:S.teams.map(t=>({id:t.id,name:t.name,color:t.color,leadId:t.leadId||null,
                            members:(t.members||[]).map(m=>({personId:m.personId,role:m.role||''}))})),
-    /* Revision AG — `org` is still the selected chart, exactly as every earlier
-       revision wrote it, so an older build opens this file and sees what it
-       expects.  `orgs` carries the whole set beside it. */
-    org:orgOut(S.org),
-    orgs:(S.orgs||[]).map(orgOut),
-    orgCur:S._org||'',
+    org:{title:(S.org&&S.org.title)||'', zoom:+(((S.org&&S.org.zoom)||1).toFixed(3)), tidy:!(S.org&&S.org.tidy===false),
+         layout:((S.org&&S.org.layout)==='classic')?'classic':'compact',
+         nodes:((S.org&&S.org.nodes)||[]).map(n=>({id:n.id, kind:orgKind(n), personId:n.personId||null, name:n.name||'',
+           role:n.role||'', teamId:n.teamId||null, parentId:n.parentId||null,
+           phone:n.phone||'', email:n.email||'', location:n.location||'', notes:n.notes||'',
+           x:Math.round(n.x||0), y:Math.round(n.y||0)}))},
     /* Revision U — labels are the one place shift windows and command periods live.
        shifts/command are still written out so a Revision T copy can read the file. */
     labels:(S.labels||[]).map(x=>({id:x.id, groupId:x.groupId, name:x.name, role:x.role,
@@ -5580,31 +5232,14 @@ function serialize(){
     command:labelsOfRole('command').map(x=>({id:x.id, who:labelWho(x), start:ISO_DT(x.s), end:ISO_DT(x.e),
                                              note:x.note||'', color:x.color})),
     maps:(S.maps||[]).map(mapOut),
-    /* Revision AG — the boards and the last reading each of them took, so a
-       copy opened with no signal still shows the sky it last saw */
-    weather:(S.weather||[]).map(wxOut),
-    weatherCur:S._wx||'',
     /* Revision V — the Locations register and the WhatsApp update settings */
     locations:(S.locations||[]).map(l=>({id:l.id, name:l.name, color:l.color,
                                          parentId:l.parentId||null, note:l.note||''})),
     /* Revision AA — what the Live screen plays, in the order it plays it */
-    watch:watchClean().map(w=>({kind:w.kind==='g'?'group':(w.kind==='m'?'map':(w.kind==='o'?'org':(w.kind==='w'?'weather':'task'))), id:w.id})),
-    /* ── Revision AG · the Live screen's own set-up travels with the file ──
-       The watch list has been in here since Rev AA, but which closure the
-       screen was left on, and how long each slide sits, were not — so a
-       published copy opened on a different night's work and somebody had to
-       set it up again at the other end.  Both are written out now.      */
-    live:{stage:(function(){ try{ return liveStageId()||''; }catch(e){ return (S.live&&S.live.stage)||''; } })(),
-          secs:(typeof LIVE!=='undefined' && LIVE.secs) ? LIVE.secs : ((S.live&&S.live.secs)||12)},
+    watch:watchClean().map(w=>({kind:w.kind==='g'?'group':(w.kind==='m'?'map':'task'), id:w.id})),
     whatsapp:{title:(S.wa&&S.wa.title)||'', to:(S.wa&&S.wa.to)||'',
               apiUrl:(S.wa&&S.wa.apiUrl)||'', phoneId:(S.wa&&S.wa.phoneId)||'',
-              /* Revision AG — `stage` still holds a closure id, exactly as before,
-                 and `follow` says whether the card is tracking the Live screen
-                 instead.  A file written before AG has no `follow`, so it reads
-                 as following — which is what stopped the card and the wall
-                 disagreeing in the first place. */
-              stage:((S.wa&&S.wa.stage)==='__live') ? '' : ((S.wa&&S.wa.stage)||''),
-              follow:((S.wa&&S.wa.stage!=null) ? (S.wa.stage==='__live') : true),
+              stage:(S.wa&&S.wa.stage)||'',
               fields:((S.wa&&S.wa.fields)||[]).map(f=>({id:f.id,label:f.label,value:f.value||''}))},
     groups:S.groups.map(g=>({id:g.id,name:g.name,color:g.color,collapsed:!!g.collapsed,
                              categoryId:g.categoryId||null, parentId:g.parentId||null})),
@@ -5652,9 +5287,7 @@ function hydrate(o){
       if(['plan','az','pct','n'].indexOf(o.view.dashSort.phase)>=0) st.view.dashSort.phase=o.view.dashSort.phase;
       if(['load','az','pct','n'].indexOf(o.view.dashSort.team)>=0)  st.view.dashSort.team =o.view.dashSort.team;
     }
-    /* Revision AG — 'live' and 'weather' were missing from this list, so a file
-       (or a hosted config) asking for either quietly opened on the Dashboard */
-    st.view.lastTab=TABS.indexOf(o.view.lastTab)>=0?o.view.lastTab:'dash';
+    st.view.lastTab=['dash','schedule','actions','teams','locs','maps','org'].indexOf(o.view.lastTab)>=0?o.view.lastTab:'dash';
     if(o.view.columns&&typeof o.view.columns==='object')
       Object.keys(st.view.cols).forEach(k=>{ const v=+o.view.columns[k]; if(v>=28&&v<=700) st.view.cols[k]=v; });
     st.view.gridW=+o.view.gridWidth||718;
@@ -5671,28 +5304,25 @@ function hydrate(o){
     leadId:pids.has(t.leadId)?t.leadId:null,
     members:(t.members||[]).filter(m=>pids.has(m.personId)).map(m=>({personId:m.personId,role:m.role||''}))
   }));
-  /* ---------- Revision AG · one chart or many ----------
-     Files written before AG carry a single `org`; from AG they carry `orgs`
-     as well, with `org` still holding whichever one was selected.  Either
-     shape comes in here and leaves as a list with one of them selected. */
-  const orgIn=(src,i)=>{
-    src=src||{};
-    const c={id:src.id||uid('oc'),
-             name:String(src.name||src.title|| (i ? ('Chart '+((i|0)+1)) : 'Organisation Chart')),
-             note:String(src.note||''), title:String(src.title||''),
-             zoom:clamp(+src.zoom||1,0.25,2.5), tidy:src.tidy!==false,
-             layout:(src.layout==='classic')?'classic':'compact', nodes:[]};
-    c.nodes=(Array.isArray(src.nodes)?src.nodes:[]).map((n,j)=>orgNodeIn(n,j));
-    return c;
-  };
-  st.orgs=(Array.isArray(o.orgs)&&o.orgs.length ? o.orgs : (o.org&&typeof o.org==='object' ? [o.org] : []))
-          .map(orgIn).filter(Boolean);
-  if(!st.orgs.length) st.orgs=[orgIn({name:'Organisation Chart'},0)];
-  /* two charts may not share an id, or selecting one would select both */
-  (function(){ const seen=new Set();
-    st.orgs.forEach(c=>{ while(seen.has(c.id)) c.id=uid('oc'); seen.add(c.id); }); })();
-  st._org = st.orgs.some(c=>c.id===o.orgCur) ? o.orgCur : st.orgs[0].id;
-  st.org  = st.orgs.find(c=>c.id===st._org);
+  if(o.org&&typeof o.org==='object'){
+    st.org.title=String(o.org.title||'');
+    st.org.zoom=clamp(+o.org.zoom||1,0.25,2.5);
+    st.org.tidy=o.org.tidy!==false;
+    st.org.layout=(o.org.layout==='classic')?'classic':'compact';
+    st.org.nodes=(Array.isArray(o.org.nodes)?o.org.nodes:[]).map((n,i)=>{
+      /* Revision Q — a box is a person, a team or a free-standing role.  Files
+         written before Q carry no kind, so work it out from what they do have. */
+      let kind=['person','team','role'].indexOf(n.kind)>=0?n.kind:null;
+      if(!kind) kind = n.personId ? 'person'
+                     : ((n.teamId && /^team\b/i.test(String(n.role||''))) ? 'team' : 'role');
+      return {
+        id:n.id||uid('on'), kind:kind, personId:n.personId||null,
+        name:String(n.name||(kind==='team'?'':('Person '+(i+1)))),
+        role:String(n.role||''), teamId:n.teamId||null, parentId:n.parentId||null,
+        phone:String(n.phone||''), email:String(n.email||''), location:String(n.location||''), notes:String(n.notes||''),
+        x:+n.x||0, y:+n.y||0};
+    });
+  }
   /* ---------- Revision V · locations ---------- */
   st.locations=(Array.isArray(o.locations)?o.locations:[]).map((l,i)=>({
     id:l.id||uid('lc'), name:String(l.name||('Location '+(i+1))),
@@ -5715,12 +5345,7 @@ function hydrate(o){
     st.wa.to=String(o.whatsapp.to||'');
     st.wa.apiUrl=String(o.whatsapp.apiUrl||'');
     st.wa.phoneId=String(o.whatsapp.phoneId||'');
-    /* Revision AG — a file that does not say otherwise means "follow the Live
-       screen", so the card and the wall cannot disagree.  A closure pinned on
-       purpose writes follow:false and is honoured.                        */
-    st.wa.stage = (o.whatsapp.follow===false)
-                ? (String(o.whatsapp.stage||'') || '__live')
-                : '__live';
+    st.wa.stage=String(o.whatsapp.stage||'');
     st.wa.fields=(Array.isArray(o.whatsapp.fields)?o.whatsapp.fields:[])
       .slice(0,12).map((f,i)=>({id:f.id||uid('wf'), label:String(f.label||('Field '+(i+1))), value:String(f.value||'')}));
   }
@@ -5750,11 +5375,10 @@ function hydrate(o){
   })();
   if(!st.groups.length) st.groups.push({id:uid('g'),name:'General',color:PALETTE[0],collapsed:false,categoryId:null,parentId:null});
   const gids=new Set(st.groups.map(g=>g.id)), cids=new Set(st.categories.map(c=>c.id)), tmids=new Set(st.teams.map(t=>t.id));
-  /* org-chart nodes may only point at people, teams and nodes that exist —
-     Revision AG checks every chart, not only the one that happens to be open */
-  (st.orgs||[]).forEach(ch=>{
-    const nids=new Set(ch.nodes.map(n=>n.id));
-    ch.nodes.forEach(n=>{
+  /* org-chart nodes may only point at people, teams and nodes that exist */
+  (function(){
+    const nids=new Set(st.org.nodes.map(n=>n.id));
+    st.org.nodes.forEach(n=>{
       if(n.personId&&!pids.has(n.personId)) n.personId=null;
       if(n.teamId&&!tmids.has(n.teamId)) n.teamId=null;
       if(n.parentId&&(!nids.has(n.parentId)||n.parentId===n.id)) n.parentId=null;
@@ -5762,15 +5386,15 @@ function hydrate(o){
       if(n.kind==='team'&&!n.teamId)     n.kind='role';       /* the team went away  */
     });
     /* break any cycle that survived an edit */
-    ch.nodes.forEach(n=>{
+    st.org.nodes.forEach(n=>{
       const seen=new Set([n.id]); let c=n;
       while(c&&c.parentId){
         if(seen.has(c.parentId)){ c.parentId=null; break; }
         seen.add(c.parentId);
-        c=ch.nodes.find(x=>x.id===c.parentId);
+        c=st.org.nodes.find(x=>x.id===c.parentId);
       }
     });
-  });
+  })();
   st.groups.forEach(g=>{ if(!cids.has(g.categoryId)) g.categoryId=null; });
 
   /* legacy Rev-1 owner strings become directory people */
@@ -5863,77 +5487,27 @@ function hydrate(o){
   /* ---------- Revision U · maps ---------- */
   st.maps=(Array.isArray(o.maps)?o.maps:[]).map(mapIn).filter(Boolean);
 
-  /* ---------- Revision AG · weather boards ---------- */
-  st.weather=(Array.isArray(o.weather)?o.weather:[]).map(wxIn).filter(Boolean);
-  st._wx = st.weather.some(b=>b.id===o.weatherCur) ? o.weatherCur : ((st.weather[0]||{}).id||null);
-
   /* ---------- Revision AA · the live watch list ---------- */
   {
     const gids=new Set(st.groups.map(g=>g.id)), seen=new Set();
     /* Revision AF — maps can be watched too, so the register has to be checked
        as well before an entry is believed */
     const mids=new Set((st.maps||[]).map(m=>m.id));
-    const oids=new Set((st.orgs||[]).map(c=>c.id));
-    const wids=new Set((st.weather||[]).map(b=>b.id));
-    const HAS={g:gids, m:mids, o:oids, w:wids, t:tids};
     st.watch=(Array.isArray(o.watch)?o.watch:[]).map(w=>{
       const k=w&&w.kind;
-      const kind=(k==='group'||k==='g')?'g'
-               :((k==='map'||k==='m')?'m'
-               :((k==='org'||k==='o')?'o'
-               :((k==='weather'||k==='w')?'w':'t')));
+      const kind=(k==='group'||k==='g')?'g':((k==='map'||k==='m')?'m':'t');
       return {kind, id:w&&w.id};
     }).filter(w=>{
       if(!w.id) return false;
-      if(!(HAS[w.kind]||tids).has(w.id)) return false;
+      if(!(w.kind==='g'?gids.has(w.id):(w.kind==='m'?mids.has(w.id):tids.has(w.id)))) return false;
       const k=w.kind+':'+w.id;
       if(seen.has(k)) return false;
       seen.add(k); return true;
     });
   }
 
-  /* ---------- Revision AG · the Live screen's set-up ---------- */
-  {
-    st.live={stage:'', secs:12};
-    const o2=(o.live&&typeof o.live==='object')?o.live:{};
-    if(o2.stage && st.categories.some(c=>c.id===o2.stage)) st.live.stage=o2.stage;
-    st.live.secs=clamp(Math.round(+o2.secs||12),4,120);
-    /* a new file means the carousel starts again: it must not keep playing the
-       closure the last file happened to be left on */
-    try{ if(typeof DET!=='undefined') DET.stage='__init'; }catch(e){}
-    try{ if(typeof LIVE!=='undefined') LIVE.secs=st.live.secs; }catch(e){}
-  }
-
   return st;
 }
-/* ── Revision AG · one box, read in ──────────────────────────── */
-function orgNodeIn(n,i){
-  n=n||{};
-  /* Revision Q — a box is a person, a team or a free-standing role.  Files
-     written before Q carry no kind, so work it out from what they do have. */
-  let kind=['person','team','role'].indexOf(n.kind)>=0?n.kind:null;
-  if(!kind) kind = n.personId ? 'person'
-                 : ((n.teamId && /^team\b/i.test(String(n.role||''))) ? 'team' : 'role');
-  return {
-    id:n.id||uid('on'), kind:kind, personId:n.personId||null,
-    name:String(n.name||(kind==='team'?'':('Person '+((i|0)+1)))),
-    role:String(n.role||''), teamId:n.teamId||null, parentId:n.parentId||null,
-    phone:String(n.phone||''), email:String(n.email||''), location:String(n.location||''), notes:String(n.notes||''),
-    x:+n.x||0, y:+n.y||0};
-}
-
-/* ── Revision AG · one chart, written out ────────────────────── */
-function orgOut(c){
-  c=c||{};
-  return {id:c.id||'oc_main', name:String(c.name||'Organisation Chart'), note:String(c.note||''),
-    title:c.title||'', zoom:+((c.zoom||1).toFixed(3)), tidy:c.tidy!==false,
-    layout:(c.layout==='classic')?'classic':'compact',
-    nodes:(c.nodes||[]).map(n=>({id:n.id, kind:orgKind(n), personId:n.personId||null, name:n.name||'',
-      role:n.role||'', teamId:n.teamId||null, parentId:n.parentId||null,
-      phone:n.phone||'', email:n.email||'', location:n.location||'', notes:n.notes||'',
-      x:Math.round(n.x||0), y:Math.round(n.y||0)}))};
-}
-
 /* ══════════════════════════════════════════════════════════════
    MAPS · model  (Revision U)
    A map is a background picture with things drawn on top of it: areas, pins,
@@ -6490,11 +6064,7 @@ function watchIndex(kind,id){ return watchList().findIndex(w=>w.kind===kind && w
 /* Revision AF — a map is a third thing the wall can play.  It carries no
    activities of its own, so everything that counts tasks steps over it, and
    everything that names things asks the map register instead.            */
-const watchThing = (kind,id) => kind==='g' ? G(id)
-                              : kind==='m' ? MP(id)
-                              : kind==='o' ? (typeof OC==='function' ? OC(id) : null)
-                              : kind==='w' ? (typeof WX==='function' ? WX(id) : null)
-                              : T(id);
+const watchThing = (kind,id) => kind==='g' ? G(id) : (kind==='m' ? MP(id) : T(id));
 function watchName(w){
   const th=watchThing(w.kind,w.id);
   return th?(th.name||''):'';
@@ -6513,16 +6083,10 @@ function watchAdd(kind,id,quiet){
   watchList().push({kind,id});
   markDirty();
   if(!quiet) toast('“'+(thing.name||'')+'” added to the Live screen — it is slide '+watchList().length,'ok');
-  watchEcho();
+  if(S._view==='live'){ renderLive(); liveRestart(); }
+  else if(S._view==='maps') renderMaps();
+  else renderSchedule();
   return true;
-}
-/* whichever tab is open, show that the list has changed there */
-function watchEcho(){
-  if(S._view==='live'){ renderLive(); liveRestart(); return; }
-  if(S._view==='maps'){ renderMaps(); return; }
-  if(S._view==='org'){ if(typeof renderOrgTabs==='function') renderOrgTabs(); return; }
-  if(S._view==='weather'){ if(typeof renderWx==='function') renderWx(); return; }
-  renderSchedule();
 }
 function watchRemove(kind,id,quiet){
   const i=watchIndex(kind,id);
@@ -6531,7 +6095,9 @@ function watchRemove(kind,id,quiet){
   S.watch.splice(i,1);
   markDirty();
   if(!quiet) toast(nm?('“'+nm+'” taken off the Live screen'):'Taken off the Live screen');
-  watchEcho();
+  if(S._view==='live'){ renderLive(); liveRestart(); }
+  else if(S._view==='maps') renderMaps();
+  else renderSchedule();
   return true;
 }
 function watchToggle(kind,id){
@@ -6547,22 +6113,20 @@ function watchClear(){
   if(!watchList().length) return;
   S.watch=[]; markDirty();
   toast('Live screen back to playing everything');
-  watchEcho();
+  if(S._view==='live'){ renderLive(); liveRestart(); }
+  else renderSchedule();
 }
 /* the list, resolved and in order — what the carousel is built from */
 function watchItems(){
   return watchClean().map(w=>{
     if(w.kind==='g') return {kind:'g', id:w.id, group:G(w.id), name:G(w.id).name};
     if(w.kind==='m') return {kind:'m', id:w.id, map:MP(w.id),  name:MP(w.id).name};
-    if(w.kind==='o') return {kind:'o', id:w.id, chart:OC(w.id), name:OC(w.id).name};
-    if(w.kind==='w') return {kind:'w', id:w.id, board:WX(w.id), name:WX(w.id).name};
     return {kind:'t', id:w.id, task:T(w.id), name:T(w.id).name};
   });
 }
-/* every task a watched entry stands for — a map, a chart and a weather board
-   each stand for none: they are pictures of the job, not slices of the plan */
+/* every task a watched entry stands for — a map stands for none */
 function watchTasksOf(w){
-  if(w.kind==='m'||w.kind==='o'||w.kind==='w') return [];
+  if(w.kind==='m') return [];
   return w.kind==='g' ? tasksUnder(w.id) : [T(w.id)].filter(Boolean);
 }
 /* the little marker a watched row carries, so the Schedule says at a glance
@@ -9343,9 +8907,8 @@ function setView(v){
   $('#viewOrg').classList.toggle('on',v==='org');
   $('#viewMaps').classList.toggle('on',v==='maps');
   $('#viewLocs').classList.toggle('on',v==='locs');
-  $('#viewWeather').classList.toggle('on',v==='weather');
   $('#toolbar').style.display = v==='schedule'?'':'none';
-  $('#catbarWrap').style.display = (v==='dash'||v==='live'||v==='maps'||v==='weather')?'none':'';
+  $('#catbarWrap').style.display = (v==='dash'||v==='live'||v==='maps')?'none':'';
   hideTip(); hideTeamCard();
   if(v!=='live') liveStop();
   if(v==='dash'){ renderDashboard(); railBind(); waBind(); }
@@ -9357,10 +8920,9 @@ function setView(v){
     if(S._needFit){ S._needFit=false; requestAnimationFrame(()=>{ fit(); }); } }
   if(v==='actions') renderActions();
   if(v==='teams'){ renderTeams(); requestAnimationFrame(()=>renderTeamTimeline()); }
-  if(v==='org'){ orgBind(); renderOrgTabs(); renderOrg(); if(!ORG.pan.x&&!ORG.pan.y) requestAnimationFrame(()=>orgFit()); }
+  if(v==='org'){ orgBind(); renderOrg(); if(!ORG.pan.x&&!ORG.pan.y) requestAnimationFrame(()=>orgFit()); }
   if(v==='maps'){ mapBind(); renderMaps(); }
   if(v==='locs'){ locBind(); renderLocations(); requestAnimationFrame(()=>renderLocTimeline()); }
-  if(v==='weather'){ wxBind(); renderWx(); }
   markDirty();
 }
 $('#tabs').onclick=e=>{ const b=e.target.closest('.tab'); if(b) setView(b.dataset.view); };
@@ -13920,104 +13482,6 @@ function genericDetail(more,M,key){
 const ONW=208, ONH=94, OHGAP=24, OVGAP=68, OPAD=60;
 const ORG={sel:null, pan:{x:0,y:0}, drag:null, link:null, panning:null, mode:'move', linkFrom:null};
 
-/* ══════════ Revision AG · more than one chart ══════════
-   A programme has more than one structure worth drawing — the closure command
-   team, the contractor's site organisation, who is on shift tonight — and they
-   are not versions of each other.  So charts are a list, like maps, and S.org
-   is a reference to whichever one is open: every function below still reads
-   S.org.nodes and neither knows nor cares that there are others.        */
-const orgList = ()=> (S.orgs||[]);
-const OC = id => orgList().find(c=>c.id===id) || null;
-function orgUse(id){
-  const c=OC(id); if(!c) return false;
-  S._org=id; S.org=c;
-  ORG.sel=null; ORG.pan={x:0,y:0};
-  markDirty();
-  renderOrg(); renderOrgTabs();
-  requestAnimationFrame(()=>orgFit());
-  return true;
-}
-function orgChartAdd(name){
-  if(RO_ON) return null;
-  const c={id:uid('oc'), name:String(name||('Chart '+(orgList().length+1))), note:'',
-           title:'', nodes:[], zoom:1, tidy:true, layout:'compact'};
-  orgList().push(c);
-  orgUse(c.id);
-  toast('“'+c.name+'” added — it starts empty, build it with Add to chart','ok');
-  return c;
-}
-function orgChartRename(id){
-  if(RO_ON) return;
-  const c=OC(id); if(!c) return;
-  const v=prompt('Name for this chart', c.name);
-  if(v==null) return;
-  c.name=String(v).trim()||c.name;
-  markDirty(); renderOrgTabs(); if(typeof renderLive==='function' && S._view==='live') renderLive();
-}
-function orgChartDuplicate(id){
-  if(RO_ON) return;
-  const c=OC(id); if(!c) return;
-  const copy=JSON.parse(JSON.stringify(c));
-  copy.id=uid('oc');
-  copy.name=c.name+' (copy)';
-  /* every box needs its own id, and the reporting lines have to follow */
-  const remap={};
-  copy.nodes.forEach(n=>{ const old2=n.id; n.id=uid('on'); remap[old2]=n.id; });
-  copy.nodes.forEach(n=>{ if(n.parentId) n.parentId=remap[n.parentId]||null; });
-  orgList().push(copy);
-  orgUse(copy.id);
-  toast('Copied to “'+copy.name+'”','ok');
-}
-function orgChartDelete(id){
-  if(RO_ON) return;
-  const c=OC(id); if(!c) return;
-  if(orgList().length<2){ toast('This is the only chart — rename it rather than deleting it','err'); return; }
-  if(!confirm('Delete “'+c.name+'”?  Its '+c.nodes.length+' box'+(c.nodes.length===1?'':'es')+
-              ' go with it.  The people and teams themselves are not touched.')) return;
-  if(typeof watchRemove==='function') watchRemove('o',id,true);
-  S.orgs=orgList().filter(x=>x.id!==id);
-  markDirty();
-  orgUse(S.orgs[0].id);
-  toast('“'+c.name+'” deleted');
-}
-function orgChartMenu(x,y,id){
-  const c=OC(id); if(!c) return;
-  const m=$('#colMenu'); m.innerHTML='';
-  m.appendChild(el('div','mh','Chart · '+c.name));
-  if(typeof watchMenuItem==='function') watchMenuItem(m,'o',id);
-  m.appendChild(el('div','msep'));
-  if(!RO_ON){
-    menuItem(m,'Rename…',()=>orgChartRename(id));
-    menuItem(m,'Duplicate it',()=>orgChartDuplicate(id));
-    m.appendChild(el('div','msep'));
-    menuItem(m,'Delete this chart…',()=>orgChartDelete(id),'dan');
-  }
-  placeMenu(m,x,y);
-}
-/* the row of chart chips above the canvas */
-function renderOrgTabs(){
-  const host=$('#orgCharts'); if(!host) return;
-  host.innerHTML='';
-  orgList().forEach(c=>{
-    const b=el('button','octab'+(c.id===S._org?' on':'')+((typeof watchHas==='function'&&watchHas('o',c.id))?' wch':''));
-    b.type='button';
-    b.appendChild(el('span',null,c.name));
-    b.appendChild(el('em',null,String((c.nodes||[]).length)));
-    b.title=c.name+' · '+(c.nodes||[]).length+' box'+((c.nodes||[]).length===1?'':'es')+
-            '  —  right-click to rename, duplicate, delete or put it on the Live screen';
-    b.onclick=()=>{ if(c.id!==S._org) orgUse(c.id); };
-    b.ondblclick=()=>orgChartRename(c.id);
-    b.oncontextmenu=e=>{ e.preventDefault(); orgChartMenu(e.clientX,e.clientY,c.id); };
-    host.appendChild(b);
-  });
-  const add=el('button','octab add');
-  add.type='button'; add.textContent='+ New chart';
-  add.title='Start another chart — the people and teams are shared, the structure is not';
-  add.disabled=!!RO_ON;
-  add.onclick=()=>orgChartAdd();
-  host.appendChild(add);
-}
-
 const orgNodes = ()=> (S.org&&S.org.nodes)||[];
 const ON = id => orgNodes().find(n=>n.id===id);
 const orgKids = id => orgNodes().filter(n=>n.parentId===id);
@@ -17760,21 +17224,10 @@ const WAHORIZON=4/24;                            /* the update goes out every fo
    them tells the reader nothing about the night they are standing in,
    so the update is scoped: Day Zero, FSC-1 or FSC-2, or the whole
    programme when that is genuinely what is wanted.               */
-/* ══════════ Revision AG · the card reports what the room is looking at ══════════
-   The card used to carry its own closure, chosen once in this dialog, while the
-   Live screen carried another, chosen by the chips.  Two screens, two answers,
-   both labelled "what we are watching" — which is the one thing a situation
-   update cannot afford.  The default is now to follow the Live screen, so they
-   cannot drift; an explicit closure can still be pinned here when somebody
-   wants a report on a night that is not the one on the wall.            */
-const WA_FOLLOW='__live';
 function waStageId(){
-  const raw=(S.wa&&S.wa.stage!=null)?S.wa.stage:WA_FOLLOW;
-  if(raw===WA_FOLLOW){
-    try{ return liveStageId()||''; }catch(e){ return ''; }
-  }
-  if(!raw) return '';
-  return S.categories.some(c=>c.id===raw) ? raw : '';
+  const id=(S.wa&&S.wa.stage)||'';
+  if(!id) return '';
+  return S.categories.some(c=>c.id===id) ? id : '';
 }
 function waStage(){
   const id=waStageId();
@@ -17893,19 +17346,16 @@ function waBuild(){
   /* Revision AE — whatever has been put on the Live screen is what the room is
      actually watching, so the four-hourly card carries the same list, with the
      same reading: booked against planned, and how far apart the two are. */
-  /* Revision AG — worked out by the Live screen's own functions rather than by
-     a second copy of the same arithmetic, so the two can never disagree */
   const watch=(typeof watchItems==='function' ? watchItems() : []).map(wi=>{
     const own=watchTasksOf(wi).filter(t=>!taskOff(t) && (!sid || stOf(t)===sid));
     if(!own.length) return null;
-    const v=liveVerdict(own);
-    /* the same name the wall uses — the "(FSC1)" a group carries for filtering
-       is noise on a card that already says which closure it is about */
-    const nm=(wi.kind==='g' && typeof gclean==='function') ? gclean(wi.name) : wi.name;
-    return {name:nm, pct:v.st.pct, plan:v.st.plan, d:v.d, lab:v.lab, k:v.k,
-            n:v.st.n, done:v.st.done, late:v.st.late,
-            color:(wi.kind==='g'&&wi.group)?wi.group.color
-                 :(wi.kind==='t'&&wi.task?barPaint(wi.task).base:null)};
+    let a=0,b2=0,pl=0;
+    own.forEach(t=>{ const d=Math.max(dur(t),1e-6); a+=d; b2+=d*pct(t)/100; pl+=d*clamp((now-t.s)/d,0,1); });
+    const p1=a?b2/a*100:0, p2=a?pl/a*100:0;
+    return {name:wi.name, pct:Math.round(p1), plan:Math.round(p2), d:Math.round(p1-p2),
+            n:own.length, done:own.filter(t=>t.status==='done').length,
+            late:own.filter(t=>t.status!=='done' && t.e<now).length,
+            color:(wi.kind==='g'&&wi.group)?wi.group.color:null};
   }).filter(Boolean);
   const byLoc = new Map();
   running.forEach(t=>{ const k=t.locationId||'__'; byLoc.set(k,(byLoc.get(k)||0)+1); });
@@ -18157,11 +17607,9 @@ function waCard(M){
     c.beginPath(); c.moveTo(56,y); c.lineTo(W-56,y); c.stroke();
     y+=34;
     WATCH.forEach(wi=>{
-      /* Revision AG — the same words the Live screen uses, from the same
-         function, so a photograph of the card matches the wall behind it */
-      const verdict = wi.lab || (Math.abs(wi.d)<=2 ? 'on plan'
-                    : (wi.d>0 ? ('\u25B2 '+wi.d+' pts ahead') : ('\u25BC '+Math.abs(wi.d)+' pts behind')));
-      const vcol = (wi.k==='on'||Math.abs(wi.d)<=2) ? ink3 : (wi.d>0 ? WARAG.GREEN : WARAG.RED);
+      const verdict = Math.abs(wi.d)<=2 ? 'on plan'
+                    : (wi.d>0 ? ('\u25B2 '+wi.d+' pts ahead') : ('\u25BC '+Math.abs(wi.d)+' pts behind'));
+      const vcol = Math.abs(wi.d)<=2 ? ink3 : (wi.d>0 ? WARAG.GREEN : WARAG.RED);
       /* the name, then the verdict hard right on the same line */
       c.font=F(21,700);
       const vw=c.measureText(verdict).width;
@@ -18382,22 +17830,17 @@ function renderWaScope(){
   const host=$('#waScope'); if(!host) return;
   host.innerHTML='';
   const cur=waStageId();
-  const raw=(S.wa&&S.wa.stage!=null)?S.wa.stage:WA_FOLLOW;
-  const opts=[{id:WA_FOLLOW,name:'Follow the Live screen',color:'#0D5CB6',follow:true},
-              {id:'',name:'Whole programme',color:'#7A8AA3'}]
+  const opts=[{id:'',name:'Whole programme',color:'#7A8AA3'}]
     .concat(S.categories.map(c=>({id:c.id,name:c.name,color:c.color})));
   opts.forEach(o=>{
-    const n=waTasksFor(o.follow?cur:o.id).length;
-    const on = o.follow ? (raw===WA_FOLLOW) : (raw!==WA_FOLLOW && cur===o.id);
-    const b=el('button','wascope'+(on?' on':''));
+    const n=waTasksFor(o.id).length;
+    const b=el('button','wascope'+(cur===o.id?' on':''));
     b.type='button';
-    b.disabled=!n && !!o.id && !o.follow;
+    b.disabled=!n && !!o.id;
     const d=el('i'); d.style.background=o.color; b.appendChild(d);
     b.appendChild(el('span',null,o.name));
     b.appendChild(el('em',null,String(n)));
-    b.title=o.follow ? ('Report on whatever the Live screen is showing — right now '+
-                        (waScopeName()||'everything')+', '+n+' activities')
-          : n ? (o.id?('Report on '+o.name+' only — '+n+' activities')
+    b.title=n ? (o.id?('Report on '+o.name+' only — '+n+' activities')
                      :('Report on everything — '+n+' activities'))
               : 'Nothing in this stage';
     b.onclick=()=>{
@@ -18409,13 +17852,8 @@ function renderWaScope(){
   });
   const c=waStage();
   const note=$('#waScopeNote');
-  const foll=(raw===WA_FOLLOW);
-  if(note) note.textContent = foll
-    ? ('Following the Live screen — it is showing ' + (c?c.name:'every closure') +
-       ', so this card reports exactly what the room is looking at. Change the chips on the Live tab to change both.')
-    : c
-    ? ('Reporting on ' + c.name + ' only — the window, the numbers and every line below cover this stage alone. ' +
-       'The Live screen may be showing a different closure.')
+  if(note) note.textContent = c
+    ? ('Reporting on ' + c.name + ' only — the window, the numbers and every line below cover this stage alone.')
     : 'Reporting on the whole programme — all stages averaged together.';
 }
 function waTasksFor(id){
@@ -18610,7 +18048,7 @@ const qparam = k => new URLSearchParams(location.search).get(k) || '';
 const ONLINE_DEFAULTS = {
   dataUrl: 'data/programme.json',
   title: '', owner: '', note: '',
-  openOn: 'live', refreshSeconds: 300, allowExports: true
+  openOn: '', refreshSeconds: 300, allowExports: true
 };
 async function onlineConfig(){
   const over = qparam('data');
@@ -18784,14 +18222,9 @@ async function onlineApplyUpdate(){
   }
 }
 
-/* take a freshly fetched plan without losing where the viewer was.
-   Revision AG — on the FIRST load there is no viewer to lose: the tab the page
-   happened to boot on was outranking the tab the config asked for, which is
-   why openOn:'live' still landed on the Dashboard after the allow-list was
-   fixed.  A first load takes the file's own tab.                        */
-function onlineAdopt(obj,opts){
-  const first = !!(opts && opts.first);
-  const keep = {view:(first?'':S._view), filter:S._filter, cats:S._cats, stat:S._stat,
+/* take a freshly fetched plan without losing where the viewer was */
+function onlineAdopt(obj){
+  const keep = {view:S._view, filter:S._filter, cats:S._cats, stat:S._stat,
                 ownerF:S._ownerF, teamF:S._teamF, locF:S._locF,
                 ppd:S.view.ppd, tppd:S.view.tppd, scroll:dom.tlBody ? dom.tlBody.scrollLeft : 0};
   S = hydrate(obj);
@@ -18923,12 +18356,9 @@ async function onlineStart(){
                             'everything here can be read, filtered, zoomed and exported, and nothing can be ' +
                             'changed. <i id="roWho">' + esc(who ? who.textContent : '') + '</i>';
     }
-    /* Revision AG — 'live' was missing from this list, so a config asking the
-       published page to open on the Live screen was quietly ignored and every
-       viewer landed on the Dashboard.  'weather' is new in this revision.  */
-    if(TABS.indexOf(ONLINE.cfg.openOn) >= 0)
+    if(['dash','schedule','actions','teams','locs','maps','org'].indexOf(ONLINE.cfg.openOn) >= 0)
       obj.view = Object.assign({}, obj.view || {}, {lastTab: ONLINE.cfg.openOn});
-    onlineAdopt(obj,{first:true});
+    onlineAdopt(obj);
     onlineReady();
     if(editor) onlineEditorReady();
   }catch(err){
@@ -19288,12 +18718,6 @@ const DET = {stage:'__init'};
 /* which closure to open on: the one that is running, else the next */
 function detStageId(){
   if(DET.stage==='__init'){
-    /* Revision AG — if the file says which closure this screen was set up for,
-       that is the answer, whatever the clock or the watch list would guess */
-    if(S.live && S.live.stage && S.categories.some(c=>c.id===S.live.stage)){
-      DET.stage=S.live.stage;
-      return DET.stage;
-    }
     /* Revision AA — if somebody has said what this screen is for, open on the
        closure their watch list lives in; a list that spans two opens on both,
        because half a watch list is worse than none */
@@ -19523,16 +18947,6 @@ function liveWatchSlides(){
       if(w.map) out.push({kind:'map', title:w.map.name, map:w.map, list:[]});
       return;
     }
-    /* Revision AG — an org chart and a weather board play the same way: they
-       are about the night as a whole, not about one closure's activities */
-    if(w.kind==='o'){
-      if(w.chart) out.push({kind:'org', title:w.chart.name, chart:w.chart, list:[]});
-      return;
-    }
-    if(w.kind==='w'){
-      if(w.board) out.push({kind:'weather', title:w.board.name, board:w.board, list:[]});
-      return;
-    }
     const list=tasksUnder(w.id).filter(t=>inStage(t) && !taskOff(t));
     if(!list.length) return;                       /* nothing here this closure */
     /* Revision AB — one shape for every work front: its subgroups against the
@@ -19586,9 +19000,6 @@ function liveStageSlides(){
   /* Revision AF — the three charts the Dashboard answers the same questions
      with, scoped to this closure and sized for the back of the room */
   out.push({kind:'charts', title:'Progress, work and health', stage:x, list:x.list});
-  /* Revision AG — and the same closure as a curve: what the plan said the night
-     would look like, against what has actually been booked */
-  out.push({kind:'curve', title:'Planned progress vs where we are', stage:x, list:x.list});
   if(gates.length) out.push({kind:'gates', title:'Milestone runway', stage:x, list:gates});
   return out;
 }
@@ -19676,9 +19087,7 @@ function renderLive(){
     b.type='button'; b.disabled=!n;
     const d=el('i'); d.style.background=c.color; b.appendChild(d);
     b.appendChild(el('span',null,c.name));
-    /* Revision AG — which closure this screen is on is part of the file now, so
-       changing it is a change worth saving and worth publishing */
-    b.onclick=()=>{ DET.stage=c.id; LIVE.i=0; markDirty(); renderLive(); liveRestart(); renderStats(); };
+    b.onclick=()=>{ DET.stage=c.id; LIVE.i=0; renderLive(); liveRestart(); renderStats(); };
     pick.appendChild(b);
   });
   /* Revision AA — a watch list may well span both closures, so it needs a
@@ -19687,7 +19096,7 @@ function renderLive(){
     const b=el('button','dseg'+(cur?'':' on'));
     b.type='button';
     b.appendChild(el('span',null,'All closures'));
-    b.onclick=()=>{ DET.stage=''; LIVE.i=0; markDirty(); renderLive(); liveRestart(); renderStats(); };
+    b.onclick=()=>{ DET.stage=''; LIVE.i=0; renderLive(); liveRestart(); renderStats(); };
     pick.appendChild(b);
   }
   renderWatchBtn();
@@ -19747,10 +19156,7 @@ function liveBuild(card, sl){
   const gateHead = sl.kind==='gates';
   const kick = sl.kind==='stage' ? 'Closure dashboard'
              : sl.kind==='charts' ? ((cat?cat.name:'Every closure')+'  ·  progress, where the work stands and schedule health')
-             : sl.kind==='curve'  ? ((cat?cat.name:'Every closure')+'  ·  the plan against the ground')
              : sl.kind==='map'   ? 'Site picture'
-             : sl.kind==='org'   ? 'Who is running tonight'
-             : sl.kind==='weather' ? 'Weather'
              : sl.kind==='gates' ? ((cat?cat.name:'Every closure')+'  ·  the gates it is running at')
              : (cat?cat.name:'Every closure')+
                (sl.kind==='overview'?(watchList().length?('  ·  '+watchList().length+' on the watch list'):'')
@@ -19784,12 +19190,10 @@ function liveBuild(card, sl){
 
   /* Revision AF — a map is not a list of activities, so it answers before the
      "nothing here" check that every other slide is measured by */
-  if(sl.kind==='map' || sl.kind==='org' || sl.kind==='weather'){
+  if(sl.kind==='map'){
     const bodyM=el('div','lbody');
     card.appendChild(bodyM);
-    if(sl.kind==='map')      liveMap(bodyM, sl);
-    else if(sl.kind==='org') liveOrg(bodyM, sl);
-    else                     liveWeather(bodyM, sl);
+    liveMap(bodyM, sl);
     return;
   }
 
@@ -19809,12 +19213,11 @@ function liveBuild(card, sl){
 
   /* Revision AE — these two carry their own numbers, and the strip below would
      only say the same things again in smaller type */
-  if(sl.kind==='gates' || sl.kind==='stage' || sl.kind==='charts' || sl.kind==='curve'){
+  if(sl.kind==='gates' || sl.kind==='stage' || sl.kind==='charts'){
     const body1=el('div','lbody');
     card.appendChild(body1);
     if(sl.kind==='gates')       liveRunway(body1, sl);
     else if(sl.kind==='charts') liveCharts(body1, sl);
-    else if(sl.kind==='curve')  liveCurve(body1, sl);
     else                        liveStageBoard(body1, sl);
     return;
   }
@@ -19836,7 +19239,6 @@ function liveBuild(card, sl){
 
   if(sl.kind==='stage')         liveStageBoard(body, sl);
   else if(sl.kind==='charts')   liveCharts(body, sl);
-  else if(sl.kind==='curve')    liveCurve(body, sl);
   else if(sl.kind==='gates')    liveRunway(body, sl);
   else if(sl.kind==='overview') liveOverview(body, sl.list, sl);
   else if(sl.kind==='group')    liveGroupBars(body, sl);
@@ -20178,47 +19580,26 @@ function liveCharts(host, sl){
     const score=clamp(50+variance*2.4-x.late.length*6-x.block*4,0,100);
     const verdict = score>=68?['ok','On track']:(score>=42?['warn','At risk']:['bad','Behind plan']);
     const vcol    = score>=68?C.done:(score>=42?C.prog:C.blocked);
-    /* ── Revision AG · a dial that can be read from the back of the room ──
-       The growing arc used to be painted over the zones in the verdict's own
-       colour, so an amber arc lay across the red zone and the picture argued
-       with itself.  The zones are now the dial, solid and unpainted-over; the
-       needle is the only thing that moves, it carries a marker out onto the
-       band it is pointing at, and the score is written under the hub so the
-       needle can be checked against a number rather than trusted.        */
     const box=el('div','lchg');
-    const svg=sv('svg',{viewBox:'0 0 200 136'});
-    const CX=100, CY=98, RB=76;
-    const ang = f => Math.PI - clamp(f,0,1)*Math.PI;        /* 0 = left, 1 = right */
-    const ptAt = (f,r) => [CX+r*Math.cos(ang(f)), CY-r*Math.sin(ang(f))];
+    const svg=sv('svg',{viewBox:'0 0 200 112'});
     const arcPath=(a0,a1,r)=>{
-      const p0=ptAt(a0,r), p1=ptAt(a1,r);
+      const p0=[100+r*Math.cos(Math.PI-a0*Math.PI),92-r*Math.sin(Math.PI-a0*Math.PI)];
+      const p1=[100+r*Math.cos(Math.PI-a1*Math.PI),92-r*Math.sin(Math.PI-a1*Math.PI)];
       return 'M'+p0[0].toFixed(1)+' '+p0[1].toFixed(1)+' A'+r+' '+r+' 0 0 1 '+p1[0].toFixed(1)+' '+p1[1].toFixed(1);
     };
-    const ZONES=[[0,.42,C.blocked,'Behind'],[.42,.68,C.prog,'At risk'],[.68,1,C.done,'On track']];
-    ZONES.forEach(bd=>{
-      svg.appendChild(sv('path',{d:arcPath(bd[0],bd[1],RB),class:'lchzone',fill:'none',stroke:bd[2],
-        'stroke-width':17,opacity:.85}));
+    [[0,.42,C.todo],[.42,.68,C.prog],[.68,1,C.done]].forEach(bd=>{
+      svg.appendChild(sv('path',{d:arcPath(bd[0],bd[1],74),fill:'none',stroke:bd[2],
+        'stroke-width':16,opacity:.26}));
     });
-    /* the two thresholds, marked on the dial so the zones are not just colour */
-    [.42,.68].forEach(f=>{
-      const a=ptAt(f,RB-9.5), z=ptAt(f,RB+9.5);
-      svg.appendChild(sv('line',{x1:a[0].toFixed(1),y1:a[1].toFixed(1),x2:z[0].toFixed(1),y2:z[1].toFixed(1),
-        stroke:UI.surface||'#fff','stroke-width':2.4,opacity:.9}));
-    });
-    /* where the needle is pointing, marked on the band itself */
-    const mk=sv('circle',{class:'lchmark',r:7,fill:vcol,stroke:UI.surface||'#fff','stroke-width':3});
-    const mp=ptAt(score/100,RB);
-    mk.setAttribute('cx',ptAt(0,RB)[0].toFixed(1)); mk.setAttribute('cy',ptAt(0,RB)[1].toFixed(1));
-    svg.appendChild(mk);
+    /* the whole arc, revealed along its own length — one dasharray, no maths */
+    const gv=sv('path',{d:arcPath(0,1,74),class:'lchgv',stroke:vcol,pathLength:100});
+    gv.setAttribute('stroke-dasharray','0 100');
+    svg.appendChild(gv);
     const nd=sv('g',{class:'lchneedle'});
-    nd.appendChild(sv('path',{d:'M'+CX+' '+CY+' L'+CX+' '+(CY-RB+13),
-      stroke:UI.ink||GC_.ink,'stroke-width':3.6,'stroke-linecap':'round'}));
-    nd.appendChild(sv('circle',{cx:CX,cy:CY,r:9,fill:UI.ink||GC_.ink}));
-    nd.appendChild(sv('circle',{cx:CX,cy:CY,r:3.6,fill:UI.surface||'#fff'}));
-    nd.setAttribute('transform','rotate(-90 '+CX+' '+CY+')');
+    nd.appendChild(sv('path',{d:'M100 92 L100 24',stroke:UI.ink||GC_.ink,'stroke-width':3.4,'stroke-linecap':'round'}));
+    nd.appendChild(sv('circle',{cx:100,cy:92,r:8,fill:UI.ink||GC_.ink}));
+    nd.setAttribute('transform','rotate(-90 100 92)');
     svg.appendChild(nd);
-    svg.appendChild(sv('text',{x:CX,y:CY+34,'text-anchor':'middle',class:'lchscore'},
-      Math.round(score)+' / 100'));
     box.appendChild(svg);
     b.appendChild(box);
     b.appendChild(el('div','lchverd '+verdict[0],verdict[1]));
@@ -20230,286 +19611,10 @@ function liveCharts(host, sl){
                  : 'Nothing overdue, nothing blocked');
     b.appendChild(note);
     setTimeout(()=>{
-      nd.setAttribute('transform','rotate('+(-90+score*1.8).toFixed(1)+' '+CX+' '+CY+')');
-      mk.setAttribute('cx',mp[0].toFixed(1)); mk.setAttribute('cy',mp[1].toFixed(1));
+      gv.setAttribute('stroke-dasharray',score.toFixed(1)+' 100');
+      nd.setAttribute('transform','rotate('+(-90+score*1.8).toFixed(1)+' 100 92)');
     },170);
   }
-}
-
-/* ══════════ Revision AG · the plan against the ground ══════════
-   The Dashboard draws the planned S-curve with a single dot for today.  A room
-   wants two lines: what the plan said this closure would look like hour by
-   hour, and what has actually been booked.  The second line can only be drawn
-   up to now, which is the point — the gap between the two at the right-hand end
-   is the whole argument.
-
-   Where the actual line comes from: a finished activity books its whole length
-   at the moment it was ticked off, and an activity in progress is assumed to
-   have accrued evenly since it started.  That is a reconstruction, not a
-   recording, and the footnote on the slide says so.                       */
-function liveCurve(host, sl){
-  const x=sl.stage, C=S.view.colors;
-  const list=x.list;
-  const lo=x.lo, hi=x.hi, span=Math.max(hi-lo,1e-6);
-  const tot=x.tot||1;
-
-  const plannedAt = d => {
-    let a=0;
-    list.forEach(t=>{ const l=Math.max(dur(t),1e-6); a+=l*clamp((d-t.s)/l,0,1); });
-    return a/tot*100;
-  };
-  const actualAt = d => {
-    let a=0;
-    list.forEach(t=>{
-      const l=Math.max(dur(t),1e-6), p=pct(t)/100;
-      if(p<=0) return;
-      if(t.status==='done'){
-        let at=(t.doneAt!=null && isFinite(t.doneAt)) ? t.doneAt : t.e;
-        at=Math.min(at,NOW);                    /* it cannot have been booked later than now */
-        if(d>=at) a+=l;
-      }else{
-        const run=NOW-t.s;
-        /* Revision AH — progress booked against something that has not started
-           yet cannot be spread backwards, but it is still booked: it lands at
-           now, so the marker and the headline figure always agree */
-        if(run<=0){ if(d>=NOW) a+=l*p; }
-        else a+=l*p*clamp((d-t.s)/run,0,1);
-      }
-    });
-    return a/tot*100;
-  };
-
-  const wrap=el('div','lcv');
-  host.appendChild(wrap);
-
-  const W=1000, H=440, PADL=56, PADR=26, PADT=18, PADB=44;
-  const iw=W-PADL-PADR, ih=H-PADT-PADB;
-  const gx=d=>PADL+clamp((d-lo)/span,0,1)*iw;
-  const gy=p=>PADT+ih-clamp(p,0,100)/100*ih;
-
-  const svg=sv('svg',{viewBox:'0 0 '+W+' '+H,class:'lcvsvg',preserveAspectRatio:'none'});
-  const defs=sv('defs');
-  LIVE.uid=(LIVE.uid||0)+1;
-  const gid='lcvg'+LIVE.uid;
-  /* the plan is the reference, so it is drawn in a neutral; the booked line is
-     the news, so it gets the colour.  Taking the closure's own colour for the
-     plan made two green lines on a green fill and nobody could tell them apart. */
-  const PLANC = UI.ink3 || '#7C8BA1';
-  const gr=sv('linearGradient',{id:gid,x1:0,y1:0,x2:0,y2:1});
-  gr.appendChild(sv('stop',{offset:'0%','stop-color':PLANC,'stop-opacity':.22}));
-  gr.appendChild(sv('stop',{offset:'100%','stop-color':PLANC,'stop-opacity':.02}));
-  defs.appendChild(gr); svg.appendChild(defs);
-
-  /* the grid, and what the horizontal lines mean */
-  [0,25,50,75,100].forEach(p=>{
-    svg.appendChild(sv('line',{x1:PADL,y1:gy(p),x2:W-PADR,y2:gy(p),class:'lcvgrid'}));
-    svg.appendChild(sv('text',{x:PADL-11,y:gy(p)+5,class:'lcvax','text-anchor':'end'},p+'%'));
-  });
-
-  /* the time axis: hours for one night, days for a longer window */
-  const hours=span*24;
-  const ticks=[];
-  if(hours<=36){
-    const step=hours<=14?2:(hours<=26?3:6);
-    let d=Math.ceil(lo*24/step)*step/24;
-    while(d<=hi+1e-9){ ticks.push({d, lab:HHMM(d)}); d+=step/24; }
-  }else{
-    for(let d=Math.ceil(lo); d<=Math.floor(hi); d++) ticks.push({d, lab:fmt(d)});
-  }
-  ticks.forEach(t=>{
-    svg.appendChild(sv('line',{x1:gx(t.d),y1:PADT,x2:gx(t.d),y2:PADT+ih,class:'lcvgrid v'}));
-    svg.appendChild(sv('text',{x:gx(t.d),y:H-16,class:'lcvax','text-anchor':'middle'},t.lab));
-  });
-
-  /* the two lines */
-  const N=120, pl=[], ac=[];
-  for(let i=0;i<=N;i++){
-    const d=lo+span*i/N;
-    pl.push([gx(d),gy(plannedAt(d))]);
-    if(d<=NOW) ac.push([gx(d),gy(actualAt(d))]);
-  }
-  if(NOW>lo && NOW<hi) ac.push([gx(NOW),gy(actualAt(NOW))]);
-  const path=p=>'M'+p.map(q=>q[0].toFixed(1)+' '+q[1].toFixed(1)).join('L');
-
-  svg.appendChild(sv('path',{d:path(pl)+'L'+gx(hi).toFixed(1)+' '+gy(0)+'L'+gx(lo).toFixed(1)+' '+gy(0)+'Z',
-    fill:'url(#'+gid+')',stroke:'none'}));
-  const pline=sv('path',{d:path(pl),class:'lcvplan',fill:'none',stroke:PLANC,pathLength:100});
-  pline.setAttribute('stroke-dasharray','0 100');
-  svg.appendChild(pline);
-
-  /* ══════════ Revision AH · where we are, whether or not there is a line ══════════
-     The booked line is drawn from what has actually been ticked off.  Early in a
-     closure — or on any night where nobody has ticked anything yet — that is a
-     flat run along the bottom of the chart, which lies exactly on the 0% grid
-     line and reads as "there is no actual line".  So the figure itself is always
-     marked: a dot at this moment, on the plan's own scale, carrying the number,
-     with the gap to the plan drawn beside it.  Nothing is invented — a zero is
-     shown as a zero and labelled as one.                                      */
-  const nowD  = clamp(NOW, lo, hi);
-  const nowX  = gx(nowD);
-  const nowPl = plannedAt(nowD);
-  const nowAc = actualAt(nowD);
-  const yAc   = gy(nowAc), yPl = gy(nowPl);
-
-  let aline=null;
-  if(ac.length>1){
-    /* a halo underneath, so a line lying on the axis is still a line */
-    svg.appendChild(sv('path',{d:path(ac),class:'lcvhalo',fill:'none'}));
-    aline=sv('path',{d:path(ac),class:'lcvact',fill:'none',stroke:C.done,pathLength:100});
-    aline.setAttribute('stroke-dasharray','0 100');
-    svg.appendChild(aline);
-  }
-
-  /* where the clock is */
-  if(NOW>lo && NOW<hi){
-    svg.appendChild(sv('line',{x1:nowX,y1:PADT-6,x2:nowX,y2:PADT+ih,class:'lcvnow'}));
-    svg.appendChild(sv('text',{x:nowX+7,y:PADT+7,class:'lcvnowlab'},'now'));
-  }
-
-  /* the gap between the two, drawn where the eye already is */
-  if(Math.abs(yPl-yAc)>6){
-    svg.appendChild(sv('line',{x1:nowX,y1:yPl.toFixed(1),x2:nowX,y2:yAc.toFixed(1),class:'lcvgapline'}));
-    svg.appendChild(sv('circle',{cx:nowX,cy:yPl.toFixed(1),r:5,class:'lcvplandot',
-      fill:PLANC,stroke:UI.surface||'#fff','stroke-width':2.5}));
-  }
-
-  /* and the figure itself, always */
-  const dot=sv('circle',{cx:nowX,cy:yAc.toFixed(1),r:10,class:'lcvdot',
-    fill:C.done,stroke:UI.surface||'#fff','stroke-width':3.5});
-  svg.appendChild(dot);
-  {
-    const txt=Math.round(nowAc)+'%';
-    const right = nowX < (W-PADR-150);
-    const lx = right ? nowX+18 : nowX-18;
-    const ly = Math.min(Math.max(yAc-16, PADT+16), PADT+ih-10);
-    const lab=sv('text',{x:lx.toFixed(1),y:ly.toFixed(1),class:'lcvnum',
-      'text-anchor':right?'start':'end'}, txt+(nowAc<0.5?' booked':''));
-    svg.appendChild(lab);
-  }
-
-  const box=el('div','lcvbox');
-  box.appendChild(svg);
-  wrap.appendChild(box);
-
-  /* the legend and the one number the room is after */
-  const d0=Math.round(x.actual-x.planNow);
-  const leg=el('div','lcvfoot');
-  const key=el('div','lcvkey');
-  const row=(cls,col,lab,val)=>{
-    const r=el('div','lcvkr '+cls);
-    const i=el('i'); i.style.background=col; r.appendChild(i);
-    r.appendChild(el('span',null,lab));
-    r.appendChild(el('b',null,val));
-    key.appendChild(r);
-  };
-  row('plan', PLANC, 'Planned by now', Math.round(x.planNow)+'%');
-  row('act',  C.done, 'Booked so far',  Math.round(x.actual)+'%');
-  leg.appendChild(key);
-  const gap=el('div','lcvgap '+(d0>=0?'ok':'bad'));
-  gap.appendChild(el('b',null, d0===0?'on plan':(d0>0?('▲ '+d0+' pts ahead'):('▼ '+Math.abs(d0)+' pts behind'))));
-  gap.appendChild(el('span',null, liveWindow(lo,hi)));
-  leg.appendChild(gap);
-  wrap.appendChild(leg);
-  wrap.appendChild(el('div','lcvnote',
-    Math.round(x.actual)===0
-      ? ('Nothing has been booked in this closure yet, so the booked line sits on zero and the marker '+
-         'shows where we are at '+HHMM(NOW)+'. It lifts off as soon as activities are ticked off.')
-      : ('The booked line is reconstructed: an activity counts in full from the moment it was ticked off, '+
-         'and work in progress is spread evenly since it started.')));
-
-  setTimeout(()=>{
-    pline.setAttribute('stroke-dasharray','100 100');
-    if(aline) aline.setAttribute('stroke-dasharray','100 100');
-    if(dot) dot.classList.add('on');
-  },150);
-}
-
-/* ══════════ Revision AG · an org chart on the wall ══════════
-   The Org tab draws its chart as draggable cards on a pan-and-zoom canvas,
-   which is right for building one and wrong for showing one.  On the wall the
-   same chart is drawn once, as flat SVG, scaled so the whole structure lands
-   inside the slide — no panning, nothing to touch, readable from the back.  */
-function liveOrg(host, sl){
-  const c=sl.chart;
-  const wrap=el('div','lorg');
-  host.appendChild(wrap);
-  if(!c){ wrap.appendChild(el('div','lorgempty','That chart has been deleted.')); return; }
-
-  const nodes=(c.nodes||[]).slice();
-  if(!nodes.length){
-    wrap.appendChild(el('div','lorgempty',
-      '“'+c.name+'” has no boxes on it yet — build it on the Org Chart tab.'));
-    return;
-  }
-
-  /* lay it out with the Org tab's own tidier, so the wall and the tab agree */
-  const keep=S.org;
-  try{
-    S.org=c;
-    if(c.tidy!==false) orgTidy(false);
-  }catch(e){}
-  const ext=(function(){
-    try{ S.org=c; return orgExtent(); }finally{ S.org=keep; }
-  })();
-
-  const PAD=34;
-  const VW=ext.w+PAD*2, VH=ext.h+PAD*2;
-  const ox=PAD-ext.minX, oy=PAD-ext.minY;
-  const box=el('div','lorgb');
-  const svg=sv('svg',{viewBox:'0 0 '+VW+' '+VH, preserveAspectRatio:'xMidYMid meet'});
-
-  /* the reporting lines first, so no box is crossed out by one */
-  const g0=sv('g',{transform:'translate('+ox+','+oy+')'});
-  const byId={}; nodes.forEach(n=>byId[n.id]=n);
-  nodes.forEach(n=>{
-    if(!n.parentId) return;
-    const pa=byId[n.parentId]; if(!pa) return;
-    let d='';
-    try{ S.org=c; d=orgPath(pa,n); }catch(e){ d=''; }finally{ S.org=keep; }
-    if(d) g0.appendChild(sv('path',{d, class:'lorglink'}));
-  });
-
-  const cut=(txt,max)=>{ txt=String(txt||''); return txt.length>max ? (txt.slice(0,max-1)+'…') : txt; };
-  nodes.forEach(n=>{
-    const kind=orgKind(n), tm=orgTeam(n);
-    const col=tm?(tm.color||'#8fa0b6'):(n.personId?avColor(n.personId):'#8fa0b6');
-    const g=sv('g',{class:'lorgnode',transform:'translate('+n.x+','+n.y+')'});
-    g.appendChild(sv('rect',{x:0,y:0,width:ONW,height:ONH,rx:12,
-      fill:UI.surface||'#fff'}));
-    g.appendChild(sv('rect',{x:0,y:0,width:ONW,height:6,rx:3,fill:col}));
-    g.appendChild(sv('circle',{cx:32,cy:50,r:17,fill:col,opacity:kind==='team'?.9:1}));
-    g.appendChild(sv('text',{x:32,y:56,'text-anchor':'middle',class:'nm',
-      style:'font-size:14px;fill:#fff'}, initials(orgName(n))));
-    g.appendChild(sv('text',{x:60,y:45,class:'nm',style:'font-size:16px'}, cut(orgName(n),20)));
-    g.appendChild(sv('text',{x:60,y:65,class:'rl',style:'font-size:12.5px'}, cut(orgRole(n)||'—',24)));
-    g0.appendChild(g);
-  });
-  svg.appendChild(g0);
-  box.appendChild(svg);
-  wrap.appendChild(box);
-
-  /* what the chart is made of */
-  const foot=el('div','lorgfoot');
-  const tile=(lab,val,kind)=>{
-    const t=el('div','lsbtile'+(kind?(' '+kind):''));
-    t.appendChild(el('b',null,String(val)));
-    t.appendChild(el('span',null,lab));
-    foot.appendChild(t);
-  };
-  const kinds=nodes.map(orgKind);
-  const roots=nodes.filter(n=>!n.parentId||!byId[n.parentId]);
-  let depth=0;
-  nodes.forEach(n=>{ let d=0,cur=n,seen=new Set();
-    while(cur&&cur.parentId&&byId[cur.parentId]&&!seen.has(cur.id)){ seen.add(cur.id); cur=byId[cur.parentId]; d++; }
-    if(d>depth) depth=d; });
-  tile('Boxes', nodes.length, '');
-  tile('People', kinds.filter(k=>k==='person').length, '');
-  tile('Teams',  kinds.filter(k=>k==='team').length, '');
-  tile('Roles',  kinds.filter(k=>k==='role').length, '');
-  tile('Levels', depth+1, '');
-  tile('Top of the tree', roots.length, '');
-  wrap.appendChild(foot);
-  if(c.note) wrap.appendChild(el('div','lmapnote',c.note));
 }
 
 /* ══════════ Revision AF · a map on the wall ══════════
@@ -20527,12 +19632,20 @@ function liveMap(host, sl){
   const svg=document.createElementNS(MAPNS,'svg');
   box.appendChild(svg);
   wrap.appendChild(box);
-  /* Revision AG — a map on the wall is a picture, not a film.  Every other
-     slide is still while it is up, and a convoy sliding across the screen
-     behind a room full of people reading numbers was a distraction, so the
-     motion layer is drawn where it starts and left there.            */
-  cancelAnimationFrame(LIVE.mraf||0); LIVE.mraf=0;
-  paintMap(svg,m,{show:true});
+  paintMap(svg,m,{show:true,play:true});
+  /* its own clock, so the carousel's map runs whether or not the Maps tab has
+     ever been opened — and only one of these is ever alive at a time */
+  cancelAnimationFrame(LIVE.mraf||0);
+  const t0=performance.now();
+  const step=ts=>{
+    /* the moment this slide is gone, or the tab is, the clock stops — a hidden
+       card animating in the background is only a warm laptop */
+    if(!svg.isConnected || S._view!=='live') return;
+    MAP.t0=t0;
+    animTick(svg,m,ts);
+    LIVE.mraf=requestAnimationFrame(step);
+  };
+  LIVE.mraf=requestAnimationFrame(step);
 
   /* what the map is about, and how the work it points at is doing */
   const els=(m.els||[]).length;
@@ -20585,28 +19698,16 @@ function liveRunway(host, sl){
   const n = ms.length;
   const at = i => n===1 ? 50 : (8 + 84*i/(n-1));
 
-  /* ── Revision AG · the bar reads the clock ─────────────────────────────
-     Until now the fill only moved when a gate was passed, so on the run-up
-     to the first gate — which is most of a closure — it sat at 0% and the
-     screen looked frozen.  It is a time line: the anchors are the closure's
-     own start and each gate, and the fill is simply where the clock is
-     between them.  It moves the whole way through, which is the point of
-     putting it on a wall.                                              */
-  const origin = Math.min(sl.stage ? sl.stage.lo : ms[0].s, ms[0].s);
-  const anchors = [{t:origin, x:0}].concat(ms.map((t,i)=>({t:t.s, x:at(i)})));
-  const xAt = when => {
-    if(when<=anchors[0].t) return 0;
-    for(let i=0;i<anchors.length-1;i++){
-      const a=anchors[i], b=anchors[i+1];
-      if(when<=b.t){
-        const span=b.t-a.t;
-        return span>1e-9 ? (a.x+(when-a.t)/span*(b.x-a.x)) : b.x;
-      }
-    }
-    return 100;
-  };
+  /* how far along the run-up the clock has actually got */
   const cleared = ms.filter(t=>t.status==='done' || t.s<NOW).length;
-  const fill = clamp(xAt(NOW),0,100);
+  let fill=0;
+  if(cleared>=n) fill=100;
+  else if(cleared>0){
+    const a=at(cleared-1), b=at(cleared);
+    const span=ms[cleared].s-ms[cleared-1].s;
+    const k=span>1e-9?clamp((NOW-ms[cleared-1].s)/span,0,1):0;
+    fill=a+k*(b-a);
+  }
   /* Revision AF — the fill grows into place rather than arriving finished: the
      width is set on the next frame, once the slide is in the document, which is
      what gives the CSS transition something to run from */
@@ -20635,10 +19736,12 @@ function liveRunway(host, sl){
     inner.appendChild(lab);
   });
 
-  /* where the clock is — anywhere inside the closure, including the run-up
-     to the first gate, which is where a wall screen spends most of its night */
-  if(NOW>origin && NOW<ms[n-1].s){
-    const nw=el('div','lrwnow'); nw.style.left=fill+'%';
+  /* where the clock is, if it is inside the run */
+  if(NOW>ms[0].s && NOW<ms[n-1].s){
+    let k=0; while(k<n-1 && ms[k+1].s<=NOW) k++;
+    const a=at(k), b=at(k+1), span=ms[k+1].s-ms[k].s;
+    const q=span>1e-9?clamp((NOW-ms[k].s)/span,0,1):0;
+    const nw=el('div','lrwnow'); nw.style.left=(a+q*(b-a))+'%';
     nw.appendChild(el('span',null,'now'));
     inner.appendChild(nw);
   }
@@ -20988,7 +20091,7 @@ function liveBind(){
   const secs=$('#liveSecs');
   if(secs){
     secs.value=LIVE.secs;
-    secs.onchange=()=>{ LIVE.secs=clamp(+secs.value||12,4,120); markDirty(); liveRestart(); };
+    secs.onchange=()=>{ LIVE.secs=clamp(+secs.value||12,4,120); liveRestart(); };
   }
   /* Revision AF.online — the second box on this bar is not about the carousel,
      it is about the data: how often this page reads the published programme
@@ -21348,10 +20451,8 @@ function ghConfigText(){
     title: S.name || 'Live programme',
     owner: (S.doc && S.doc.preparedBy) || APP.devRole || '',
     note: 'Published from Gantt Studio — this page refreshes itself',
-    /* Revision AG — a published programme is a wall screen first and a
-       document second, so it opens on the Live carousel */
-    openOn: 'live',
-    refreshSeconds: (typeof refSecs==='function') ? refSecs() : 60,
+    openOn: 'dash',
+    refreshSeconds: 60,
     allowExports: true
   }, null, 2);
 }
@@ -21402,867 +20503,6 @@ function ghShowConfig(txt){
   box.appendChild(el('div','ghmsg','Copying was blocked — here it is to select by hand:'));
   const ta=el('textarea','ghta'); ta.value=txt; ta.readOnly=true;
   box.appendChild(ta); ta.select();
-}
-
-/* ══════════════════════════════════════════════════════════════
-   38 · WEATHER   (Revision AG)
-
-   A closure is an outdoor job.  Rain decides whether a switch can be
-   opened, gusts decide whether anything goes up in the air, lightning
-   stops work outright, and the haze decides what the track team can
-   see.  All of that was being read off somebody's phone and shouted
-   across the room, so it now has a tab.
-
-   A board is a place: a town, a country, and the coordinates the met
-   service gave back for them.  It reads Open-Meteo — no key, no
-   account, no sign-up, and it answers a browser directly, which is
-   what lets a published copy of this page fetch its own weather.
-
-   Three rules this layer keeps:
-
-     · It never invents.  Every figure is what the service returned,
-       and the board says when it was read.
-     · It keeps the last reading in the project file, so a copy opened
-       on a train with no signal still shows the last known sky rather
-       than an empty panel — clearly stamped with its age.
-     · Revision AH — it does not tell anybody what to do about it.  The
-       board reports the sky: how likely rain is, how much, whether
-       there is lightning in the window and when, how hard it will gust
-       and how far anyone can see.  What that means for the night is the
-       shift manager's call, and a wall screen handing out instructions
-       only picks an argument with the person actually running it.
-   ══════════════════════════════════════════════════════════════ */
-
-const WXAPI  = 'https://api.open-meteo.com/v1/forecast';
-const WXAIR  = 'https://air-quality-api.open-meteo.com/v1/air-quality';
-const WXGEO  = 'https://geocoding-api.open-meteo.com/v1/search';
-const WX_STALE = 30*60*1000;              /* older than half an hour is worth re-reading */
-const WXS = {busy:{}, bound:false, geo:[], geoBusy:false, timer:0};
-
-const wxList = () => (S.weather || (S.weather=[]));
-const WX  = id => wxList().find(b=>b.id===id) || null;
-const wxCur = () => WX(S._wx) || wxList()[0] || null;
-
-/* ══════════ what the sky is doing ══════════
-   WMO weather codes, grouped the way a site office actually talks. */
-const WXCODE = {
-  0:['Clear','clear'], 1:['Mainly clear','clear'], 2:['Partly cloudy','partly'], 3:['Overcast','cloud'],
-  45:['Fog','fog'], 48:['Freezing fog','fog'],
-  51:['Light drizzle','drizzle'], 53:['Drizzle','drizzle'], 55:['Heavy drizzle','drizzle'],
-  56:['Freezing drizzle','drizzle'], 57:['Freezing drizzle','drizzle'],
-  61:['Light rain','rain'], 63:['Rain','rain'], 65:['Heavy rain','heavy'],
-  66:['Freezing rain','rain'], 67:['Freezing rain','heavy'],
-  71:['Light snow','snow'], 73:['Snow','snow'], 75:['Heavy snow','snow'], 77:['Snow grains','snow'],
-  80:['Light showers','rain'], 81:['Showers','rain'], 82:['Violent showers','heavy'],
-  85:['Snow showers','snow'], 86:['Heavy snow showers','snow'],
-  95:['Thunderstorm','storm'], 96:['Thunderstorm with hail','storm'], 99:['Thunderstorm with hail','storm']
-};
-const wxWord = c => (WXCODE[c] || ['Unknown','cloud'])[0];
-const wxSky  = c => (WXCODE[c] || ['Unknown','cloud'])[1];
-
-/* ══════════ the model ══════════ */
-function wxBlank(name){
-  return {id:uid('wx'), name:String(name||'New board'), country:'', area:'',
-          lat:null, lon:null, tz:'', place:'', note:'', snap:null};
-}
-function wxIn(b,i){
-  if(!b || typeof b!=='object') return null;
-  const snap = (b.snap && typeof b.snap==='object') ? b.snap : null;
-  return {
-    id:b.id||uid('wx'), name:String(b.name||('Board '+((i|0)+1))),
-    country:String(b.country||''), area:String(b.area||''),
-    place:String(b.place||''), note:String(b.note||''),
-    lat:(b.lat==null||isNaN(+b.lat))?null:+b.lat,
-    lon:(b.lon==null||isNaN(+b.lon))?null:+b.lon,
-    tz:String(b.tz||''),
-    snap: snap ? {
-      at:String(snap.at||''),
-      cur:(snap.cur&&typeof snap.cur==='object')?snap.cur:null,
-      air:(snap.air&&typeof snap.air==='object')?snap.air:null,
-      hours:Array.isArray(snap.hours)?snap.hours.slice(0,36):[],
-      days:Array.isArray(snap.days)?snap.days.slice(0,10):[]
-    } : null
-  };
-}
-const wxOut = b => wxIn(b,0);
-
-/* ══════════ reading it ══════════ */
-function wxUrl(base,q){
-  const p=Object.keys(q).map(k=>encodeURIComponent(k)+'='+encodeURIComponent(q[k])).join('&');
-  return base+'?'+p;
-}
-async function wxJson(url){
-  const r=await fetch(url,{cache:'no-store'});
-  if(!r.ok) throw new Error('the weather service answered '+r.status);
-  return await r.json();
-}
-
-/* find a place by name — the country box narrows it, it does not have to be exact */
-async function wxGeocode(area,country){
-  const q=String(area||'').trim();
-  if(q.length<2) return [];
-  const o=await wxJson(wxUrl(WXGEO,{name:q, count:10, language:'en', format:'json'}));
-  let list=(o&&o.results)||[];
-  const c=String(country||'').trim().toLowerCase();
-  if(c) list=list.filter(r=>
-    String(r.country||'').toLowerCase().indexOf(c)>=0 ||
-    String(r.country_code||'').toLowerCase()===c);
-  return list.map(r=>({
-    name:r.name, admin:r.admin1||'', country:r.country||'', cc:r.country_code||'',
-    lat:r.latitude, lon:r.longitude, tz:r.timezone||''
-  }));
-}
-
-/* the forecast, the air and the sun — three calls, one snapshot */
-async function wxRead(b){
-  if(b.lat==null||b.lon==null) throw new Error('this board has no place yet — type a town and press Find');
-  const base={latitude:b.lat, longitude:b.lon, timezone:b.tz||'auto'};
-  const fx=wxJson(wxUrl(WXAPI, Object.assign({}, base, {
-    current:'temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,weather_code,cloud_cover,pressure_msl,wind_speed_10m,wind_direction_10m,wind_gusts_10m,visibility',
-    hourly:'temperature_2m,precipitation_probability,precipitation,weather_code,wind_speed_10m,wind_gusts_10m,visibility',
-    daily:'weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,wind_speed_10m_max,wind_gusts_10m_max,sunrise,sunset',
-    forecast_days:7, forecast_hours:36
-  })));
-  const aq=wxJson(wxUrl(WXAIR, Object.assign({}, base, {
-    current:'pm10,pm2_5,european_aqi,us_aqi,uv_index'
-  }))).catch(()=>null);                       /* air quality is a bonus, never a blocker */
-
-  const [f,a]=await Promise.all([fx,aq]);
-  const c=(f&&f.current)||{};
-  const hu=(f&&f.hourly)||{};
-  const da=(f&&f.daily)||{};
-  const ac=(a&&a.current)||{};
-
-  const hours=[];
-  const HT=hu.time||[];
-  for(let i=0;i<HT.length && hours.length<36;i++){
-    hours.push({t:HT[i], temp:num2(hu.temperature_2m,i), pop:num2(hu.precipitation_probability,i),
-                mm:num2(hu.precipitation,i), code:num2(hu.weather_code,i),
-                wind:num2(hu.wind_speed_10m,i), gust:num2(hu.wind_gusts_10m,i),
-                vis:num2(hu.visibility,i)});
-  }
-  const days=[];
-  const DT=da.time||[];
-  for(let i=0;i<DT.length && days.length<10;i++){
-    days.push({t:DT[i], code:num2(da.weather_code,i), hi:num2(da.temperature_2m_max,i),
-               lo:num2(da.temperature_2m_min,i), mm:num2(da.precipitation_sum,i),
-               pop:num2(da.precipitation_probability_max,i), wind:num2(da.wind_speed_10m_max,i),
-               gust:num2(da.wind_gusts_10m_max,i),
-               sunrise:(da.sunrise||[])[i]||'', sunset:(da.sunset||[])[i]||''});
-  }
-  return {
-    at:new Date().toISOString(),
-    cur:{t:c.time||'', temp:c.temperature_2m, feels:c.apparent_temperature, rh:c.relative_humidity_2m,
-         code:c.weather_code, cloud:c.cloud_cover, mm:c.precipitation, rain:c.rain,
-         wind:c.wind_speed_10m, gust:c.wind_gusts_10m, dir:c.wind_direction_10m,
-         vis:c.visibility, press:c.pressure_msl, day:c.is_day!==0},
-    air:{pm25:ac.pm2_5, pm10:ac.pm10, aqi:ac.european_aqi, usaqi:ac.us_aqi, uv:ac.uv_index},
-    hours, days
-  };
-}
-const num2=(arr,i)=>{ const v=(arr||[])[i]; return (v==null||isNaN(+v))?null:+v; };
-
-async function wxLoad(b,quiet){
-  if(!b) return false;
-  if(WXS.busy[b.id]) return false;
-  WXS.busy[b.id]=true;
-  renderWx();
-  try{
-    const snap=await wxRead(b);
-    b.snap=snap;
-    b.err='';
-    markDirty();
-    return true;
-  }catch(e){
-    b.err=(e&&e.message)||'could not reach the weather service';
-    if(!quiet) toast('“'+b.name+'” — '+b.err,'err');
-    return false;
-  }finally{
-    WXS.busy[b.id]=false;
-    renderWx();
-    if(S._view==='live' && typeof renderLive==='function') renderLive();
-  }
-}
-const wxAge = b => (b && b.snap && b.snap.at) ? (Date.now()-new Date(b.snap.at).getTime()) : Infinity;
-const wxStale = b => wxAge(b) > WX_STALE;
-
-/* ══════════ Revision AH · the next twelve hours, and nothing else ══════════
-   Until AH this panel read the forecast and then told the room what to do about
-   it — stop outdoor work, brief the team, have pumps to hand.  That is the shift
-   manager's call, not the software's, and a screen that hands out instructions
-   invites an argument with whoever is actually running the night.  So it states
-   the forecast and stops: how likely rain is, how much of it, whether there is
-   lightning in the window and when, how hard it is expected to gust, and how far
-   anyone will be able to see.  What that means is for the people in the room. */
-function wxOutlook(b){
-  const sn=b&&b.snap; if(!sn) return null;
-  const next=(sn.hours||[]).filter(h=>{
-    const t=new Date(h.t).getTime();
-    return t>=Date.now()-3600e3 && t<=Date.now()+12*3600e3;
-  });
-  const look = next.length ? next : (sn.hours||[]).slice(0,12);
-  const hhmm = h => String(h && h.t || '').slice(11,16);
-  const val = (arr,f) => { let best=null;
-    arr.forEach(h=>{ const v=f(h); if(v!=null && (best===null || v>best.v)) best={v, h}; });
-    return best; };
-
-  const gust = val(look, h=>(h.gust!=null?h.gust:h.wind));
-  const pop  = val(look, h=>h.pop);
-  const mm   = look.reduce((a,h)=>a+(h.mm||0),0);
-  const storm= look.filter(h=>wxSky(h.code)==='storm');
-  let vis=null;
-  look.forEach(h=>{ if(h.vis!=null && (vis===null || h.vis<vis.v)) vis={v:h.vis, h}; });
-  const temps=look.map(h=>h.temp).filter(t=>t!=null);
-
-  /* a run of thundery hours reads as a window, not as six separate hours */
-  let stormWin='';
-  if(storm.length){
-    stormWin = storm.length===1 ? ('around '+hhmm(storm[0]))
-             : (hhmm(storm[0])+' \u2013 '+hhmm(storm[storm.length-1]));
-  }
-
-  const rows=[];
-  rows.push({k:'rain', lab:'Chance of rain',
-             val: pop ? (Math.round(pop.v)+'%') : '\u2014',
-             sub: pop && pop.v>0 ? ('highest around '+hhmm(pop.h)) : 'none forecast'});
-  rows.push({k:'mm', lab:'Rainfall', val: mm.toFixed(1), unit:'mm',
-             sub:'total over the twelve hours'});
-  rows.push({k:'storm', lab:'Lightning',
-             val: storm.length ? (storm.length+' h') : 'None',
-             sub: storm.length ? ('forecast '+stormWin) : 'none forecast'});
-  rows.push({k:'gust', lab:'Strongest gust',
-             val: gust ? Math.round(gust.v) : '\u2014', unit:'km/h',
-             sub: gust ? ('around '+hhmm(gust.h)) : ''});
-  rows.push({k:'vis', lab:'Lowest visibility',
-             val: vis ? (vis.v>=1000 ? (vis.v/1000).toFixed(1) : Math.round(vis.v)) : '\u2014',
-             unit: vis ? (vis.v>=1000?'km':'m') : '',
-             sub: vis ? ('around '+hhmm(vis.h)) : ''});
-  if(temps.length) rows.push({k:'temp', lab:'Temperature',
-             val: Math.round(Math.min.apply(null,temps))+'\u2013'+Math.round(Math.max.apply(null,temps)),
-             unit:'\u00b0C', sub:'range over the twelve hours'});
-
-  return {rows, hours:look,
-          worstGust: gust?gust.v:0, worstPop: pop?pop.v:0, totalMm: mm,
-          stormHours: storm.length, stormWindow: stormWin,
-          lowVis: vis?vis.v:null};
-}
-
-/* ══════════ the boards ══════════ */
-function wxUse(id){
-  const b=WX(id); if(!b) return false;
-  S._wx=id; markDirty(); renderWx();
-  if(wxStale(b) && b.lat!=null) wxLoad(b,true);
-  return true;
-}
-function wxAdd(name){
-  if(RO_ON) return null;
-  const b=wxBlank(name||('Board '+(wxList().length+1)));
-  wxList().push(b);
-  S._wx=b.id; markDirty(); renderWx();
-  toast('Board added — type a town and a country, then press Find','ok');
-  return b;
-}
-function wxRename(id){
-  if(RO_ON) return;
-  const b=WX(id); if(!b) return;
-  const v=prompt('Name for this board', b.name);
-  if(v==null) return;
-  b.name=String(v).trim()||b.name;
-  markDirty(); renderWx();
-  if(S._view==='live' && typeof renderLive==='function') renderLive();
-}
-function wxDuplicate(id){
-  if(RO_ON) return;
-  const b=WX(id); if(!b) return;
-  const c=wxIn(JSON.parse(JSON.stringify(wxOut(b))),0);
-  c.id=uid('wx'); c.name=b.name+' (copy)';
-  wxList().push(c); S._wx=c.id; markDirty(); renderWx();
-}
-function wxDelete(id){
-  if(RO_ON) return;
-  const b=WX(id); if(!b) return;
-  if(!confirm('Delete the weather board “'+b.name+'”?')) return;
-  if(typeof watchRemove==='function') watchRemove('w',id,true);
-  S.weather=wxList().filter(x=>x.id!==id);
-  if(S._wx===id) S._wx=(wxList()[0]||{}).id||null;
-  markDirty(); renderWx();
-  toast('“'+b.name+'” deleted');
-}
-function wxMenu(x,y,id){
-  const b=WX(id); if(!b) return;
-  const m=$('#colMenu'); m.innerHTML='';
-  m.appendChild(el('div','mh','Weather · '+b.name));
-  if(typeof watchMenuItem==='function') watchMenuItem(m,'w',id);
-  m.appendChild(el('div','msep'));
-  menuItem(m,'Read the forecast again',()=>wxLoad(WX(id)));
-  if(!RO_ON){
-    menuItem(m,'Rename…',()=>wxRename(id));
-    menuItem(m,'Duplicate it',()=>wxDuplicate(id));
-    m.appendChild(el('div','msep'));
-    menuItem(m,'Delete this board…',()=>wxDelete(id),'dan');
-  }
-  placeMenu(m,x,y);
-}
-
-/* ══════════ the tab ══════════ */
-function renderWxTabs(){
-  const host=$('#wxTabs'); if(!host) return;
-  host.innerHTML='';
-  const cur=wxCur();
-  wxList().forEach(b=>{
-    const on=cur&&b.id===cur.id;
-    const t=el('button','octab'+(on?' on':'')+((typeof watchHas==='function'&&watchHas('w',b.id))?' wch':''));
-    t.type='button';
-    t.appendChild(el('span',null,b.name));
-    const c=(b.snap&&b.snap.cur&&b.snap.cur.temp!=null)?(Math.round(b.snap.cur.temp)+'°'):'—';
-    t.appendChild(el('em',null,c));
-    t.title=(b.place||b.area||'no place yet')+
-            (b.snap?('  ·  read '+wxAgo(b)):'  ·  never read')+
-            '  —  right-click to rename, copy, delete or put it on the Live screen';
-    t.onclick=()=>{ if(!on) wxUse(b.id); };
-    t.ondblclick=()=>wxRename(b.id);
-    t.oncontextmenu=e=>{ e.preventDefault(); wxMenu(e.clientX,e.clientY,b.id); };
-    host.appendChild(t);
-  });
-  const add=el('button','octab add');
-  add.type='button'; add.textContent='+ New board';
-  add.disabled=!!RO_ON;
-  add.onclick=()=>wxAdd();
-  host.appendChild(add);
-}
-function wxAgo(b){
-  const ms=wxAge(b);
-  if(!isFinite(ms)) return 'never';
-  const s=ms/1000;
-  if(s<90) return 'just now';
-  if(s<5400) return Math.round(s/60)+' min ago';
-  if(s<86400) return Math.round(s/3600)+' h ago';
-  return Math.round(s/86400)+' d ago';
-}
-
-function renderWx(){
-  renderWxTabs();
-  const host=$('#wxWrap'); if(!host) return;
-  host.innerHTML='';
-  const b=wxCur();
-  if(!b){
-    const e=el('div','wxempty');
-    e.innerHTML='<h3>No weather boards yet</h3>'+
-      '<p>Add one for each place the work touches — a depot, a station, a viaduct — '+
-      'and each board reads its own forecast.</p>';
-    const btn=el('button','btn primary','Add the first board');
-    btn.type='button'; btn.disabled=!!RO_ON;
-    btn.onclick=()=>wxAdd('Worksite');
-    e.appendChild(btn);
-    host.appendChild(e);
-    return;
-  }
-  /* the place editor — small, and out of the way once a place is set */
-  host.appendChild(wxPlaceBar(b));
-  const board=el('div','wxboard');
-  wxPaint(board,b,{});
-  host.appendChild(board);
-}
-
-function wxPlaceBar(b){
-  const bar=el('div','wxplace');
-  const f=(lab,val,ph,on)=>{
-    const w=el('label','wxf');
-    w.appendChild(el('span',null,lab));
-    const i=document.createElement('input');
-    i.type='text'; i.value=val||''; i.placeholder=ph||''; i.disabled=!!RO_ON;
-    i.addEventListener('keydown',e=>{ e.stopPropagation(); if(e.key==='Enter') wxFind(b); });
-    i.oninput=()=>on(i.value);
-    w.appendChild(i);
-    bar.appendChild(w);
-    return i;
-  };
-  f('Area',    b.area,    'e.g. Bukit Panjang', v=>{ b.area=v; markDirty(); });
-  f('Country', b.country, 'e.g. Singapore',     v=>{ b.country=v; markDirty(); });
-  const find=el('button','btn primary','Find');
-  find.type='button'; find.disabled=!!RO_ON;
-  find.onclick=()=>wxFind(b);
-  bar.appendChild(find);
-
-  const st=el('div','wxplacenote');
-  if(b.lat!=null){
-    st.innerHTML='<b>'+esc(b.place||b.area)+'</b> · '+b.lat.toFixed(3)+', '+b.lon.toFixed(3)+
-                 (b.tz?(' · '+esc(b.tz)):'')+' · read '+wxAgo(b);
-  }else{
-    st.textContent='No place set yet — type a town and press Find.';
-  }
-  bar.appendChild(st);
-
-  const rf=el('button','btn','Refresh');
-  rf.type='button';
-  rf.disabled=(b.lat==null)||!!WXS.busy[b.id];
-  rf.onclick=()=>wxLoad(b);
-  bar.appendChild(rf);
-
-  if(WXS.geo.length){
-    const list=el('div','wxgeo');
-    list.appendChild(el('b',null,'Which one?'));
-    WXS.geo.slice(0,8).forEach(g=>{
-      const r=el('button','wxgeor');
-      r.type='button';
-      r.appendChild(el('b',null,g.name));
-      r.appendChild(el('span',null,[g.admin,g.country].filter(Boolean).join(', ')));
-      r.onclick=()=>{
-        b.lat=g.lat; b.lon=g.lon; b.tz=g.tz;
-        b.place=[g.name,g.admin,g.country].filter(Boolean).join(', ');
-        b.country=b.country||g.country;
-        if(/^(new board|board \d+|worksite)$/i.test(b.name)) b.name=g.name;
-        WXS.geo=[];
-        markDirty(); renderWx(); wxLoad(b);
-      };
-      list.appendChild(r);
-    });
-    const x=el('button','wxgeox','×');
-    x.type='button'; x.onclick=()=>{ WXS.geo=[]; renderWx(); };
-    list.appendChild(x);
-    bar.appendChild(list);
-  }
-  return bar;
-}
-
-async function wxFind(b){
-  if(!b || RO_ON) return;
-  if(WXS.geoBusy) return;
-  WXS.geoBusy=true;
-  try{
-    const list=await wxGeocode(b.area,b.country);
-    WXS.geo=list;
-    if(!list.length) toast('Nothing found for “'+(b.area||'')+'” — try the nearest town','err');
-    renderWx();
-  }catch(e){
-    toast('Could not reach the place lookup — '+(e.message||e),'err');
-  }finally{ WXS.geoBusy=false; }
-}
-
-/* ══════════════════════════════════════════════════════════════
-   the board itself — the same picture on the tab and on the wall
-   ══════════════════════════════════════════════════════════════ */
-function wxPaint(host,b,opts){
-  opts=opts||{};
-  const big=!!opts.big;
-  host.innerHTML='';
-  host.classList.toggle('big',big);
-
-  if(WXS.busy[b.id] && !b.snap){
-    host.appendChild(el('div','wxempty','Reading the forecast…'));
-    return;
-  }
-  if(!b.snap){
-    const e=el('div','wxempty');
-    e.innerHTML='<h3>'+esc(b.name)+'</h3><p>'+
-      (b.lat==null ? 'No place set yet. Type a town and a country above, then press Find.'
-                   : 'Nothing read yet — press Refresh.')+'</p>'+
-      (b.err?('<p class="err">'+esc(b.err)+'</p>'+
-              '<p class="hint">This page reads the met service directly from your browser. '+
-              'If your network blocks it, these three addresses need to be reachable:<br>'+
-              '<code>api.open-meteo.com</code> · <code>air-quality-api.open-meteo.com</code> · '+
-              '<code>geocoding-api.open-meteo.com</code></p>'):'');
-    if(b.lat!=null){
-      const again=el('button','btn primary','Try again');
-      again.type='button';
-      again.onclick=()=>wxLoad(b);
-      e.appendChild(again);
-    }
-    host.appendChild(e);
-    return;
-  }
-  const sn=b.snap, cur=sn.cur||{}, air=sn.air||{};
-  const sky=wxSky(cur.code), word=wxWord(cur.code);
-  const out=wxOutlook(b);
-
-  /* ---------- the sky ---------- */
-  const hero=el('div','wxhero sky-'+sky+(cur.day?' day':' night'));
-  hero.appendChild(wxSkyArt(sky,cur.day,cur.wind||0));
-  const over=el('div','wxover');
-  const lft=el('div','wxnow');
-  const tline=el('div','wxtemp');
-  tline.appendChild(el('b',null, cur.temp==null?'—':Math.round(cur.temp)));
-  tline.appendChild(el('i',null,'°C'));
-  lft.appendChild(tline);
-  lft.appendChild(el('div','wxword',word));
-  lft.appendChild(el('div','wxfeels',
-    (cur.feels!=null?('Feels like '+Math.round(cur.feels)+'°'):'')+
-    (cur.rh!=null?('  ·  '+Math.round(cur.rh)+'% humidity'):'')));
-  over.appendChild(lft);
-  const rgt=el('div','wxwhere');
-  rgt.appendChild(el('b',null,b.place||b.area||b.name));
-  rgt.appendChild(el('span',null,'read '+wxAgo(b)+(wxStale(b)?'  ·  worth refreshing':'')));
-  over.appendChild(rgt);
-  hero.appendChild(over);
-  host.appendChild(hero);
-
-  /* ---------- the next twelve hours, stated plainly ---------- */
-  if(out){
-    const w=el('div','wxout');
-    const h=el('div','wxouth');
-    h.appendChild(el('b',null,'The next 12 hours'));
-    h.appendChild(el('span',null,'forecast for '+(b.place||b.area||b.name)));
-    w.appendChild(h);
-    const row=el('div','wxoutr');
-    out.rows.forEach((r,i)=>{
-      const c=el('div','wxoutc k-'+r.k);
-      c.style.animationDelay=(50+i*45)+'ms';
-      c.appendChild(wxGlyphFor(r.k));
-      const v=el('div','v');
-      v.appendChild(el('b',null,String(r.val)));
-      if(r.unit) v.appendChild(el('i',null,r.unit));
-      c.appendChild(v);
-      c.appendChild(el('div','l',r.lab));
-      if(r.sub) c.appendChild(el('div','s',r.sub));
-      row.appendChild(c);
-    });
-    w.appendChild(row);
-    host.appendChild(w);
-  }
-
-  /* ---------- the numbers ---------- */
-  const grid=el('div','wxtiles');
-  const tile=(lab,val,unit,sub,kind,art)=>{
-    const t=el('div','wxtile'+(kind?(' '+kind):''));
-    if(art) t.appendChild(art);
-    const v=el('div','v');
-    v.appendChild(el('b',null,val==null?'—':String(val)));
-    if(unit) v.appendChild(el('i',null,unit));
-    t.appendChild(v);
-    t.appendChild(el('div','l',lab));
-    if(sub) t.appendChild(el('div','s',sub));
-    grid.appendChild(t);
-    return t;
-  };
-  /* Revision AH — the tiles say what the instruments say.  The colour and the
-     advice they used to carry were a judgement about the work, which is not
-     this screen's to make. */
-  const gust=cur.gust==null?null:Math.round(cur.gust);
-  tile('Wind', cur.wind==null?null:Math.round(cur.wind), 'km/h',
-       (gust!=null?('gusting '+gust):'')+(cur.dir!=null?('  ·  from the '+wxCompass(cur.dir)):''),
-       '', wxWindArt(cur.dir));
-  tile('Rain now', cur.mm==null?null:cur.mm.toFixed(1), 'mm',
-       out?('next 12h: '+Math.round(out.worstPop)+'% · '+out.totalMm.toFixed(1)+' mm'):'', '');
-  tile('Humidity', cur.rh==null?null:Math.round(cur.rh), '%',
-       cur.cloud!=null?(Math.round(cur.cloud)+'% cloud'):'', '');
-  tile('Visibility', cur.vis==null?null:(cur.vis>=1000?(cur.vis/1000).toFixed(1):Math.round(cur.vis)),
-       cur.vis==null?'':(cur.vis>=1000?'km':'m'),
-       cur.vis==null?'':(cur.vis>=10000?'10 km or more':'as reported'), '');
-  tile('Air quality', air.aqi==null?null:Math.round(air.aqi), 'EAQI',
-       air.pm25==null?'':('PM2.5 '+air.pm25.toFixed(1)+' µg/m³'), '');
-  tile('Pressure', cur.press==null?null:Math.round(cur.press), 'hPa',
-       air.uv==null?'':('UV '+air.uv.toFixed(1)), '');
-  host.appendChild(grid);
-
-  /* ---------- the next hours ---------- */
-  if((sn.hours||[]).length>1) host.appendChild(wxHourStrip(sn.hours.slice(0,18)));
-
-  /* ---------- the week ----------
-     Not on the wall: a carousel slide has one screenful, and tonight's hours
-     beat next Thursday's high every time. */
-  if(!big && (sn.days||[]).length) host.appendChild(wxDayStrip(sn.days,5));
-
-  host.appendChild(el('div','wxsrc',
-    'Open-Meteo · read '+(sn.at?new Date(sn.at).toLocaleString():'—')+
-    (b.tz?('  ·  times shown in '+b.tz):'')));
-}
-
-/* ── the compass, in words a shift brief would use ── */
-function wxCompass(d){
-  const P=['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW'];
-  return P[Math.round(((d||0)%360)/22.5)%16];
-}
-
-/* ── the moving sky ──────────────────────────────────────────
-   Drawn rather than fetched: a gradient for the hour, a sun or a moon,
-   clouds that drift, rain that falls and a bolt that flashes.  It is the
-   one piece of this application that is purely decorative, and it earns
-   its place by being readable across a room at a glance.            */
-function wxSkyArt(sky,day,wind){
-  const art=el('div','wxart');
-  const svg=sv('svg',{viewBox:'0 0 400 180',preserveAspectRatio:'none',class:'wxsvg'});
-  LIVE.uid=(typeof LIVE!=='undefined') ? ((LIVE.uid||0)+1) : Math.floor(Math.random()*1e6);
-  const gid='wxg'+LIVE.uid;
-  const defs=sv('defs');
-  const gr=sv('linearGradient',{id:gid,x1:0,y1:0,x2:0,y2:1});
-  const PAL = day
-    ? {clear:['#2f93e8','#bfe4fb'], partly:['#4d9edd','#cfe6f6'], cloud:['#7d95aa','#d6dee6'],
-       fog:['#94a2ae','#dfe4e8'], drizzle:['#64809a','#c3d0da'], rain:['#54718c','#b9c7d3'],
-       heavy:['#42576b','#9fb0be'], storm:['#33445a','#8b9aa8'], snow:['#93aabd','#e8eef3']}
-    : {clear:['#0d1930','#2a3f63'], partly:['#111e38','#2d4369'], cloud:['#151f2e','#31404f'],
-       fog:['#19212b','#3a444f'], drizzle:['#121c2b','#2b3a4a'], rain:['#0f1927','#28394a'],
-       heavy:['#0b131f','#213040'], storm:['#090f17','#1b2634'], snow:['#151f2b','#38485a']};
-  const pair = PAL[sky] || PAL.cloud;
-  gr.appendChild(sv('stop',{offset:'0%','stop-color':pair[0]}));
-  gr.appendChild(sv('stop',{offset:'100%','stop-color':pair[1]}));
-  defs.appendChild(gr); svg.appendChild(defs);
-  svg.appendChild(sv('rect',{x:0,y:0,width:400,height:180,fill:'url(#'+gid+')'}));
-
-  if(sky==='clear'||sky==='partly'){
-    if(day){
-      const g=sv('g',{class:'wxsun'});
-      g.appendChild(sv('circle',{cx:0,cy:0,r:26,fill:'#FFD65A'}));
-      for(let i=0;i<12;i++){
-        const a=i*Math.PI/6;
-        g.appendChild(sv('line',{x1:(Math.cos(a)*34).toFixed(1),y1:(Math.sin(a)*34).toFixed(1),
-          x2:(Math.cos(a)*44).toFixed(1),y2:(Math.sin(a)*44).toFixed(1),
-          stroke:'#FFD65A','stroke-width':3.4,'stroke-linecap':'round',opacity:.85}));
-      }
-      g.setAttribute('transform','translate(316,52)');
-      svg.appendChild(g);
-    }else{
-      const g=sv('g',{class:'wxmoon',transform:'translate(316,52)'});
-      g.appendChild(sv('path',{d:'M14 -18A22 22 0 1 0 14 18A17 17 0 0 1 14 -18Z',fill:'#E8EEF6',opacity:.95}));
-      svg.appendChild(g);
-      [[60,40,1.4],[110,28,1],[180,52,1.2],[248,34,1],[92,74,.9],[210,88,1.1],[150,22,1]].forEach((s,i)=>{
-        const st=sv('circle',{cx:s[0],cy:s[1],r:s[2],fill:'#fff',class:'wxstar'});
-        st.style.animationDelay=(i*0.45)+'s';
-        svg.appendChild(st);
-      });
-    }
-  }
-
-  /* clouds, more of them the thicker the sky */
-  const CLOUD={clear:0, partly:2, cloud:4, fog:3, drizzle:4, rain:4, heavy:5, storm:5, snow:4};
-  const n=CLOUD[sky]==null?3:CLOUD[sky];
-  const base=day?'#ffffff':'#9fb0c4';
-  for(let i=0;i<n;i++){
-    const g=sv('g',{class:'wxcloud c'+(i%3)});
-    const sc=0.7+((i*37)%40)/100;
-    const y=24+((i*53)%70);
-    g.appendChild(sv('path',{d:'M0 20 a20 20 0 0 1 20 -20 a26 26 0 0 1 25 18 a16 16 0 0 1 -3 32 l-52 0 a15 15 0 0 1 -1 -30 z',
-      fill:base, opacity:(sky==='clear'||sky==='partly')?0.85:0.62}));
-    g.setAttribute('transform','translate('+(-90+i*110)+','+y+') scale('+sc.toFixed(2)+')');
-    g.style.animationDuration=(26+i*7-Math.min(wind,30)*0.3).toFixed(1)+'s';
-    g.style.animationDelay=(-i*5)+'s';
-    svg.appendChild(g);
-  }
-
-  /* precipitation */
-  if(sky==='rain'||sky==='heavy'||sky==='drizzle'||sky==='storm'){
-    const hard=(sky==='heavy'||sky==='storm');
-    const count=hard?46:(sky==='drizzle'?24:34);
-    for(let i=0;i<count;i++){
-      const x=(i*397)%400, len=hard?16:(sky==='drizzle'?7:11);
-      const d=sv('line',{x1:x,y1:0,x2:x-6,y2:len,stroke:day?'#ffffff':'#cfe0f2',
-        'stroke-width':hard?2:1.4,'stroke-linecap':'round',opacity:hard?.75:.6,class:'wxdrop'});
-      d.style.animationDuration=((hard?0.55:0.9)+((i*13)%30)/100).toFixed(2)+'s';
-      d.style.animationDelay=(-(i*0.07).toFixed(2))+'s';
-      svg.appendChild(d);
-    }
-  }
-  if(sky==='snow'){
-    for(let i=0;i<30;i++){
-      const x=(i*401)%400;
-      const f=sv('circle',{cx:x,cy:0,r:2.2,fill:'#fff',opacity:.85,class:'wxflake'});
-      f.style.animationDuration=(4+((i*17)%30)/10).toFixed(1)+'s';
-      f.style.animationDelay=(-(i*0.3).toFixed(1))+'s';
-      svg.appendChild(f);
-    }
-  }
-  if(sky==='storm'){
-    const b1=sv('path',{d:'M206 52 l-26 46 l20 0 l-12 40 l40 -54 l-21 0 l17 -32 z',
-      fill:'#FFE066',class:'wxbolt'});
-    svg.appendChild(b1);
-    const fl=sv('rect',{x:0,y:0,width:400,height:180,fill:'#fff',class:'wxflash',opacity:0});
-    svg.appendChild(fl);
-  }
-  if(sky==='fog'){
-    for(let i=0;i<5;i++){
-      const g=sv('rect',{x:-60,y:40+i*24,width:520,height:9,rx:5,fill:day?'#ffffff':'#b9c6d4',
-        opacity:.45,class:'wxfog f'+(i%3)});
-      g.style.animationDuration=(18+i*5)+'s';
-      g.style.animationDelay=(-i*3)+'s';
-      svg.appendChild(g);
-    }
-  }
-  art.appendChild(svg);
-  return art;
-}
-
-/* ── a little rotating arrow for the wind ── */
-function wxWindArt(dir){
-  const w=el('div','wxwind');
-  const svg=sv('svg',{viewBox:'0 0 40 40'});
-  svg.appendChild(sv('circle',{cx:20,cy:20,r:16,fill:'none',stroke:'currentColor','stroke-width':1.6,opacity:.28}));
-  const g=sv('g',{class:'wxarrow'});
-  g.appendChild(sv('path',{d:'M20 7 L26 27 L20 23 L14 27 Z',fill:'currentColor'}));
-  /* met convention: the direction the wind comes FROM, so the arrow flies away from it */
-  g.setAttribute('transform','rotate('+(((dir||0)+180)%360)+' 20 20)');
-  svg.appendChild(g);
-  w.appendChild(svg);
-  return w;
-}
-
-/* ── the next hours: temperature over rain probability ── */
-function wxHourStrip(hours){
-  const wrap=el('div','wxhours');
-  const head=el('div','wxsh');
-  head.appendChild(el('b',null,'The next '+hours.length+' hours'));
-  head.appendChild(el('span',null,'temperature, and how likely rain is'));
-  wrap.appendChild(head);
-
-  const W=1000,H=150,PADT=16,PADB=34,PADL=10,PADR=10;
-  const ih=H-PADT-PADB, iw=W-PADL-PADR;
-  const temps=hours.map(h=>h.temp==null?0:h.temp);
-  const lo=Math.min.apply(null,temps)-1, hi=Math.max.apply(null,temps)+1;
-  const span=Math.max(hi-lo,1);
-  const gx=i=>PADL+(hours.length<2?iw/2:(i/(hours.length-1))*iw);
-  const gy=t=>PADT+ih-((t-lo)/span)*ih;
-  const svg=sv('svg',{viewBox:'0 0 '+W+' '+H,preserveAspectRatio:'none',class:'wxhsvg'});
-
-  /* rain probability as columns behind the line */
-  const bw=Math.max(6,iw/Math.max(hours.length,1)*0.52);
-  hours.forEach((h,i)=>{
-    const p=(h.pop||0)/100;
-    if(p<=0.02) return;
-    const hgt=ih*p;
-    svg.appendChild(sv('rect',{x:(gx(i)-bw/2).toFixed(1),y:(PADT+ih-hgt).toFixed(1),
-      width:bw.toFixed(1),height:hgt.toFixed(1),rx:Math.min(4,bw/2),class:'wxpop'}));
-  });
-  const pts=hours.map((h,i)=>[gx(i),gy(h.temp==null?lo:h.temp)]);
-  const d='M'+pts.map(p=>p[0].toFixed(1)+' '+p[1].toFixed(1)).join('L');
-  const line=sv('path',{d,class:'wxtline',fill:'none',pathLength:100});
-  line.setAttribute('stroke-dasharray','0 100');
-  svg.appendChild(line);
-  /* "now" is the first hour we have */
-  svg.appendChild(sv('circle',{cx:pts[0][0].toFixed(1),cy:pts[0][1].toFixed(1),r:5,class:'wxtdot'}));
-  wrap.appendChild(svg);
-
-  const labs=el('div','wxhlabs');
-  hours.forEach((h,i)=>{
-    if(hours.length>14 && i%2) { labs.appendChild(el('span')); return; }
-    const c=el('span');
-    c.appendChild(el('b',null,String(h.t||'').slice(11,16)));
-    c.appendChild(el('i',null,(h.temp==null?'—':Math.round(h.temp)+'°')));
-    if(h.pop!=null && h.pop>=20) c.appendChild(el('s',null,Math.round(h.pop)+'%'));
-    labs.appendChild(c);
-  });
-  wrap.appendChild(labs);
-  setTimeout(()=>line.setAttribute('stroke-dasharray','100 100'),180);
-  return wrap;
-}
-
-/* ── the week ── */
-function wxDayStrip(days,n){
-  const wrap=el('div','wxdays');
-  const head=el('div','wxsh');
-  head.appendChild(el('b',null,'The week ahead'));
-  head.appendChild(el('span',null,'high and low, and the chance of rain'));
-  wrap.appendChild(head);
-  const list=days.slice(0,n);
-  const lo=Math.min.apply(null,list.map(d=>d.lo==null?0:d.lo));
-  const hi=Math.max.apply(null,list.map(d=>d.hi==null?0:d.hi));
-  const span=Math.max(hi-lo,1);
-  list.forEach((d,i)=>{
-    const r=el('div','wxday');
-    r.style.animationDelay=(60+i*50)+'ms';
-    const dt=new Date(d.t+'T00:00:00');
-    r.appendChild(el('b',null, i===0?'Today':DAYN[dt.getDay()]));
-    const ic=el('span','wxdi'); ic.appendChild(wxGlyph(wxSky(d.code))); r.appendChild(ic);
-    r.appendChild(el('s',null, d.pop==null?'':(Math.round(d.pop)+'%')));
-    const bar=el('div','wxdbar');
-    const fill=el('i');
-    const a=((d.lo-lo)/span)*100, b2=((d.hi-lo)/span)*100;
-    fill.style.left=a.toFixed(1)+'%';
-    fill.style.width=Math.max(4,b2-a).toFixed(1)+'%';
-    bar.appendChild(fill);
-    r.appendChild(bar);
-    r.appendChild(el('em',null,(d.lo==null?'—':Math.round(d.lo))+'°  /  '+(d.hi==null?'—':Math.round(d.hi))+'°'));
-    wrap.appendChild(r);
-  });
-  return wrap;
-}
-
-/* ── Revision AH · one small drawn mark per reading ──────────────
-   Six little pictures, so a row of figures can be read at a glance from the
-   back of the room without anybody parsing the labels first.            */
-function wxGlyphFor(k){
-  const g=sv('svg',{viewBox:'0 0 24 24',class:'wxog'});
-  const cloud=col=>sv('path',{d:'M7 15h9a3 3 0 0 0 .4-6A4.6 4.6 0 0 0 7.6 7.6 3.4 3.4 0 0 0 7 15z',fill:col});
-  if(k==='rain'){
-    g.appendChild(cloud('#AEBCCB'));
-    [9,13,17].forEach(x=>g.appendChild(sv('line',{x1:x,y1:17,x2:x-1.6,y2:21.5,
-      stroke:'#4A90D9','stroke-width':2,'stroke-linecap':'round'})));
-  }else if(k==='mm'){
-    g.appendChild(sv('path',{d:'M12 3c3.4 4.4 6 7.6 6 10.6A6 6 0 0 1 6 13.6C6 10.6 8.6 7.4 12 3z',
-      fill:'#4A90D9'}));
-  }else if(k==='storm'){
-    g.appendChild(cloud('#8593A4'));
-    g.appendChild(sv('path',{d:'M13 15l-4 6h2.6L10 24l6-6.4h-2.8L14.6 15z',fill:'#F5C542'}));
-  }else if(k==='gust'){
-    ['M3 8h11a3 3 0 1 0 -3 -3','M3 13h15a3 3 0 1 1 -3 3','M3 18h8'].forEach(d=>
-      g.appendChild(sv('path',{d,fill:'none',stroke:'#7C8BA1','stroke-width':2,
-        'stroke-linecap':'round','stroke-linejoin':'round'})));
-  }else if(k==='vis'){
-    g.appendChild(sv('path',{d:'M2 12s4-6 10-6 10 6 10 6-4 6-10 6-10-6-10-6z',fill:'none',
-      stroke:'#7C8BA1','stroke-width':2,'stroke-linejoin':'round'}));
-    g.appendChild(sv('circle',{cx:12,cy:12,r:2.8,fill:'#7C8BA1'}));
-  }else{
-    g.appendChild(sv('rect',{x:9.5,y:2.5,width:5,height:13,rx:2.5,fill:'none',
-      stroke:'#E8804A','stroke-width':2}));
-    g.appendChild(sv('circle',{cx:12,cy:18,r:3.6,fill:'#E8804A'}));
-    g.appendChild(sv('line',{x1:12,y1:9,x2:12,y2:17,stroke:'#E8804A','stroke-width':2.6,
-      'stroke-linecap':'round'}));
-  }
-  return g;
-}
-
-/* a small drawn glyph per sky, so the week reads without a font or an image */
-function wxGlyph(sky){
-  const svg=sv('svg',{viewBox:'0 0 24 24',class:'wxg sk-'+sky});
-  if(sky==='clear'){
-    svg.appendChild(sv('circle',{cx:12,cy:12,r:5,fill:'#F5A623'}));
-    for(let i=0;i<8;i++){ const a=i*Math.PI/4;
-      svg.appendChild(sv('line',{x1:(12+Math.cos(a)*7.5).toFixed(1),y1:(12+Math.sin(a)*7.5).toFixed(1),
-        x2:(12+Math.cos(a)*10).toFixed(1),y2:(12+Math.sin(a)*10).toFixed(1),
-        stroke:'#F5A623','stroke-width':1.8,'stroke-linecap':'round'})); }
-    return svg;
-  }
-  const cloud=col=>sv('path',{d:'M7 18h9.5a3.5 3.5 0 0 0 .4-7A5 5 0 0 0 7.6 9.4 3.8 3.8 0 0 0 7 18z',fill:col});
-  if(sky==='partly'){
-    svg.appendChild(sv('circle',{cx:16,cy:8,r:4,fill:'#F5A623'}));
-    svg.appendChild(cloud('#B7C4D2'));
-    return svg;
-  }
-  svg.appendChild(cloud(sky==='storm'?'#6B7A8C':(sky==='heavy'?'#7A8A9C':'#AEBCCB')));
-  if(sky==='rain'||sky==='drizzle'||sky==='heavy'){
-    [9,13,17].forEach((x,i)=>svg.appendChild(sv('line',{x1:x,y1:19.5,x2:x-1.6,y2:23,
-      stroke:'#4A90D9','stroke-width':sky==='heavy'?2:1.5,'stroke-linecap':'round'})));
-  }
-  if(sky==='storm') svg.appendChild(sv('path',{d:'M13 18l-3 4h2.4L11 24.5 15.5 19H13.2L14.6 18z',fill:'#F5C542'}));
-  if(sky==='snow') [9,13,17].forEach(x=>svg.appendChild(sv('circle',{cx:x,cy:21,r:1.3,fill:'#9FC7E8'})));
-  if(sky==='fog') [19,22].forEach(y=>svg.appendChild(sv('line',{x1:6,y1:y,x2:18,y2:y,
-    stroke:'#9AA8B6','stroke-width':1.6,'stroke-linecap':'round'})));
-  return svg;
-}
-
-/* ══════════ the wall ══════════ */
-function liveWeather(host,sl){
-  const b=sl.board;
-  const wrap=el('div','lwxb');
-  host.appendChild(wrap);
-  if(!b){ wrap.appendChild(el('div','lorgempty','That weather board has been deleted.')); return; }
-  const board=el('div','wxboard big');
-  wxPaint(board,b,{big:true});
-  wrap.appendChild(board);
-  /* a wall screen looks after itself: if the reading has gone stale while the
-     carousel was running, fetch a new one and repaint when it lands */
-  if(wxStale(b) && b.lat!=null && !WXS.busy[b.id]) wxLoad(b,true);
-}
-
-/* ══════════ wiring ══════════ */
-function wxBind(){
-  if(WXS.bound) return; WXS.bound=true;
-  const n=$('#wxNew'); if(n) n.onclick=()=>wxAdd();
-  const r=$('#wxRefresh'); if(r) r.onclick=()=>{ const b=wxCur(); if(b) wxLoad(b); };
-  /* every board is re-read on the hour, whichever tab is open, so the Live
-     screen never shows yesterday's sky */
-  clearInterval(WXS.timer);
-  WXS.timer=setInterval(()=>{
-    if(document.hidden) return;
-    wxList().forEach(b=>{ if(b.lat!=null && wxStale(b) && !WXS.busy[b.id]) wxLoad(b,true); });
-  }, 15*60*1000);
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -22465,7 +20705,7 @@ let restored=null;
 if(SHARED){
   /* a view-only copy carries its own plan; local storage is left alone */
   try{ S=hydrate(SHARED.project); }catch(e){ S=hydrate(sample()); }
-  if(TABS.indexOf(SHARED.openOn)>=0) S.view.lastTab=SHARED.openOn;
+  if(['dash','schedule','actions','teams','org'].indexOf(SHARED.openOn)>=0) S.view.lastTab=SHARED.openOn;
   restored=S;
 }else if(ONLINE_ON){
   /* lock it down before the first render, so no part of boot can write a
@@ -22548,34 +20788,7 @@ window.GanttStudio={
        addBlank:p=>orgAddBlank(p||null),
        members:id=>orgAddTeamMembers(id),
        picker:(k,pre)=>openOrgAdd(k,pre), side:t=>setOrgSideTab(t),
-       teams:()=>orgNodes().filter(isTeamNode).map(n=>({id:n.id,teamId:n.teamId,name:orgName(n),role:orgRole(n)})),
-       /* ---------- Revision AG · more than one chart ---------- */
-       charts:()=>orgList().map(c=>({id:c.id,name:c.name,n:(c.nodes||[]).length,
-                                     on:c.id===S._org,watched:watchHas('o',c.id)})),
-       get cur(){return S._org;},
-       use:id=>orgUse(id), new:n=>orgChartAdd(n), del:id=>orgChartDelete(id),
-       dup:id=>orgChartDuplicate(id), chartMenu:(x,y,id)=>orgChartMenu(x,y,id),
-       tabs:()=>renderOrgTabs(),
-       rename:(id,n)=>{ const c=OC(id); if(!c) return false; c.name=String(n||c.name);
-                        markDirty(); renderOrgTabs(); return true; }},
-
-  /* ---------- Revision AG · the Weather tab ---------- */
-  weather:{get list(){return wxList().map(b=>({id:b.id,name:b.name,area:b.area,country:b.country,
-             place:b.place,lat:b.lat,lon:b.lon,read:!!b.snap,at:(b.snap||{}).at||'',
-             on:b.id===S._wx,watched:watchHas('w',b.id)}));},
-           get cur(){return S._wx;},
-           add:n=>wxAdd(n), use:id=>wxUse(id), del:id=>wxDelete(id), dup:id=>wxDuplicate(id),
-           menu:(x,y,id)=>wxMenu(x,y,id), render:renderWx, bind:wxBind,
-           rename:(id,n)=>{ const b=WX(id); if(!b) return false; b.name=String(n||b.name);
-                            markDirty(); renderWx(); return true; },
-           place:(id,o)=>{ const b=WX(id); if(!b) return false;
-                           Object.assign(b,o||{}); markDirty(); renderWx(); return true; },
-           load:id=>wxLoad(WX(id)), read:id=>wxRead(WX(id)),
-           geocode:(a,c)=>wxGeocode(a,c), find:id=>wxFind(WX(id)),
-           outlook:id=>wxOutlook(WX(id)), sky:c=>wxSky(c), word:c=>wxWord(c),
-           snap:(id,sn)=>{ const b=WX(id); if(!b) return false; b.snap=sn; markDirty(); renderWx(); return true; },
-           stale:id=>wxStale(WX(id)), state:WXS,
-           paint:(host,id,o)=>wxPaint(host,WX(id),o||{})},
+       teams:()=>orgNodes().filter(isTeamNode).map(n=>({id:n.id,teamId:n.teamId,name:orgName(n),role:orgRole(n)}))},
   sort:{get:()=>sortMode(), set:(k,d)=>setSort(k,d), rows:()=>ROWS.map(r=>({k:r.kind,id:r.id,
         name:r.kind==='g'?(G(r.id)||{}).name:(T(r.id)||{}).name}))},
   act:{get status(){return actStatusSet();}, set:v=>{S._act.status=Array.isArray(v)?v:[v];

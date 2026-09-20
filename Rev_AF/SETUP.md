@@ -1,4 +1,4 @@
-# Gantt Studio — Revision AH.online
+# Gantt Studio — Revision AF.online
 ## Hosting it on GitHub, and publishing straight from the page
 
 Everything here is done once. After that, updating the programme everyone sees
@@ -36,7 +36,7 @@ You have them in **`BPLRT_FSC_github_repo.zip`**. Unzip it somewhere — you
 should see:
 
 ```
-index.html          ← Gantt Studio, Revision AH
+index.html          ← Gantt Studio, Revision AF
 config.json         ← what the page reads and how often
 data/programme.json ← the programme itself
 .nojekyll           ← tells GitHub Pages to serve files as they are
@@ -122,7 +122,7 @@ Press **Check connection**. It should turn green and say **Connected**, naming
 the account the token belongs to.
 
 Now **reload the page**. This time it opens *unlocked* — the header reads
-`REVISION AH · PUBLISHING`, the toolbar is live, and the green bar has a
+`REVISION AF · PUBLISHING`, the toolbar is live, and the green bar has a
 **Publish** button on it. Everyone else still gets the read-only page, because
 the unlocking is done by the token in your browser, not by anything in the
 repository.
@@ -148,7 +148,7 @@ for your repository, with the raw address already filled in:
   "title": "BPLRT Full Sunday Closure — live programme",
   "owner": "Sanjeewa Abeyrathne · D&IS Project Technical Manager",
   "note": "Contract C801B · published from Gantt Studio",
-  "openOn": "live",
+  "openOn": "dash",
   "refreshSeconds": 60,
   "allowExports": true
 }
@@ -158,20 +158,7 @@ On GitHub, open `config.json`, press the pencil, replace the contents with what
 you copied, and commit. From then on a publish reaches other people's screens
 within seconds of them checking.
 
-### 7. What the page opens on
-
-`"openOn": "live"` in `config.json` is what makes the published page open on the
-Live carousel rather than the Dashboard. The other tabs are accepted too —
-`dash`, `schedule`, `actions`, `teams`, `locs`, `maps`, `org`, `weather` — but on
-a wall screen `live` is the one you want.
-
-The carousel does not have to be set up again at this end. Whatever was put on
-the Live screen in the desktop copy — the watched groups, subgroups, activities,
-maps, org charts and weather boards, which closure was selected and how long
-each slide sits — is written into `data/programme.json` when you publish, and
-read back here.
-
-### 8. Set how often the wall screen looks
+### 7. Set how often the wall screen looks
 
 `refreshSeconds` in `config.json` is only where a screen starts. On the **Live**
 tab there is a **refresh … s** box beside the play controls. Change it there and
@@ -226,7 +213,7 @@ in the repository have drifted apart.
 
 ## What has and has not changed
 
-The file in this repository is the same `Gantt_Studio_RevAH.html` you run on
+The file in this repository is the same `Gantt_Studio_RevAF.html` you run on
 your desktop, byte for byte. Opened by double-clicking, it is the ordinary
 application, saving to that computer. Served over a web address, it becomes the
 live page. One file, two lives — there is no separate online build to keep in
