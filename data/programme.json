@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T01:54:23.588Z",
+  "savedAt": "2026-09-20T02:09:54.381Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -3084,7 +3084,7 @@
       "id": "g_tlh325uwv",
       "name": "SW 12",
       "color": "#0d97c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_39c7wczpj"
     },
@@ -3116,7 +3116,7 @@
       "id": "g_4aw16o7nm",
       "name": "R801 (COLAS RAIL) ACTIVITIES [FSC 1]",
       "color": "#e0740b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3124,7 +3124,7 @@
       "id": "g_lz3ftp3wl",
       "name": "All Transformers Related Activities",
       "color": "#1273e0",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_4aw16o7nm"
     },
@@ -3140,7 +3140,7 @@
       "id": "g_t5lkgddba",
       "name": "R801A Activities PA Testing (FSC1)",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_egmy4vfsr"
     },
@@ -4298,7 +4298,7 @@
         "tm_ec1y0xa4j"
       ],
       "teamId": "tm_ec1y0xa4j",
-      "status": "not-started",
+      "status": "in-progress",
       "progress": 0,
       "autoProgress": false,
       "effectiveProgress": 0,
@@ -6630,10 +6630,10 @@
         "tm_86jv8qrvn"
       ],
       "teamId": "tm_86jv8qrvn",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 5,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 5,
       "subtasks": [],
       "milestone": false,
       "notes": "",
