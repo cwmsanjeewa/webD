@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T04:39:17.763Z",
+  "savedAt": "2026-09-20T06:48:57.909Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -1912,61 +1912,31 @@
       "lon": 103.76472,
       "tz": "Asia/Singapore",
       "snap": {
-        "at": "2026-09-20T02:30:22.171Z",
+        "at": "2026-09-20T05:41:35.351Z",
         "cur": {
-          "t": "2026-09-20T10:30",
-          "temp": 30.7,
-          "feels": 35.5,
-          "rh": 68,
+          "t": "2026-09-20T13:30",
+          "temp": 30.4,
+          "feels": 36.7,
+          "rh": 72,
           "code": 53,
-          "cloud": 67,
+          "cloud": 68,
           "mm": 0.2,
-          "rain": 0,
-          "wind": 12.3,
-          "gust": 29.5,
-          "dir": 157,
-          "vis": 8700,
-          "press": 1014.9,
+          "rain": 0.1,
+          "wind": 10.2,
+          "gust": 27.4,
+          "dir": 156,
+          "vis": 3700,
+          "press": 1013.4,
           "day": true
         },
         "air": {
-          "pm25": 26.7,
-          "pm10": 30.6,
-          "aqi": 47,
-          "usaqi": 111,
-          "uv": 3.45
+          "pm25": 21.1,
+          "pm10": 25,
+          "aqi": 43,
+          "usaqi": 98,
+          "uv": 9.05
         },
         "hours": [
-          {
-            "t": "2026-09-20T10:00",
-            "temp": 30.1,
-            "pop": 15,
-            "mm": 0,
-            "code": 2,
-            "wind": 12.8,
-            "gust": 28.8,
-            "vis": 12340
-          },
-          {
-            "t": "2026-09-20T11:00",
-            "temp": 30.9,
-            "pop": 27,
-            "mm": 0.7,
-            "code": 53,
-            "wind": 11.7,
-            "gust": 29.2,
-            "vis": 5060
-          },
-          {
-            "t": "2026-09-20T12:00",
-            "temp": 29.5,
-            "pop": 48,
-            "mm": 2.3,
-            "code": 95,
-            "wind": 12.9,
-            "gust": 29.5,
-            "vis": 2440
-          },
           {
             "t": "2026-09-20T13:00",
             "temp": 29.5,
@@ -1990,7 +1960,7 @@
           {
             "t": "2026-09-20T15:00",
             "temp": 28.6,
-            "pop": 100,
+            "pop": 99,
             "mm": 3.5,
             "code": 95,
             "wind": 12.8,
@@ -2000,7 +1970,7 @@
           {
             "t": "2026-09-20T16:00",
             "temp": 29.2,
-            "pop": 100,
+            "pop": 99,
             "mm": 1.1,
             "code": 55,
             "wind": 9,
@@ -2010,7 +1980,7 @@
           {
             "t": "2026-09-20T17:00",
             "temp": 29.7,
-            "pop": 100,
+            "pop": 94,
             "mm": 0.2,
             "code": 51,
             "wind": 9.6,
@@ -2020,7 +1990,7 @@
           {
             "t": "2026-09-20T18:00",
             "temp": 29.3,
-            "pop": 87,
+            "pop": 81,
             "mm": 0.1,
             "code": 51,
             "wind": 8.6,
@@ -2030,7 +2000,7 @@
           {
             "t": "2026-09-20T19:00",
             "temp": 28.4,
-            "pop": 68,
+            "pop": 63,
             "mm": 0,
             "code": 1,
             "wind": 5.3,
@@ -2040,7 +2010,7 @@
           {
             "t": "2026-09-20T20:00",
             "temp": 27.9,
-            "pop": 49,
+            "pop": 45,
             "mm": 0,
             "code": 0,
             "wind": 4.1,
@@ -2050,7 +2020,7 @@
           {
             "t": "2026-09-20T21:00",
             "temp": 27.9,
-            "pop": 31,
+            "pop": 29,
             "mm": 0,
             "code": 0,
             "wind": 3.2,
@@ -2060,7 +2030,7 @@
           {
             "t": "2026-09-20T22:00",
             "temp": 27.6,
-            "pop": 14,
+            "pop": 13,
             "mm": 0,
             "code": 0,
             "wind": 5.1,
@@ -2100,7 +2070,7 @@
           {
             "t": "2026-09-21T02:00",
             "temp": 25.3,
-            "pop": 2,
+            "pop": 0,
             "mm": 0,
             "code": 0,
             "wind": 2.9,
@@ -2110,7 +2080,7 @@
           {
             "t": "2026-09-21T03:00",
             "temp": 24.9,
-            "pop": 3,
+            "pop": 0,
             "mm": 0,
             "code": 1,
             "wind": 3,
@@ -2120,7 +2090,7 @@
           {
             "t": "2026-09-21T04:00",
             "temp": 24.6,
-            "pop": 4,
+            "pop": 0,
             "mm": 0,
             "code": 3,
             "wind": 3.2,
@@ -2130,7 +2100,7 @@
           {
             "t": "2026-09-21T05:00",
             "temp": 24.3,
-            "pop": 4,
+            "pop": 0,
             "mm": 0,
             "code": 3,
             "wind": 3.5,
@@ -2140,7 +2110,7 @@
           {
             "t": "2026-09-21T06:00",
             "temp": 24.1,
-            "pop": 3,
+            "pop": 0,
             "mm": 0,
             "code": 3,
             "wind": 1.5,
@@ -2150,7 +2120,7 @@
           {
             "t": "2026-09-21T07:00",
             "temp": 23.9,
-            "pop": 1,
+            "pop": 0,
             "mm": 0,
             "code": 3,
             "wind": 4.2,
@@ -2180,7 +2150,7 @@
           {
             "t": "2026-09-21T10:00",
             "temp": 30.3,
-            "pop": 1,
+            "pop": 0,
             "mm": 0,
             "code": 0,
             "wind": 11,
@@ -2190,7 +2160,7 @@
           {
             "t": "2026-09-21T11:00",
             "temp": 31.5,
-            "pop": 8,
+            "pop": 2,
             "mm": 0.1,
             "code": 51,
             "wind": 10.7,
@@ -2200,7 +2170,7 @@
           {
             "t": "2026-09-21T12:00",
             "temp": 31.8,
-            "pop": 28,
+            "pop": 19,
             "mm": 0.8,
             "code": 53,
             "wind": 12,
@@ -2210,7 +2180,7 @@
           {
             "t": "2026-09-21T13:00",
             "temp": 31.2,
-            "pop": 54,
+            "pop": 43,
             "mm": 1.8,
             "code": 80,
             "wind": 11,
@@ -2220,7 +2190,7 @@
           {
             "t": "2026-09-21T14:00",
             "temp": 31.5,
-            "pop": 75,
+            "pop": 63,
             "mm": 1.9,
             "code": 80,
             "wind": 8.4,
@@ -2230,7 +2200,7 @@
           {
             "t": "2026-09-21T15:00",
             "temp": 32.2,
-            "pop": 85,
+            "pop": 77,
             "mm": 0.4,
             "code": 51,
             "wind": 9.7,
@@ -2240,7 +2210,7 @@
           {
             "t": "2026-09-21T16:00",
             "temp": 31,
-            "pop": 88,
+            "pop": 87,
             "mm": 0.5,
             "code": 53,
             "wind": 9.5,
@@ -2250,7 +2220,7 @@
           {
             "t": "2026-09-21T17:00",
             "temp": 29.3,
-            "pop": 88,
+            "pop": 92,
             "mm": 0.7,
             "code": 53,
             "wind": 7.7,
@@ -2260,7 +2230,7 @@
           {
             "t": "2026-09-21T18:00",
             "temp": 27.9,
-            "pop": 84,
+            "pop": 90,
             "mm": 0.6,
             "code": 53,
             "wind": 6.6,
@@ -2270,7 +2240,7 @@
           {
             "t": "2026-09-21T19:00",
             "temp": 27,
-            "pop": 77,
+            "pop": 83,
             "mm": 0.2,
             "code": 51,
             "wind": 3.6,
@@ -2280,7 +2250,7 @@
           {
             "t": "2026-09-21T20:00",
             "temp": 26.5,
-            "pop": 65,
+            "pop": 71,
             "mm": 0,
             "code": 0,
             "wind": 4.7,
@@ -2290,12 +2260,42 @@
           {
             "t": "2026-09-21T21:00",
             "temp": 26.1,
-            "pop": 45,
+            "pop": 51,
             "mm": 0,
             "code": 0,
             "wind": 5.9,
             "gust": 11.2,
             "vis": 7380
+          },
+          {
+            "t": "2026-09-21T22:00",
+            "temp": 25.8,
+            "pop": 26,
+            "mm": 0,
+            "code": 0,
+            "wind": 4.9,
+            "gust": 10.8,
+            "vis": 7120
+          },
+          {
+            "t": "2026-09-21T23:00",
+            "temp": 25.7,
+            "pop": 10,
+            "mm": 0,
+            "code": 1,
+            "wind": 4.3,
+            "gust": 9,
+            "vis": 7180
+          },
+          {
+            "t": "2026-09-22T00:00",
+            "temp": 25.5,
+            "pop": 9,
+            "mm": 0,
+            "code": 1,
+            "wind": 2.7,
+            "gust": 8.3,
+            "vis": 5640
           }
         ],
         "days": [
@@ -2305,7 +2305,7 @@
             "hi": 31,
             "lo": 24.6,
             "mm": 12.6,
-            "pop": 100,
+            "pop": 99,
             "wind": 12.9,
             "gust": 29.5,
             "sunrise": "2026-09-20T06:55",
@@ -2317,7 +2317,7 @@
             "hi": 32.2,
             "lo": 23.9,
             "mm": 7,
-            "pop": 88,
+            "pop": 92,
             "wind": 12,
             "gust": 28.8,
             "sunrise": "2026-09-21T06:54",
@@ -2329,7 +2329,7 @@
             "hi": 30.1,
             "lo": 24.3,
             "mm": 11.1,
-            "pop": 97,
+            "pop": 95,
             "wind": 12.2,
             "gust": 29.2,
             "sunrise": "2026-09-22T06:54",
@@ -2341,7 +2341,7 @@
             "hi": 30.5,
             "lo": 24.5,
             "mm": 10.7,
-            "pop": 86,
+            "pop": 91,
             "wind": 10.7,
             "gust": 27.4,
             "sunrise": "2026-09-23T06:54",
@@ -2353,7 +2353,7 @@
             "hi": 30.9,
             "lo": 23.6,
             "mm": 11.1,
-            "pop": 88,
+            "pop": 78,
             "wind": 11.8,
             "gust": 29.5,
             "sunrise": "2026-09-24T06:54",
@@ -2365,7 +2365,7 @@
             "hi": 30.4,
             "lo": 23.8,
             "mm": 7.2,
-            "pop": 82,
+            "pop": 78,
             "wind": 8.8,
             "gust": 24.8,
             "sunrise": "2026-09-25T06:53",
@@ -2621,10 +2621,6 @@
     },
     {
       "kind": "group",
-      "id": "g_39c7wczpj"
-    },
-    {
-      "kind": "group",
       "id": "g_egmy4vfsr"
     },
     {
@@ -2633,19 +2629,19 @@
     },
     {
       "kind": "group",
-      "id": "g_hqqonlpl7"
-    },
-    {
-      "kind": "group",
-      "id": "g_t5lkgddba"
-    },
-    {
-      "kind": "group",
-      "id": "g_lz3ftp3wl"
-    },
-    {
-      "kind": "group",
       "id": "g_kj6q9w590"
+    },
+    {
+      "kind": "group",
+      "id": "g_tlh325uwv"
+    },
+    {
+      "kind": "group",
+      "id": "g_0ywlmfz1y"
+    },
+    {
+      "kind": "group",
+      "id": "g_nxez8e2ni"
     },
     {
       "kind": "group",
@@ -2653,7 +2649,11 @@
     },
     {
       "kind": "group",
-      "id": "g_nxez8e2ni"
+      "id": "g_3sv939h4o"
+    },
+    {
+      "kind": "group",
+      "id": "g_xwkwq5e7c"
     },
     {
       "kind": "group",
@@ -2669,13 +2669,23 @@
     "to": "",
     "apiUrl": "",
     "phoneId": "",
-    "stage": "",
-    "follow": true,
+    "stage": "cat_fsc1",
+    "follow": false,
     "fields": [
       {
         "id": "wf_iw1oquxds",
         "label": "IR Test",
         "value": "All IR Tests Completed. Normalizing Brakers Are Pending."
+      },
+      {
+        "id": "wf_jqt39dydf",
+        "label": "Rain ",
+        "value": "Thundery showers expected in 30 mins."
+      },
+      {
+        "id": "wf_nnbv0fpye",
+        "label": "SW14",
+        "value": "Will be considered after the completion of SW12"
       }
     ]
   },
@@ -2748,7 +2758,7 @@
       "id": "g_6c2p9r599",
       "name": "C801B ACTIVITIES [FSC 1]",
       "color": "#9333c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2972,7 +2982,7 @@
       "id": "g_f5yeuzfkj",
       "name": "Cabinet Relocation Works (FSC1)",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3036,7 +3046,7 @@
       "id": "g_nxez8e2ni",
       "name": "BP10 [ RATC ]",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3108,7 +3118,7 @@
       "id": "g_tlh325uwv",
       "name": "SW 12",
       "color": "#0d97c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_39c7wczpj"
     },
@@ -3156,7 +3166,7 @@
       "id": "g_hqqonlpl7",
       "name": "R801A Activities Rack-To-Rack Activities BP02, BP12, BP13(FSC1)",
       "color": "#9333c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_egmy4vfsr"
     },
@@ -3164,7 +3174,7 @@
       "id": "g_t5lkgddba",
       "name": "R801A Activities PA Testing (FSC1)",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_egmy4vfsr"
     },
@@ -6120,9 +6130,37 @@
     {
       "id": "t_zvfhjbkjn",
       "groupId": "g_4rom9sra2",
-      "name": "[FSC 1] Cabinet Power On - Call (Successful Relocation of All Cabinets)",
-      "start": "2026-09-20T17:00",
-      "end": "2026-09-20T17:00",
+      "name": "[FSC 1] Cabinet Power On - BPD",
+      "start": "2026-09-20T16:00",
+      "end": "2026-09-20T16:00",
+      "allDay": false,
+      "durationDays": 0,
+      "durationLabel": "—",
+      "categoryId": "cat_fsc1",
+      "ownerId": "p_h595i0uzy",
+      "teamIds": [
+        "tm_0osk8fb25"
+      ],
+      "teamId": "tm_0osk8fb25",
+      "status": "in-progress",
+      "progress": 15,
+      "autoProgress": false,
+      "effectiveProgress": 15,
+      "subtasks": [],
+      "milestone": true,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
+      "id": "t_c2vohsw7k",
+      "groupId": "g_4rom9sra2",
+      "name": "[FSC 1] Cabinet Power On - BP10 ( Due to delayed BP10 Cabinet Relocation Works)",
+      "start": "2026-09-20T18:30",
+      "end": "2026-09-20T18:30",
       "allDay": false,
       "durationDays": 0,
       "durationLabel": "—",
