@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T03:17:21.002Z",
+  "savedAt": "2026-09-20T03:22:36.549Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -2617,15 +2617,15 @@
   "watch": [
     {
       "kind": "group",
-      "id": "g_39c7wczpj"
+      "id": "g_x8pyxkd24"
     },
     {
       "kind": "group",
       "id": "g_f5yeuzfkj"
     },
     {
-      "kind": "weather",
-      "id": "wx_lgam5po17"
+      "kind": "group",
+      "id": "g_39c7wczpj"
     },
     {
       "kind": "group",
@@ -2634,22 +2634,6 @@
     {
       "kind": "group",
       "id": "g_4aw16o7nm"
-    },
-    {
-      "kind": "group",
-      "id": "g_me18au8ss"
-    },
-    {
-      "kind": "group",
-      "id": "g_nxez8e2ni"
-    },
-    {
-      "kind": "group",
-      "id": "g_erszwjd3x"
-    },
-    {
-      "kind": "task",
-      "id": "t_wgwciz4c0"
     }
   ],
   "live": {
@@ -2740,7 +2724,7 @@
       "id": "g_6c2p9r599",
       "name": "C801B ACTIVITIES [FSC 1]",
       "color": "#9333c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2964,7 +2948,7 @@
       "id": "g_f5yeuzfkj",
       "name": "Cabinet Relocation Works (FSC1)",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3124,7 +3108,7 @@
       "id": "g_egmy4vfsr",
       "name": "R801A (NEC) ACTIVITIES [FSC 1]",
       "color": "#1273e0",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3132,7 +3116,7 @@
       "id": "g_4aw16o7nm",
       "name": "R801 (COLAS RAIL) ACTIVITIES [FSC 1]",
       "color": "#e0740b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -6646,10 +6630,10 @@
         "tm_86jv8qrvn"
       ],
       "teamId": "tm_86jv8qrvn",
-      "status": "in-progress",
-      "progress": 15,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 15,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -6657,7 +6641,7 @@
       "locationId": "lc_sa7atgh9p",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T11:21"
     },
     {
       "id": "t_osbvz24wj",
