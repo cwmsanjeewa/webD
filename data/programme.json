@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T08:45:24.917Z",
+  "savedAt": "2026-09-20T09:02:31.092Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -14,12 +14,12 @@
     "applyFilters": true
   },
   "view": {
-    "ppd": 340.881,
+    "ppd": 384.906,
     "teamPpd": 48.956,
     "locPpd": 11.176,
     "criticalPath": true,
     "autoSchedule": false,
-    "gridWidth": 769,
+    "gridWidth": 953.12939453125,
     "wrapText": true,
     "hideUnticked": false,
     "columnsHidden": [
@@ -47,7 +47,7 @@
       "stripe": false
     },
     "columns": {
-      "name": 529,
+      "name": 651,
       "cat": 88,
       "own": 118,
       "start": 77,
@@ -56,9 +56,7 @@
       "pct": 56
     }
   },
-  "hiddenIds": [
-    "t_qwi8ttyq0"
-  ],
+  "hiddenIds": [],
   "categories": [
     {
       "id": "cat_day0",
@@ -2993,7 +2991,7 @@
       "id": "g_f5yeuzfkj",
       "name": "Cabinet Relocation Works (FSC1)",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3097,7 +3095,7 @@
       "id": "g_m9bdvq1fg",
       "name": "Cabinet Power On",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3153,7 +3151,7 @@
       "id": "g_egmy4vfsr",
       "name": "R801A (NEC) ACTIVITIES [FSC 1]",
       "color": "#1273e0",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3169,7 +3167,7 @@
       "id": "g_lz3ftp3wl",
       "name": "All Transformers Related Activities",
       "color": "#1273e0",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_4aw16o7nm"
     },
@@ -3177,7 +3175,7 @@
       "id": "g_hqqonlpl7",
       "name": "R801A Activities Rack-To-Rack Activities BP02, BP12, BP13(FSC1)",
       "color": "#9333c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_egmy4vfsr"
     },
@@ -3185,7 +3183,7 @@
       "id": "g_t5lkgddba",
       "name": "R801A Activities PA Testing (FSC1)",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_egmy4vfsr"
     },
@@ -6182,9 +6180,9 @@
       ],
       "teamId": "tm_0osk8fb25",
       "status": "in-progress",
-      "progress": 15,
+      "progress": 0,
       "autoProgress": false,
-      "effectiveProgress": 15,
+      "effectiveProgress": 0,
       "subtasks": [],
       "milestone": true,
       "notes": "",
@@ -6272,7 +6270,7 @@
       "notes": "",
       "predecessors": [],
       "locationId": null,
-      "struck": false,
+      "struck": true,
       "struckNote": "",
       "completedAt": null
     },
@@ -6675,10 +6673,10 @@
         "tm_86jv8qrvn"
       ],
       "teamId": "tm_86jv8qrvn",
-      "status": "done",
-      "progress": 100,
+      "status": "in-progress",
+      "progress": 80,
       "autoProgress": false,
-      "effectiveProgress": 100,
+      "effectiveProgress": 80,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -6686,7 +6684,7 @@
       "locationId": "lc_pa34fm2d4",
       "struck": false,
       "struckNote": "",
-      "completedAt": "2026-09-20T15:14"
+      "completedAt": null
     },
     {
       "id": "t_sptnb97gn",
@@ -8385,7 +8383,7 @@
     {
       "id": "t_vokhwt7hu",
       "groupId": "g_kj6q9w590",
-      "name": "BP06 - 600V Switchboard-1 Shutdown Maintenance [Cancelled]",
+      "name": "BP06 - 600V Switchboard-1 Shutdown Maintenance",
       "start": "2026-09-20T14:00",
       "end": "2026-09-20T18:00",
       "allDay": false,
@@ -8395,10 +8393,10 @@
       "ownerId": null,
       "teamIds": [],
       "teamId": null,
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -8406,7 +8404,7 @@
       "locationId": "lc_wryhjd984",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T16:52"
     },
     {
       "id": "t_mxev5pz4q",
@@ -8447,15 +8445,15 @@
       "ownerId": null,
       "teamIds": [],
       "teamId": null,
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [
         {
           "id": "s_6q97rgtpu",
           "title": "During 600V Switchboard ATS Changeover House Power affected for BP01  Change over Time : 8 sec",
-          "done": false
+          "done": true
         }
       ],
       "milestone": false,
@@ -8464,7 +8462,7 @@
       "locationId": "lc_2ihypnmxf",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T16:55"
     },
     {
       "id": "t_s7kxry51n",
@@ -8479,15 +8477,15 @@
       "ownerId": null,
       "teamIds": [],
       "teamId": null,
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [
         {
           "id": "s_4io9hewtl",
           "title": "During 600V Switchboard ATS Changeover House Power affected for BP01 & BP02 Change over Time : 8 sec",
-          "done": false
+          "done": true
         }
       ],
       "milestone": false,
@@ -8496,7 +8494,7 @@
       "locationId": "lc_2ihypnmxf",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T16:55"
     },
     {
       "id": "t_pwahttpok",
@@ -8523,7 +8521,7 @@
         }
       ],
       "milestone": false,
-      "notes": "",
+      "notes": "M203A Feeder Chassis replacement (Troubleshooting is inprogress)",
       "predecessors": [],
       "locationId": "lc_5wghz7wqo",
       "struck": false,
@@ -8607,15 +8605,15 @@
       "ownerId": null,
       "teamIds": [],
       "teamId": null,
-      "status": "in-progress",
-      "progress": 75,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 75,
+      "effectiveProgress": 100,
       "subtasks": [
         {
           "id": "s_5zc3w7brl",
           "title": "During 600V Switchboard ATS Changeover House Power affected for BP08 & BP07 Change over Time : 8 sec",
-          "done": false
+          "done": true
         }
       ],
       "milestone": false,
@@ -8624,7 +8622,7 @@
       "locationId": "lc_ce4tp8u76",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T16:55"
     },
     {
       "id": "t_2gxalh8b6",
