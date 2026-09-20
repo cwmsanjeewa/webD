@@ -1,11 +1,11 @@
 {
   "format": "gantt-studio",
   "version": 3,
-  "revision": "AH",
+  "revision": "AI",
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T04:21:28.119Z",
+  "savedAt": "2026-09-20T04:39:17.763Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -2617,10 +2617,6 @@
   "watch": [
     {
       "kind": "group",
-      "id": "g_x8pyxkd24"
-    },
-    {
-      "kind": "group",
       "id": "g_f5yeuzfkj"
     },
     {
@@ -2634,6 +2630,34 @@
     {
       "kind": "group",
       "id": "g_4aw16o7nm"
+    },
+    {
+      "kind": "group",
+      "id": "g_hqqonlpl7"
+    },
+    {
+      "kind": "group",
+      "id": "g_t5lkgddba"
+    },
+    {
+      "kind": "group",
+      "id": "g_lz3ftp3wl"
+    },
+    {
+      "kind": "group",
+      "id": "g_kj6q9w590"
+    },
+    {
+      "kind": "group",
+      "id": "g_erszwjd3x"
+    },
+    {
+      "kind": "group",
+      "id": "g_nxez8e2ni"
+    },
+    {
+      "kind": "group",
+      "id": "g_ara6d34zn"
     }
   ],
   "live": {
@@ -2948,7 +2972,7 @@
       "id": "g_f5yeuzfkj",
       "name": "Cabinet Relocation Works (FSC1)",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -2956,7 +2980,7 @@
       "id": "g_39c7wczpj",
       "name": "Switch Power Rail Works (FSC1)",
       "color": "#0d97c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3012,7 +3036,7 @@
       "id": "g_nxez8e2ni",
       "name": "BP10 [ RATC ]",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -4326,10 +4350,10 @@
         "tm_ec1y0xa4j"
       ],
       "teamId": "tm_ec1y0xa4j",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 40,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 40,
       "subtasks": [],
       "milestone": false,
       "notes": "",
