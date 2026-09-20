@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T13:09:21.887Z",
+  "savedAt": "2026-09-20T13:14:26.255Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -14,7 +14,7 @@
     "applyFilters": true
   },
   "view": {
-    "ppd": 466.935,
+    "ppd": 273.875,
     "teamPpd": 48.956,
     "locPpd": 11.176,
     "criticalPath": true,
@@ -2767,7 +2767,7 @@
       "id": "g_6c2p9r599",
       "name": "C801B ACTIVITIES [FSC 1]",
       "color": "#9333c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2991,7 +2991,7 @@
       "id": "g_f5yeuzfkj",
       "name": "Cabinet Relocation Works (FSC1)",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -2999,7 +2999,7 @@
       "id": "g_39c7wczpj",
       "name": "Switch Power Rail Works (FSC1)",
       "color": "#0d97c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3031,7 +3031,7 @@
       "id": "g_1cfv8etni",
       "name": "RME Testing [FSC 1]",
       "color": "#b0821a",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3039,7 +3039,7 @@
       "id": "g_qcs2chv39",
       "name": "Pre System Check",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3047,7 +3047,7 @@
       "id": "g_w9lda4lbd",
       "name": "Cabinet Power Off",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3055,7 +3055,7 @@
       "id": "g_nxez8e2ni",
       "name": "BP10 [ RATC ]",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3151,7 +3151,7 @@
       "id": "g_egmy4vfsr",
       "name": "R801A (NEC) ACTIVITIES [FSC 1]",
       "color": "#1273e0",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3159,7 +3159,7 @@
       "id": "g_4aw16o7nm",
       "name": "R801 (COLAS RAIL) ACTIVITIES [FSC 1]",
       "color": "#e0740b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3207,7 +3207,7 @@
       "id": "g_kj6q9w590",
       "name": "SMRT Power Maintenance Works [FSC1]",
       "color": "#6b7a90",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     }
@@ -4537,10 +4537,10 @@
         "tm_hksnio1la"
       ],
       "teamId": "tm_hksnio1la",
-      "status": "in-progress",
-      "progress": 30,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 30,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4548,7 +4548,7 @@
       "locationId": "lc_2ipheaqcb",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T21:12"
     },
     {
       "id": "t_xmzrdcza0",
@@ -6162,10 +6162,10 @@
         "tm_0osk8fb25"
       ],
       "teamId": "tm_0osk8fb25",
-      "status": "in-progress",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": true,
       "notes": "",
@@ -6173,7 +6173,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T21:12"
     },
     {
       "id": "t_1l7iv4wtp",
@@ -6218,10 +6218,10 @@
         "tm_akrrimwy5"
       ],
       "teamId": "tm_akrrimwy5",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": true,
       "notes": "",
@@ -6229,7 +6229,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T21:13"
     },
     {
       "id": "t_55n44fx5c",
@@ -8648,10 +8648,10 @@
       "ownerId": null,
       "teamIds": [],
       "teamId": null,
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 35,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 35,
       "subtasks": [],
       "milestone": false,
       "notes": "",
