@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T03:52:41.928Z",
+  "savedAt": "2026-09-20T04:05:01.090Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -3108,7 +3108,7 @@
       "id": "g_egmy4vfsr",
       "name": "R801A (NEC) ACTIVITIES [FSC 1]",
       "color": "#1273e0",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3140,7 +3140,7 @@
       "id": "g_t5lkgddba",
       "name": "R801A Activities PA Testing (FSC1)",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_egmy4vfsr"
     },
@@ -6547,9 +6547,9 @@
       ],
       "teamId": "tm_86jv8qrvn",
       "status": "in-progress",
-      "progress": 50,
+      "progress": 75,
       "autoProgress": false,
-      "effectiveProgress": 50,
+      "effectiveProgress": 75,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -8707,7 +8707,7 @@
       "locationId": "lc_pev0qoli7",
       "struck": false,
       "struckNote": "",
-      "completedAt": "2026-09-20T11:49"
+      "completedAt": "2026-09-20T12:03"
     },
     {
       "id": "t_xy0rqnr8d",
