@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T09:48:17.320Z",
+  "savedAt": "2026-09-20T13:06:28.439Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -14,7 +14,7 @@
     "applyFilters": true
   },
   "view": {
-    "ppd": 2600,
+    "ppd": 466.935,
     "teamPpd": 48.956,
     "locPpd": 11.176,
     "criticalPath": true,
@@ -2767,7 +2767,7 @@
       "id": "g_6c2p9r599",
       "name": "C801B ACTIVITIES [FSC 1]",
       "color": "#9333c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2991,7 +2991,7 @@
       "id": "g_f5yeuzfkj",
       "name": "Cabinet Relocation Works (FSC1)",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -2999,7 +2999,7 @@
       "id": "g_39c7wczpj",
       "name": "Switch Power Rail Works (FSC1)",
       "color": "#0d97c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3015,7 +3015,7 @@
       "id": "g_vjitj8ggp",
       "name": "SAT (FSC1)",
       "color": "#b0821a",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3055,7 +3055,7 @@
       "id": "g_nxez8e2ni",
       "name": "BP10 [ RATC ]",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3063,7 +3063,7 @@
       "id": "g_erszwjd3x",
       "name": "BP10 [ CHO & OBC 2 ]",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3071,7 +3071,7 @@
       "id": "g_3sv939h4o",
       "name": "BPD [ COMMS ]",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3079,7 +3079,7 @@
       "id": "g_xwkwq5e7c",
       "name": "BPD [ RRS01 ]",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3087,7 +3087,7 @@
       "id": "g_ara6d34zn",
       "name": "BP10 [ DTS ]",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3095,7 +3095,7 @@
       "id": "g_m9bdvq1fg",
       "name": "Cabinet Power On",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3103,7 +3103,7 @@
       "id": "g_yq0foxn6s",
       "name": "Troubleshooting",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3151,7 +3151,7 @@
       "id": "g_egmy4vfsr",
       "name": "R801A (NEC) ACTIVITIES [FSC 1]",
       "color": "#1273e0",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -4397,10 +4397,10 @@
         "tm_ec1y0xa4j"
       ],
       "teamId": "tm_ec1y0xa4j",
-      "status": "in-progress",
-      "progress": 60,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 60,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4408,7 +4408,7 @@
       "locationId": "lc_2ipheaqcb",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T21:02"
     },
     {
       "id": "t_xv30a5i59",
@@ -4425,10 +4425,10 @@
         "tm_ec1y0xa4j"
       ],
       "teamId": "tm_ec1y0xa4j",
-      "status": "in-progress",
-      "progress": 40,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 40,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4436,7 +4436,7 @@
       "locationId": "lc_2ipheaqcb",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T21:03"
     },
     {
       "id": "t_9f5abvmkw",
@@ -5595,10 +5595,10 @@
         "tm_0osk8fb25"
       ],
       "teamId": "tm_0osk8fb25",
-      "status": "in-progress",
-      "progress": 50,
-      "autoProgress": true,
-      "effectiveProgress": 50,
+      "status": "done",
+      "progress": 100,
+      "autoProgress": false,
+      "effectiveProgress": 100,
       "subtasks": [
         {
           "id": "s_i9rf4crdu",
@@ -5608,7 +5608,7 @@
         {
           "id": "s_r5p6hixv5",
           "title": "BP10 All Cabinet Power On",
-          "done": false
+          "done": true
         }
       ],
       "milestone": false,
@@ -5617,7 +5617,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T21:03"
     },
     {
       "id": "t_3yts653gs",
@@ -5634,10 +5634,10 @@
         "tm_vrrn1t603"
       ],
       "teamId": "tm_vrrn1t603",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -5645,7 +5645,7 @@
       "locationId": "lc_3pluk41y0",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T21:05"
     },
     {
       "id": "t_hszkxy1n5",
@@ -5662,10 +5662,10 @@
         "tm_qtbzyacim"
       ],
       "teamId": "tm_qtbzyacim",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -5673,7 +5673,7 @@
       "locationId": "lc_3pluk41y0",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T21:05"
     },
     {
       "id": "t_gq9ckbnvr",
@@ -5746,10 +5746,10 @@
         "tm_i8chcgikg"
       ],
       "teamId": "tm_i8chcgikg",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -5757,7 +5757,7 @@
       "locationId": "lc_3pluk41y0",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T21:05"
     },
     {
       "id": "t_pdzjvq3rk",
@@ -5774,10 +5774,10 @@
         "tm_vrrn1t603"
       ],
       "teamId": "tm_vrrn1t603",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -5785,7 +5785,7 @@
       "locationId": "lc_3pluk41y0",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T21:05"
     },
     {
       "id": "t_gqhr6f5g1",
@@ -5802,10 +5802,10 @@
         "tm_qtbzyacim"
       ],
       "teamId": "tm_qtbzyacim",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -5813,7 +5813,7 @@
       "locationId": "lc_3pluk41y0",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T21:05"
     },
     {
       "id": "t_3do0yzxuo",
@@ -8700,10 +8700,10 @@
       "ownerId": "p_h595i0uzy",
       "teamIds": [],
       "teamId": null,
-      "status": "in-progress",
-      "progress": 30,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 30,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -8711,7 +8711,7 @@
       "locationId": "lc_2ipheaqcb",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T21:03"
     },
     {
       "id": "t_7zdoyvzmo",
