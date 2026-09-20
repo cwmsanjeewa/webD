@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-19T23:18:59.422Z",
+  "savedAt": "2026-09-20T00:06:19.099Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -2137,8 +2137,8 @@
     "fields": [
       {
         "id": "wf_iw1oquxds",
-        "label": "SW31 Works",
-        "value": "SW31 Maintenance Works delayed, affected IR Test. Currunt SW31 progress is around 70%. "
+        "label": "IR Test",
+        "value": "All IR Tests Completed. Normalizing Brakers Are Pending."
       }
     ]
   },
@@ -2435,7 +2435,7 @@
       "id": "g_f5yeuzfkj",
       "name": "Cabinet Relocation Works (FSC1)",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -2451,7 +2451,7 @@
       "id": "g_me18au8ss",
       "name": "IR Test Works (FSC1)",
       "color": "#6b7a90",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -2515,7 +2515,7 @@
       "id": "g_3sv939h4o",
       "name": "BPD [ COMMS ]",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2523,7 +2523,7 @@
       "id": "g_xwkwq5e7c",
       "name": "BPD [ RRS01 ]",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2531,7 +2531,7 @@
       "id": "g_ara6d34zn",
       "name": "BP10 [ DTS ]",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -2563,7 +2563,7 @@
       "id": "g_h6qdcyhmm",
       "name": "SW 11",
       "color": "#0d97c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_39c7wczpj"
     },
@@ -3758,9 +3758,9 @@
       ],
       "teamId": "tm_hksnio1la",
       "status": "in-progress",
-      "progress": 10,
+      "progress": 80,
       "autoProgress": false,
-      "effectiveProgress": 10,
+      "effectiveProgress": 80,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -4457,10 +4457,10 @@
         "tm_c45jr3z1h"
       ],
       "teamId": "tm_c45jr3z1h",
-      "status": "in-progress",
-      "progress": 70,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 70,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "Depot\n1. East Bound Lead Track.\n2. West Bound Track",
@@ -4468,7 +4468,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T07:44"
     },
     {
       "id": "t_alqszaiw8",
@@ -4541,9 +4541,9 @@
         "tm_4hswtynvq"
       ],
       "teamId": "tm_4hswtynvq",
-      "status": "in-progress",
+      "status": "done",
       "progress": 100,
-      "autoProgress": true,
+      "autoProgress": false,
       "effectiveProgress": 100,
       "subtasks": [
         {
@@ -4658,7 +4658,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T07:45"
     },
     {
       "id": "t_0f2x7p8ao",
