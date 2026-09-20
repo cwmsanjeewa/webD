@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T03:29:16.271Z",
+  "savedAt": "2026-09-20T03:52:41.928Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -3020,7 +3020,7 @@
       "id": "g_erszwjd3x",
       "name": "BP10 [ CHO & OBC 2 ]",
       "color": "#d4356b",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3084,7 +3084,7 @@
       "id": "g_tlh325uwv",
       "name": "SW 12",
       "color": "#0d97c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_39c7wczpj"
     },
@@ -3116,7 +3116,7 @@
       "id": "g_4aw16o7nm",
       "name": "R801 (COLAS RAIL) ACTIVITIES [FSC 1]",
       "color": "#e0740b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3124,7 +3124,7 @@
       "id": "g_lz3ftp3wl",
       "name": "All Transformers Related Activities",
       "color": "#1273e0",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_4aw16o7nm"
     },
@@ -5318,9 +5318,9 @@
       ],
       "teamId": "tm_hawztq4hg",
       "status": "in-progress",
-      "progress": 0,
-      "autoProgress": false,
-      "effectiveProgress": 0,
+      "progress": 20,
+      "autoProgress": true,
+      "effectiveProgress": 19,
       "subtasks": [
         {
           "id": "s_ps7pphi16",
@@ -5330,17 +5330,17 @@
         {
           "id": "s_vnn75vmmg",
           "title": "Removal of rail cover\t8:40\t8:45",
-          "done": false
+          "done": true
         },
         {
           "id": "s_ucwdjrqua",
           "title": "On-site Existing Module Measurements and Marking, Noise Barrier installation\t8:45\t9:05",
-          "done": false
+          "done": true
         },
         {
           "id": "s_s1kq1sv78",
           "title": "Existing Rail Cutting and removal mounting stud bolt nut (Fixed End, Mov Reverse & Pivot Reverse)\t8:55\t9:05",
-          "done": false
+          "done": true
         },
         {
           "id": "s_d7gpx1yvn",
@@ -6547,9 +6547,9 @@
       ],
       "teamId": "tm_86jv8qrvn",
       "status": "in-progress",
-      "progress": 10,
+      "progress": 50,
       "autoProgress": false,
-      "effectiveProgress": 10,
+      "effectiveProgress": 50,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -8439,9 +8439,9 @@
       "teamIds": [],
       "teamId": null,
       "status": "in-progress",
-      "progress": 30,
+      "progress": 50,
       "autoProgress": false,
-      "effectiveProgress": 30,
+      "effectiveProgress": 50,
       "subtasks": [
         {
           "id": "s_zrg0wjezt",
@@ -8471,9 +8471,9 @@
       "teamIds": [],
       "teamId": null,
       "status": "in-progress",
-      "progress": 5,
+      "progress": 90,
       "autoProgress": false,
-      "effectiveProgress": 5,
+      "effectiveProgress": 90,
       "subtasks": [
         {
           "id": "s_mybjqm69t",
@@ -8503,9 +8503,9 @@
       "teamIds": [],
       "teamId": null,
       "status": "in-progress",
-      "progress": 50,
+      "progress": 80,
       "autoProgress": false,
-      "effectiveProgress": 50,
+      "effectiveProgress": 80,
       "subtasks": [
         {
           "id": "s_nkfi2dwz5",
@@ -8696,10 +8696,10 @@
       "ownerId": null,
       "teamIds": [],
       "teamId": null,
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -8707,7 +8707,7 @@
       "locationId": "lc_pev0qoli7",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T11:49"
     },
     {
       "id": "t_xy0rqnr8d",
