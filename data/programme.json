@@ -5,7 +5,7 @@
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T01:05:35.376Z",
+  "savedAt": "2026-09-20T01:54:23.588Z",
   "doc": {
     "company": "Day 1",
     "preparedBy": "Day 1",
@@ -2724,7 +2724,7 @@
       "id": "g_6c2p9r599",
       "name": "C801B ACTIVITIES [FSC 1]",
       "color": "#9333c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -2964,7 +2964,7 @@
       "id": "g_me18au8ss",
       "name": "IR Test Works (FSC1)",
       "color": "#6b7a90",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3076,7 +3076,7 @@
       "id": "g_h6qdcyhmm",
       "name": "SW 11",
       "color": "#0d97c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_39c7wczpj"
     },
@@ -3084,7 +3084,7 @@
       "id": "g_tlh325uwv",
       "name": "SW 12",
       "color": "#0d97c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_39c7wczpj"
     },
@@ -3108,7 +3108,7 @@
       "id": "g_egmy4vfsr",
       "name": "R801A (NEC) ACTIVITIES [FSC 1]",
       "color": "#1273e0",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3124,7 +3124,7 @@
       "id": "g_lz3ftp3wl",
       "name": "All Transformers Related Activities",
       "color": "#1273e0",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_4aw16o7nm"
     },
@@ -3132,7 +3132,7 @@
       "id": "g_hqqonlpl7",
       "name": "R801A Activities Rack-To-Rack Activities BP02, BP12, BP13(FSC1)",
       "color": "#9333c4",
-      "collapsed": true,
+      "collapsed": false,
       "categoryId": "cat_fsc1",
       "parentId": "g_egmy4vfsr"
     },
@@ -4875,10 +4875,10 @@
         "tm_c45jr3z1h"
       ],
       "teamId": "tm_c45jr3z1h",
-      "status": "not-started",
-      "progress": 0,
+      "status": "in-progress",
+      "progress": 75,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 75,
       "subtasks": [
         {
           "id": "s_5vmr1gwp2",
@@ -5317,7 +5317,7 @@
         "tm_hawztq4hg"
       ],
       "teamId": "tm_hawztq4hg",
-      "status": "not-started",
+      "status": "in-progress",
       "progress": 0,
       "autoProgress": false,
       "effectiveProgress": 0,
@@ -5325,7 +5325,7 @@
         {
           "id": "s_ps7pphi16",
           "title": "Shifting of materials to work location\t8:30\t8:40",
-          "done": false
+          "done": true
         },
         {
           "id": "s_vnn75vmmg",
@@ -6370,10 +6370,10 @@
         "tm_hawztq4hg"
       ],
       "teamId": "tm_hawztq4hg",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -6381,7 +6381,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T09:50"
     },
     {
       "id": "t_pjmg8yxk2",
@@ -6396,10 +6396,10 @@
       "ownerId": "p_mvb8p9r6h",
       "teamIds": [],
       "teamId": null,
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -6407,7 +6407,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-20T09:50"
     },
     {
       "id": "t_u039fv7jl",
@@ -8438,7 +8438,7 @@
       "ownerId": null,
       "teamIds": [],
       "teamId": null,
-      "status": "not-started",
+      "status": "in-progress",
       "progress": 0,
       "autoProgress": false,
       "effectiveProgress": 0,
@@ -8470,7 +8470,7 @@
       "ownerId": null,
       "teamIds": [],
       "teamId": null,
-      "status": "not-started",
+      "status": "in-progress",
       "progress": 0,
       "autoProgress": false,
       "effectiveProgress": 0,
