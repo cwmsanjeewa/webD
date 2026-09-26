@@ -3474,6 +3474,136 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
   .ldbig b{font-size:24px}
 }
 
+/* ══════════════════════════════════════════════════════════════
+   Revision AN · dropping into a group, and being asked first
+   ══════════════════════════════════════════════════════════════ */
+.dropbadge{
+  position:fixed;z-index:900;pointer-events:none;
+  background:var(--ink);color:var(--bg);
+  font-size:11.5px;font-weight:700;letter-spacing:.01em;
+  padding:5px 10px;border-radius:7px;white-space:nowrap;
+  box-shadow:0 6px 18px rgba(16,26,43,.28);
+}
+.grow.dragrow{opacity:.45}
+.grip{opacity:.42}
+.grow:hover .grip{opacity:1}
+
+.mvwhat{display:flex;align-items:baseline;gap:9px;padding:0 0 14px;flex-wrap:wrap}
+.mvwhat b{font-size:15px;font-weight:750;letter-spacing:-.2px;line-height:1.35;min-width:0}
+.mvwhat span{font-size:9.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-3);background:var(--surface-3);padding:2px 7px;border-radius:5px;flex:none}
+.mvmove{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch}
+.mvleg{min-width:0;background:var(--surface-2);border:1px solid var(--line);
+  border-radius:var(--r-sm);padding:9px 11px}
+.mvleg label{display:block;font-size:9.5px;font-weight:800;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:4px}
+.mvleg div{font-size:12.5px;font-weight:650;line-height:1.4;color:var(--ink);word-break:break-word}
+.mvarr{display:grid;place-items:center;color:var(--ink-3)}
+.mvnote{margin-top:13px;padding:9px 11px;border-radius:var(--r-sm);
+  background:var(--surface-3);border:1px solid var(--line);
+  font-size:12px;line-height:1.45;color:var(--ink-2)}
+@media (max-width:520px){
+  .mvmove{grid-template-columns:1fr}
+  .mvarr{transform:rotate(90deg)}
+}
+
+/* ══════════════════════════════════════════════════════════════
+   Revision AM · the runway's own closure chips
+   ══════════════════════════════════════════════════════════════ */
+.drcbar{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 10px}
+.drc{display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px;
+  border:1px solid var(--line);border-radius:999px;background:var(--surface);
+  color:var(--ink-2);font:inherit;font-size:11.5px;font-weight:650;cursor:pointer;
+  transition:background .15s,border-color .15s,color .15s}
+.drc:hover{background:var(--hover);border-color:var(--line-hover)}
+.drc.on{background:var(--surface-3);border-color:var(--line-hover);color:var(--ink)}
+.drc i{width:8px;height:8px;border-radius:3px;flex:none}
+.drc b{font-size:10.5px;font-weight:800;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.drc.on b{color:var(--ink-2)}
+.drctag{display:inline-block;margin:2px 0 0;padding:1px 6px;border-radius:5px;
+  font-size:9px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
+  white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.lrwlab .drctag{margin:3px auto 1px;display:table}
+/* a rail carrying its whole closure packs the labels in a little */
+.drail-inner.tight .dmslab{width:112px;margin-left:-56px;font-size:10px}
+.drail-inner.tight .dmslab s{font-size:9px}
+.drail-inner.tight .drctag{font-size:8px;padding:1px 4px}
+
+/* ══════════════════════════════════════════════════════════════
+   Revision AK · cancelled scope
+   Cancelled work is shown, never coloured in: a hatch over a
+   neutral grey, so it reads as absence on a chart whose every
+   other colour means a state of work.
+   ══════════════════════════════════════════════════════════════ */
+.kpi.k-canc{--kc:#98A2B3}
+.kpi.k-canc::before{background:#98A2B3}
+/* a sixth box has to fit the header it was not designed for */
+body.akcanc .kpis{gap:7px}
+body.akcanc .kpis .kpi{min-width:66px;padding:6px 9px}
+body.akcanc .kpi .val{font-size:15.5px}
+body.akcanc .kpi .lab{font-size:9px;letter-spacing:.5px}
+.kpi.k-canc .val{color:#71809A}
+.smix i.akoff,.lsbmix i.akoff,.aks.akoff{
+  background-image:repeating-linear-gradient(135deg,
+    rgba(255,255,255,.55) 0 3px,transparent 3px 6px);
+}
+.lsbtile.off b{color:#71809A}
+.akcap{color:#71809A!important;font-style:normal!important;font-weight:700!important}
+
+.akb{display:flex;flex-direction:column;gap:14px;padding:4px 2px 0}
+.akbar{display:flex;height:30px;border-radius:9px;overflow:hidden;background:var(--surface-3)}
+.aks{height:100%;transition:width .9s cubic-bezier(.22,1,.36,1)}
+.akkey{display:flex;gap:26px;align-items:baseline;flex-wrap:wrap}
+.akk{display:flex;align-items:baseline;gap:8px}
+.akk i{width:11px;height:11px;border-radius:3px;position:relative;top:1px;flex:none}
+.akk.off i{background-image:repeating-linear-gradient(135deg,
+    rgba(255,255,255,.55) 0 3px,transparent 3px 6px)}
+.akk b{font-size:21px;font-weight:800;font-variant-numeric:tabular-nums}
+.akk span{font-size:12.5px;color:var(--ink-3);letter-spacing:.02em}
+.aknote{display:flex;gap:10px;align-items:baseline;padding:10px 13px;border-radius:10px;
+  background:var(--surface-2);border:1px solid var(--line)}
+.aknote b{font-size:19px;font-weight:800;flex:none}
+.aknote span{font-size:12.5px;color:var(--ink-2);line-height:1.45}
+
+.aklist{display:flex;flex-direction:column;gap:2px;overflow:auto;min-height:0}
+.akrow{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,1.3fr) minmax(0,.9fr) 205px;
+  gap:14px;align-items:center;padding:8px 12px;border-radius:8px;
+  background:var(--surface-2);animation:akin .5s both}
+.akrow.hd{background:none;padding:2px 12px;font-size:10.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--ink-3);font-weight:700;animation:none}
+.akrow>div{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.aknm s{text-decoration:line-through;text-decoration-color:rgba(122,134,150,.8);
+  color:var(--ink-2);font-weight:650;font-size:13.5px}
+.akg,.ako{font-size:12px;color:var(--ink-3)}
+.akw{font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums;text-align:center;
+  background:var(--surface-3);padding:3px 9px;border-radius:999px}
+.akrow.hd .akw{background:none;padding:3px 0;text-align:right}
+@keyframes akin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.akrow{animation:none}.aks{transition:none}}
+
+/* ══════════════════════════════════════════════════════════════
+   Revision AJ · Cancelled
+   It keeps its row and its bar — greyed, ruled through, and
+   hatched the way struck-out work is, so at a glance it reads as
+   "not happening" rather than as "not started yet".
+   ══════════════════════════════════════════════════════════════ */
+.statchip.on.cx{background:var(--surface-3);color:var(--ink-3);border-color:var(--line-hover)}
+.statchip.cx i{background:#98A2B3}
+.grow.canc .nm,.grow.canc .cell{opacity:.55}
+/* a task row carries its name as the text of .nm itself, so the rule has to
+   sit there — on a group row the inner b is the name instead */
+.grow.canc .nm,.grow.canc .nm b,.grow.canc .nm .tname{
+  text-decoration:line-through;text-decoration-thickness:1.5px;
+  text-decoration-color:rgba(122,134,150,.85);
+}
+.grow.canc{background:repeating-linear-gradient(135deg,transparent 0 7px,var(--hover) 7px 8px)}
+.bar.canc,.ms.canc{opacity:.5;filter:saturate(.25)}
+.bar.canc .fill{display:none}
+.bar.canc::after{
+  content:"";position:absolute;left:0;right:0;top:50%;height:1.5px;
+  background:rgba(255,255,255,.85);
+}
+
 </style>
 <script>
 /* Revision M — decide the theme before the first pixel is painted */
@@ -3510,7 +3640,7 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.1"/><path d="M19.4 14.6a1.6 1.6 0 0 0 .32 1.77l.06.06a1.9 1.9 0 1 1-2.69 2.69l-.06-.06a1.6 1.6 0 0 0-1.77-.32 1.6 1.6 0 0 0-.97 1.46V21a1.9 1.9 0 0 1-3.8 0v-.11a1.6 1.6 0 0 0-1.05-1.46 1.6 1.6 0 0 0-1.77.32l-.06.06a1.9 1.9 0 1 1-2.69-2.69l.06-.06a1.6 1.6 0 0 0 .32-1.77 1.6 1.6 0 0 0-1.46-.97H3a1.9 1.9 0 0 1 0-3.8h.11a1.6 1.6 0 0 0 1.46-1.05 1.6 1.6 0 0 0-.32-1.77l-.06-.06a1.9 1.9 0 1 1 2.69-2.69l.06.06a1.6 1.6 0 0 0 1.77.32H9a1.6 1.6 0 0 0 .97-1.46V3a1.9 1.9 0 0 1 3.8 0v.11a1.6 1.6 0 0 0 .97 1.46 1.6 1.6 0 0 0 1.77-.32l.06-.06a1.9 1.9 0 1 1 2.69 2.69l-.06.06a1.6 1.6 0 0 0-.32 1.77V9a1.6 1.6 0 0 0 1.46.97H21a1.9 1.9 0 0 1 0 3.8h-.11a1.6 1.6 0 0 0-1.46.97z"/></svg>
           <i class="gdot" id="ghDot"></i>
         </button>
-          <button class="sub subbtn" id="bAbout" type="button" title="Revision, release date and who built this">Rev AI · 20 Sep 2026</button>
+          <button class="sub subbtn" id="bAbout" type="button" title="Revision, release date and who built this">Rev AN · 25 Sep 2026</button>
         </div>
       </div>
     </div>
@@ -3573,6 +3703,8 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
       <div class="kpi k-acc act" id="cardPct" title="Open the Action Tracker, least complete first"><div class="lab">Complete</div><div class="val" id="kPct">0<small>%</small></div></div>
       <div class="kpi k-warn act" id="cardDur" title="Fit the whole window on the Gantt"><div class="lab">Duration</div><div class="val" id="kDur">0<small>d</small></div></div>
       <div class="kpi k-dang act" id="cardCrit" title="Show only the critical path"><div class="lab">Critical</div><div class="val" id="kCrit">0</div></div>
+      <!-- Revision AK · only here when something has been called off -->
+      <div class="kpi k-canc act" id="cardCanc" hidden><div class="lab">Cancelled</div><div class="val" id="kCanc">0<small>%</small></div></div>
       <!-- Revision AF · on the Live tab these four count the closure the chips have picked, and this says which -->
       <div class="kpi kscope" id="kScope" hidden title="These four boxes are counting this closure only"><div class="lab">Counting</div><div class="val" id="kScopeV">—</div></div>
     </div>
@@ -3757,7 +3889,7 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
 
         <div class="dgrid d2">
           <div class="dcard" data-card="phase"><h3>Phase progress</h3><div class="dsort" id="dPhaseSort"></div><div class="cap" id="dPhaseCap"></div><div id="dPhase"></div></div>
-          <div class="dcard" data-card="ms"><h3>Milestone runway</h3><div class="cap" id="dMsCap"></div><div class="drail" id="dRail"></div><div id="dNextUp"></div></div>
+          <div class="dcard" data-card="ms"><h3>Milestone runway</h3><div class="cap" id="dMsCap"></div><div class="drcbar" id="dRailBar"></div><div class="drail" id="dRail"></div><div id="dNextUp"></div></div>
         </div>
 
         <div class="dgrid d2">
@@ -3879,6 +4011,7 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
           <button data-s="in-progress">In progress</button>
           <button data-s="blocked">Blocked</button>
           <button data-s="done">Done</button>
+          <button data-s="cancelled">Cancelled</button>
         </div>
         <span class="segcount hidden" id="actStatusCount"></span>
         <select class="fsel" id="actOwner"><option value="">All owners</option></select>
@@ -4306,12 +4439,7 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
             </div>
           </div>
         </div>
-        <div class="fld" style="max-width:160px"><label>Status</label><select id="fStatus">
-          <option value="not-started">Not started</option>
-          <option value="in-progress">In progress</option>
-          <option value="blocked">Blocked</option>
-          <option value="done">Done</option>
-        </select></div>
+        <div class="fld" style="max-width:160px"><label>Status</label><select id="fStatus"></select></div>
       </div>
       <div class="frow">
         <div class="fld"><label>Work location <span class="hint-n" id="fLocPath"></span></label>
@@ -4501,6 +4629,29 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
 </div>
 
 <!-- ================= LOCATION MODAL  (Revision V) ================= -->
+<!-- ============ MOVE CONFIRM (Revision AN) ============ -->
+<div class="scrim" id="moveScrim">
+  <div class="modal" style="width:480px" role="dialog" aria-modal="true" aria-labelledby="mvTitle">
+    <header><h2 id="mvTitle">Move this activity?</h2>
+      <button class="x" id="mvX" aria-label="Cancel"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
+    <div class="body">
+      <div class="mvwhat" id="mvWhat"></div>
+      <div class="mvmove">
+        <div class="mvleg"><label>From</label><div id="mvFrom">—</div></div>
+        <div class="mvarr" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="M13 6l6 6-6 6"/></svg>
+        </div>
+        <div class="mvleg"><label>To</label><div id="mvTo">—</div></div>
+      </div>
+      <div class="mvnote" id="mvNote" hidden></div>
+    </div>
+    <footer>
+      <button class="btn" id="mvNo">Cancel</button>
+      <button class="btn primary" id="mvYes">Move it</button>
+    </footer>
+  </div>
+</div>
+
 <div class="scrim" id="locScrim">
   <div class="modal" style="width:470px" role="dialog" aria-modal="true">
     <header><h2 id="lcTitle">New Location</h2><button class="x" data-close><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
@@ -5414,12 +5565,36 @@ const LBLROLE={
 };
 const LBLPAL=['#8A242F','#20368B','#0F6B5B','#9646DC','#B0821A','#0D5CB6','#C2410C','#7A5AF5'];
 const CMDPAL  =['#8A242F','#20368B','#0F6B5B','#9646DC','#B0821A','#0D5CB6'];
+/* ══════════ Revision AJ · Cancelled ══════════
+   A fifth status, and the only one that means the work is not going to happen.
+   It is not "done" and it is not "blocked": a cancelled activity has been taken
+   out of the night by a decision, and counting it either way would be a lie.
+
+   So it is kept out of the arithmetic — progress, planned progress, overdue,
+   every dashboard figure and every export total — exactly as a struck-out row
+   is.  What it is NOT is hidden: it keeps its row, its bar, its place in the
+   group, and it has a filter chip of its own, because the first question after
+   "what was cancelled?" is always "show me".                              */
 const STATUS={
   'not-started':{lab:'Not started',cls:'ns'},
   'in-progress':{lab:'In progress',cls:'ip'},
   'blocked'    :{lab:'Blocked',    cls:'bl'},
-  'done'       :{lab:'Done',       cls:'dn'}
+  'done'       :{lab:'Done',       cls:'dn'},
+  'cancelled'  :{lab:'Cancelled',  cls:'cx'}
 };
+const isCancelled = t => !!(t && t.status==='cancelled');
+/* Revision AK — the task dialog's status list is built from STATUS, not typed
+   out again in the markup.  In AJ it was typed out, which is why Cancelled
+   reached the chip bar, the Action Tracker and every export but not the one
+   dialog most people set a status from. */
+(function(){
+  const sel=document.getElementById('fStatus'); if(!sel) return;
+  sel.innerHTML=Object.keys(STATUS)
+    .map(k=>'<option value="'+k+'">'+STATUS[k].lab+'</option>').join('');
+})();
+/* struck out by hand, or cancelled by decision — either way it is not work
+   that is going to be done, and nothing may count it */
+const offPlan = t => !!(t && (t.struck || t.status==='cancelled'));
 function initials(name){
   const w=String(name||'?').trim().split(/\s+/);
   return ((w[0]||'?')[0]+(w.length>1?w[w.length-1][0]:'')).toUpperCase();
@@ -5501,7 +5676,7 @@ const avColor=id=>'hsl('+hueOf(id)+' 52% 46%)';
    2 · STATE
    ══════════════════════════════════════════════════════════════ */
 const APP={
-  rev:'AI',
+  rev:'AN',
   revDate:'2026-09-20',
   released:'20 Sep 2026',
   product:'Gantt Studio',
@@ -5513,8 +5688,8 @@ const APP={
 const APP_REV='Revision '+APP.rev+' · '+APP.released;
 const APP_CREDIT=APP.devRole+' · '+APP.devMail+' · '+APP.devTel;
 
-const KEY='ganttStudio.revAI';
-const KEY_PREV=['ganttStudio.revAH','ganttStudio.revAG','ganttStudio.revAF','ganttStudio.revAE','ganttStudio.revAD','ganttStudio.revAC','ganttStudio.revAB','ganttStudio.revAA','ganttStudio.revZ','ganttStudio.revY','ganttStudio.revX','ganttStudio.revW','ganttStudio.revV','ganttStudio.revU','ganttStudio.revT','ganttStudio.revS','ganttStudio.revR','ganttStudio.revQ','ganttStudio.revP','ganttStudio.revO','ganttStudio.revN','ganttStudio.revM','ganttStudio.revL','ganttStudio.revK','ganttStudio.revJ','ganttStudio.revI','ganttStudio.revH','ganttStudio.revG','ganttStudio.revF','ganttStudio.revE','ganttStudio.revD','ganttStudio.revC','ganttStudio.revA'];   // earlier revisions carry over on first open
+const KEY='ganttStudio.revAN';
+const KEY_PREV=['ganttStudio.revAM','ganttStudio.revAL','ganttStudio.revAK','ganttStudio.revAJ','ganttStudio.revAI','ganttStudio.revAH','ganttStudio.revAG','ganttStudio.revAF','ganttStudio.revAE','ganttStudio.revAD','ganttStudio.revAC','ganttStudio.revAB','ganttStudio.revAA','ganttStudio.revZ','ganttStudio.revY','ganttStudio.revX','ganttStudio.revW','ganttStudio.revV','ganttStudio.revU','ganttStudio.revT','ganttStudio.revS','ganttStudio.revR','ganttStudio.revQ','ganttStudio.revP','ganttStudio.revO','ganttStudio.revN','ganttStudio.revM','ganttStudio.revL','ganttStudio.revK','ganttStudio.revJ','ganttStudio.revI','ganttStudio.revH','ganttStudio.revG','ganttStudio.revF','ganttStudio.revE','ganttStudio.revD','ganttStudio.revC','ganttStudio.revA'];   // earlier revisions carry over on first open
 let S = blank();
 
 function blank(){
@@ -5563,7 +5738,10 @@ const durLabel = t => t.milestone?'—':fmtDur(dur(t));
 const endShown = t => t.allDay? Math.max(t.s,Math.round(t.e)-1) : t.e;
 const fmtStart = t => t.allDay? fmt(t.s) : fmtDT(t.s);
 const fmtFinish = t => t.milestone?'—':(t.allDay? fmt(endShown(t)) : fmtDT(t.e));
-const isLate = t => t.status!=='done' && t.e<NOW;
+const isLate = t => t.status!=='done' && t.status!=='cancelled' && t.e<NOW;
+/* Revision AJ — open means still to do.  A called-off activity is neither
+   open nor late nor unassigned: it is simply no longer work. */
+const isOpen = t => t.status!=='done' && t.status!=='cancelled';
 const subs = t => t.subtasks||[];
 const subDone = t => subs(t).filter(s=>s.done).length;
 function pct(t){
@@ -5627,7 +5805,45 @@ const tasksAtLoc = id => S.tasks.filter(t=>t.locationId===id);
    ruled through, so the decision to drop it is visible — but nothing counts
    it, totals it, schedules it or exports it. */
 const isStruck = t => !!(t && t.struck);
-const liveTasks = () => S.tasks.filter(t=>!t.struck);
+/* Revision AJ — and cancelled work leaves with it.  Nearly every figure in
+   the application is drawn from this one list, so excluding it here keeps the
+   dashboards, the Live screen, the situation card and the workbook totals
+   honest without a special case in any of them. */
+const liveTasks = () => S.tasks.filter(t=>!offPlan(t));
+/* ══════════════════════════════════════════════════════════════
+   Revision AK · the split
+   liveTasks() is the work still in the plan.  planTasks() is the
+   work that WAS planned, cancelled included — because a cancelled
+   share only means anything measured against the scope it was cut
+   out of.  scopeSplit() is the one place both are reconciled, and
+   every headline figure in the file reads from it, so the Live
+   wall, the Dashboard and the header can never disagree.
+   Weighting is by duration, exactly as progress has always been
+   weighted here: a six-hour activity called off is a bigger hole
+   in the night than a ten-minute one.
+   ══════════════════════════════════════════════════════════════ */
+const planTasks = () => S.tasks.filter(t=>!t.struck);
+function scopeSplit(all){
+  let plan=0, canc=0, don=0;
+  const live=[], off=[];
+  (all||[]).forEach(t=>{
+    const d=Math.max(dur(t),1e-6); plan+=d;
+    if(isCancelled(t)){ canc+=d; off.push(t); return; }
+    live.push(t); don+=d*pct(t)/100;
+  });
+  const lw=plan-canc;
+  return {
+    all:all||[], live, off,
+    plan, canc, lw, don,
+    /* of the work still in the plan — the figure the header has always shown */
+    pct:      lw   ? Math.round(don/lw*100)        : 0,
+    /* of the scope as it was first planned — these three add up to 100 */
+    donePct:  plan ? Math.round(don/plan*100)      : 0,
+    goPct:    plan ? Math.round((lw-don)/plan*100) : 0,
+    cancPct:  plan ? Math.round(canc/plan*100)     : 0,
+    n:(all||[]).length, nLive:live.length, nCanc:off.length
+  };
+}
 function markDone(t, on){
   if(!t) return;
   if(on){ t.status='done'; t.progress=100; t.autoPct=false;
@@ -6399,8 +6615,63 @@ function focusHas(t){ return !S._focus || S._focus.ids.has(t.id); }
 function setFocus(kind,id,label,ids,color){
   const set=new Set(ids);
   if(!set.size){ toast('Nothing to show for '+label,'err'); return false; }
-  S._focus={kind,id,label,ids:set,color:color||null};
+  /* `keep` is the escape hatch: anything created while this focus is on is
+     remembered here, so it stays visible even for a focus whose membership
+     cannot be re-derived (a dashboard selection, say). */
+  S._focus={kind,id,label,ids:set,color:color||null,keep:new Set()};
   return true;
+}
+/* ══════════════════════════════════════════════════════════════
+   Revision AL · a live focus
+   Until AL a focus was the list of ids that existed at the moment
+   you clicked "Show only this".  Add an activity to the group you
+   were looking at, or duplicate one inside it, and the new row was
+   not in that list — so the plan grew and the screen did not, and
+   the only way to see your own work was to reload, which threw the
+   focus away and made it look like a fix.
+   A focus now says what it MEANS, and the meaning is re-read every
+   time the screen is drawn.  Only a focus with no such meaning
+   falls back to the frozen list.
+   ══════════════════════════════════════════════════════════════ */
+function focusResolve(f){
+  if(!f) return null;
+  switch(f.kind){
+    case 'group':
+      return G(f.id) ? tasksUnder(f.id).map(t=>t.id) : null;
+    case 'stage':
+      return S.tasks.filter(t=>(stageOf(t)||null)===(f.id||null)).map(t=>t.id);
+    case 'team':
+      return S.tasks.filter(t=>inTeam(t,f.id)).map(t=>t.id);
+    case 'none':                                  /* the tasks with no team */
+      return S.tasks.filter(t=>teamIdsOf(t).length===0).map(t=>t.id);
+    case 'loc':
+      return f.id==='__untagged'
+        ? S.tasks.filter(t=>!t.locationId).map(t=>t.id)
+        : S.tasks.filter(t=>locTree(f.id).indexOf(t.locationId)>=0).map(t=>t.id);
+  }
+  return null;
+}
+function focusSync(){
+  const f=S._focus; if(!f) return;
+  const live=focusResolve(f);
+  if(live){
+    /* a focus that knows what it means is simply that, every time: a task that
+       joins the group joins the view, and one that leaves it leaves.  `keep`
+       deliberately does NOT override this — the chip would then be counting
+       work that is not in the thing it names. */
+    f.ids=new Set(live);
+    return;
+  }
+  /* a hand-picked set has no meaning to re-read, so it holds what it was given,
+     less anything deleted, plus anything made while it was on */
+  f.ids.forEach(id=>{ if(!T(id)) f.ids.delete(id); });
+  (f.keep||new Set()).forEach(id=>{ if(T(id)) f.ids.add(id); });
+}
+/* anything made while a hand-picked focus is on belongs to it */
+function focusAdopt(id){
+  const f=S._focus; if(!f||!id) return;
+  (f.keep||(f.keep=new Set())).add(id);
+  f.ids.add(id);
 }
 function clearFocus(quiet){
   if(!S._focus) return;
@@ -6759,7 +7030,9 @@ function labelSpan(gid){
 }
 function groupSpan(gid){
   const all=tasksUnder(gid);
-  const list=all.filter(t=>!taskOff(t));
+  /* Revision AJ — cancelled work is not a zero to average in, it is not work:
+     a group with four activities, one of them cancelled, is three activities */
+  const list=all.filter(t=>!taskOff(t) && !isCancelled(t));
   if(!list.length) return null;
   let tot=0,don=0; list.forEach(t=>{const d=dur(t);tot+=d;don+=d*pct(t)/100;});
   return {s:Math.min(...list.map(t=>t.s)), e:Math.max(...list.map(t=>t.e)), pct:tot?Math.round(don/tot*100):0};
@@ -6779,6 +7052,7 @@ cacheDom();                                   // script sits after the markup, s
 let rafPending=false;
 
 function refreshAll(){
+  focusSync();                                   /* Revision AL */
   computeRange(); computeCPM();
   renderCatBar(); renderStatBar(); renderFilterPill(); renderPickers();
   if(S._view==='schedule') renderSchedule();
@@ -6900,9 +7174,12 @@ function renderGrid(){
       const chip=el('div','chip'); chip.style.background=g.color; c.appendChild(chip);
       c.appendChild(el('span','nm',g.name));
       if(watchHas('g',g.id)) c.appendChild(watchPip('g',g.id));
-      const nT=(kids.length?tasksUnder(g.id):tasksOf(g.id)).length, nL=labelsOf(g.id).length;
+      const gAll=(kids.length?tasksUnder(g.id):tasksOf(g.id));
+      const nT=gAll.length, nL=labelsOf(g.id).length;
+      const nC=gAll.filter(isCancelled).length;          /* Revision AK */
       const cnt=el('span',null,' ('+nT+(kids.length?(' · '+kids.length+' subgroup'+(kids.length===1?'':'s')):'')+
-                                    (nL?' · '+nL+' label'+(nL===1?'':'s'):'')+')');
+                                    (nL?' · '+nL+' label'+(nL===1?'':'s'):'')+
+                                    (nC?' · '+nC+' cancelled':'')+')');
       cnt.style.cssText='color:var(--ink-3);font-weight:600;font-size:11px'; c.appendChild(cnt);
       row.appendChild(c);
       const cc=styleCell(el('div','cell c-cat'),'cat'); cc.appendChild(catTag(g.categoryId)); row.appendChild(cc);
@@ -6948,12 +7225,12 @@ function renderGrid(){
     }else{
       const t=T(r.id);
       const off=taskOff(t);
-      const row=el('div','grow'+(S._sel&&S._sel.k==='t'&&S._sel.id===t.id?' sel':'')+((S.view.crit&&t.critical)?' crit':'')+(off?' off':'')+(t.struck?' struck':'')+(watchHas('t',t.id)?' wch':''));
+      const row=el('div','grow'+(S._sel&&S._sel.k==='t'&&S._sel.id===t.id?' sel':'')+((S.view.crit&&t.critical)?' crit':'')+(off?' off':'')+(t.struck?' struck':'')+(isCancelled(t)?' canc':'')+(watchHas('t',t.id)?' wch':''));
       row.dataset.k='t'; row.dataset.id=t.id; row.style.height=r.h+'px';
       row.appendChild(tickCell(t.struck?'off':(off?'off':'on'),'t',t.id));
       const c=el('div','cell c-name'); c.style.width=cellW('name');
       const grip=el('div','grip'); grip.innerHTML=ICONS.grip; grip.dataset.drag='1';
-      grip.title='Drag to reorder, or onto a group or subgroup to move it there';
+      grip.title='Drag to reorder — or drop it on a group or subgroup row to move it in there';
       c.appendChild(grip);
       for(let d=0; d<r.depth; d++) c.appendChild(el('div','subind'));
       c.appendChild(el('div','indent'));
@@ -7100,8 +7377,10 @@ function shade(hex,amt){
 const selT=t=>S._sel&&S._sel.k==='t'&&S._sel.id===t.id;
 /* Progress colouring: green = finished, amber = the outstanding part of work in
    progress, red = not started or blocked. Every colour is user-settable. */
+const CANCOL='#98A2B3';                    /* Revision AJ — a colour that claims nothing */
 function barPaint(t){
   const C=S.view.colors, st=t.status||'not-started', p=pct(t);
+  if(st==='cancelled')    return {base:CANCOL, done:CANCOL, pct:0};
   if(st==='done'||p>=100) return {base:C.done, done:C.done, pct:100};
   if(st==='not-started')  return {base:C.todo, done:C.done, pct:p};
   if(st==='blocked')      return {base:C.blocked, done:C.done, pct:p};
@@ -7138,7 +7417,7 @@ function renderBars(){
     if(taskOff(t)) return;                          // unticked → no bar
     const crit=S.view.crit&&t.critical, cat=catOf(t.categoryId);
     if(t.milestone){
-      const m=el('div','ms'+(crit?' crit':'')+(selT(t)?' sel':''));
+      const m=el('div','ms'+(crit?' crit':'')+(selT(t)?' sel':'')+(isCancelled(t)?' canc':''));
       m.dataset.k='t'; m.dataset.id=t.id; m.dataset.role='move';
       const mp=barPaint(t);
       m.style.background='linear-gradient(135deg,'+shade(mp.base,22)+','+mp.base+')';
@@ -7152,7 +7431,7 @@ function renderBars(){
       return;
     }
     const w=Math.max(5,dur(t)*p);
-    const b=el('div','bar'+(crit?' crit':'')+(selT(t)?' sel':''));
+    const b=el('div','bar'+(crit?' crit':'')+(selT(t)?' sel':'')+(isCancelled(t)?' canc':''));
     b.dataset.k='t'; b.dataset.id=t.id; b.dataset.role='move';
     b.style.left=X(t.s)+'px'; b.style.width=w+'px'; b.style.top=(r.y+(r.h-22)/2)+'px';
     const paint=barPaint(t);
@@ -7204,19 +7483,23 @@ function renderArrows(){
    different questions.  They now count whatever the chips have selected, and a
    fifth box says out loud which closure that is, so nobody has to guess.   */
 function statScope(){
-  const all=liveTasks();
+  const live=liveTasks(), planned=planTasks();
   if(S._view==='live' && typeof detTasks==='function'){
     const id=(typeof liveStageId==='function')?liveStageId():'';
     const cat=id?S.categories.find(c=>c.id===id):null;
-    if(cat) return {list:detTasks(), name:cat.name, color:cat.color, on:true};
-    return {list:all, name:'Every closure', color:'', on:true};
+    /* Revision AK — "scope" carries the cancelled work too, so the Cancelled
+       box can say what share of the night was called off */
+    if(cat) return {list:detTasks(), scope:detAll(), name:cat.name, color:cat.color, on:true};
+    return {list:live, scope:planned, name:'Every closure', color:'', on:true};
   }
-  return {list:all, name:'', color:'', on:false};
+  return {list:live, scope:planned, name:'', color:'', on:false};
 }
 function renderStats(){
   const sc=statScope();
   const ts=sc.list;
-  const struck=S.tasks.length-liveTasks().length;
+  /* Revision AK — struck means struck.  AJ's cancelled activities were landing
+     in this count too, so the window note claimed they had been struck out. */
+  const struck=S.tasks.filter(t=>t.struck).length;
   $('#kTasks').textContent=ts.length;
   let tot=0,don=0; ts.forEach(t=>{const d=dur(t);tot+=d;don+=d*pct(t)/100;});
   $('#kPct').innerHTML=(tot?Math.round(don/tot*100):0)+'<small>%</small>';
@@ -7243,6 +7526,23 @@ function renderStats(){
       }
     }
   }
+  /* Revision AK — the cancelled share of whatever these boxes are counting */
+  {
+    const sp=scopeSplit(sc.scope||liveTasks()), box=$('#cardCanc'), v=$('#kCanc');
+    if(box && v){
+      box.hidden=!sp.nCanc;
+      document.body.classList.toggle('akcanc', !!sp.nCanc);
+      /* a share that rounds to nothing is still not nothing — three activities
+         called off inside a programme measured in months round to 0%, and a
+         box reading "0%" next to a visible count reads as a bug */
+      v.innerHTML=(sp.nCanc && sp.cancPct===0 ? '&lt;1' : sp.cancPct)+'<small>%</small>';
+      box.title=sp.nCanc+' activit'+(sp.nCanc===1?'y':'ies')+' cancelled'+
+                (sc.on&&sc.name?(' in '+sc.name):'')+' — '+fmtDur(sp.canc)+' of the '+
+                fmtDur(sp.plan)+' first planned, '+sp.cancPct+'% of the scope.  They are '+
+                'not overdue and not owed tonight; they come back on a later date.  '+
+                'Click to list them.';
+    }
+  }
   const cc=$('#cardCrit'); if(cc) cc.classList.toggle('live',!!S._critOnly);
   $('#sGroups').textContent=S.groups.length;
   $('#sLinks').textContent=ts.reduce((n,t)=>n+(t.deps?t.deps.length:0),0);
@@ -7257,7 +7557,9 @@ function renderStats(){
    view still claimed the full span and you had to work the real dates out by
    eye.  Now it reports exactly the set you are looking at, and says so.     */
 function shownTasks(){
-  return liveTasks().filter(t=>taskPassesFilter(t));
+  /* Revision AJ — what is on screen, not what is live: a cancelled row is
+     still drawn, so filtering to Cancelled must report those three, not none */
+  return S.tasks.filter(t=>!t.struck && taskPassesFilter(t));
 }
 function windowNote(struckCount){
   const el2=$('#sWindow'); if(!el2) return;
@@ -7268,7 +7570,7 @@ function windowNote(struckCount){
   else{
     list=shownTasks();
     what = anyFilter() ? 'Filtered' : (S.view.hideUnticked||S.hidden.size ? 'Ticked' : 'Window');
-    if(!list.length && !anyFilter()){ list=liveTasks(); what='Window'; }
+    if(!list.length && !anyFilter()){ list=S.tasks.filter(t=>!t.struck); what='Window'; }
   }
   if(lab) lab.textContent=what;
   if(!list.length){
@@ -7291,7 +7593,7 @@ function windowNote(struckCount){
             + (struckCount ? ('  ·  '+struckCount+' struck out and not counted.') : '');
 }
 function updTabCounts(){
-  const open=S.tasks.filter(t=>t.status!=='done').length;
+  const open=S.tasks.filter(t=>isOpen(t)).length;
   const c=$('#tabCnt'); c.textContent=open; c.style.display=open?'':'none';
 }
 
@@ -7324,7 +7626,7 @@ function renderCatBar(){
   all.onclick=()=>{ S._cats=null; renderCatBar(); renderSchedule(); renderActions(); renderTeams(); };
   bar.appendChild(all);
 }
-const STCLS={'not-started':'ns','in-progress':'ip','blocked':'bl','done':'dn'};
+const STCLS={'not-started':'ns','in-progress':'ip','blocked':'bl','done':'dn','cancelled':'cx'};
 function renderStatBar(){
   const bar=$('#statBar'); if(!bar) return;
   bar.innerHTML='';
@@ -7357,6 +7659,12 @@ function renderFilterPill(){
     const p=el('span','fpill focus');
     if(f.color){ const i=el('i'); i.style.background=f.color; p.appendChild(i); }
     p.appendChild(el('span',null,'Only '+f.label+' · '+f.ids.size+' task'+(f.ids.size===1?'':'s')));
+    /* Revision AL — the count is re-read on every draw, so anything added to
+       this group while it is on shows up here and on the chart at once */
+    p.title = focusResolve(f)
+      ? ('Showing “'+f.label+'” only.  Anything you add to it, or duplicate '+
+         'inside it, appears here straight away.')
+      : ('Showing “'+f.label+'” only — '+f.ids.size+' task'+(f.ids.size===1?'':'s')+'.');
     const x=el('button',null,'×'); x.title='Show the whole programme again';
     x.onclick=()=>clearFocus();
     p.appendChild(x); w.appendChild(p);
@@ -7477,7 +7785,9 @@ function dupTask(id){
   const c=JSON.parse(JSON.stringify(t)); c.id=uid('t'); c.name=t.name+' (copy)'; c.deps=[];
   c.subtasks=subs(t).map(s=>({id:uid('s'),title:s.title,done:false}));
   S.tasks.splice(S.tasks.indexOf(t)+1,0,c);
-  S._sel={k:'t',id:c.id}; markDirty(); refreshAll(); toast('Task duplicated');
+  S._sel={k:'t',id:c.id}; markDirty();
+  revealTask(c.id, '“'+c.name+'”');            /* Revision AL */
+  refreshAll(); toast('Task duplicated');
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -7654,11 +7964,65 @@ document.addEventListener('pointerdown',e=>{
   window.addEventListener('pointermove',onRowMove);
   window.addEventListener('pointerup',onRowUp,{once:true});
 });
+/* ── Revision AN · the drop badge, the lit row and the auto-scroll ──
+   Everything the pointer needs to be told before it lets go.          */
+function dropClear(){
+  $$('#gridRows .grow.gdrop').forEach(r=>r.classList.remove('gdrop'));
+}
+function dropBadge(text,x,y){
+  let b=$('#dropBadge');
+  if(!text){ if(b) b.remove(); return; }
+  if(!b){ b=el('div',null,''); b.id='dropBadge'; b.className='dropbadge'; document.body.appendChild(b); }
+  b.textContent=text;
+  b.style.left=(x+16)+'px';
+  b.style.top =(y+18)+'px';
+}
+/* dragging towards a row that is off the bottom has to bring it into view */
+function dropScroll(y){
+  const bd=dom.gridBody; if(!bd) return;
+  const r=bd.getBoundingClientRect(), edge=46;
+  if(y<r.top+edge)        bd.scrollTop -= Math.max(4,(r.top+edge-y)/2);
+  else if(y>r.bottom-edge)bd.scrollTop += Math.max(4,(y-(r.bottom-edge))/2);
+}
+/* a closed group opens if you hover it, so you can drop inside and see where */
+let dropOpen=null;
+function dropHover(gid){
+  if(dropOpen && dropOpen.id===gid) return;
+  if(dropOpen){ clearTimeout(dropOpen.t); dropOpen=null; }
+  if(!gid) return;
+  const g=G(gid); if(!g||!g.collapsed) return;
+  dropOpen={id:gid,t:setTimeout(()=>{ const gg=G(gid);
+    if(gg&&gg.collapsed&&rowDrag){ gg.collapsed=false; renderSchedule(); } },600)};
+}
+
 function onRowMove(e){
   if(!rowDrag) return;
   const rows=$$('#gridRows .grow');
   const box=dom.gridRows.getBoundingClientRect();
   const y=e.clientY;
+  dropScroll(y);
+
+  /* ── Revision AN · dropping an activity ONTO a group row puts it in that
+     group.  Before AN the only hint was a line between two rows, so "into
+     this subgroup" had to be aimed at the gap under its first task — which
+     is how an activity ends up somewhere nobody meant to put it.        */
+  if(rowDrag.k==='t'){
+    const over=document.elementFromPoint(e.clientX,y);
+    const gr=over&&over.closest&&over.closest('#gridRows .grow[data-k="g"]');
+    if(gr){
+      const gid=gr.dataset.id, g=G(gid);
+      dropClear(); gr.classList.add('gdrop');
+      hint.style.display='none';
+      rowDrag.target={k:'g',id:gid,pos:'in'};
+      dropHover(gid);
+      const t=T(rowDrag.id);
+      dropBadge(t && t.groupId===gid ? ('Already in “'+g.name+'”')
+                                     : ('Into “'+g.name+'”'), e.clientX, y);
+      return;
+    }
+    dropClear(); dropHover(null);
+  }
+
   let best=null, bestD=Infinity, pos='before';
   rows.forEach(r=>{
     if(r===rowDrag.row) return;
@@ -7679,24 +8043,134 @@ function onRowMove(e){
       });
     });
   }
-  if(!best){ hint.style.display='none'; rowDrag.target=null; return; }
+  if(!best){ hint.style.display='none'; rowDrag.target=null; dropBadge(''); return; }
   hint.style.display='';
   const rc=best.getBoundingClientRect();
   hint.style.top=((pos==='before'?rc.top:rc.bottom)-box.top-1)+'px';
   rowDrag.target={k:best.dataset.k,id:best.dataset.id,pos};
+  /* Revision AN — say where it will land, including the group it joins */
+  if(rowDrag.k==='t'){
+    const ref=best.dataset.k==='t'?T(best.dataset.id):null;
+    const gid=ref?ref.groupId:best.dataset.id;
+    const g=G(gid);
+    dropBadge((pos==='before'?'Above':'Below')+' “'+
+              (ref?cutName(ref.name,26):(g?g.name:'')) + '”' +
+              (g?('  ·  in “'+g.name+'”'):''), e.clientX, y);
+  }else dropBadge('');
 }
 function onRowUp(){
   window.removeEventListener('pointermove',onRowMove);
   document.body.style.cursor='';
   if(hint){ hint.remove(); hint=null; }
+  dropClear(); dropBadge('');
+  if(dropOpen){ clearTimeout(dropOpen.t); dropOpen=null; }
   const d=rowDrag; rowDrag=null;
   if(d&&d.row) d.row.classList.remove('dragrow');
   if(!d||!d.target){ return; }
-  push();
-  if(d.k==='g') moveGroup(d.id,d.target);
-  else moveTask(d.id,d.target);
-  markDirty(); refreshAll();
+
+  /* ── Revision AN · ask first ───────────────────────────────────────────
+     A drag that only re-orders rows inside the group they already live in
+     changes nothing about the plan, so it lands straight away — asking on
+     every nudge would make ordering unusable.  A drag that moves work from
+     one group to another, or a group to another parent, is the one that
+     does damage when it was a slip of the hand, and that one always asks.
+     Nothing is written until it is agreed to, so Cancel has nothing to
+     undo — the plan was never touched.                                  */
+  const commit=()=>{
+    push();
+    if(d.k==='g') moveGroup(d.id,d.target);
+    else moveTask(d.id,d.target);
+    markDirty();
+    if(d.k==='t' && typeof revealTask==='function') revealTask(d.id);
+    refreshAll();
+  };
+  const mv=moveIntent(d);
+  if(!mv){ return; }                       /* it would not move anywhere */
+  if(!mv.rehome){ commit(); return; }      /* only the order changed */
+  askMove(mv, commit);
 }
+
+/* ══════════════════════════════════════════════════════════════
+   Revision AN · what a drop would actually do
+   Worked out before anything is written, so the question the
+   screen asks and the change it makes are the same thing.
+   ══════════════════════════════════════════════════════════════ */
+/* the file already has groupPath(group, sep) — this is just the id form */
+const gPath = gid => { const g=G(gid); return g?groupPath(g):''; };
+function moveIntent(d){
+  if(!d||!d.target) return null;
+  if(d.k==='g'){
+    const g=G(d.id), drop=G(d.target.id);
+    if(!g) return null;
+    /* mirror moveGroup's own reading of the drop, so the question matches */
+    let cand=null;
+    if(drop){
+      cand=(d.target.pos==='after' && subsOf(drop.id).length && !drop.collapsed)
+           ? drop.id : (drop.parentId||null);
+      const ok=cand && cand!==g.id && !isUnder(G(cand),g.id) &&
+               groupDepth(G(cand))+1<=GDEPTH_MAX;
+      if(!ok) cand=null;
+    }
+    const from=g.parentId||null, to=cand||null;
+    return {kind:'g', id:g.id, name:g.name, rehome:from!==to,
+            fromLab: from?gPath(from):'the top level',
+            toLab:   to  ?gPath(to)  :'the top level',
+            fromCat: catOf(stageOf({groupId:from||g.id,categoryId:null})),
+            toCat:   null};
+  }
+  const t=T(d.id); if(!t) return null;
+  let gid;
+  if(d.target.k==='g'){
+    gid=d.target.id;
+    /* dropped straight onto the group it already lives in: the badge said
+       "Already in …", so honour that and leave the order alone */
+    if(d.target.pos==='in' && t.groupId===gid) return null;
+  }
+  else{ const ref=T(d.target.id); if(!ref) return null; gid=ref.groupId; }
+  const from=t.groupId, to=gid;
+  const fc=catOf(stageOf(t));
+  const tc=catOf(t.categoryId || (G(to)?stageOf({groupId:to,categoryId:null}):null));
+  return {kind:'t', id:t.id, name:t.name, rehome:from!==to,
+          fromLab: from?gPath(from):'no group',
+          toLab:   to  ?gPath(to)  :'no group',
+          fromCat: fc, toCat: tc};
+}
+
+let moveAsk=null;
+function askMove(mv, go){
+  moveAsk={go};
+  const what=$('#mvWhat'), from=$('#mvFrom'), to=$('#mvTo'), note=$('#mvNote');
+  $('#mvTitle').textContent = mv.kind==='g' ? 'Move this group?' : 'Move this activity?';
+  what.innerHTML='';
+  what.appendChild(el('b',null,mv.name));
+  what.appendChild(el('span',null, mv.kind==='g' ? 'group' : 'activity'));
+  from.textContent=mv.fromLab;
+  to.textContent=mv.toLab;
+  /* the one consequence that is easy to miss and expensive to discover late */
+  const fc=mv.fromCat, tc=mv.toCat;
+  if(mv.kind==='t' && fc && tc && fc.id!==tc.id){
+    note.hidden=false;
+    note.textContent='It also changes closure — from “'+fc.name+'” to “'+tc.name+
+                     '” — so it will be counted against that night instead.';
+  }else if(mv.kind==='t' && fc && !tc){
+    note.hidden=false;
+    note.textContent='“'+mv.toLab+'” carries no closure, so this activity would '+
+                     'stop being counted under “'+fc.name+'”.';
+  }else note.hidden=true;
+  openScrim('#moveScrim');
+  setTimeout(()=>{ const b=$('#mvYes'); if(b) b.focus(); },60);
+}
+function moveAnswer(yes){
+  const a=moveAsk; moveAsk=null;
+  closeScrim('#moveScrim');
+  if(!a) return;
+  if(yes) a.go();
+  else toast('Left where it was');
+}
+$('#mvYes').onclick=()=>moveAnswer(true);
+$('#mvNo').onclick =()=>moveAnswer(false);
+$('#mvX').onclick  =()=>moveAnswer(false);
+$('#moveScrim').addEventListener('pointerdown',e=>{ if(e.target.id==='moveScrim') moveAnswer(false); });
 /* ══════════════════════════════════════════════════════════════
    13b · SUBGROUPS  (Revision Z)
    A right-click on a group row opens the row menu; "Add subgroup"
@@ -7816,6 +8290,13 @@ function moveTask(id,target){
     const gid=target.id;
     t.groupId=gid;
     const list=S.tasks.filter(x=>x.groupId===gid);
+    /* Revision AN — dropped onto the group itself, it joins the end of its work */
+    if(target.pos==='in'&&list.length){
+      const last=list[list.length-1];
+      S.tasks.splice(S.tasks.indexOf(last)+1,0,t);
+      toast('“'+t.name+'” moved into “'+(G(gid)||{}).name+'”','ok');
+      return;
+    }
     if(target.pos==='before'||!list.length){
       const first=list[0];
       const at=first?S.tasks.indexOf(first):S.tasks.length;
@@ -8141,6 +8622,9 @@ function renderTaskState(){
   if(done) bits.push('Completed '+(editingTask.doneAt!=null&&isFinite(editingTask.doneAt)
                                    ? fmtY(editingTask.doneAt) : 'today')+' · 100%');
   if(st) bits.push('Struck out — kept on the chart, counted nowhere, left out of every export');
+  if(isCancelled(editingTask))
+    bits.push('Cancelled — it could not proceed and will be re-planned. It keeps its row, '+
+              'it is never overdue, and it counts as cancelled scope, not as work still owed tonight.');
   if(!bits.length) bits.push('Strike out instead of deleting when the work is dropped but not yet settled.');
   note.textContent=bits.join('  ·  ');
   const lp=$('#fLocPath');
@@ -8421,7 +8905,12 @@ $('#tmSave').onclick=()=>{
   const ex=T(rec.id);
   if(ex) Object.assign(ex,rec); else S.tasks.push(rec);
   S._sel={k:'t',id:rec.id};
-  closeScrim('#taskScrim'); markDirty(); refreshAll(); toast(ex?'Task updated':'Task added','ok');
+  /* Revision AL — an activity is edited into a view that was already showing
+     it, but a NEW one has to be let in */
+  closeScrim('#taskScrim'); markDirty();
+  if(!ex) revealTask(rec.id, '“'+rec.name+'”');
+  refreshAll();
+  toast(ex?'Task updated':'Task added','ok');
 };
 $('#tmDelete').onclick=()=>{ const id=editingTask&&editingTask.id; closeScrim('#taskScrim'); if(id) delTask(id); };
 
@@ -8758,18 +9247,20 @@ $('#bAddTeam').onclick=()=>openTeam(null);
 function actStatusSet(){
   const s=S._act.status;
   const a=Array.isArray(s)?s.slice():(s?[s]:[]);
-  return a.filter(x=>['open','all','not-started','in-progress','blocked','done'].indexOf(x)>=0);
+  return a.filter(x=>['open','all','not-started','in-progress','blocked','done','cancelled'].indexOf(x)>=0);
 }
 function actStatusOk(t){
   const set=actStatusSet();
   if(!set.length||set.indexOf('all')>=0) return true;
   const st=t.status||'not-started';
-  return set.some(k=> k==='open' ? st!=='done' : st===k);
+  /* Revision AJ — "Open" means work still to do, and cancelled work is not
+     work still to do.  Asking for it by name is how you see it. */
+  return set.some(k=> k==='open' ? (st!=='done' && st!=='cancelled') : st===k);
 }
 function actStatusLabel(){
   const set=actStatusSet();
   if(!set.length||set.indexOf('all')>=0) return 'All statuses';
-  const L={open:'Open','not-started':'Not started','in-progress':'In progress',blocked:'Blocked',done:'Done'};
+  const L={open:'Open','not-started':'Not started','in-progress':'In progress',blocked:'Blocked',done:'Done',cancelled:'Cancelled'};
   return set.map(k=>L[k]).join(' + ');
 }
 function actionRows(){
@@ -8802,7 +9293,7 @@ function actionRows(){
   return list;
 }
 function dueClass(t){
-  if(t.status==='done') return '';
+  if(t.status==='done'||t.status==='cancelled') return '';
   if(t.e<NOW) return 'od';
   if(t.e-NOW<=7) return 'soon';
   return '';
@@ -8814,10 +9305,10 @@ function renderActions(){
   const all=S.tasks;
   const cnt=s=>all.filter(t=>(t.status||'not-started')===s).length;
   const overdue=all.filter(isLate).length;
-  const week=all.filter(t=>t.status!=='done'&&t.e>=NOW&&t.e-NOW<=7).length;
-  const unass=all.filter(t=>t.status!=='done'&&!t.ownerId).length;
+  const week=all.filter(t=>isOpen(t)&&t.e>=NOW&&t.e-NOW<=7).length;
+  const unass=all.filter(t=>isOpen(t)&&!t.ownerId).length;
   const tiles=[
-    ['Open actions',all.filter(t=>t.status!=='done').length,'var(--brand-2)'],
+    ['Open actions',all.filter(t=>isOpen(t)).length,'var(--brand-2)'],
     ['Not started',cnt('not-started'),'#61718a'],
     ['In progress',cnt('in-progress'),'#0b5fa8'],
     ['Blocked',cnt('blocked'),'#b3271c'],
@@ -8894,7 +9385,7 @@ function renderActions(){
     const c7=el('td');
     const dd=el('span','due '+dueClass(t), t.allDay?fmt(endShown(t)):fmtDT(t.e));
     c7.appendChild(dd);
-    if(t.status!=='done'){
+    if(isOpen(t)){
       const diff=t.e-NOW;
       const sm=el('div','mini', diff<0?fmtDur(-diff)+' late':(diff<1?'due today':'in '+fmtDur(diff)));
       c7.appendChild(sm);
@@ -8911,6 +9402,26 @@ function renderActions(){
   const cap=$('#actCount');
   if(cap) cap.textContent=list.length+' of '+S.tasks.length+' tasks  ·  '+actStatusLabel();
 }
+/* ══════════ Revision AJ · cancelling, and changing your mind ══════════
+   Coming back from cancelled has to land somewhere sensible, so the status is
+   worked out from what the activity had actually booked rather than being
+   dropped back to "not started" and losing the record of the work done.   */
+function toggleCancelTask(id){
+  const t=T(id); if(!t || RO_ON) return;
+  push();
+  if(isCancelled(t)){
+    const p=+t.progress||0;
+    t.status = p>=100 ? 'done' : (p>0 ? 'in-progress' : 'not-started');
+    markDirty(); refreshAll();
+    toast('\u201c'+t.name+'\u201d is back in the plan as '+STATUS[t.status].lab.toLowerCase());
+    return;
+  }
+  t.status='cancelled';
+  t.autoPct=false;
+  markDirty(); refreshAll();
+  toast('\u201c'+t.name+'\u201d marked cancelled \u2014 it keeps its row and counts nowhere','ok');
+}
+
 function cycleStatus(id){
   const t=T(id); if(!t) return;
   const order=['not-started','in-progress','blocked','done'];
@@ -9123,9 +9634,12 @@ function teamLaneModel(){
 }
 function teamStats(tm){
   const items=S.tasks.filter(t=>inTeam(t,tm.id));
-  const open=items.filter(t=>t.status!=='done').length;
-  const late=items.filter(t=>t.status!=='done'&&t.e<TODAY).length;
-  let tot=0,don=0; items.forEach(t=>{const d=Math.max(dur(t),1e-6);tot+=d;don+=d*pct(t)/100;});
+  /* Revision AJ — a cancelled activity is not an open one, and it is not a
+     zero either: the team's figure is worked out from what is left to do */
+  const own=items.filter(t=>!isCancelled(t));
+  const open=own.filter(t=>isOpen(t)).length;
+  const late=own.filter(t=>isOpen(t)&&t.e<TODAY).length;
+  let tot=0,don=0; own.forEach(t=>{const d=Math.max(dur(t),1e-6);tot+=d;don+=d*pct(t)/100;});
   return {items, open, late, pct:tot?Math.round(don/tot*100):0,
           span:items.length?{s:Math.min.apply(null,items.map(t=>t.s)),e:Math.max.apply(null,items.map(t=>t.e))}:null};
 }
@@ -9277,7 +9791,7 @@ function teamsList(gridEl,jump){
       mr.appendChild(el('div','c c2',''));
       const owned=S.tasks.filter(t=>t.ownerId===p.id);
       mr.appendChild(el('div','c c3',String(owned.length)));
-      mr.appendChild(el('div','c c4',String(owned.filter(t=>t.status!=='done').length)));
+      mr.appendChild(el('div','c c4',String(owned.filter(t=>isOpen(t)).length)));
       const l=owned.filter(isLate).length;
       const lc=el('div','c c5',String(l)); if(l) lc.classList.add('bad');
       mr.appendChild(lc);
@@ -9302,8 +9816,9 @@ function teamsPeople(gridEl,jump){
   const rows=peopleShown().map(p=>{
     const owned=S.tasks.filter(t=>t.ownerId===p.id);
     const teams=S.teams.filter(tm=>(tm.members||[]).some(m=>m.personId===p.id));
-    let tot=0,don=0; owned.forEach(t=>{const d=Math.max(dur(t),1e-6);tot+=d;don+=d*pct(t)/100;});
-    return {p, owned, teams, open:owned.filter(t=>t.status!=='done').length,
+    const live2=owned.filter(t=>!isCancelled(t));          /* Revision AJ */
+    let tot=0,don=0; live2.forEach(t=>{const d=Math.max(dur(t),1e-6);tot+=d;don+=d*pct(t)/100;});
+    return {p, owned, teams, open:live2.filter(t=>isOpen(t)).length,
             late:owned.filter(isLate).length, pct:tot?Math.round(don/tot*100):0};
   }).sort((a,b)=>b.owned.length-a.owned.length||a.p.name.localeCompare(b.p.name));
   const maxOwned=Math.max(1,...rows.map(r=>r.owned.length));
@@ -10181,6 +10696,10 @@ function openTaskRowMenu(x,y,tid){
     menuItem(m,'Move to…',()=>openMovePicker(tid));
     menuItem(m,t.status==='done'?'Reopen':'Mark complete',()=>toggleDoneTask(tid));
     menuItem(m,t.struck?'Bring back into the plan':'Strike out',()=>toggleStrikeTask(tid));
+    /* Revision AJ — cancelling is a decision about the work, not a tidy-up of
+       the chart, so it sits beside Mark complete rather than beside Strike out */
+    menuItem(m,isCancelled(t)?'Un-cancel it':'Cancel this activity\u2026',()=>toggleCancelTask(tid),
+             isCancelled(t)?'':'dan');
   }
   m.appendChild(el('div','msep'));
   watchMenuItem(m,'t',tid);
@@ -10304,6 +10823,14 @@ $('#cardPct').onclick=()=>{
   setView('actions'); toast('Open actions, least complete first');
 };
 $('#cardDur').onclick=()=>{ setView('schedule'); fit(); toast('Fitted the full programme window'); };
+/* Revision AK — name them, do not just count them */
+$('#cardCanc').onclick=()=>{
+  S._act={...S._act, status:['cancelled']};
+  if(typeof syncActStatusSeg==='function') syncActStatusSeg();
+  setView('actions');
+  const n=scopeSplit(statScope().scope||liveTasks()).nCanc;
+  toast(n+' cancelled activit'+(n===1?'y':'ies')+' — each one comes back on a later date');
+};
 
 const typing=e=>/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)||e.target.isContentEditable;
 document.addEventListener('keydown',e=>{
@@ -10314,6 +10841,8 @@ document.addEventListener('keydown',e=>{
   }
   if(typing(e)){
     if(e.key==='Enter'){
+      /* Revision AN — the move question answers to the keyboard as well */
+      if(moveAsk){ e.preventDefault(); moveAnswer(true); return; }
       if($('#taskScrim').classList.contains('open')&&e.target.id!=='fNotes'&&e.target.id!=='fSubNew'&&e.target.id!=='fDepQ'&&!e.target.classList.contains('stxt')){ e.preventDefault(); $('#tmSave').click(); }
       else if($('#groupScrim').classList.contains('open')){ e.preventDefault(); $('#gmSave').click(); }
       else if($('#teamScrim').classList.contains('open')&&!e.target.closest('.ta')){ e.preventDefault(); $('#teSave').click(); }
@@ -10890,7 +11419,8 @@ async function buildWorkbook(cfg){
     if(!catCache[hex]) catCache[hex]=st({font:{b:1,sz:8,color:hex},fill:XLSX.lighten(hex,.86),align:{h:'center',v:'center'},border:BOT});
     return catCache[hex];
   }
-  const STCOL={'not-started':['61718A','EDF1F6'],'in-progress':['0B5FA8','E6F2FD'],'blocked':['B3271C','FDECEA'],'done':['0D7A42','E4F6EC']};
+  const STCOL={'not-started':['61718A','EDF1F6'],'in-progress':['0B5FA8','E6F2FD'],'blocked':['B3271C','FDECEA'],'done':['0D7A42','E4F6EC'],
+               'cancelled':['6B7280','F1F2F4']};
   const stCache={};
   function sStatus(k){
     if(!stCache[k]){ const c=STCOL[k]||STCOL['not-started'];
@@ -11012,9 +11542,11 @@ async function buildWorkbook(cfg){
   navBand(cov,'PROGRAMME PACK',10);
   titleBlock(cov,S.name,(doc.company?doc.company+'  ·  ':'')+'Programme schedule pack'+(useFilter?'  ·  filtered view':''),7);
   {
-    const openN=tasksIn.filter(t=>t.status!=='done').length;
+    const openN=tasksIn.filter(t=>isOpen(t)).length;
     const lateN=tasksIn.filter(isLate).length;
-    let tot=0,don=0; tasksIn.forEach(t=>{const d=dur(t);tot+=d;don+=d*pct(t)/100;});
+    /* Revision AJ — the workbook still LISTS cancelled work, with its status
+       against it, but it is not averaged into the headline figure */
+    let tot=0,don=0; tasksIn.filter(t=>t.status!=='cancelled').forEach(t=>{const d=dur(t);tot+=d;don+=d*pct(t)/100;});
     const kpis=[['Tasks',tasksIn.length,0],['Complete',(tot?Math.round(don/tot*100):0)+'%',0],
                 ['Window (days)',hi-lo+1,0],['Critical',tasksIn.filter(t=>t.critical).length,1],
                 ['Open actions',openN,0],['Overdue',lateN,1]];
@@ -11108,7 +11640,7 @@ async function buildWorkbook(cfg){
     periods.length+' × '+scaleLab+' columns'+(useFilter?'  ·  filtered':'')+
     (skipped?('  ·  '+periods.filter(p=>p.gap).map(p=>p.full).join('  ·  ')):''),lastCol);
   {
-    let tot=0,don=0; tasksIn.forEach(t=>{const d=dur(t);tot+=d;don+=d*pct(t)/100;});
+    let tot=0,don=0; tasksIn.filter(t=>t.status!=='cancelled').forEach(t=>{const d=dur(t);tot+=d;don+=d*pct(t)/100;});
     const kpis=[['Tasks',tasksIn.length,0],['Complete',(tot?Math.round(don/tot*100):0)+'%',0],
                 ['Duration (d)',hi-lo+1,0],['Critical',tasksIn.filter(t=>t.critical).length,1],
                 ['Milestones',tasksIn.filter(t=>t.milestone).length,0]];
@@ -11146,10 +11678,13 @@ async function buildWorkbook(cfg){
       const sub = m.sub, dep = m.d||0;
       const T2 = (kidsOf(g).length && typeof tasksUnder==='function') ? tasksUnder(g.id) : tasksOf(g.id);
       const span=(function(){
-        const list=T2.filter(passes);
-        if(!list.length) return null;
+        const all2=T2.filter(passes);
+        if(!all2.length) return null;
+        /* Revision AJ — the row still spans everything, the percentage counts
+           only the work that is still in the plan */
+        const list=all2.filter(t=>t.status!=='cancelled');
         let tot=0,don=0; list.forEach(t=>{const d=dur(t);tot+=d;don+=d*pct(t)/100;});
-        return {s:Math.min(...list.map(t=>t.s)),e:Math.max(...list.map(t=>t.e)),pct:tot?don/tot:0};
+        return {s:Math.min(...all2.map(t=>t.s)),e:Math.max(...all2.map(t=>t.e)),pct:tot?don/tot:0};
       })();
       const cTxt = sub?sSubTxt:sGrpTxt, cCel = sub?sSubCel:sGrpCel,
             cDt  = sub?sSubDt :sGrpDt , cPct = sub?sSubPct:sGrpPct;
@@ -11240,10 +11775,10 @@ async function buildWorkbook(cfg){
   navBand(ac,'ACTION TRACKER',14);
   titleBlock(ac,'Action Tracker','Open items by responsible person — click an action to jump to its bar on the Schedule',14);
   {
-    const openN=tasksIn.filter(t=>t.status!=='done').length;
+    const openN=tasksIn.filter(t=>isOpen(t)).length;
     const lateN=tasksIn.filter(isLate).length;
-    const soonN=tasksIn.filter(t=>t.status!=='done'&&t.e>=NOW&&t.e-NOW<=7).length;
-    const unassN=tasksIn.filter(t=>t.status!=='done'&&!t.ownerId).length;
+    const soonN=tasksIn.filter(t=>isOpen(t)&&t.e>=NOW&&t.e-NOW<=7).length;
+    const unassN=tasksIn.filter(t=>isOpen(t)&&!t.ownerId).length;
     const kpis=[['Open',openN,0],['Blocked',tasksIn.filter(t=>t.status==='blocked').length,1],
                 ['Overdue',lateN,1],['Due ≤ 7 days',soonN,0],['Unassigned',unassN,0],
                 ['Completed',tasksIn.filter(t=>t.status==='done').length,0]];
@@ -11278,7 +11813,7 @@ async function buildWorkbook(cfg){
     ac.set(row,9,pct(t)/100,sPct,'n');
     ac.set(row,10,subs(t).length?(subDone(t)+' / '+subs(t).length):'—',sNum);
     ac.set(row,11,serial(t.s),t.allDay?sDate:sDateT,'d');
-    const late=isLate(t), soon=t.status!=='done'&&t.e>=NOW&&t.e-NOW<=7;
+    const late=isLate(t), soon=isOpen(t)&&t.e>=NOW&&t.e-NOW<=7;
     ac.set(row,12,t.allDay?serial(endShown(t)):serial(t.e),late?(t.allDay?sLate:sLateT):(soon?sSoon:(t.allDay?sDate:sDateT)),'d');
     ac.set(row,13,late?+(NOW-t.e).toFixed(2):0,late?st({font:{b:1,sz:10,color:XLC.crit},align:{h:'center',v:'center'},border:BOT}):sNum,'n');
     ac.set(row,14,t.notes||'',sNote);
@@ -11294,7 +11829,7 @@ async function buildWorkbook(cfg){
     .forEach((h,i)=>tc.set(5,i+1,h,i>=2?sHdrC:sHdr));
   teamsList.forEach((tm,i)=>{
     const row=6+i, items=tasksIn.filter(t=>inTeam(t,tm.id));
-    const open=items.filter(t=>t.status!=='done').length;
+    const open=items.filter(t=>isOpen(t)).length;
     const late=items.filter(isLate).length;
     tc.h(row,18);
     tc.set(row,1,tm.name,st({font:{b:1,sz:11,color:'FFFFFF'},fill:hex(tm.color),align:{v:'center',indent:1},border:BOT}));
@@ -11327,7 +11862,7 @@ async function buildWorkbook(cfg){
       tc.set(mr,4,p.role||'',sMuted);
       tc.set(mr,5,tm.leadId===p.id?'LEAD':'',tm.leadId===p.id?st({font:{b:1,sz:8,color:'FFFFFF'},fill:XLC.band,align:{h:'center',v:'center'},border:BOT}):sNum);
       tc.set(mr,6,owned.length,sNum);
-      tc.set(mr,7,owned.filter(t=>t.status!=='done').length,sNum);
+      tc.set(mr,7,owned.filter(t=>isOpen(t)).length,sNum);
       tc.set(mr,8,owned.filter(isLate).length,sNum);
       mr++;
     });
@@ -11993,8 +12528,10 @@ function exportModel(useFilter){
   return {rows,tasks,lo,hi};
 }
 function groupSpanOf(list){
-  let tot=0,don=0; list.forEach(t=>{const d=Math.max(dur(t),1e-6);tot+=d;don+=d*pct(t)/100;});
-  return {s:Math.min(...list.map(t=>t.s)),e:Math.max(...list.map(t=>t.e)),pct:tot?Math.round(don/tot*100):0};
+  const own=(list||[]).filter(t=>!isCancelled(t));        /* Revision AJ */
+  if(!own.length) return {s:Math.min(...list.map(t=>t.s)),e:Math.max(...list.map(t=>t.e)),pct:0};
+  let tot=0,don=0; own.forEach(t=>{const d=Math.max(dur(t),1e-6);tot+=d;don+=d*pct(t)/100;});
+  return {s:Math.min(...own.map(t=>t.s)),e:Math.max(...own.map(t=>t.e)),pct:tot?Math.round(don/tot*100):0};
 }
 /* month gridlines across a chart of width w starting at x */
 function monthTicks(lo,hi,x,w){
@@ -12362,7 +12899,7 @@ async function buildDeck(cfg){
     const cnt=st=>M.tasks.filter(t=>(t.status||'not-started')===st).length;
     return {n:M.tasks.length, pct:tot?Math.round(don/tot*100):0,
             days:Math.max(1,Math.ceil(M.hi-M.lo)), crit:M.tasks.filter(t=>t.critical).length,
-            open:M.tasks.filter(t=>t.status!=='done').length, late:M.tasks.filter(isLate).length,
+            open:M.tasks.filter(t=>isOpen(t)).length, late:M.tasks.filter(isLate).length,
             ns:cnt('not-started'), ip:cnt('in-progress'), bl:cnt('blocked'), dn:cnt('done')};
   })();
   function tiles(sd,y,list,w){
@@ -12567,7 +13104,7 @@ async function buildDeck(cfg){
 
   /* ---------- action list ---------- */
   if(cfg.act!==false){
-    const open=M.tasks.filter(t=>t.status!=='done').sort((a,b)=>a.e-b.e);
+    const open=M.tasks.filter(t=>isOpen(t)).sort((a,b)=>a.e-b.e);
     const per=13, pages=Math.max(1,Math.ceil(open.length/per));
     for(let pg=0;pg<pages;pg++){
       const sd=deck.slide('FFFFFF');
@@ -12604,7 +13141,7 @@ async function buildDeck(cfg){
     S.teams.slice(0,6).forEach((tm,i)=>{
       const x=PAD+(i%3)*(cw+18), y=100+Math.floor(i/3)*(ch+20);
       const items=M.tasks.filter(t=>inTeam(t,tm.id));
-      const open=items.filter(t=>t.status!=='done').length, late=items.filter(isLate).length;
+      const open=items.filter(t=>isOpen(t)).length, late=items.filter(isLate).length;
       let tot=0,don=0; items.forEach(t=>{const d=Math.max(dur(t),1e-6);tot+=d;don+=d*pct(t)/100;});
       const prog=tot?Math.round(don/tot*100):0;
       sd.round(x,y,cw,ch,{fill:'FFFFFF',line:GC_.line,adj:6000});
@@ -12648,7 +13185,7 @@ function pptPreview(){
     if($('#pptCover').checked) n++;
     if($('#pptGantt').checked) n+=deckGanttLayout(M,per).pages.length;
     if($('#pptStat').checked) n++;
-    if($('#pptAct').checked) n+=Math.max(1,Math.ceil(M.tasks.filter(t=>t.status!=='done').length/13));
+    if($('#pptAct').checked) n+=Math.max(1,Math.ceil(M.tasks.filter(t=>isOpen(t)).length/13));
     if($('#pptTeam').checked && S.teams.length) n++;
     if($('#pptOrg').checked && orgNodes().length) n++;
     el2.innerHTML='<b>'+n+' slide'+(n===1?'':'s')+'</b> · '+M.tasks.length+' tasks in '+
@@ -12882,9 +13419,18 @@ function spanLab(lo,hi){
   return (Math.ceil(hi)-1 <= lo) ? a : (a+' → '+b);
 }
 function stageOf(t){
+  if(!t) return null;
   if(t.categoryId) return t.categoryId;
-  const g=(typeof G==='function')?G(t.groupId):null;   /* fall back to the group's */
-  return (g && g.categoryId) || null;
+  /* Revision AM — walk the whole ancestry, not one step.  A subgroup usually
+     carries no closure of its own; before AM an activity inside one belonged
+     to no closure and quietly disappeared from every closure-scoped view. */
+  if(typeof G!=='function') return null;
+  let g=G(t.groupId), guard=0;
+  while(g && guard++<64){
+    if(g.categoryId) return g.categoryId;
+    g=G(g.parentId);
+  }
+  return null;
 }
 function stageStats(id,name,color,tasks,all){
   /* Revision AE — "all" means take the list as given, which is what the Live
@@ -12902,14 +13448,23 @@ function stageStats(id,name,color,tasks,all){
   const planNow=plannedAt(clamp(NOW,lo,hi));
   const cnt=st=>list.filter(t=>(t.status||'not-started')===st).length;
   const late=list.filter(isLate);
-  const openList=list.filter(t=>t.status!=='done');
+  const openList=list.filter(t=>isOpen(t));
   const gates=list.filter(t=>t.milestone);
+  /* Revision AK — the work called off in this same scope.  It is deliberately
+     not in `list` (it earns no progress and owes no time), but the room still
+     has to see how much of the night was dropped, and which activities. */
+  const canc=S.tasks.filter(t=>!t.struck && isCancelled(t) && !taskOff(t) &&
+                            (all || (stageOf(t)||null)===(id||null)));
+  let ctot=0; canc.forEach(t=>{ ctot+=Math.max(dur(t),1e-6); });
+  const scope=tot+ctot;
   return {id,name,color,list,tot,actual,planNow,lo,hi,
+    canc, cancTot:ctot, scope, n2:list.length+canc.length,
+    cancPct: scope?Math.round(ctot/scope*100):0,
     done:cnt('done'), prog:cnt('in-progress'), block:cnt('blocked'), todo:cnt('not-started'),
     late, open:openList.length,
     next:openList.slice().sort((a,b)=>a.e-b.e)[0]||null,
     gates:gates.length,
-    nextGate:gates.filter(t=>t.status!=='done').sort((a,b)=>a.s-b.s)[0]||null,
+    nextGate:gates.filter(t=>isOpen(t)).sort((a,b)=>a.s-b.s)[0]||null,
     started:NOW>=lo, ended:NOW>=hi};
 }
 function stageModel(M){
@@ -12960,7 +13515,8 @@ function renderStages(M){
     card.appendChild(el('div','sub',
       x.list.length+' task'+(x.list.length===1?'':'s')+
       (x.gates?('  ·  '+x.gates+' gate'+(x.gates===1?'':'s')):'')+
-      '  ·  '+fmtDur(x.tot)+' of work'));
+      '  ·  '+fmtDur(x.tot)+' of work'+
+      (x.canc.length?('  ·  '+x.canc.length+' cancelled'):'')));   /* Revision AK */
 
     card.appendChild(el('div','big',Math.round(x.actual)+'%'));
     card.appendChild(el('div','var '+(Math.round(v)>0?'ahead':(Math.round(v)<0?'behind':'flat')),
@@ -12983,11 +13539,12 @@ function renderStages(M){
 
     /* status mix */
     const segs=[[x.done,'Done',C.done],[x.prog,'Running',C.prog],
-                [x.block,'Blocked',C.blocked],[x.todo,'To go',C.todo]];
+                [x.block,'Blocked',C.blocked],[x.todo,'To go',C.todo],
+                [x.canc.length,'Cancelled',CANCOL]];      /* Revision AK */
     const mix=el('div','smix');
     segs.forEach(sg=>{ if(!sg[0]) return;
-      const b=el('i',(!x.started&&sg[1]==='To go')?'idle':null);
-      b.style.setProperty('--w',(sg[0]/x.list.length*100)+'%');
+      const b=el('i',(!x.started&&sg[1]==='To go')?'idle':(sg[1]==='Cancelled'?'akoff':null));
+      b.style.setProperty('--w',(sg[0]/Math.max(1,x.n2)*100)+'%');
       b.style.background=sg[2]; b.title=sg[1]+' · '+sg[0]; mix.appendChild(b); });
     card.appendChild(mix);
     const keys=el('div','skeys');
@@ -13051,10 +13608,10 @@ function dashModel(){
   const planNow=plannedAt(Math.min(Math.max(NOW,lo),hi));
   return {tasks,lo,hi,tot,actual,planNow,plannedAt,
     done:cnt('done'), prog:cnt('in-progress'), block:cnt('blocked'), todo:cnt('not-started'),
-    open:tasks.filter(t=>t.status!=='done').length,
+    open:tasks.filter(t=>isOpen(t)).length,
     late:tasks.filter(isLate),
-    soon:tasks.filter(t=>t.status!=='done'&&t.e>=NOW&&t.e-NOW<=7),
-    unass:tasks.filter(t=>t.status!=='done'&&!t.ownerId),
+    soon:tasks.filter(t=>isOpen(t)&&t.e>=NOW&&t.e-NOW<=7),
+    unass:tasks.filter(t=>isOpen(t)&&!t.ownerId),
     ms:tasks.filter(t=>t.milestone).sort((a,b)=>a.s-b.s),
     crit:tasks.filter(t=>t.critical).length};
 }
@@ -13122,11 +13679,16 @@ function renderDashboard(){
   setTimeout(()=>{ arc.setAttribute('stroke-dashoffset',CIRC*(1-M.actual/100)); tween(big,Math.round(M.actual),'%',1100); },140);
 
   /* ---------- status donut ---------- */
-  $('#dDonutCap').innerHTML='Every task by status — <b>'+M.open+'</b> still open';
+  /* Revision AK — cancelled work is a state too, and leaving it out of a donut
+     captioned "every task by status" left a total that did not add up */
+  const cancL=S.tasks.filter(t=>!t.struck && isCancelled(t) && !taskOff(t));
+  $('#dDonutCap').innerHTML='Every task by status — <b>'+M.open+'</b> still open'+
+    (cancL.length?(', <b>'+cancL.length+'</b> cancelled'):'');
   const don=$('#dDonut'); don.innerHTML='';
   const segs=[[M.done,'Completed',C.done],[M.prog,'In progress',C.prog],
-              [M.block,'Blocked',C.blocked],[M.todo,'Not started',C.todo]];
-  const total=Math.max(1,M.tasks.length), DR=54, DC=2*Math.PI*DR;
+              [M.block,'Blocked',C.blocked],[M.todo,'Not started',C.todo],
+              [cancL.length,'Cancelled',CANCOL]];
+  const total=Math.max(1,M.tasks.length+cancL.length), DR=54, DC=2*Math.PI*DR;
   const ds=sv('svg',{width:150,height:150,viewBox:'0 0 150 150'});
   ds.appendChild(sv('circle',{cx:75,cy:75,r:DR,fill:'none',stroke:UI.ringTrack||'#E7ECF3','stroke-width':17}));
   let off=0;
@@ -13288,7 +13850,7 @@ function renderDashboard(){
   });
 
   /* ---------- milestone runway ---------- */
-  RAIL.ms=M.ms;
+  RAIL.all=M.ms;
   renderRail();
 
   /* ---------- team load ---------- */
@@ -13403,12 +13965,39 @@ function renderDashboard(){
    gates at even spacing so nothing ever piles up, with arrows, a
    true-to-date ribbon underneath, and keyboard/wheel paging.
    ══════════════════════════════════════════════════════════════ */
-const RAIL={ms:[],page:0,init:false};
+/* Revision AM — `stage` is the closure the runway is showing ('' = every
+   closure).  `all` is the list before that filter, which the chips count. */
+const RAIL={ms:[],all:[],page:0,init:false,stage:'',key:''};
+function railList(){
+  const all=RAIL.all||[];
+  if(!RAIL.stage) return all;
+  if(RAIL.stage==='__none') return all.filter(t=>!stageOf(t));
+  return all.filter(t=>(stageOf(t)||null)===RAIL.stage);
+}
+function railStage(id){
+  RAIL.stage = (id===RAIL.stage) ? '' : (id||'');
+  RAIL.init=false;                       /* land on the next open gate again */
+  renderRail();
+}
 
 function railPer(){
   const rail=$('#dRail');
   const w=(rail&&rail.clientWidth)||620;
-  return clamp(Math.floor((w-146)/134),2,6);
+  const inner=Math.max(120,(w-146))*0.80;      /* the slots are inset 10% each side */
+  /* labels sit above and below in turn, so the gap a label has to clear is two
+     slots wide, not one */
+  const loose=clamp(1+Math.floor(inner/76),2,8);
+  const tight=clamp(1+Math.floor(inner/58),2,10);
+  const n=(RAIL.ms||[]).length;
+  /* if the whole set fits once the labels tighten, show the whole set: paging
+     a single closure's own gates is exactly what hid them */
+  return (n && n<=tight) ? n : loose;
+}
+function railTight(){
+  const rail=$('#dRail');
+  const w=(rail&&rail.clientWidth)||620;
+  const inner=Math.max(120,(w-146))*0.80;
+  return railPer() > clamp(1+Math.floor(inner/76),2,8);
 }
 function railPages(){ return Math.max(1,Math.ceil(RAIL.ms.length/railPer())); }
 
@@ -13428,31 +14017,50 @@ function railNow(page,slots){
 
 function renderRail(){
   const rail=$('#dRail'); if(!rail) return;
-  const ms=RAIL.ms||[];
+  /* Revision AM — the chips first, because they decide what the rail holds */
+  railChips();
+  const ms=RAIL.ms=railList();
   const cap=$('#dMsCap');
   rail.innerHTML='';
 
-  if(!ms.length){
+  if(!(RAIL.all||[]).length){
     if(cap) cap.textContent='No milestones yet — tick “Milestone” on any task to raise a gate here.';
     rail.appendChild(el('div','drail-empty','Nothing to run towards yet.'));
     return;
   }
+  if(!ms.length){
+    if(cap) cap.textContent='No gates in this closure.';
+    rail.appendChild(el('div','drail-empty','“'+railStageName()+'” raises no gates — pick another closure above.'));
+    return;
+  }
 
   const per=railPer(), pages=railPages();
-  if(!RAIL.init){                                   /* land on the next open gate */
-    const nx=ms.findIndex(t=>t.status!=='done');
+  /* the page belongs to the list it was worked out for; change the list and it
+     has to be worked out again, or the rail opens on a window that no longer
+     means anything */
+  const key=RAIL.stage+'/'+ms.length+'/'+per;
+  if(!RAIL.init || RAIL.key!==key){
+    const nx=ms.findIndex(t=>isOpen(t));
     RAIL.page=Math.floor((nx<0?ms.length-1:nx)/per);
-    RAIL.init=true;
+    RAIL.init=true; RAIL.key=key;
   }
   RAIL.page=clamp(RAIL.page,0,pages-1);
   const from=RAIL.page*per, page=ms.slice(from,from+per);
 
-  const next=ms.find(t=>t.status!=='done');
-  if(cap) cap.innerHTML='<b>'+ms.length+'</b> gate'+(ms.length===1?'':'s')+
-    (next?(' · hover a gate to see it and close it out here')
-         :' · every gate cleared');
+  const next=ms.find(t=>isOpen(t));
+  /* Revision AM — a card drawing four of nineteen gates used to say "19 gates"
+     and nothing else, which reads as "and here they are" */
+  const from0=RAIL.page*per, upto=Math.min(ms.length, from0+per);
+  if(cap) cap.innerHTML=
+    (pages>1
+      ? ('<b>'+(from0+1)+'–'+upto+'</b> of '+ms.length+' gate'+(ms.length===1?'':'s')+
+         (RAIL.stage?(' in '+esc(railStageName())):'')+
+         ' · the rest are on the arrows, or pick one closure above')
+      : ('<b>'+ms.length+'</b> gate'+(ms.length===1?'':'s')+
+         (RAIL.stage?(' in '+esc(railStageName())):'')+
+         (next?' · hover a gate to see it and close it out here':' · every gate cleared')));
 
-  const inner=el('div','drail-inner'); rail.appendChild(inner);
+  const inner=el('div','drail-inner'+(railTight()?' tight':'')); rail.appendChild(inner);
   inner.appendChild(el('div','line'));
   const prog=el('div','prog'); inner.appendChild(prog);
 
@@ -13486,9 +14094,18 @@ function renderRail(){
     lab.style.left=f+'%'; lab.style[up?'top':'bottom']='6px';
     lab.style.animationDelay=(140+i*80)+'ms';
     lab.appendChild(el('span','n',t.name));
+    /* Revision AM — with every closure on one rail, a gate has to say which
+       night it is a gate for */
+    if(!RAIL.stage){
+      const c2=catOf(stageOf(t));
+      if(c2){ const tg=el('span','drctag',c2.name);
+              tg.style.background=(c2.color||'#7C8BA1')+'22';
+              tg.style.color=c2.color||'var(--ink-2)';
+              lab.appendChild(tg); }
+    }
     lab.appendChild(el('s',null,(t.allDay?fmt(t.s):fmtDT(t.s))+' · '+STATUS[t.status||'not-started'].lab+
       (late?' · overdue':'')));
-    lab.title=t.name;
+    lab.title=t.name+'  ·  '+((catOf(stageOf(t))||{}).name||'no closure');
     inner.appendChild(lab);
 
     /* Rev X — the gate itself is the control now */
@@ -13518,8 +14135,13 @@ function renderRail(){
     const f=hi>lo?((t.s-lo)/(hi-lo))*100:50;
     const dot=el('b'); dot.style.left=f+'%';
     if(i>=from&&i<from+per) dot.className='on';
-    dot.style.background=t.status==='done'?S.view.colors.done:(isLate(t)?S.view.colors.todo:'var(--ink-3)');
-    dot.title=t.name+' · '+(t.allDay?fmtY(t.s):fmtDTY(t.s));
+    /* Revision AM — off-page gates exist only here, so let them at least say
+       which closure they belong to */
+    const c3=catOf(stageOf(t));
+    dot.style.background=t.status==='done'?S.view.colors.done
+                        :(isLate(t)?S.view.colors.todo:((c3&&c3.color)||'var(--ink-3)'));
+    dot.title=t.name+' · '+(t.allDay?fmtY(t.s):fmtDTY(t.s))+
+              (c3?('  ·  '+c3.name):'')+(i>=from&&i<from+per?'':'  ·  click to bring it onto the rail');
     dot.onclick=()=>railGo(Math.floor(i/per));
     rib.appendChild(dot);
   });
@@ -13563,6 +14185,41 @@ function renderNextUp(next){
     bar.appendChild(b);
   }
   host.appendChild(bar);
+}
+
+/* ══════════ Revision AM · one closure's gates ══════════
+   The runway is the one card on the Dashboard that cannot show everything it
+   holds — it is a rail with room for four or five gates.  Until AM the only
+   way through nineteen of them was the arrows, and nothing on the card said
+   which night a gate belonged to, so "the runway for FSC-2" was a thing you
+   could not actually ask for.  These chips are that question.            */
+function railStageName(){
+  if(RAIL.stage==='__none') return 'No closure';
+  const c=catOf(RAIL.stage);
+  return c ? c.name : 'Every closure';
+}
+function railChips(){
+  const bar=$('#dRailBar'); if(!bar) return;
+  bar.innerHTML='';
+  const all=RAIL.all||[];
+  if(all.length<2) return;
+  const count=id=>all.filter(t=>(stageOf(t)||null)===id).length;
+  const mk=(id,name,color,n)=>{
+    const b=el('button','drc'+(RAIL.stage===id?' on':'')); b.type='button';
+    if(color){ const i=el('i'); i.style.background=color; b.appendChild(i); }
+    b.appendChild(el('span',null,name));
+    b.appendChild(el('b',null,String(n)));
+    b.title = id ? ('Show only the gates in “'+name+'” — '+n+' of '+all.length)
+                 : 'Show every gate in the programme';
+    b.onclick=()=>railStage(id);
+    bar.appendChild(b);
+  };
+  S.categories.forEach(c=>{ const n=count(c.id); if(n) mk(c.id,c.name,c.color,n); });
+  const none=count(null);
+  if(none) mk('__none','No closure','#94A3B8',none);
+  mk('','All closures','',all.length);
+  /* a closure that no longer raises gates must not stay selected and empty */
+  if(RAIL.stage && RAIL.stage!=='__none' && !count(RAIL.stage)) { RAIL.stage=''; }
 }
 
 function railGo(p){
@@ -13696,12 +14353,16 @@ function dashDetail(key,card){
 
 /* the one the user asked for: every gate, wired to the rail */
 function msDetail(more,M){
-  more.appendChild(el('h4','','Every gate, in order'));
-  const ms=M.ms;
+  /* Revision AM — the table follows the chips, so opening the card out shows
+     the closure you were looking at rather than silently widening again */
+  const ms=(RAIL.all&&RAIL.all.length)?railList():M.ms;
+  more.appendChild(el('h4','', RAIL.stage
+    ? ('Every gate in “'+railStageName()+'”, in order')
+    : 'Every gate, in order'));
   if(!ms.length){ more.appendChild(el('div','tlempty','No milestones yet — tick “Milestone” on any task to raise a gate.')); return; }
   const cleared=ms.filter(t=>t.status==='done').length;
   const overdue=ms.filter(isLate).length;
-  const next=ms.find(t=>t.status!=='done');
+  const next=ms.find(t=>isOpen(t));
   more.appendChild(statBlock([
     ['Gates',ms.length,cleared+' cleared · '+(ms.length-cleared)+' to go'],
     ['Overdue',overdue,overdue?'past their date and not signed off':'nothing has slipped'],
@@ -13861,7 +14522,7 @@ function teamDetail(more,M){
     c0.appendChild(i); c0.appendChild(document.createTextNode(tm.name)); tr.appendChild(c0);
     tr.appendChild(el('td','','led by '+(personName(tm.leadId)||'—')));
     tr.appendChild(el('td','num',String(list.length)));
-    tr.appendChild(el('td','num',String(list.filter(x=>x.status!=='done').length)));
+    tr.appendChild(el('td','num',String(list.filter(x=>isOpen(x)).length)));
     tr.appendChild(el('td','num'+(late?' bad':''),String(late)));
     const pc=el('td'); const mini=el('div','mini'); const bar=el('div','mbar'); const f=el('i');
     f.style.width=p2+'%'; f.style.background=late?S.view.colors.prog:S.view.colors.done; bar.appendChild(f);
@@ -13876,7 +14537,7 @@ function teamDetail(more,M){
       const nc=el('td','',p3.name); nc.style.paddingLeft='26px'; r.appendChild(nc);
       r.appendChild(el('td','',m.role||p3.role||'—'));
       r.appendChild(el('td','num',String(owned.length)));
-      r.appendChild(el('td','num',String(owned.filter(x=>x.status!=='done').length)));
+      r.appendChild(el('td','num',String(owned.filter(x=>isOpen(x)).length)));
       const l=owned.filter(isLate).length;
       r.appendChild(el('td','num'+(l?' bad':''),String(l)));
       r.appendChild(el('td','',(p3.phone||p3.email)?[p3.phone,p3.email].filter(Boolean).join(' · '):''));
@@ -17502,7 +18163,7 @@ function locItems(id,roll){
 }
 function locStats(id,roll){
   const items=locItems(id,roll);
-  const open=items.filter(t=>t.status!=='done').length;
+  const open=items.filter(t=>isOpen(t)).length;
   const late=items.filter(isLate).length;
   let tot=0,don=0; items.forEach(t=>{const d=dur(t);tot+=d;don+=d*pct(t)/100;});
   const span=items.length?{s:Math.min(...items.map(t=>t.s)), e:Math.max(...items.map(t=>t.e))}:null;
@@ -17942,7 +18603,7 @@ function waBuild(){
   /* Rev X.1 — "running" means somebody has said it started.  Work that is
      inside its window with nobody on it is a different fact, and reporting
      the two as one used to put the same activity in both lists. */
-  const inWin = t => !t.milestone && t.s<=now && t.e>now && t.status!=='done';
+  const inWin = t => !t.milestone && t.s<=now && t.e>now && isOpen(t);
   const running  = live.filter(t=>inWin(t) && t.status!=='not-started').sort((a,b)=>a.e-b.e);
   const doneRecently = live.filter(t=>t.status==='done' && t.doneAt!=null && (now-t.doneAt)<=0.26)
                            .sort((a,b)=>b.doneAt-a.doneAt);
@@ -17951,18 +18612,18 @@ function waBuild(){
      have started is pulled to the front of that list, because on the night
      that is the thing the reader has to act on. */
   const to4 = now + WAHORIZON;
-  const soon4 = live.filter(t=>t.status!=='done' && t.s>=now && t.s<to4).sort((a,b)=>a.s-b.s);
-  const late = live.filter(t=>t.status!=='done' && t.e<now).sort((a,b)=>a.e-b.e);
+  const soon4 = live.filter(t=>isOpen(t) && t.s>=now && t.s<to4).sort((a,b)=>a.s-b.s);
+  const late = live.filter(t=>isOpen(t) && t.e<now).sort((a,b)=>a.e-b.e);
   /* inside its window, and nobody has said it started */
   const notBegun = live.filter(t=>inWin(t) && t.status==='not-started').sort((a,b)=>a.s-b.s);
   /* if the next four hours are genuinely empty, say what does come next
      rather than printing a blank heading */
-  const after4 = live.filter(t=>t.status!=='done' && t.s>=to4).sort((a,b)=>a.s-b.s).slice(0,3);
+  const after4 = live.filter(t=>isOpen(t) && t.s>=to4).sort((a,b)=>a.s-b.s).slice(0,3);
   const next = soon4.length ? soon4 : after4.slice(0,4);
   const blocked = live.filter(t=>t.status==='blocked');
   const ms = live.filter(t=>t.milestone).sort((a,b)=>a.s-b.s);
   const msDone = ms.filter(t=>t.status==='done').length;
-  const nextMs = ms.find(t=>t.status!=='done');
+  const nextMs = ms.find(t=>isOpen(t));
 
   let tot=0,don=0;
   live.forEach(t=>{ const d=Math.max(dur(t),1e-6); tot+=d; don+=d*pct(t)/100; });
@@ -17973,7 +18634,7 @@ function waBuild(){
   const variance = actual-planned;
 
   /* the slip on the critical path is the number management actually wants */
-  const critLate = live.filter(t=>t.critical && t.status!=='done' && t.e<now);
+  const critLate = live.filter(t=>t.critical && isOpen(t) && t.e<now);
   const slipDays = critLate.length ? Math.max(...critLate.map(t=>now-t.e)) : 0;
 
   const lateRunning   = late.filter(t=>t.status!=='not-started');
@@ -17986,6 +18647,8 @@ function waBuild(){
   const sid=waStageId();
   const stOf = t => (typeof stageOf==='function') ? stageOf(t) : (t.categoryId||null);
   const struck = S.tasks.filter(t=>t.struck && (!sid || stOf(t)===sid));
+  /* Revision AK — reported apart from struck-out work, because these come back */
+  const cancelled = S.tasks.filter(t=>!t.struck && isCancelled(t) && (!sid || stOf(t)===sid));
 
   /* Revision AE — whatever has been put on the Live screen is what the room is
      actually watching, so the four-hourly card carries the same list, with the
@@ -18013,13 +18676,13 @@ function waBuild(){
     title: cfg.title || (stage ? (stage.name+' — situation update')
                                : (S.name+' — situation update')),
     actual, planned, variance, slipDays,
-    running, doneRecently, next, late, blocked, struck,
+    running, doneRecently, next, late, blocked, struck, cancelled,
     soon4, after4, notBegun, lateRunning, lateNotStarted, behind,
     horizonH: Math.round(WAHORIZON*24), to4,
     onSchedule: behind===0 && blocked.length===0,
     ms, msDone, nextMs, byLoc, watch,
     counts:{total:live.length, done:live.filter(t=>t.status==='done').length,
-            open:live.filter(t=>t.status!=='done').length},
+            open:live.filter(t=>isOpen(t)).length},
     fields:(cfg.fields||[]).filter(f=>String(f.value||'').trim()),
     hoursLeft: w ? Math.max(0,(w.hi-now)*24) : 0
   };
@@ -18119,6 +18782,13 @@ function waText(M){
     if(M.after4.length) L.push('• Next after that: '+M.after4[0].name+' — '+waWhen(M.after4[0]));
   }
   L.push('');
+  if(M.cancelled.length){
+    L.push('*Cancelled tonight, to be re-planned:* '+M.cancelled.length+
+           ' item'+(M.cancelled.length===1?'':'s'));
+    M.cancelled.slice(0,6).forEach(t=>L.push('• '+t.name));
+    if(M.cancelled.length>6) L.push('• …and '+(M.cancelled.length-6)+' more');
+    L.push('');
+  }
   if(M.struck.length){
     L.push('*Dropped from the plan:* '+M.struck.length+' item'+(M.struck.length===1?'':'s'));
     L.push('');
@@ -19238,6 +19908,93 @@ function apopTask(anchor,id){
   apopPlace(n,anchor);
 }
 
+/* ══════════════════════════════════════════════════════════════
+   Revision AL · reveal
+   A new activity can be invisible for six different reasons at
+   once — a focus it is not in, a collapsed parent, a row ticked
+   off, a closure chip, a status chip, a search box still holding
+   yesterday's word.  Making work and not seeing it is the same
+   bug however it happens, so one function answers all of them:
+   it puts the activity inside whatever you are looking at, and
+   says in plain words what it had to lift to do so.
+   ══════════════════════════════════════════════════════════════ */
+function revealTask(id, what){
+  const t=T(id); if(!t) return;
+  const said=[];
+
+  /* "Show only this" is a filter like any other, so it is handled like any
+     other: the activity joins it if it belongs, and if it cannot belong the
+     view is lifted and the screen says so.  Silently widening a named view to
+     hold something that is not in it would make its count a lie. */
+  if(S._focus){
+    focusAdopt(id);
+    focusSync();
+    if(!S._focus.ids.has(id)){
+      said.push('cleared the “'+S._focus.label+'” view');
+      S._focus=null;
+    }
+  }
+
+  /* a collapsed parent hides a row as completely as any filter does */
+  S.hidden.delete(id);
+  let g=G(t.groupId), opened=0;
+  while(g){
+    if(g.collapsed){ g.collapsed=false; opened++; }
+    S.hidden.delete(g.id);
+    g=parentOf(g);
+  }
+  if(opened) said.push(opened===1?'opened its group':('opened '+opened+' closed groups'));
+
+  if(t.struck && !S._showStruck){ S._showStruck=true; said.push('turned struck-out work back on'); }
+  if(!catVisible(t.categoryId) && S._cats){
+    S._cats.add(t.categoryId||'none');
+    said.push('put the “'+((catOf(t.categoryId)||{}).name||'Uncategorised')+'” chip back on');
+  }
+  if(!statVisible(t) && S._stat){
+    const k=t.status||'not-started';
+    S._stat.add(k);
+    said.push('put the “'+((STATUS[k]||{}).lab||k)+'” chip back on');
+  }
+  if(S._critOnly && !t.critical){ S._critOnly=false; said.push('cleared the critical-path filter'); }
+  if(S._ownerF && t.ownerId!==S._ownerF){
+    S._ownerF=''; const b=$('#ownerFilter'); if(b) b.value='';
+    said.push('cleared the owner filter');
+  }
+  if(S._teamF && !inTeam(t,S._teamF)){
+    S._teamF=''; const b=$('#teamFilter'); if(b) b.value='';
+    said.push('cleared the team filter');
+  }
+  if(S._locF && locTree(S._locF).indexOf(t.locationId)<0){
+    S._locF=''; const b=$('#locFilter'); if(b) b.value='';
+    said.push('cleared the place filter');
+  }
+  /* last, because by now the search box is the only thing left that can be
+     holding it back */
+  if((S._filter||'').trim() && !taskMatchesBars(t)){
+    S._filter=''; const b=$('#qSearch'); if(b) b.value='';
+    said.push('cleared the search box');
+  }
+
+  S._sel={k:'t',id};
+  if(said.length){
+    const li = said.length===1 ? said[0]
+             : said.slice(0,-1).join(', ')+' and '+said[said.length-1];
+    setTimeout(()=>toast((what||'The new activity')+' was outside the view you had — '+li),420);
+  }
+  requestAnimationFrame(()=>{
+    const row=document.querySelector('#gridRows .grow[data-k="t"][data-id="'+id+'"]');
+    if(row && row.scrollIntoView) row.scrollIntoView({block:'center'});
+    /* the bar as well as the row: a name in the grid with its bar off the side
+       of the chart is only half an answer to "where is the thing I just made" */
+    const body = dom && dom.tlBody;
+    if(body && body.clientWidth){
+      const x=(t.s-RANGE.lo)*ppd();
+      if(x < body.scrollLeft+40 || x > body.scrollLeft+body.clientWidth-140)
+        body.scrollLeft=Math.max(0, x-body.clientWidth*0.3);
+    }
+  });
+}
+
 /* land on the Schedule with the task selected and scrolled into view */
 function jumpToTask(id){
   clearFocus(true);
@@ -19284,7 +20041,7 @@ function apopPhase(anchor,gid){
   if(chips.children.length) n.appendChild(chips);
 
   const sp=groupSpanOf(list);
-  const open=list.filter(t=>t.status!=='done').sort((a,b)=>a.e-b.e);
+  const open=list.filter(t=>isOpen(t)).sort((a,b)=>a.e-b.e);
   const body=el('div','abody');
   apopRow(body,'Progress', sp.pct+'%  ·  '+(list.length-open.length)+' of '+list.length+' done');
   apopRow(body,'Window', fmt(sp.s)+'  →  '+fmtY(endShown({s:sp.s, e:sp.e, allDay:true})));
@@ -19338,7 +20095,7 @@ function apopPhase(anchor,gid){
 function completePhase(gid){
   if(RO_ON) return roNope();
   const g=G(gid); if(!g) return;
-  const open=tasksOf(gid).filter(t=>t.status!=='done');
+  const open=tasksOf(gid).filter(t=>isOpen(t));
   if(!open.length) return;
   push();
   open.forEach(t=>markDone(t,true));
@@ -19422,6 +20179,11 @@ function detTasks(){
   const id=detStageId(), live=liveTasks();
   return id ? live.filter(t=>(stageOf(t)||null)===id) : live;
 }
+/* Revision AK — the same closure, cancelled work included, for the split */
+function detAll(){
+  const id=detStageId(), all=planTasks();
+  return id ? all.filter(t=>(stageOf(t)||null)===id) : all;
+}
 
 /* ── what the plan says should be done by now, for one list ───── */
 function detPlanned(list){
@@ -19495,7 +20257,7 @@ function detCabinets(list){
     e.at=null;
     for(const st of CAB_STEPS){
       const ts=e.steps[st.key]; if(!ts||!ts.length) continue;
-      const open=ts.filter(t=>t.status!=='done');
+      const open=ts.filter(t=>isOpen(t));
       if(open.length){ e.at=st; e.atTasks=open; break; }
     }
     e.state = !e.at ? (e.gate && e.gate.status==='done' ? 'energised' : 'ready')
@@ -19686,6 +20448,10 @@ function liveStageSlides(){
   /* Revision AG — and the same closure as a curve: what the plan said the night
      would look like, against what has actually been booked */
   out.push({kind:'curve', title:'Planned progress vs where we are', stage:x, list:x.list});
+  /* Revision AK — only when there is something to report.  A wall screen that
+     says "nothing was cancelled" every twelve seconds is noise. */
+  if(x.canc && x.canc.length)
+    out.push({kind:'scope', title:'What was called off', stage:x, list:x.list});
   if(gates.length) out.push({kind:'gates', title:'Milestone runway', stage:x, list:gates});
   return out;
 }
@@ -19703,7 +20469,7 @@ function liveStats(list){
     plan: Math.round(detPlanned(list)),
     n: list.length,
     done: list.filter(t=>t.status==='done').length,
-    run: list.filter(t=>t.status!=='done' && t.s<=NOW && t.e>NOW).length,
+    run: list.filter(t=>isOpen(t) && t.s<=NOW && t.e>NOW).length,
     late: list.filter(isLate).length,
     s: Math.min(...list.map(t=>t.s)), e: Math.max(...list.map(t=>t.e))
   };
@@ -19867,7 +20633,8 @@ function liveBuild(card, sl){
   const head=el('div','lhead');
   const l=el('div','lhl');
   const gateHead = sl.kind==='gates';
-  const kick = sl.kind==='stage' ? 'Closure dashboard'
+  const kick = sl.kind==='scope' ? ((cat?cat.name:'Every closure')+'  ·  cancelled scope, and what is left to do')
+             : sl.kind==='stage' ? 'Closure dashboard'
              : sl.kind==='charts' ? ((cat?cat.name:'Every closure')+'  ·  progress, where the work stands and schedule health')
              : sl.kind==='curve'  ? ((cat?cat.name:'Every closure')+'  ·  the plan against the ground')
              : sl.kind==='map'   ? 'Site picture'
@@ -19934,12 +20701,14 @@ function liveBuild(card, sl){
 
   /* Revision AE — these two carry their own numbers, and the strip below would
      only say the same things again in smaller type */
-  if(sl.kind==='gates' || sl.kind==='stage' || sl.kind==='charts' || sl.kind==='curve'){
+  if(sl.kind==='gates' || sl.kind==='stage' || sl.kind==='charts' ||
+     sl.kind==='curve' || sl.kind==='scope'){
     const body1=el('div','lbody');
     card.appendChild(body1);
     if(sl.kind==='gates')       liveRunway(body1, sl);
     else if(sl.kind==='charts') liveCharts(body1, sl);
     else if(sl.kind==='curve')  liveCurve(body1, sl);
+    else if(sl.kind==='scope')  liveScopeBoard(body1, sl);
     else                        liveStageBoard(body1, sl);
     return;
   }
@@ -19964,7 +20733,8 @@ function liveBuild(card, sl){
   const body=el('div','lbody');
   card.appendChild(body);
 
-  if(sl.kind==='stage')         liveStageBoard(body, sl);
+  if(sl.kind==='scope')         liveScopeBoard(body, sl);
+  else if(sl.kind==='stage')    liveStageBoard(body, sl);
   else if(sl.kind==='charts')   liveCharts(body, sl);
   else if(sl.kind==='curve')    liveCurve(body, sl);
   else if(sl.kind==='gates')    liveRunway(body, sl);
@@ -20062,6 +20832,7 @@ function liveOverview(host, list, sl){
 
 /* ── one watched activity, given the whole screen ────────────── */
 function liveState(t){
+  if(t.status==='cancelled') return {k:'struck', lab:'Cancelled', sub:'Taken out of this closure'};
   if(t.struck)             return {k:'struck', lab:'Struck out', sub:t.struckNote||'Off the plan'};
   if(t.status==='done')    return {k:'ok', lab:t.milestone?'Passed':'Complete',
                                    sub:(t.doneAt!=null&&isFinite(t.doneAt))?('Signed off '+HHMM(t.doneAt)+' on '+fmt(t.doneAt)):''};
@@ -20146,14 +20917,26 @@ function liveStageBoard(host, sl){
   cap.appendChild(el('span',null,'Booked '+Math.round(x.actual)+'%'));
   cap.appendChild(el('b',null,'Plan says '+Math.round(x.planNow)+'% by now'));
   cap.appendChild(el('s',null,liveWindow(x.lo,x.hi)));
+  /* Revision AK — said out loud, because "booked 74%" of a night that lost a
+     fifth of its scope is a different sentence from "booked 74%" of all of it */
+  if(x.canc.length){
+    const c2=el('em','akcap', x.cancPct+'% of this closure cancelled');
+    c2.title=x.canc.length+' activit'+(x.canc.length===1?'y':'ies')+' — '+fmtDur(x.cancTot)+
+             ' of the '+fmtDur(x.scope)+' first planned.  Booked % above is measured '+
+             'against the work that is still in the plan.';
+    cap.appendChild(c2);
+  }
   wrap.appendChild(cap);
 
   /* the mix, and what each colour is */
   const segs = [[x.done,'Done',C.done],[x.prog,'Running',C.prog],
-                [x.block,'Blocked',C.blocked],[x.todo,'To go',C.todo]];
+                [x.block,'Blocked',C.blocked],[x.todo,'To go',C.todo],
+                /* Revision AK — the part of the night that was called off */
+                [x.canc.length,'Cancelled',CANCOL]];
   const mix = el('div','lsbmix');
   segs.forEach(sg=>{ if(!sg[0]) return;
-    const b=el('i'); b.style.width=(sg[0]/x.list.length*100)+'%';
+    const b=el('i', sg[1]==='Cancelled'?'akoff':null);
+    b.style.width=(sg[0]/Math.max(1,x.n2)*100)+'%';
     b.style.background=sg[2]; b.title=sg[1]+' · '+sg[0]; mix.appendChild(b); });
   wrap.appendChild(mix);
 
@@ -20169,6 +20952,7 @@ function liveStageBoard(host, sl){
   tile('Blocked',  x.block, x.block?'bad':'');
   tile('To go',    x.todo, '');
   tile('Overdue',  x.late.length, x.late.length?'bad':'');
+  if(x.canc.length) tile('Cancelled', x.canc.length, 'off');
   tile('Gates',    x.gates, '');
   wrap.appendChild(tiles);
 
@@ -20195,6 +20979,70 @@ function liveStageBoard(host, sl){
   wrap.appendChild(nx);
   host.appendChild(wrap);
 }
+/* ══════════ Revision AK · the scope board ══════════
+   One bar for the closure as it was first planned, cut three ways — booked,
+   still to do, called off — so the three add to the whole night and nobody
+   has to hold two denominators in their head.  Under it, the activities that
+   were called off, by name, with who held them and when they were meant to
+   run, because "9% cancelled" is not something a shift manager can act on
+   and "SW14 relocation, Power Rail Team 2, 12:30–18:00" is.            */
+function liveScopeBoard(host, sl){
+  const x=sl.stage, C=S.view.colors;
+  const sp=scopeSplit(x.list.concat(x.canc));
+  const wrap=el('div','akb');
+
+  const bar=el('div','akbar');
+  const seg=(w,cls,lab,col)=>{
+    if(w<=0) return;
+    const i=el('div','aks '+cls); i.style.width=w+'%';
+    if(col) i.style.background=col;
+    i.title=lab; bar.appendChild(i);
+  };
+  seg(sp.donePct,'dn','Booked  ·  '+sp.donePct+'% of the closure as first planned',C.done);
+  /* not C.todo: on this palette "to go" is red, and a bar that is two thirds
+     red says disaster when it only says the night has not happened yet */
+  seg(sp.goPct,'go','Still to do  ·  '+sp.goPct+'%','var(--line-hover)');
+  seg(sp.cancPct,'off akoff','Cancelled  ·  '+sp.cancPct+'%',CANCOL);
+  wrap.appendChild(bar);
+
+  const key=el('div','akkey');
+  const k=(col,cls,lab,val)=>{
+    const sp2=el('div','akk'+(cls?(' '+cls):''));
+    const d=el('i'); d.style.background=col; sp2.appendChild(d);
+    sp2.appendChild(el('b',null,val+'%'));
+    sp2.appendChild(el('span',null,lab));
+    key.appendChild(sp2);
+  };
+  k(C.done,'', 'booked', sp.donePct);
+  k('var(--line-hover)','', 'still to do', sp.goPct);
+  k(CANCOL,'off','cancelled', sp.cancPct);
+  wrap.appendChild(key);
+
+  const note=el('div','aknote');
+  note.appendChild(el('b',null,sp.pct+'%'));
+  note.appendChild(el('span',null,
+    'of the work still in the plan is booked — '+fmtDur(sp.canc)+' of the '+
+    fmtDur(sp.plan)+' first planned for this closure was called off and will be re-planned'));
+  wrap.appendChild(note);
+
+  const lst=el('div','aklist');
+  const head=el('div','akrow hd');
+  ['Cancelled activity','Where it sits','Held by','Was to run'].forEach(h2=>head.appendChild(el('div',null,h2)));
+  lst.appendChild(head);
+  x.canc.slice().sort((a,b)=>a.s-b.s).forEach((t,i)=>{
+    const r=el('div','akrow');
+    r.style.animationDelay=(60+i*40)+'ms';
+    const n=el('div','aknm'); n.appendChild(el('s',null,t.name)); r.appendChild(n);
+    const g=G(t.groupId);
+    r.appendChild(el('div','akg', g?gclean(g.name):'—'));
+    r.appendChild(el('div','ako', personName(t.ownerId)||'unassigned'));
+    r.appendChild(el('div','akw', liveWindow(t.s,t.e)));
+    lst.appendChild(r);
+  });
+  wrap.appendChild(lst);
+  host.appendChild(wrap);
+}
+
 /* "in 40 min" reads better on a wall than a timestamp nobody subtracts from */
 function liveWhen(t){
   const d=(t-NOW)*1440;
@@ -20767,7 +21615,7 @@ function liveRunway(host, sl){
     head.style.left=fill+'%';
   }));
 
-  const next = ms.find(t=>t.status!=='done');
+  const next = ms.find(t=>isOpen(t));
   ms.forEach((t,i)=>{
     const L=at(i), up=i%2===0;
     const done=t.status==='done', late=isLate(t), isNext=next&&t.id===next.id;
@@ -20780,6 +21628,15 @@ function liveRunway(host, sl){
     lab.style.left=L+'%';
     lab.style.animationDelay=(140+i*90)+'ms';
     lab.appendChild(el('b',null,t.name));
+    /* Revision AM — on the All-closures chip the wall is running several
+       nights at once, so each gate says whose it is */
+    if(!liveStageId()){
+      const c4=catOf(stageOf(t));
+      if(c4){ const tg=el('span','drctag',c4.name);
+              tg.style.background=(c4.color||'#7C8BA1')+'22';
+              tg.style.color=c4.color||'var(--ink-2)';
+              lab.appendChild(tg); }
+    }
     lab.appendChild(el('s',null,(t.allDay?fmt(t.s):(fmt(t.s)+'  '+HHMM(t.s)))+
       '  ·  '+(done?'cleared':(late?'overdue':liveWhen(t.s)))));
     inner.appendChild(lab);
@@ -22750,10 +23607,71 @@ window.GanttStudio={
   get state(){return S;}, render:refreshAll, sample:loadSample, export:()=>serialize(),
   view:setView, actions:()=>actionRows(), xlsx:opts=>buildWorkbook(opts||{}),
   ppt:opts=>buildDeck(opts||{}), image:opts=>renderGanttImage(opts||{}), dash:()=>renderDashboard(),
-  rail:{go:railGo, pages:railPages, per:railPer, get page(){return RAIL.page;}, state:RAIL},
+  rail:{go:railGo, pages:railPages, per:railPer, get page(){return RAIL.page;}, state:RAIL,
+        /* ---------- Revision AM ---------- */
+        stage:id=>railStage(id), get on(){return RAIL.stage;},
+        get name(){return railStageName();},
+        list:()=>railList().map(t=>t.id),
+        get all(){return (RAIL.all||[]).map(t=>t.id);},
+        shown:()=>[...document.querySelectorAll('#dRail .dmslab .n')].map(x=>x.textContent),
+        chips:()=>[...document.querySelectorAll('#dRailBar .drc')]
+                  .map(x=>({lab:(x.querySelector('span')||{}).textContent,
+                            n:+((x.querySelector('b')||{}).textContent||0),
+                            on:x.classList.contains('on')}))},
   dash2:{max:dashToggleMax, restore:dashRestore, get maxed(){return DASH.max;},
          sort:(w,k)=>{S.view.dashSort=Object.assign({phase:'plan',team:'load'},S.view.dashSort||{});S.view.dashSort[w]=k;renderDashboard();},
-         focus:focusOn, clearFocus:clearFocus, get focused(){return S._focus?{kind:S._focus.kind,id:S._focus.id,label:S._focus.label,n:S._focus.ids.size}:null;}},
+         focus:focusOn, clearFocus:clearFocus, get focused(){return S._focus?{kind:S._focus.kind,id:S._focus.id,label:S._focus.label,n:S._focus.ids.size}:null;},
+         /* ---------- Revision AL ---------- */
+         sync:()=>focusSync(),
+         live:()=>{ const r=focusResolve(S._focus); return r?r.length:null; },
+         has:id=>!!(S._focus&&S._focus.ids.has(id)),
+         reveal:(id,what)=>{ revealTask(id,what); refreshAll(); }},
+  bars:{get cats(){return S._cats?[...S._cats]:null;},
+        get stat(){return S._stat?[...S._stat]:null;},
+        get search(){return S._filter||'';},
+        get struck(){return !!S._showStruck;},
+        get crit(){return !!S._critOnly;}},
+  /* ---------- Revision AN ---------- */
+  move:{intent:d=>moveIntent(d),
+        drag:(id,target)=>{                       /* the drop, as the grid makes it */
+          const d={k:T(id)?'t':'g', id, target};
+          const mv=moveIntent(d);
+          if(!mv) return {done:false,why:'nowhere'};
+          const commit=()=>{ push();
+            if(d.k==='g') moveGroup(d.id,d.target); else moveTask(d.id,d.target);
+            markDirty();
+            if(d.k==='t'&&typeof revealTask==='function') revealTask(d.id);
+            refreshAll(); };
+          if(!mv.rehome){ commit(); return {done:true,asked:false,mv}; }
+          askMove(mv,commit);
+          return {done:false,asked:true,mv};
+        },
+        get asking(){return !!moveAsk;},
+        get shown(){const s2=$('#moveScrim');
+          return s2&&s2.classList.contains('open')?{
+            title:($('#mvTitle')||{}).textContent,
+            what:($('#mvWhat')||{}).textContent,
+            from:($('#mvFrom')||{}).textContent,
+            to:($('#mvTo')||{}).textContent,
+            note:($('#mvNote')||{}).hidden?'':($('#mvNote')||{}).textContent}:null;},
+        yes:()=>moveAnswer(true), no:()=>moveAnswer(false),
+        to:(tid,gid)=>{ const d={k:'t',id:tid,target:{k:'g',id:gid,pos:'in'}};
+          const mv=moveIntent(d); if(!mv) return null;
+          askMove(mv,()=>{ push(); moveTask(tid,d.target); markDirty();
+            if(typeof revealTask==='function') revealTask(tid); refreshAll(); });
+          return mv; }},
+  make:{dup:id=>dupTask(id),
+        task:(gid,name,opts)=>{
+          const g=G(gid)||S.groups[0]; if(!g) return null;
+          const base=S.tasks.filter(t=>t.groupId===g.id)[0];
+          const rec={...newTaskDefaults(false), ...(opts||{}),
+                     id:uid('t'), groupId:g.id, name:name||'New Task',
+                     categoryId:(opts&&'categoryId' in opts)?opts.categoryId
+                                 :(base?base.categoryId:null)};
+          push(); S.tasks.push(rec); S._sel={k:'t',id:rec.id}; markDirty();
+          revealTask(rec.id,'“'+rec.name+'”'); refreshAll();
+          return rec.id;
+        }},
   load:o=>{ const v=S._view; S=hydrate(o); S._view=v; refreshAll(); return S.tasks.length; },
   about:openAbout, app:APP, deckLayout:per=>deckGanttLayout(exportModel(false),per||15),
   dbg:{nAt, X, TX, fit, setZoom, setTZoom, zoomRangeSchedule, zoomRangeTeams, get RANGE(){return RANGE;}, get TRANGE(){return TRANGE;}},
@@ -22812,6 +23730,30 @@ window.GanttStudio={
         name:r.kind==='g'?(G(r.id)||{}).name:(T(r.id)||{}).name}))},
   act:{get status(){return actStatusSet();}, set:v=>{S._act.status=Array.isArray(v)?v:[v];
         syncActStatusSeg(); renderActions();}, rows:()=>actionRows()},
+  /* ---------- Revision AJ · the status, and the filter that follows it ---------- */
+  status:{get list(){return Object.keys(STATUS);}, lab:k=>(STATUS[k]||{}).lab||'',
+          get sel(){return S._stat?[...S._stat]:null;},
+          set:v=>{ S._stat = v==null ? null : new Set([].concat(v)); refreshAll(); },
+          count:k=>S.tasks.filter(t=>(t.status||'not-started')===k).length,
+          of:id=>{ const t=T(id); return t?(t.status||'not-started'):null; },
+          setOf:(id,k)=>{ const t=T(id); if(!t||!STATUS[k]) return false;
+                          t.status=k; markDirty(); refreshAll(); return true; }},
+  late:t=>isLate(typeof t==='string'?T(t):t),
+  /* ---------- Revision AK ---------- */
+  edit:id=>openTask(id),
+  split:list=>scopeSplit(list||planTasks()),
+  planTasks:()=>planTasks(),
+  /* named `canc`, not `scope`: the API already has a `scope` (the WhatsApp
+     stage picker) further down, and a duplicate key silently wins */
+  canc:{get name(){return statScope().name;},
+        get split(){return scopeSplit(statScope().scope||liveTasks());},
+        get pct(){return scopeSplit(statScope().scope||liveTasks()).cancPct;},
+        get text(){return (($('#kCanc')||{}).textContent||'').trim();},
+        get shown(){return !($('#cardCanc')||{hidden:true}).hidden;}},
+  stage:{get stats(){return typeof liveStage==='function'?liveStage():null;}},
+  liveTasks:()=>liveTasks(),
+  group:{span:gid=>groupSpan(gid)},
+  search:q=>{ S._filter=String(q||''); const b=$('#qSearch'); if(b) b.value=S._filter; refreshAll(); },
   get ro(){return RO();}, share:cfg=>buildShareZip(cfg||{}), shareHtml:cfg=>buildShareHtml(cfg||{}),
   theme:{set:applyTheme, get pref(){return THEME_PREF;}, get dark(){return themeIsDark();}, ui:UI},
   get selfLen(){return SELF_SRC.length;},
@@ -22890,7 +23832,7 @@ window.GanttStudio={
        close:apopKill, get open(){return !!APOP.node;}, get pinned(){return APOP.pin;},
        get key(){return APOP.key;}, bump:bumpProgress, completePhase:completePhase,
        next:()=>{ const m=liveTasks().filter(t=>t.milestone).sort((a,b)=>a.s-b.s);
-                  const n=m.find(t=>t.status!=='done'); return n?{id:n.id,name:n.name,when:n.s}:null; }},
+                  const n=m.find(t=>isOpen(t)); return n?{id:n.id,name:n.name,when:n.s}:null; }},
   scope:{get:()=>((S.wa&&S.wa.stage)||''),
          set:id=>{ S.wa=S.wa||{}; S.wa.stage=id||''; markDirty();
                    if(typeof renderWaUpdate==='function' && $('#waScope')) renderWaUpdate(); },
@@ -22910,6 +23852,10 @@ window.GanttStudio={
         get lanes(){return locLaneModel();}, state:LTL,
         set filter(v){S._locF=v||''; refreshAll();}, get filter(){return S._locF;}},
   task:{strike:toggleStrikeTask, done:toggleDoneTask, get struck(){return S.tasks.filter(t=>t.struck);},
+        /* ---------- Revision AJ ---------- */
+        get:id=>T(id), cancel:id=>toggleCancelTask(id),
+        get cancelled(){return S.tasks.filter(isCancelled).map(t=>t.id);},
+        isCancelled:id=>isCancelled(T(id)), offPlan:id=>offPlan(T(id)),
         get live(){return liveTasks();}, shown:shownTasks,
         setLoc:(id,lid)=>{ const t=T(id); if(t){ t.locationId=lid||null; markDirty(); refreshAll(); } }},
   window:{note:()=>({label:($('#sWindowLab')||{}).textContent,

@@ -21,10 +21,35 @@ still asks first.
 
 | File | What it is |
 |---|---|
-| `index.html` | Gantt Studio, Revision AI. One self-contained file — no build, no dependencies, no server code. |
+| `index.html` | Gantt Studio, Revision AN. One self-contained file — no build, no dependencies, no server code. |
 | `config.json` | Where the page looks for the programme, what it calls itself, and the interval it starts on. |
 | `data/programme.json` | The programme itself. This is the file the Publish button rewrites. |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are. |
+
+## Called-off work
+
+An activity can be marked **Cancelled**. It keeps its row and its bar — greyed,
+ruled through and hatched — so the record of what was planned survives, but it
+counts nowhere: not in the task total, not in the percentage complete, not in the
+group roll-up, not as open, overdue or unassigned. The **Cancelled** chip sits on
+the status bar with the others and stacks with everything else — closure, owner,
+team, location, the search box — and the Action Tracker has a matching
+**Cancelled** button.
+
+Cancelled means *not tonight* — the work could not proceed and comes back on a
+later date. So it is never overdue, and it is never counted as work still owed.
+What it is counted as is **cancelled scope**, and the page reports that in three
+places: a **Cancelled** box in the header, giving the share of whatever the Live
+chips have selected; a segment on every closure's status bar, on the wall and on
+the Dashboard; and a screen of its own in the carousel — *What was called off* —
+which cuts the closure three ways, booked / still to do / cancelled, and then
+names each called-off activity with the group it sits in, who holds it and the
+window it was meant to run in.
+
+Two percentages, deliberately: **Complete** is measured against the work still in
+the plan, because that is the number a shift manager acts on, and **Cancelled**
+is measured against the scope as first planned, because that is the only
+denominator a lost activity means anything against. Both say so when hovered.
 
 ## Turning it into a web page
 

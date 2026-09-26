@@ -1,25 +1,25 @@
 {
   "format": "gantt-studio",
   "version": 3,
-  "revision": "AI",
+  "revision": "AN",
   "builtBy": "D&IS Project Technical Manager",
   "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
   "name": "FSC",
-  "savedAt": "2026-09-20T13:14:26.255Z",
+  "savedAt": "2026-09-25T22:31:17.616Z",
   "doc": {
-    "company": "Day 1",
-    "preparedBy": "Day 1",
-    "ref": "Day 1",
+    "company": "Day 2",
+    "preparedBy": "Day 2",
+    "ref": "Day 2",
     "scale": "auto",
     "applyFilters": true
   },
   "view": {
-    "ppd": 273.875,
+    "ppd": 6.748,
     "teamPpd": 48.956,
     "locPpd": 11.176,
     "criticalPath": true,
     "autoSchedule": false,
-    "gridWidth": 953.12939453125,
+    "gridWidth": 718,
     "wrapText": true,
     "hideUnticked": false,
     "columnsHidden": [
@@ -47,7 +47,7 @@
       "stripe": false
     },
     "columns": {
-      "name": 651,
+      "name": 480,
       "cat": 88,
       "own": 118,
       "start": 77,
@@ -2617,51 +2617,19 @@
   "watch": [
     {
       "kind": "group",
-      "id": "g_h6qdcyhmm"
+      "id": "g_ljlo4v024"
     },
     {
       "kind": "group",
-      "id": "g_tlh325uwv"
+      "id": "g_ntdc6wdad"
     },
     {
       "kind": "group",
-      "id": "g_0ywlmfz1y"
+      "id": "g_35nkjz9hi"
     },
     {
       "kind": "group",
-      "id": "g_bzvinw38v"
-    },
-    {
-      "kind": "group",
-      "id": "g_nxez8e2ni"
-    },
-    {
-      "kind": "group",
-      "id": "g_erszwjd3x"
-    },
-    {
-      "kind": "group",
-      "id": "g_3sv939h4o"
-    },
-    {
-      "kind": "group",
-      "id": "g_xwkwq5e7c"
-    },
-    {
-      "kind": "group",
-      "id": "g_ara6d34zn"
-    },
-    {
-      "kind": "group",
-      "id": "g_egmy4vfsr"
-    },
-    {
-      "kind": "group",
-      "id": "g_4aw16o7nm"
-    },
-    {
-      "kind": "group",
-      "id": "g_kj6q9w590"
+      "id": "g_a5dsc4dju"
     }
   ],
   "live": {
@@ -2675,28 +2643,7 @@
     "phoneId": "",
     "stage": "cat_fsc1",
     "follow": false,
-    "fields": [
-      {
-        "id": "wf_iw1oquxds",
-        "label": "Depot TRA",
-        "value": "Depot TRA Power On Pending"
-      },
-      {
-        "id": "wf_nnbv0fpye",
-        "label": "Depot Cabinet Power",
-        "value": "Target Depot Cabinet Power on Next : 1645h"
-      },
-      {
-        "id": "wf_kuhoc8hlr",
-        "label": "BP10 Cabinet Relocation",
-        "value": "Target Complete by 1830h"
-      },
-      {
-        "id": "wf_bjnk6jq7d",
-        "label": "SW12 ",
-        "value": "Work Completed. Doing the final adjustment. Tartget 1700h"
-      }
-    ]
+    "fields": []
   },
   "groups": [
     {
@@ -2788,134 +2735,6 @@
       "parentId": null
     },
     {
-      "id": "g_ljlo4v024",
-      "name": "Cabinet Relocation Works (FSC2)",
-      "color": "#0f8a4a",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": null
-    },
-    {
-      "id": "g_g3c44dmig",
-      "name": "BP10 [ OBC1]",
-      "color": "#0f8a4a",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": "g_ljlo4v024"
-    },
-    {
-      "id": "g_9kwxjtyvm",
-      "name": "BPD [ OBC1]",
-      "color": "#0f8a4a",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": "g_ljlo4v024"
-    },
-    {
-      "id": "g_2448jblnp",
-      "name": "BPD [ RATC ]",
-      "color": "#0f8a4a",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": "g_ljlo4v024"
-    },
-    {
-      "id": "g_gk87kx7bc",
-      "name": "BPD [ DIAG01 ]",
-      "color": "#0f8a4a",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": "g_ljlo4v024"
-    },
-    {
-      "id": "g_96ecbuue0",
-      "name": "Cabinet Power On",
-      "color": "#0f8a4a",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": "g_ljlo4v024"
-    },
-    {
-      "id": "g_0wudekrar",
-      "name": "Pre System Check",
-      "color": "#0f8a4a",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": "g_ljlo4v024"
-    },
-    {
-      "id": "g_ntdc6wdad",
-      "name": "Switch Power Rail Works (FSC2)",
-      "color": "#d4356b",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": null
-    },
-    {
-      "id": "g_stjeljvtf",
-      "name": "SW 41",
-      "color": "#d4356b",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": "g_ntdc6wdad"
-    },
-    {
-      "id": "g_w6wt4q5xq",
-      "name": "SW 53",
-      "color": "#d4356b",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": "g_ntdc6wdad"
-    },
-    {
-      "id": "g_35nkjz9hi",
-      "name": "SW 71",
-      "color": "#d4356b",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": "g_ntdc6wdad"
-    },
-    {
-      "id": "g_a5dsc4dju",
-      "name": "SW 72",
-      "color": "#d4356b",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": "g_ntdc6wdad"
-    },
-    {
-      "id": "g_krrxi2jq0",
-      "name": "SW 51",
-      "color": "#d4356b",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": "g_ntdc6wdad"
-    },
-    {
-      "id": "g_7ebvggnwy",
-      "name": "SW 52",
-      "color": "#d4356b",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": "g_ntdc6wdad"
-    },
-    {
-      "id": "g_x785j8k0c",
-      "name": "Material Delevery & Unloading",
-      "color": "#d4356b",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": "g_ntdc6wdad"
-    },
-    {
-      "id": "g_4scdn8s2y",
-      "name": "IR Test Works (FSC2)",
-      "color": "#7a5af5",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": null
-    },
-    {
       "id": "g_bvuiia2y7",
       "name": "SMRT SWITCH MAINTENANCE WORKS [FSC 1]",
       "color": "#1273e0",
@@ -2929,30 +2748,6 @@
       "color": "#00a6a0",
       "collapsed": true,
       "categoryId": "cat_day0",
-      "parentId": null
-    },
-    {
-      "id": "g_3g6jwtdmr",
-      "name": "R801A Activities PA Testing (FSC2)",
-      "color": "#6b7a90",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": null
-    },
-    {
-      "id": "g_6hrc541qt",
-      "name": "SIT (FSC2)",
-      "color": "#9333c4",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": null
-    },
-    {
-      "id": "g_a1al3yum0",
-      "name": "SAT (FSC2)",
-      "color": "#1273e0",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
       "parentId": null
     },
     {
@@ -2972,6 +2767,22 @@
       "parentId": null
     },
     {
+      "id": "g_qufaa5tvk",
+      "name": "600V Switchboard-1 Shutdown Maintenance",
+      "color": "#b0821a",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_oijr6mjov"
+    },
+    {
+      "id": "g_628wh6x9l",
+      "name": "BP9 to BP10 for atgrade CCTV cm work",
+      "color": "#b0821a",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_oijr6mjov"
+    },
+    {
       "id": "g_9k31msvnw",
       "name": "Go/No-Go (Milestones) (FSC2)",
       "color": "#b0821a",
@@ -2980,18 +2791,10 @@
       "parentId": null
     },
     {
-      "id": "g_2fxj4v088",
-      "name": "R801A Activities Rack-To-Rack Activities Depot, BP01, BP05(FSC2)",
-      "color": "#00a6a0",
-      "collapsed": true,
-      "categoryId": "cat_fsc2",
-      "parentId": null
-    },
-    {
       "id": "g_f5yeuzfkj",
       "name": "Cabinet Relocation Works (FSC1)",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -2999,7 +2802,7 @@
       "id": "g_39c7wczpj",
       "name": "Switch Power Rail Works (FSC1)",
       "color": "#0d97c4",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3015,7 +2818,7 @@
       "id": "g_vjitj8ggp",
       "name": "SAT (FSC1)",
       "color": "#b0821a",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3031,7 +2834,7 @@
       "id": "g_1cfv8etni",
       "name": "RME Testing [FSC 1]",
       "color": "#b0821a",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_6c2p9r599"
     },
@@ -3039,7 +2842,7 @@
       "id": "g_qcs2chv39",
       "name": "Pre System Check",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3047,7 +2850,7 @@
       "id": "g_w9lda4lbd",
       "name": "Cabinet Power Off",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3055,7 +2858,7 @@
       "id": "g_nxez8e2ni",
       "name": "BP10 [ RATC ]",
       "color": "#d4356b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": "g_f5yeuzfkj"
     },
@@ -3151,7 +2954,7 @@
       "id": "g_egmy4vfsr",
       "name": "R801A (NEC) ACTIVITIES [FSC 1]",
       "color": "#1273e0",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3159,7 +2962,7 @@
       "id": "g_4aw16o7nm",
       "name": "R801 (COLAS RAIL) ACTIVITIES [FSC 1]",
       "color": "#e0740b",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
     },
@@ -3207,9 +3010,145 @@
       "id": "g_kj6q9w590",
       "name": "SMRT Power Maintenance Works [FSC1]",
       "color": "#6b7a90",
-      "collapsed": false,
+      "collapsed": true,
       "categoryId": "cat_fsc1",
       "parentId": null
+    },
+    {
+      "id": "g_8zb8lg5pi",
+      "name": "C801B ACTIVITIES [FSC 2]",
+      "color": "#0f8a4a",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": null
+    },
+    {
+      "id": "g_ljlo4v024",
+      "name": "Cabinet Relocation Works (FSC2)",
+      "color": "#0f8a4a",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_8zb8lg5pi"
+    },
+    {
+      "id": "g_0wudekrar",
+      "name": "Pre System Check",
+      "color": "#0f8a4a",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_ljlo4v024"
+    },
+    {
+      "id": "g_96ecbuue0",
+      "name": "Cabinet Power On",
+      "color": "#0f8a4a",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_ljlo4v024"
+    },
+    {
+      "id": "g_g3c44dmig",
+      "name": "BP10 [ OBC1]",
+      "color": "#0f8a4a",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_ljlo4v024"
+    },
+    {
+      "id": "g_9kwxjtyvm",
+      "name": "BPD [ OBC1]",
+      "color": "#0f8a4a",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_ljlo4v024"
+    },
+    {
+      "id": "g_2448jblnp",
+      "name": "BPD [ RATC ]",
+      "color": "#0f8a4a",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_ljlo4v024"
+    },
+    {
+      "id": "g_gk87kx7bc",
+      "name": "BPD [ DIAG01 ]",
+      "color": "#0f8a4a",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_ljlo4v024"
+    },
+    {
+      "id": "g_ntdc6wdad",
+      "name": "Switch Power Rail Works (FSC2)",
+      "color": "#d4356b",
+      "collapsed": false,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_8zb8lg5pi"
+    },
+    {
+      "id": "g_35nkjz9hi",
+      "name": "SW 71",
+      "color": "#d4356b",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_ntdc6wdad"
+    },
+    {
+      "id": "g_a5dsc4dju",
+      "name": "SW 72",
+      "color": "#d4356b",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_ntdc6wdad"
+    },
+    {
+      "id": "g_x785j8k0c",
+      "name": "Material Delevery & Unloading",
+      "color": "#d4356b",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_ntdc6wdad"
+    },
+    {
+      "id": "g_a1al3yum0",
+      "name": "SAT (FSC2)",
+      "color": "#1273e0",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_8zb8lg5pi"
+    },
+    {
+      "id": "g_4scdn8s2y",
+      "name": "IR Test Works (FSC2)",
+      "color": "#7a5af5",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_8zb8lg5pi"
+    },
+    {
+      "id": "g_6hrc541qt",
+      "name": "SIT (FSC2)",
+      "color": "#9333c4",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_8zb8lg5pi"
+    },
+    {
+      "id": "g_emzukip37",
+      "name": "R801A (NEC) ACTIVITIES [FSC 2]",
+      "color": "#d4356b",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": null
+    },
+    {
+      "id": "g_3g6jwtdmr",
+      "name": "STIPA and SPL Measurement(FSC2)",
+      "color": "#6b7a90",
+      "collapsed": true,
+      "categoryId": "cat_fsc2",
+      "parentId": "g_emzukip37"
     }
   ],
   "tasks": [
@@ -4733,10 +4672,10 @@
         "tm_f8rct4q5h"
       ],
       "teamId": "tm_f8rct4q5h",
-      "status": "in-progress",
-      "progress": 80,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 80,
+      "effectiveProgress": 100,
       "subtasks": [
         {
           "id": "s_iugz1zwbo",
@@ -4761,7 +4700,7 @@
         {
           "id": "s_mt1it1fdo",
           "title": "SW 71",
-          "done": false
+          "done": true
         },
         {
           "id": "s_6z2knwh78",
@@ -4781,7 +4720,7 @@
         {
           "id": "s_wbjrdtoxo",
           "title": "SW 53",
-          "done": false
+          "done": true
         },
         {
           "id": "s_d70hbistw",
@@ -4795,7 +4734,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-25T16:50"
     },
     {
       "id": "t_xb8n23v3z",
@@ -5203,7 +5142,7 @@
         "tm_4hswtynvq"
       ],
       "teamId": "tm_4hswtynvq",
-      "status": "not-started",
+      "status": "cancelled",
       "progress": 0,
       "autoProgress": true,
       "effectiveProgress": 0,
@@ -5466,7 +5405,7 @@
         "tm_hawztq4hg"
       ],
       "teamId": "tm_hawztq4hg",
-      "status": "not-started",
+      "status": "cancelled",
       "progress": 0,
       "autoProgress": false,
       "effectiveProgress": 0,
@@ -5676,62 +5615,6 @@
       "completedAt": "2026-09-20T21:05"
     },
     {
-      "id": "t_gq9ckbnvr",
-      "groupId": "g_6hrc541qt",
-      "name": "[FSC 2] SAT Static - ATS verification (R4)",
-      "start": "2026-09-27T15:00",
-      "end": "2026-09-27T17:30",
-      "allDay": false,
-      "durationDays": 0.1042,
-      "durationLabel": "2h 30m",
-      "categoryId": "cat_fsc2",
-      "ownerId": "p_oymstg25h",
-      "teamIds": [
-        "tm_vrrn1t603"
-      ],
-      "teamId": "tm_vrrn1t603",
-      "status": "not-started",
-      "progress": 0,
-      "autoProgress": false,
-      "effectiveProgress": 0,
-      "subtasks": [],
-      "milestone": false,
-      "notes": "",
-      "predecessors": [],
-      "locationId": null,
-      "struck": false,
-      "struckNote": "",
-      "completedAt": null
-    },
-    {
-      "id": "t_qfkekssca",
-      "groupId": "g_6hrc541qt",
-      "name": "[FSC 2] SAT Static - ATS verification (R1)",
-      "start": "2026-09-27T15:00",
-      "end": "2026-09-27T17:30",
-      "allDay": false,
-      "durationDays": 0.1042,
-      "durationLabel": "2h 30m",
-      "categoryId": "cat_fsc2",
-      "ownerId": "p_oymstg25h",
-      "teamIds": [
-        "tm_vrrn1t603"
-      ],
-      "teamId": "tm_vrrn1t603",
-      "status": "not-started",
-      "progress": 0,
-      "autoProgress": false,
-      "effectiveProgress": 0,
-      "subtasks": [],
-      "milestone": false,
-      "notes": "",
-      "predecessors": [],
-      "locationId": null,
-      "struck": false,
-      "struckNote": "",
-      "completedAt": null
-    },
-    {
       "id": "t_3iefqt5k0",
       "groupId": "g_vjitj8ggp",
       "name": "[FSC 1] SAT Static -ATS + Wayside verification (R4)",
@@ -5858,10 +5741,10 @@
         "tm_9w7uinopk"
       ],
       "teamId": "tm_9w7uinopk",
-      "status": "in-progress",
-      "progress": 20,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 20,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -5869,7 +5752,7 @@
       "locationId": "lc_3pluk41y0",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-25T16:54"
     },
     {
       "id": "t_fk5ols53n",
@@ -5886,10 +5769,10 @@
         "tm_c45jr3z1h"
       ],
       "teamId": "tm_c45jr3z1h",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -5897,35 +5780,7 @@
       "locationId": "lc_3pluk41y0",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
-    },
-    {
-      "id": "t_nk740m7fb",
-      "groupId": "g_6hrc541qt",
-      "name": "[FSC 2] SIT Dynamic Regression Test",
-      "start": "2026-09-27T21:30",
-      "end": "2026-09-27T22:30",
-      "allDay": false,
-      "durationDays": 0.0417,
-      "durationLabel": "1h",
-      "categoryId": "cat_fsc2",
-      "ownerId": "p_q2kbomftl",
-      "teamIds": [
-        "tm_c45jr3z1h"
-      ],
-      "teamId": "tm_c45jr3z1h",
-      "status": "not-started",
-      "progress": 0,
-      "autoProgress": false,
-      "effectiveProgress": 0,
-      "subtasks": [],
-      "milestone": false,
-      "notes": "",
-      "predecessors": [],
-      "locationId": null,
-      "struck": false,
-      "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-25T16:54"
     },
     {
       "id": "t_qwyrbh2jc",
@@ -5942,10 +5797,10 @@
         "tm_c45jr3z1h"
       ],
       "teamId": "tm_c45jr3z1h",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": true,
       "notes": "",
@@ -5953,35 +5808,7 @@
       "locationId": "lc_3pluk41y0",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
-    },
-    {
-      "id": "t_3n1f6u8gu",
-      "groupId": "g_6hrc541qt",
-      "name": "[FSC 2] Mainline/Depot - Final confirmation trains are initialized and ready for revenue service",
-      "start": "2026-09-28T02:00",
-      "end": "2026-09-28T03:00",
-      "allDay": false,
-      "durationDays": 0.0417,
-      "durationLabel": "1h",
-      "categoryId": "cat_fsc2",
-      "ownerId": "p_q2kbomftl",
-      "teamIds": [
-        "tm_c45jr3z1h"
-      ],
-      "teamId": "tm_c45jr3z1h",
-      "status": "not-started",
-      "progress": 0,
-      "autoProgress": false,
-      "effectiveProgress": 0,
-      "subtasks": [],
-      "milestone": false,
-      "notes": "",
-      "predecessors": [],
-      "locationId": null,
-      "struck": false,
-      "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-25T16:54"
     },
     {
       "id": "t_a68aciz1s",
@@ -5998,10 +5825,10 @@
         "tm_c45jr3z1h"
       ],
       "teamId": "tm_c45jr3z1h",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": true,
       "notes": "",
@@ -6009,7 +5836,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-25T16:54"
     },
     {
       "id": "t_8zzuxx107",
@@ -6032,6 +5859,90 @@
       "effectiveProgress": 0,
       "subtasks": [],
       "milestone": true,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
+      "id": "t_nk740m7fb",
+      "groupId": "g_6hrc541qt",
+      "name": "[FSC 2] SIT Dynamic Regression Test",
+      "start": "2026-09-27T21:00",
+      "end": "2026-09-27T22:30",
+      "allDay": false,
+      "durationDays": 0.0625,
+      "durationLabel": "1h 30m",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_q2kbomftl",
+      "teamIds": [
+        "tm_c45jr3z1h"
+      ],
+      "teamId": "tm_c45jr3z1h",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": false,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
+      "id": "t_40vohatzl",
+      "groupId": "g_6hrc541qt",
+      "name": "[FSC 2] ISF ATS Contengency / Pending RRS Test",
+      "start": "2026-09-27T22:30",
+      "end": "2026-09-27T23:30",
+      "allDay": false,
+      "durationDays": 0.0417,
+      "durationLabel": "1h",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_q2kbomftl",
+      "teamIds": [
+        "tm_c45jr3z1h"
+      ],
+      "teamId": "tm_c45jr3z1h",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": false,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
+      "id": "t_8dgw3u4k9",
+      "groupId": "g_6hrc541qt",
+      "name": "[FSC 2] SIT Timetable Test",
+      "start": "2026-09-27T23:30",
+      "end": "2026-09-28T03:30",
+      "allDay": false,
+      "durationDays": 0.1667,
+      "durationLabel": "4h",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_q2kbomftl",
+      "teamIds": [
+        "tm_c45jr3z1h"
+      ],
+      "teamId": "tm_c45jr3z1h",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": false,
       "notes": "",
       "predecessors": [],
       "locationId": null,
@@ -6246,10 +6157,10 @@
         "tm_akrrimwy5"
       ],
       "teamId": "tm_akrrimwy5",
-      "status": "not-started",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 0,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": true,
       "notes": "",
@@ -6257,59 +6168,7 @@
       "locationId": null,
       "struck": false,
       "struckNote": "",
-      "completedAt": null
-    },
-    {
-      "id": "t_okp5ywj9o",
-      "groupId": "g_4rom9sra2",
-      "name": "[FSC 1] Starting Bus Services (In the event of delay)",
-      "start": "2026-09-21T04:00",
-      "end": "2026-09-21T04:00",
-      "allDay": false,
-      "durationDays": 0,
-      "durationLabel": "—",
-      "categoryId": "cat_fsc1",
-      "ownerId": "p_mvb8p9r6h",
-      "teamIds": [],
-      "teamId": null,
-      "status": "not-started",
-      "progress": 0,
-      "autoProgress": false,
-      "effectiveProgress": 0,
-      "subtasks": [],
-      "milestone": true,
-      "notes": "",
-      "predecessors": [],
-      "locationId": null,
-      "struck": true,
-      "struckNote": "",
-      "completedAt": null
-    },
-    {
-      "id": "t_1l4bjanzo",
-      "groupId": "g_9k31msvnw",
-      "name": "[FSC 2] Starting Bus Services (In the event of delay)",
-      "start": "2026-09-28T04:00",
-      "end": "2026-09-28T04:00",
-      "allDay": false,
-      "durationDays": 0,
-      "durationLabel": "—",
-      "categoryId": "cat_fsc2",
-      "ownerId": "p_mvb8p9r6h",
-      "teamIds": [],
-      "teamId": null,
-      "status": "not-started",
-      "progress": 0,
-      "autoProgress": false,
-      "effectiveProgress": 0,
-      "subtasks": [],
-      "milestone": true,
-      "notes": "",
-      "predecessors": [],
-      "locationId": null,
-      "struck": false,
-      "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-25T16:53"
     },
     {
       "id": "t_kyhbkcn6j",
@@ -6490,44 +6349,6 @@
       "struck": false,
       "struckNote": "",
       "completedAt": "2026-09-20T09:50"
-    },
-    {
-      "id": "t_u039fv7jl",
-      "groupId": "g_19h9wcdg7",
-      "name": "FSC 2 - (26th 2200h) Main Tool Box Meeting [Both Cabinet Relo & SW Pwr] Fro PICs & Engineers At Site Office",
-      "start": "2026-09-26T23:00",
-      "end": "2026-09-27T00:00",
-      "allDay": false,
-      "durationDays": 0.0417,
-      "durationLabel": "1h",
-      "categoryId": "cat_fsc2",
-      "ownerId": "p_mvb8p9r6h",
-      "teamIds": [
-        "tm_hksnio1la",
-        "tm_ec1y0xa4j",
-        "tm_psvvco9ve",
-        "tm_av7su60i2",
-        "tm_p9dxyxx17",
-        "tm_tedxmf6nb",
-        "tm_0osk8fb25",
-        "tm_4hswtynvq",
-        "tm_c45jr3z1h",
-        "tm_b2obj5nta",
-        "tm_vrrn1t603"
-      ],
-      "teamId": "tm_hksnio1la",
-      "status": "not-started",
-      "progress": 0,
-      "autoProgress": false,
-      "effectiveProgress": 0,
-      "subtasks": [],
-      "milestone": false,
-      "notes": "Cabinet Relocation Team 1, 3 & 4\nSwitch Power Rail Team 1 & 2\nSI Team (For IR Test)\nITC Team (Cabinet Power Down)",
-      "predecessors": [],
-      "locationId": null,
-      "struck": false,
-      "struckNote": "",
-      "completedAt": null
     },
     {
       "id": "t_rglcj6a8t",
@@ -6728,12 +6549,40 @@
     {
       "id": "t_osbvz24wj",
       "groupId": "g_3g6jwtdmr",
-      "name": "Depot - All Rooms, Concourse, Mezzanine, Platforms",
-      "start": "2026-09-27T08:30",
-      "end": "2026-09-27T11:00",
+      "name": "BP09",
+      "start": "2026-09-27T14:00",
+      "end": "2026-09-27T16:00",
       "allDay": false,
-      "durationDays": 0.1042,
-      "durationLabel": "2h 30m",
+      "durationDays": 0.0833,
+      "durationLabel": "2h",
+      "categoryId": "cat_fsc2",
+      "ownerId": null,
+      "teamIds": [
+        "tm_86jv8qrvn"
+      ],
+      "teamId": "tm_86jv8qrvn",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": false,
+      "notes": "",
+      "predecessors": [],
+      "locationId": "lc_uxzojfm3v",
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
+      "id": "t_e5ayoinf4",
+      "groupId": "g_3g6jwtdmr",
+      "name": "BP08",
+      "start": "2026-09-27T16:30",
+      "end": "2026-09-27T18:30",
+      "allDay": false,
+      "durationDays": 0.0833,
+      "durationLabel": "2h",
       "categoryId": "cat_fsc2",
       "ownerId": null,
       "teamIds": [
@@ -6756,12 +6605,12 @@
     {
       "id": "t_t8yt8mwtg",
       "groupId": "g_3g6jwtdmr",
-      "name": "BP01 - CER",
-      "start": "2026-09-27T12:00",
-      "end": "2026-09-27T14:30",
+      "name": "BP01",
+      "start": "2026-09-27T08:30",
+      "end": "2026-09-27T10:30",
       "allDay": false,
-      "durationDays": 0.1042,
-      "durationLabel": "2h 30m",
+      "durationDays": 0.0833,
+      "durationLabel": "2h",
       "categoryId": "cat_fsc2",
       "ownerId": null,
       "teamIds": [
@@ -6784,12 +6633,12 @@
     {
       "id": "t_h3g68elbn",
       "groupId": "g_3g6jwtdmr",
-      "name": "BP05 - All Rooms, Concourse, Mezzanine, Platforms",
-      "start": "2026-09-27T15:00",
-      "end": "2026-09-27T17:30",
+      "name": "BP05",
+      "start": "2026-09-27T11:00",
+      "end": "2026-09-27T13:00",
       "allDay": false,
-      "durationDays": 0.1042,
-      "durationLabel": "2h 30m",
+      "durationDays": 0.0833,
+      "durationLabel": "2h",
       "categoryId": "cat_fsc2",
       "ownerId": null,
       "teamIds": [
@@ -6953,11 +6802,11 @@
       "id": "t_438pzj73i",
       "groupId": "g_4scdn8s2y",
       "name": "[FSC 2] TRA Power Off",
-      "start": "2026-09-27T00:00",
-      "end": "2026-09-27T03:00",
+      "start": "2026-09-27T00:30",
+      "end": "2026-09-27T01:00",
       "allDay": false,
-      "durationDays": 0.125,
-      "durationLabel": "3h",
+      "durationDays": 0.0208,
+      "durationLabel": "30m",
       "categoryId": "cat_fsc2",
       "ownerId": "p_q2kbomftl",
       "teamIds": [
@@ -6999,11 +6848,67 @@
       "completedAt": null
     },
     {
+      "id": "t_usgy9963r",
+      "groupId": "g_4scdn8s2y",
+      "name": "[FSC 2] IR Test - Breaker Isolation",
+      "start": "2026-09-27T01:30",
+      "end": "2026-09-27T02:00",
+      "allDay": false,
+      "durationDays": 0.0208,
+      "durationLabel": "30m",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_q2kbomftl",
+      "teamIds": [
+        "tm_c45jr3z1h"
+      ],
+      "teamId": "tm_c45jr3z1h",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": false,
+      "notes": "Depot\n1. East Bound Lead Track.\n2. West Bound Track",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
       "id": "t_c4qrnz8r1",
       "groupId": "g_4scdn8s2y",
-      "name": "[FSC 2] IR Test - BP01_BP02_IB",
-      "start": "2026-09-27T00:00",
-      "end": "2026-09-27T03:00",
+      "name": "[FSC 2] IR Test - BP08_BP09_IB & OB",
+      "start": "2026-09-27T00:30",
+      "end": "2026-09-27T04:30",
+      "allDay": false,
+      "durationDays": 0.1667,
+      "durationLabel": "4h",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_q2kbomftl",
+      "teamIds": [
+        "tm_c45jr3z1h"
+      ],
+      "teamId": "tm_c45jr3z1h",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": false,
+      "notes": "Depot\n1. East Bound Lead Track.\n2. West Bound Track",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
+      "id": "t_juxzcyyqt",
+      "groupId": "g_4scdn8s2y",
+      "name": "[FSC 2] IR Test - BP11_BP12_IB & OB",
+      "start": "2026-09-27T04:30",
+      "end": "2026-09-27T07:30",
       "allDay": false,
       "durationDays": 0.125,
       "durationLabel": "3h",
@@ -7027,14 +6932,14 @@
       "completedAt": null
     },
     {
-      "id": "t_juxzcyyqt",
+      "id": "t_62n2zh37h",
       "groupId": "g_4scdn8s2y",
-      "name": "[FSC 2] IR Test - BP01_BP02_OB",
-      "start": "2026-09-27T03:00",
-      "end": "2026-09-27T05:00",
+      "name": "[FSC 2] IR Test - Breaker Normalization",
+      "start": "2026-09-27T07:30",
+      "end": "2026-09-27T09:00",
       "allDay": false,
-      "durationDays": 0.0833,
-      "durationLabel": "2h",
+      "durationDays": 0.0625,
+      "durationLabel": "1h 30m",
       "categoryId": "cat_fsc2",
       "ownerId": "p_q2kbomftl",
       "teamIds": [
@@ -7055,14 +6960,14 @@
       "completedAt": null
     },
     {
-      "id": "t_qamw3yl2s",
+      "id": "t_pspavq9jc",
       "groupId": "g_4scdn8s2y",
-      "name": "[FSC 2] IR Test - Depot Switch Area",
-      "start": "2026-09-27T05:00",
+      "name": "[FSC 2] TRA Power On",
+      "start": "2026-09-27T09:00",
       "end": "2026-09-27T09:30",
       "allDay": false,
-      "durationDays": 0.1875,
-      "durationLabel": "4h 30m",
+      "durationDays": 0.0208,
+      "durationLabel": "30m",
       "categoryId": "cat_fsc2",
       "ownerId": "p_q2kbomftl",
       "teamIds": [
@@ -7073,7 +6978,28 @@
       "progress": 0,
       "autoProgress": false,
       "effectiveProgress": 0,
-      "subtasks": [],
+      "subtasks": [
+        {
+          "id": "s_mmfner9jc",
+          "title": "Turn Off TRA 0101",
+          "done": false
+        },
+        {
+          "id": "s_syb5dl9jc",
+          "title": "Turn Off TRA 0104",
+          "done": false
+        },
+        {
+          "id": "s_j8lb9t9jc",
+          "title": "Turn Off TRA 0105",
+          "done": false
+        },
+        {
+          "id": "s_oyzaog9jc",
+          "title": "Turn Off TRA 0201",
+          "done": false
+        }
+      ],
       "milestone": false,
       "notes": "Depot\n1. East Bound Lead Track.\n2. West Bound Track",
       "predecessors": [],
@@ -7165,6 +7091,62 @@
       "completedAt": null
     },
     {
+      "id": "t_reahguq3b",
+      "groupId": "g_g3c44dmig",
+      "name": "[FSC 2] BP10 [ OBC1] - Cable PICO Completion",
+      "start": "2026-09-27T09:00",
+      "end": "2026-09-27T09:00",
+      "allDay": false,
+      "durationDays": 0,
+      "durationLabel": "—",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_h595i0uzy",
+      "teamIds": [
+        "tm_tedxmf6nb"
+      ],
+      "teamId": "tm_tedxmf6nb",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": true,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
+      "id": "t_teta5zvtc",
+      "groupId": "g_g3c44dmig",
+      "name": "Cable dressing",
+      "start": "2026-09-27T08:30",
+      "end": "2026-09-27T21:30",
+      "allDay": false,
+      "durationDays": 0.5417,
+      "durationLabel": "13h",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_h595i0uzy",
+      "teamIds": [
+        "tm_tedxmf6nb"
+      ],
+      "teamId": "tm_tedxmf6nb",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": false,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
       "id": "t_l9k9boj9n",
       "groupId": "g_9kwxjtyvm",
       "name": "[FSC 2] BPD [ OBC1] - Cable PICO",
@@ -7185,6 +7167,34 @@
       "effectiveProgress": 0,
       "subtasks": [],
       "milestone": false,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
+      "id": "t_zfuyz9nt4",
+      "groupId": "g_9kwxjtyvm",
+      "name": "[FSC 2] BPD [ OBC1] - Completion",
+      "start": "2026-09-27T15:00",
+      "end": "2026-09-27T15:00",
+      "allDay": false,
+      "durationDays": 0,
+      "durationLabel": "—",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_h595i0uzy",
+      "teamIds": [
+        "tm_p9dxyxx17"
+      ],
+      "teamId": "tm_p9dxyxx17",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": true,
       "notes": "",
       "predecessors": [],
       "locationId": null,
@@ -7221,6 +7231,34 @@
       "completedAt": null
     },
     {
+      "id": "t_ukunzp29w",
+      "groupId": "g_2448jblnp",
+      "name": "[FSC 2] BPD [ RATC ] - Completion",
+      "start": "2026-09-27T09:30",
+      "end": "2026-09-27T09:30",
+      "allDay": false,
+      "durationDays": 0,
+      "durationLabel": "—",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_h595i0uzy",
+      "teamIds": [
+        "tm_ec1y0xa4j"
+      ],
+      "teamId": "tm_ec1y0xa4j",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": true,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
       "id": "t_haszsgphh",
       "groupId": "g_gk87kx7bc",
       "name": "[FSC 2] BPD [ DIAG01 ] - Cable PICO",
@@ -7241,6 +7279,34 @@
       "effectiveProgress": 0,
       "subtasks": [],
       "milestone": false,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
+      "id": "t_qtvbmo9fq",
+      "groupId": "g_gk87kx7bc",
+      "name": "[FSC 2] BPD [ DIAG01 ] - Completion",
+      "start": "2026-09-27T09:00",
+      "end": "2026-09-27T09:00",
+      "allDay": false,
+      "durationDays": 0,
+      "durationLabel": "—",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_h595i0uzy",
+      "teamIds": [
+        "tm_hksnio1la"
+      ],
+      "teamId": "tm_hksnio1la",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": true,
       "notes": "",
       "predecessors": [],
       "locationId": null,
@@ -7361,6 +7427,34 @@
       "completedAt": null
     },
     {
+      "id": "t_us2gn4qmw",
+      "groupId": "g_g3c44dmig",
+      "name": "[FSC 2] BP10 [ OBC1] - Relocation Complete",
+      "start": "2026-09-27T05:00",
+      "end": "2026-09-27T05:00",
+      "allDay": false,
+      "durationDays": 0,
+      "durationLabel": "—",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_h595i0uzy",
+      "teamIds": [
+        "tm_tedxmf6nb"
+      ],
+      "teamId": "tm_tedxmf6nb",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": true,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
       "id": "t_017xu3u0u",
       "groupId": "g_9kwxjtyvm",
       "name": "[FSC 2] BPD [ OBC1] - Relocation of cabinet",
@@ -7447,12 +7541,12 @@
     {
       "id": "t_ckb11560b",
       "groupId": "g_gk87kx7bc",
-      "name": "[FSC 2] All Cabinets (BPD / BP10) - Power off from PDU",
-      "start": "2026-09-27T01:30",
-      "end": "2026-09-27T02:00",
+      "name": "[FSC 2] Disconnection of all the cables from PDU and Cabinet",
+      "start": "2026-09-27T02:00",
+      "end": "2026-09-27T03:30",
       "allDay": false,
-      "durationDays": 0.0208,
-      "durationLabel": "30m",
+      "durationDays": 0.0625,
+      "durationLabel": "1h 30m",
       "categoryId": "cat_fsc2",
       "ownerId": "p_h595i0uzy",
       "teamIds": [
@@ -7560,8 +7654,8 @@
       "id": "t_e5pr4e7q7",
       "groupId": "g_2448jblnp",
       "name": "[FSC 2] BPD [ RATC ] - New Cable termination",
-      "start": "2026-09-27T16:30",
-      "end": "2026-09-27T19:30",
+      "start": "2026-09-27T04:30",
+      "end": "2026-09-27T07:30",
       "allDay": false,
       "durationDays": 0.125,
       "durationLabel": "3h",
@@ -7585,11 +7679,11 @@
       "completedAt": null
     },
     {
-      "id": "t_0e7xd9aff",
-      "groupId": "g_gk87kx7bc",
-      "name": "[FSC 2] BP10 [ DIAG01 ] - Disconnection of all the cables from PDU and Cabinet",
-      "start": "2026-09-27T02:00",
-      "end": "2026-09-27T03:00",
+      "id": "t_qsxusjf0r",
+      "groupId": "g_0wudekrar",
+      "name": "[FSC 2] All Cabinets (BPD) - Check the system (everthing working fine)",
+      "start": "2026-09-27T00:30",
+      "end": "2026-09-27T01:30",
       "allDay": false,
       "durationDays": 0.0417,
       "durationLabel": "1h",
@@ -7613,14 +7707,14 @@
       "completedAt": null
     },
     {
-      "id": "t_qsxusjf0r",
+      "id": "t_07k3uf4dx",
       "groupId": "g_0wudekrar",
-      "name": "[FSC 2] All Cabinets (BPD) - Check the system (everthing working fine)",
-      "start": "2026-09-27T00:00",
+      "name": "[FSC 2] All Cabinets (BP10) - Check the system (everthing working fine)",
+      "start": "2026-09-27T00:30",
       "end": "2026-09-27T01:30",
       "allDay": false,
-      "durationDays": 0.0625,
-      "durationLabel": "1h 30m",
+      "durationDays": 0.0417,
+      "durationLabel": "1h",
       "categoryId": "cat_fsc2",
       "ownerId": "p_h595i0uzy",
       "teamIds": [
@@ -7641,11 +7735,123 @@
       "completedAt": null
     },
     {
+      "id": "t_x1wpugz1i",
+      "groupId": "g_0wudekrar",
+      "name": "[FSC 2] All Cabinets (BPD) - Power Off From PDU",
+      "start": "2026-09-27T00:30",
+      "end": "2026-09-27T01:30",
+      "allDay": false,
+      "durationDays": 0.0417,
+      "durationLabel": "1h",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_h595i0uzy",
+      "teamIds": [
+        "tm_hksnio1la"
+      ],
+      "teamId": "tm_hksnio1la",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": false,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
+      "id": "t_7264l8kqd",
+      "groupId": "g_0wudekrar",
+      "name": "[FSC 2] All Cabinets (BPD) - Power Off From PDU",
+      "start": "2026-09-27T00:30",
+      "end": "2026-09-27T00:30",
+      "allDay": false,
+      "durationDays": 0,
+      "durationLabel": "—",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_h595i0uzy",
+      "teamIds": [
+        "tm_hksnio1la"
+      ],
+      "teamId": "tm_hksnio1la",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": true,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
+      "id": "t_gcg7unwmq",
+      "groupId": "g_0wudekrar",
+      "name": "[FSC 2] All Cabinets (BP10) - Power Off From PDU",
+      "start": "2026-09-27T01:30",
+      "end": "2026-09-27T02:00",
+      "allDay": false,
+      "durationDays": 0.0208,
+      "durationLabel": "30m",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_h595i0uzy",
+      "teamIds": [
+        "tm_hksnio1la"
+      ],
+      "teamId": "tm_hksnio1la",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": false,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
+      "id": "t_3x1az58at",
+      "groupId": "g_0wudekrar",
+      "name": "[FSC 2] All Cabinets (BP10) - Power Off From PDU",
+      "start": "2026-09-27T01:30",
+      "end": "2026-09-27T01:30",
+      "allDay": false,
+      "durationDays": 0,
+      "durationLabel": "—",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_h595i0uzy",
+      "teamIds": [
+        "tm_hksnio1la"
+      ],
+      "teamId": "tm_hksnio1la",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": true,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
       "id": "t_yn20c8nvp",
       "groupId": "g_96ecbuue0",
       "name": "[FSC 2] Cabinet Power On - Depot",
-      "start": "2026-09-27T17:00",
-      "end": "2026-09-27T17:00",
+      "start": "2026-09-27T18:00",
+      "end": "2026-09-27T18:00",
       "allDay": false,
       "durationDays": 0,
       "durationLabel": "—",
@@ -7672,8 +7878,8 @@
       "id": "t_n33aovxrr",
       "groupId": "g_96ecbuue0",
       "name": "[FSC 2] Cabinet Power On - BP10",
-      "start": "2026-09-27T18:00",
-      "end": "2026-09-27T18:00",
+      "start": "2026-09-27T16:30",
+      "end": "2026-09-27T16:30",
       "allDay": false,
       "durationDays": 0,
       "durationLabel": "—",
@@ -7753,14 +7959,70 @@
       "completedAt": null
     },
     {
+      "id": "t_qltjuo7vg",
+      "groupId": "g_x785j8k0c",
+      "name": "Track access Granted",
+      "start": "2026-09-27T00:30",
+      "end": "2026-09-27T01:05",
+      "allDay": false,
+      "durationDays": 0.0243,
+      "durationLabel": "35m",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_h595i0uzy",
+      "teamIds": [
+        "tm_hawztq4hg"
+      ],
+      "teamId": "tm_hawztq4hg",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": false,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
+      "id": "t_txcj6e4v5",
+      "groupId": "g_x785j8k0c",
+      "name": "Shifting of materials to work location",
+      "start": "2026-09-27T00:45",
+      "end": "2026-09-27T01:50",
+      "allDay": false,
+      "durationDays": 0.0451,
+      "durationLabel": "1h 5m",
+      "categoryId": "cat_fsc2",
+      "ownerId": "p_h595i0uzy",
+      "teamIds": [
+        "tm_hawztq4hg"
+      ],
+      "teamId": "tm_hawztq4hg",
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": false,
+      "notes": "",
+      "predecessors": [],
+      "locationId": null,
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
       "id": "t_e3l8z9kh2",
       "groupId": "g_35nkjz9hi",
       "name": "[FSC 2] BP 06 - BP 07 | SW71",
-      "start": "2026-09-27T00:45",
-      "end": "2026-09-27T04:30",
+      "start": "2026-09-27T00:50",
+      "end": "2026-09-27T08:00",
       "allDay": false,
-      "durationDays": 0.1563,
-      "durationLabel": "3h 45m",
+      "durationDays": 0.2986,
+      "durationLabel": "7h 10m",
       "categoryId": "cat_fsc2",
       "ownerId": "p_h595i0uzy",
       "teamIds": [
@@ -7771,113 +8033,7 @@
       "progress": 0,
       "autoProgress": false,
       "effectiveProgress": 0,
-      "subtasks": [
-        {
-          "id": "s_vv759kxcq",
-          "title": "Shifting of materials to work location\t00:45\t00:50",
-          "done": false
-        },
-        {
-          "id": "s_mmcqxv1py",
-          "title": "Removal of rail cover\t00:50\t00:55",
-          "done": false
-        },
-        {
-          "id": "s_3wzp2r90h",
-          "title": "On-site Existing Module Measurements and Marking, Noise Barrier installation\t00:55\t01:15",
-          "done": false
-        },
-        {
-          "id": "s_vkx9prdjw",
-          "title": "Existing Rail Cutting and removal mounting stud bolt nut (Fixed End, Mov Reverse & Pivot Reverse)\t01:05\t01:15",
-          "done": false
-        },
-        {
-          "id": "s_l1gthmijz",
-          "title": "Tread plate removal\t01:05\t01:15",
-          "done": false
-        },
-        {
-          "id": "s_hbjcizmto",
-          "title": "Removal of exisiting module (Fixed End, Mov Reverse & Pivot Reverse)\t01:15\t01:20",
-          "done": false
-        },
-        {
-          "id": "s_jesfgvs0q",
-          "title": "Cleaning and stud health check\t01:20\t01:35",
-          "done": false
-        },
-        {
-          "id": "s_q49hjjv5o",
-          "title": "Stud Welding (If required)\t01:20\t01:35",
-          "done": false
-        },
-        {
-          "id": "s_tn382d09k",
-          "title": "Installation of New Module including Splice joint (Fixed End, Mov Reverse & Pivot Reverse)\t01:35\t02:35",
-          "done": false
-        },
-        {
-          "id": "s_2wlnw2483",
-          "title": "Installation of Components - PF & PIN\t02:35\t03:20",
-          "done": false
-        },
-        {
-          "id": "s_xc20gh7q0",
-          "title": "installation of rail cover\t03:20\t03:25",
-          "done": false
-        },
-        {
-          "id": "s_x977o1c21",
-          "title": "Mounting bracket (torque)\t03:25\t03:35",
-          "done": false
-        },
-        {
-          "id": "s_i9gkmkfyc",
-          "title": "Existing Rail Cutting and removal mounting stud bolt nut\t02:35\t02:45",
-          "done": false
-        },
-        {
-          "id": "s_6511flk3v",
-          "title": "Removal of exisiting module, \t02:45\t02:55",
-          "done": false
-        },
-        {
-          "id": "s_nlul5tokc",
-          "title": "Cleaning and stud health check\t02:55\t03:05",
-          "done": false
-        },
-        {
-          "id": "s_8opblfskx",
-          "title": "Stud Welding (If required)\t02:55\t03:05",
-          "done": false
-        },
-        {
-          "id": "s_0tvqr1xr2",
-          "title": "Installation of New Module including Splice joint (Mov Normal & Pivot Normal)\t03:05\t03:35",
-          "done": false
-        },
-        {
-          "id": "s_5wwkqf1u9",
-          "title": "Installation of Components - PF & PIN\t03:35\t04:05",
-          "done": false
-        },
-        {
-          "id": "s_t8oikj5fg",
-          "title": "installation of rail cover\t04:05\t04:10",
-          "done": false
-        },
-        {
-          "id": "s_9taau48zo",
-          "title": "Mounting bracket (torque)\t04:10\t04:15",
-          "done": false
-        },
-        {
-          "id": "s_rynfd6cm8",
-          "title": "Alignment of module\t04:15\t04:30",
-          "done": false
-        }
-      ],
+      "subtasks": [],
       "milestone": false,
       "notes": "",
       "predecessors": [],
@@ -7890,452 +8046,27 @@
       "id": "t_358fwu333",
       "groupId": "g_a5dsc4dju",
       "name": "[FSC 2] BP 06 - BP 07 | SW72",
-      "start": "2026-09-27T05:30",
-      "end": "2026-09-27T09:10",
-      "allDay": false,
-      "durationDays": 0.1528,
-      "durationLabel": "3h 40m",
-      "categoryId": "cat_fsc2",
-      "ownerId": "p_h595i0uzy",
-      "teamIds": [
-        "tm_4hswtynvq"
-      ],
-      "teamId": "tm_4hswtynvq",
-      "status": "not-started",
-      "progress": 0,
-      "autoProgress": false,
-      "effectiveProgress": 0,
-      "subtasks": [
-        {
-          "id": "s_w5f64jgm1",
-          "title": "Removal of rail cover\t05:30\t05:35",
-          "done": false
-        },
-        {
-          "id": "s_tn2rw6kem",
-          "title": "On-site Existing Module Measurements and Marking, Noise Barrier installation\t05:35\t05:55",
-          "done": false
-        },
-        {
-          "id": "s_dkn8lkonv",
-          "title": "Existing Rail Cutting and removal mounting stud bolt nut (Fixed End, Mov Reverse & Pivot Reverse)\t05:45\t05:55",
-          "done": false
-        },
-        {
-          "id": "s_8aa04dsmy",
-          "title": "Tread plate removal\t05:45\t05:55",
-          "done": false
-        },
-        {
-          "id": "s_9etuobx5f",
-          "title": "Removal of exisiting module (Fixed End, Mov Reverse & Pivot Reverse)\t05:55\t06:00",
-          "done": false
-        },
-        {
-          "id": "s_g229bn13j",
-          "title": "Cleaning and stud health check\t06:00\t06:15",
-          "done": false
-        },
-        {
-          "id": "s_6p44hq4tu",
-          "title": "Stud Welding (If required)\t06:00\t06:15",
-          "done": false
-        },
-        {
-          "id": "s_h17j1e93i",
-          "title": "Installation of New Module including Splice joint (Fixed End, Mov Reverse & Pivot Reverse)\t06:15\t07:15",
-          "done": false
-        },
-        {
-          "id": "s_3cif6fcfv",
-          "title": "Installation of Components - PF & PIN\t07:15\t08:00",
-          "done": false
-        },
-        {
-          "id": "s_yodcv7gd2",
-          "title": "installation of rail cover\t08:00\t08:05",
-          "done": false
-        },
-        {
-          "id": "s_qkqfe6k5n",
-          "title": "Mounting bracket (torque)\t08:05\t08:15",
-          "done": false
-        },
-        {
-          "id": "s_7l07jznes",
-          "title": "Existing Rail Cutting and removal mounting stud bolt nut\t07:15\t07:25",
-          "done": false
-        },
-        {
-          "id": "s_syr3yus4p",
-          "title": "Removal of exisiting module, \t07:25\t07:35",
-          "done": false
-        },
-        {
-          "id": "s_3puqchvpw",
-          "title": "Cleaning and stud health check\t07:35\t07:45",
-          "done": false
-        },
-        {
-          "id": "s_0no3kuzea",
-          "title": "Stud Welding (If required)\t07:35\t07:45",
-          "done": false
-        },
-        {
-          "id": "s_e7nz6s3e8",
-          "title": "Installation of New Module including Splice joint (Mov Normal & Pivot Normal)\t07:45\t08:15",
-          "done": false
-        },
-        {
-          "id": "s_a13nbx7dr",
-          "title": "Installation of Components - PF & PIN\t08:15\t08:45",
-          "done": false
-        },
-        {
-          "id": "s_gj99hfaw5",
-          "title": "installation of rail cover\t08:45\t08:50",
-          "done": false
-        },
-        {
-          "id": "s_o3kf1te4u",
-          "title": "Mounting bracket (torque)\t08:50\t08:55",
-          "done": false
-        },
-        {
-          "id": "s_t7sdqmhlc",
-          "title": "Alignment of module\t08:55\t09:10",
-          "done": false
-        }
-      ],
-      "milestone": false,
-      "notes": "",
-      "predecessors": [],
-      "locationId": null,
-      "struck": false,
-      "struckNote": "",
-      "completedAt": null
-    },
-    {
-      "id": "t_spqa7msjd",
-      "groupId": "g_krrxi2jq0",
-      "name": "[FSC 2] BP 05 - BP 06 | SW51",
       "start": "2026-09-27T08:30",
-      "end": "2026-09-27T11:30",
-      "allDay": false,
-      "durationDays": 0.125,
-      "durationLabel": "3h",
-      "categoryId": "cat_fsc2",
-      "ownerId": "p_h595i0uzy",
-      "teamIds": [
-        "tm_4hswtynvq"
-      ],
-      "teamId": "tm_4hswtynvq",
-      "status": "not-started",
-      "progress": 0,
-      "autoProgress": false,
-      "effectiveProgress": 0,
-      "subtasks": [
-        {
-          "id": "s_mj1x17sze",
-          "title": "Shifting of materials to work location\t08:30\t08:40",
-          "done": false
-        },
-        {
-          "id": "s_9bcstgxf3",
-          "title": "Removal of rail cover\t08:40\t08:45",
-          "done": false
-        },
-        {
-          "id": "s_41imlw1d8",
-          "title": "On-site Existing Module Measurements and Marking, Noise Barrier installation\t08:45\t09:05",
-          "done": false
-        },
-        {
-          "id": "s_hzqa2v4yf",
-          "title": "Existing Rail Cutting and removal mounting stud bolt nut (Fixed End, Mov Reverse & Pivot Reverse)\t08:55\t09:05",
-          "done": false
-        },
-        {
-          "id": "s_vpuwcd8gt",
-          "title": "Existing Rail Cutting and removal mounting stud bolt nut (Fixed End, Mov Reverse & Pivot Reverse)\t08:55\t09:05",
-          "done": false
-        },
-        {
-          "id": "s_91ti3zhus",
-          "title": "Tread plate removal\t09:05\t09:05",
-          "done": false
-        },
-        {
-          "id": "s_l496kfl82",
-          "title": "Removal of exisiting module (Fixed End, Mov Reverse & Pivot Reverse)\t09:05\t09:10",
-          "done": false
-        },
-        {
-          "id": "s_2y3xg9pad",
-          "title": "Cleaning and stud health check\t09:10\t09:25",
-          "done": false
-        },
-        {
-          "id": "s_edpj0qt1k",
-          "title": "Stud Welding (If required)\t09:10\t09:25",
-          "done": false
-        },
-        {
-          "id": "s_228avrwxd",
-          "title": "Installation of New Module including Splice joint (Fixed End, Mov Reverse & Pivot Reverse)\t09:25\t09:25",
-          "done": false
-        },
-        {
-          "id": "s_bjgmwt0fq",
-          "title": "Installation of Components - PF & PIN\t09:25\t10:10",
-          "done": false
-        },
-        {
-          "id": "s_dhfvff4fq",
-          "title": "Installation of Components - PF & PIN\t09:25\t10:10",
-          "done": false
-        },
-        {
-          "id": "s_7kq18h8ui",
-          "title": "Mounting bracket (torque)\t10:15\t10:25",
-          "done": false
-        },
-        {
-          "id": "s_6ov8akfxl",
-          "title": "Existing Rail Cutting and removal mounting stud bolt nut\t09:25\t09:35",
-          "done": false
-        },
-        {
-          "id": "s_wqsw6cjvr",
-          "title": "Removal of exisiting module, \t09:35\t09:45",
-          "done": false
-        },
-        {
-          "id": "s_ei1xozo1b",
-          "title": "Cleaning and stud health check\t09:45\t09:55",
-          "done": false
-        },
-        {
-          "id": "s_21661stvx",
-          "title": "Stud Welding (If required)\t09:45\t09:55",
-          "done": false
-        },
-        {
-          "id": "s_ol1kmhypj",
-          "title": "Installation of New Module including Splice joint (Mov Normal & Pivot Normal)\t09:55\t10:35",
-          "done": false
-        },
-        {
-          "id": "s_5r2z863j6",
-          "title": "Installation of Components - PF & PIN\t10:35\t11:05",
-          "done": false
-        },
-        {
-          "id": "s_rb09ut6xu",
-          "title": "installation of rail cover\t11:05\t11:10",
-          "done": false
-        },
-        {
-          "id": "s_gdoejpcbe",
-          "title": "Mounting bracket (torque)\t11:10\t11:15",
-          "done": false
-        },
-        {
-          "id": "s_wdhvhyg15",
-          "title": "Alignment of module\t11:15\t11:30",
-          "done": false
-        }
-      ],
-      "milestone": false,
-      "notes": "",
-      "predecessors": [],
-      "locationId": null,
-      "struck": false,
-      "struckNote": "",
-      "completedAt": null
-    },
-    {
-      "id": "t_m236enlcu",
-      "groupId": "g_7ebvggnwy",
-      "name": "[FSC 2] BP 05 - BP 06 | SW52",
-      "start": "2026-09-27T12:30",
       "end": "2026-09-27T18:00",
       "allDay": false,
-      "durationDays": 0.2292,
-      "durationLabel": "5h 30m",
+      "durationDays": 0.3958,
+      "durationLabel": "9h 30m",
       "categoryId": "cat_fsc2",
       "ownerId": "p_h595i0uzy",
       "teamIds": [
-        "tm_hawztq4hg"
+        "tm_4hswtynvq"
       ],
-      "teamId": "tm_hawztq4hg",
+      "teamId": "tm_4hswtynvq",
       "status": "not-started",
       "progress": 0,
       "autoProgress": false,
       "effectiveProgress": 0,
-      "subtasks": [
-        {
-          "id": "s_gaipw7mfj",
-          "title": "Removal of rail cover\t12:30\t12:35",
-          "done": false
-        },
-        {
-          "id": "s_3lqn0aqtv",
-          "title": "On-site Existing Module Measurements and Marking, Noise Barrier installation\t12:35\t12:55",
-          "done": false
-        },
-        {
-          "id": "s_gf71mlusx",
-          "title": "Existing Rail Cutting and removal mounting stud bolt nut (Fixed End, Mov Reverse & Pivot Reverse)\t12:45\t13:00",
-          "done": false
-        },
-        {
-          "id": "s_g39epzzct",
-          "title": "Tread plate removal\t12:45\t13:00",
-          "done": false
-        },
-        {
-          "id": "s_jrf9vj46g",
-          "title": "Tread plate removal\t12:45\t13:00",
-          "done": false
-        },
-        {
-          "id": "s_3l2km08je",
-          "title": "Cleaning and stud health check\t13:10\t13:30",
-          "done": false
-        },
-        {
-          "id": "s_rh31awd1e",
-          "title": "Stud Welding (If required)\t13:10\t13:30",
-          "done": false
-        },
-        {
-          "id": "s_fxvhe3lc1",
-          "title": "Installation of New Module including Splice joint (Fixed End, Mov Reverse & Pivot Reverse)\t13:30\t15:00",
-          "done": false
-        },
-        {
-          "id": "s_0jkd61p00",
-          "title": "Installation of Components - PF & PIN\t15:00\t16:00",
-          "done": false
-        },
-        {
-          "id": "s_soia15ss2",
-          "title": "installation of rail cover\t16:00\t16:10",
-          "done": false
-        },
-        {
-          "id": "s_ke2km0wd8",
-          "title": "Mounting bracket (torque)\t16:10\t16:25",
-          "done": false
-        },
-        {
-          "id": "s_p5xobk3d4",
-          "title": "Existing Rail Cutting and removal mounting stud bolt nut\t15:00\t15:15",
-          "done": false
-        },
-        {
-          "id": "s_547n1h7se",
-          "title": "Removal of exisiting module, \t15:15\t15:30",
-          "done": false
-        },
-        {
-          "id": "s_rwhcdjbun",
-          "title": "Cleaning and stud health check\t15:30\t15:45",
-          "done": false
-        },
-        {
-          "id": "s_as0cubfza",
-          "title": "Stud Welding (If required)\t15:30\t15:45",
-          "done": false
-        },
-        {
-          "id": "s_08r3bsku9",
-          "title": "Installation of New Module including Splice joint (Mov Normal & Pivot Normal)\t15:45\t16:30",
-          "done": false
-        },
-        {
-          "id": "s_caif3pou8",
-          "title": "Installation of Components - PF & PIN\t16:30\t17:15",
-          "done": false
-        },
-        {
-          "id": "s_030a6wseh",
-          "title": "installation of rail cover\t17:15\t17:25",
-          "done": false
-        },
-        {
-          "id": "s_azrkjxw05",
-          "title": "installation of rail cover\t17:15\t17:25",
-          "done": false
-        },
-        {
-          "id": "s_p7ey06z0w",
-          "title": "Alignment of module\t17:35\t18:00",
-          "done": false
-        }
-      ],
+      "subtasks": [],
       "milestone": false,
       "notes": "",
       "predecessors": [],
       "locationId": null,
       "struck": false,
-      "struckNote": "",
-      "completedAt": null
-    },
-    {
-      "id": "t_d5kmefvi5",
-      "groupId": "g_stjeljvtf",
-      "name": "[FSC 2] BP 05 - BP 06 | SW41",
-      "start": "2026-09-27T13:30",
-      "end": "2026-09-27T17:00",
-      "allDay": false,
-      "durationDays": 0.1458,
-      "durationLabel": "3h 30m",
-      "categoryId": "cat_fsc2",
-      "ownerId": "p_h595i0uzy",
-      "teamIds": [
-        "tm_hawztq4hg"
-      ],
-      "teamId": "tm_hawztq4hg",
-      "status": "not-started",
-      "progress": 0,
-      "autoProgress": false,
-      "effectiveProgress": 0,
-      "subtasks": [],
-      "milestone": false,
-      "notes": "",
-      "predecessors": [],
-      "locationId": null,
-      "struck": true,
-      "struckNote": "",
-      "completedAt": null
-    },
-    {
-      "id": "t_okqaf3dll",
-      "groupId": "g_w6wt4q5xq",
-      "name": "[FSC 2] BP 05 - BP 06 | SW53",
-      "start": "2026-09-27T09:00",
-      "end": "2026-09-27T17:00",
-      "allDay": false,
-      "durationDays": 0.3333,
-      "durationLabel": "8h",
-      "categoryId": "cat_fsc2",
-      "ownerId": "p_h595i0uzy",
-      "teamIds": [
-        "tm_hawztq4hg"
-      ],
-      "teamId": "tm_hawztq4hg",
-      "status": "not-started",
-      "progress": 0,
-      "autoProgress": false,
-      "effectiveProgress": 0,
-      "subtasks": [],
-      "milestone": false,
-      "notes": "",
-      "predecessors": [],
-      "locationId": null,
-      "struck": true,
       "struckNote": "",
       "completedAt": null
     },
@@ -8367,7 +8098,7 @@
     },
     {
       "id": "t_0ekrp0pab",
-      "groupId": "g_oijr6mjov",
+      "groupId": "g_qufaa5tvk",
       "name": "BP12 - 600V Switchboard-1 Shutdown Maintenance",
       "start": "2026-09-27T09:00",
       "end": "2026-09-27T13:00",
@@ -8419,7 +8150,7 @@
     },
     {
       "id": "t_mxev5pz4q",
-      "groupId": "g_oijr6mjov",
+      "groupId": "g_qufaa5tvk",
       "name": "BP08 - 600V Switchboard-1 Shutdown Maintenance",
       "start": "2026-09-27T14:00",
       "end": "2026-09-27T18:00",
@@ -8648,10 +8379,10 @@
       "ownerId": null,
       "teamIds": [],
       "teamId": null,
-      "status": "in-progress",
-      "progress": 35,
+      "status": "done",
+      "progress": 100,
       "autoProgress": false,
-      "effectiveProgress": 35,
+      "effectiveProgress": 100,
       "subtasks": [],
       "milestone": false,
       "notes": "",
@@ -8659,33 +8390,7 @@
       "locationId": "lc_9t706vyxl",
       "struck": false,
       "struckNote": "",
-      "completedAt": null
-    },
-    {
-      "id": "t_9wu9w6ehj",
-      "groupId": "g_2fxj4v088",
-      "name": "To Be Added",
-      "start": "2026-09-27T08:00",
-      "end": "2026-09-27T17:00",
-      "allDay": false,
-      "durationDays": 0.375,
-      "durationLabel": "9h",
-      "categoryId": "cat_fsc2",
-      "ownerId": null,
-      "teamIds": [],
-      "teamId": null,
-      "status": "not-started",
-      "progress": 0,
-      "autoProgress": false,
-      "effectiveProgress": 0,
-      "subtasks": [],
-      "milestone": false,
-      "notes": "",
-      "predecessors": [],
-      "locationId": null,
-      "struck": false,
-      "struckNote": "",
-      "completedAt": null
+      "completedAt": "2026-09-25T16:55"
     },
     {
       "id": "t_wgwciz4c0",
@@ -8830,7 +8535,7 @@
       "ownerId": null,
       "teamIds": [],
       "teamId": null,
-      "status": "not-started",
+      "status": "cancelled",
       "progress": 0,
       "autoProgress": false,
       "effectiveProgress": 0,
@@ -8839,6 +8544,32 @@
       "notes": "",
       "predecessors": [],
       "locationId": "lc_fq43qsnie",
+      "struck": false,
+      "struckNote": "",
+      "completedAt": null
+    },
+    {
+      "id": "t_enta0bae3",
+      "groupId": "g_628wh6x9l",
+      "name": "BP9 to BP10 for atgrade CCTV cm work",
+      "start": "2026-09-27T03:00",
+      "end": "2026-09-27T05:00",
+      "allDay": false,
+      "durationDays": 0.0833,
+      "durationLabel": "2h",
+      "categoryId": "cat_fsc2",
+      "ownerId": null,
+      "teamIds": [],
+      "teamId": null,
+      "status": "not-started",
+      "progress": 0,
+      "autoProgress": false,
+      "effectiveProgress": 0,
+      "subtasks": [],
+      "milestone": false,
+      "notes": "",
+      "predecessors": [],
+      "locationId": "lc_qrczf72z3",
       "struck": false,
       "struckNote": "",
       "completedAt": null
