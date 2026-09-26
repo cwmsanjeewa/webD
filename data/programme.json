@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-26T17:15:14.166Z",
+ "savedAt": "2026-09-26T17:18:43.558Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -3030,7 +3030,7 @@
    "id": "g_ljlo4v024",
    "name": "Cabinet Relocation Works (FSC2)",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3046,7 +3046,7 @@
    "id": "g_96ecbuue0",
    "name": "Cabinet Power On",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3054,7 +3054,7 @@
    "id": "g_g3c44dmig",
    "name": "BP10 [ OBC1]",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3062,7 +3062,7 @@
    "id": "g_9kwxjtyvm",
    "name": "BPD [ OBC1]",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3086,7 +3086,7 @@
    "id": "g_ntdc6wdad",
    "name": "Switch Power Rail Works (FSC2)",
    "color": "#d4356b",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -7641,10 +7641,10 @@
     "tm_ec1y0xa4j"
    ],
    "teamId": "tm_ec1y0xa4j",
-   "status": "not-started",
-   "progress": 0,
+   "status": "in-progress",
+   "progress": 35,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 35,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7753,10 +7753,10 @@
     "tm_hksnio1la"
    ],
    "teamId": "tm_hksnio1la",
-   "status": "in-progress",
-   "progress": 25,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 25,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7764,7 +7764,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T01:18"
   },
   {
    "id": "t_7264l8kqd",
@@ -7781,10 +7781,10 @@
     "tm_hksnio1la"
    ],
    "teamId": "tm_hksnio1la",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": true,
    "notes": "",
@@ -7792,7 +7792,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T01:18"
   },
   {
    "id": "t_gcg7unwmq",
