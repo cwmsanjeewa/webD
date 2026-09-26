@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-26T17:18:43.558Z",
+ "savedAt": "2026-09-26T17:28:21.632Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -2766,7 +2766,7 @@
    "id": "g_oijr6mjov",
    "name": "SMRT Power Maintenance Works [FSC2]",
    "color": "#b0821a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -2774,7 +2774,7 @@
    "id": "g_qufaa5tvk",
    "name": "600V Switchboard-1 Shutdown Maintenance",
    "color": "#b0821a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_oijr6mjov"
   },
@@ -2782,7 +2782,7 @@
    "id": "g_628wh6x9l",
    "name": "BP9 to BP10 for atgrade CCTV cm work",
    "color": "#b0821a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_oijr6mjov"
   },
@@ -2790,7 +2790,7 @@
    "id": "g_9k31msvnw",
    "name": "Go/No-Go (Milestones) (FSC2)",
    "color": "#b0821a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -2998,7 +2998,7 @@
    "id": "g_ks6g5xeqe",
    "name": "R801 (COLAS RAIL) ACTIVITIES",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3046,7 +3046,7 @@
    "id": "g_96ecbuue0",
    "name": "Cabinet Power On",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3054,7 +3054,7 @@
    "id": "g_g3c44dmig",
    "name": "BP10 [ OBC1]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3062,7 +3062,7 @@
    "id": "g_9kwxjtyvm",
    "name": "BPD [ OBC1]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3086,7 +3086,7 @@
    "id": "g_ntdc6wdad",
    "name": "Switch Power Rail Works (FSC2)",
    "color": "#d4356b",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3126,7 +3126,7 @@
    "id": "g_4scdn8s2y",
    "name": "IR Test Works (FSC2)",
    "color": "#7a5af5",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -6817,30 +6817,30 @@
     "tm_c45jr3z1h"
    ],
    "teamId": "tm_c45jr3z1h",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [
     {
      "id": "s_ctdaa26s5",
      "title": "Turn Off TRA 0101",
-     "done": false
+     "done": true
     },
     {
      "id": "s_2b1tdha53",
      "title": "Turn Off TRA 0104",
-     "done": false
+     "done": true
     },
     {
      "id": "s_64yvxdfhu",
      "title": "Turn Off TRA 0105",
-     "done": false
+     "done": true
     },
     {
      "id": "s_8xqnm1lmx",
      "title": "Turn Off TRA 0201",
-     "done": false
+     "done": true
     }
    ],
    "milestone": false,
@@ -6849,7 +6849,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T01:28"
   },
   {
    "id": "t_usgy9963r",
@@ -6866,10 +6866,10 @@
     "tm_c45jr3z1h"
    ],
    "teamId": "tm_c45jr3z1h",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "Depot\n1. East Bound Lead Track.\n2. West Bound Track",
@@ -6877,7 +6877,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T01:28"
   },
   {
    "id": "t_c4qrnz8r1",
