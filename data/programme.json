@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-26T17:12:32.801Z",
+ "savedAt": "2026-09-26T17:15:14.166Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -3030,7 +3030,7 @@
    "id": "g_ljlo4v024",
    "name": "Cabinet Relocation Works (FSC2)",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3094,7 +3094,7 @@
    "id": "g_35nkjz9hi",
    "name": "SW 71",
    "color": "#d4356b",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ntdc6wdad"
   },
@@ -3110,7 +3110,7 @@
    "id": "g_x785j8k0c",
    "name": "Material Delevery & Unloading",
    "color": "#d4356b",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ntdc6wdad"
   },
@@ -7921,10 +7921,10 @@
     "tm_hawztq4hg"
    ],
    "teamId": "tm_hawztq4hg",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7932,7 +7932,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T01:14"
   },
   {
    "id": "t_p46crqm9z",
@@ -7949,10 +7949,10 @@
     "tm_hawztq4hg"
    ],
    "teamId": "tm_hawztq4hg",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7960,7 +7960,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T01:14"
   },
   {
    "id": "t_qltjuo7vg",
@@ -7977,10 +7977,10 @@
     "tm_hawztq4hg"
    ],
    "teamId": "tm_hawztq4hg",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7988,7 +7988,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T01:14"
   },
   {
    "id": "t_txcj6e4v5",
@@ -8005,10 +8005,10 @@
     "tm_hawztq4hg"
    ],
    "teamId": "tm_hawztq4hg",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -8016,7 +8016,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T01:14"
   },
   {
    "id": "t_e3l8z9kh2",
@@ -8033,10 +8033,10 @@
     "tm_4hswtynvq"
    ],
    "teamId": "tm_4hswtynvq",
-   "status": "not-started",
-   "progress": 0,
+   "status": "in-progress",
+   "progress": 5,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 5,
    "subtasks": [],
    "milestone": false,
    "notes": "",
