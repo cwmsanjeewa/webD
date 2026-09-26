@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-26T16:35:21.007Z",
+ "savedAt": "2026-09-26T16:37:32.792Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -2633,7 +2633,7 @@
   }
  ],
  "live": {
-  "stage": "cat_fsc1",
+  "stage": "cat_fsc2",
   "secs": 12
  },
  "whatsapp": {
@@ -2786,7 +2786,7 @@
    "id": "g_9k31msvnw",
    "name": "Go/No-Go (Milestones) (FSC2)",
    "color": "#b0821a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3018,7 +3018,7 @@
    "id": "g_8zb8lg5pi",
    "name": "C801B ACTIVITIES [FSC 2]",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -6101,7 +6101,7 @@
     "tm_0osk8fb25"
    ],
    "teamId": "tm_0osk8fb25",
-   "status": "not-started",
+   "status": "in-progress",
    "progress": 0,
    "autoProgress": false,
    "effectiveProgress": 0,
@@ -6183,7 +6183,7 @@
    "ownerId": null,
    "teamIds": [],
    "teamId": null,
-   "status": "not-started",
+   "status": "in-progress",
    "progress": 0,
    "autoProgress": false,
    "effectiveProgress": 0,
