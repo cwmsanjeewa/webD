@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-26T20:24:39.171Z",
+ "savedAt": "2026-09-26T22:25:09.090Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -2770,7 +2770,7 @@
    "id": "g_oijr6mjov",
    "name": "SMRT Power Maintenance Works [FSC2]",
    "color": "#b0821a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3026,7 +3026,7 @@
    "id": "g_8zb8lg5pi",
    "name": "C801B ACTIVITIES [FSC 2]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3034,7 +3034,7 @@
    "id": "g_ljlo4v024",
    "name": "Cabinet Relocation Works (FSC2)",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3082,7 +3082,7 @@
    "id": "g_gk87kx7bc",
    "name": "BPD [ DIAG01 ]",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -6898,10 +6898,10 @@
     "tm_c45jr3z1h"
    ],
    "teamId": "tm_c45jr3z1h",
-   "status": "in-progress",
-   "progress": 10,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 10,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "Depot\n1. East Bound Lead Track.\n2. West Bound Track",
@@ -6909,7 +6909,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T06:24"
   },
   {
    "id": "t_juxzcyyqt",
@@ -6926,10 +6926,10 @@
     "tm_c45jr3z1h"
    ],
    "teamId": "tm_c45jr3z1h",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "Depot\n1. East Bound Lead Track.\n2. West Bound Track",
@@ -6937,7 +6937,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T06:25"
   },
   {
    "id": "t_62n2zh37h",
