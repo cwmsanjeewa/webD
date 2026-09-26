@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-26T16:48:25.613Z",
+ "savedAt": "2026-09-26T17:10:58.291Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -14,7 +14,7 @@
   "applyFilters": true
  },
  "view": {
-  "ppd": 6.748,
+  "ppd": 353.208,
   "teamPpd": 48.956,
   "locPpd": 11.176,
   "criticalPath": true,
@@ -3042,7 +3042,7 @@
    "id": "g_96ecbuue0",
    "name": "Cabinet Power On",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3050,7 +3050,7 @@
    "id": "g_g3c44dmig",
    "name": "BP10 [ OBC1]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3058,7 +3058,7 @@
    "id": "g_9kwxjtyvm",
    "name": "BPD [ OBC1]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3066,7 +3066,7 @@
    "id": "g_2448jblnp",
    "name": "BPD [ RATC ]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3074,7 +3074,7 @@
    "id": "g_gk87kx7bc",
    "name": "BPD [ DIAG01 ]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -7693,10 +7693,10 @@
     "tm_hksnio1la"
    ],
    "teamId": "tm_hksnio1la",
-   "status": "in-progress",
-   "progress": 25,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 25,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7704,7 +7704,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T01:10"
   },
   {
    "id": "t_07k3uf4dx",
@@ -7721,10 +7721,10 @@
     "tm_hksnio1la"
    ],
    "teamId": "tm_hksnio1la",
-   "status": "in-progress",
-   "progress": 25,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 25,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7732,7 +7732,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T01:10"
   },
   {
    "id": "t_x1wpugz1i",
