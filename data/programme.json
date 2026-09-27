@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T12:55:55.643Z",
+ "savedAt": "2026-09-27T12:56:52.674Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -6762,10 +6762,10 @@
     "tm_9w7uinopk"
    ],
    "teamId": "tm_9w7uinopk",
-   "status": "not-started",
-   "progress": 0,
+   "status": "in-progress",
+   "progress": 15,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 15,
    "subtasks": [],
    "milestone": false,
    "notes": "",
