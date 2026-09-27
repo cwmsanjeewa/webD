@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T14:56:33.530Z",
+ "savedAt": "2026-09-27T14:57:39.849Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -2787,7 +2787,7 @@
    "id": "g_oijr6mjov",
    "name": "SMRT Power Maintenance Works [FSC2]",
    "color": "#b0821a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -8590,7 +8590,7 @@
    "ownerId": null,
    "teamIds": [],
    "teamId": null,
-   "status": "not-started",
+   "status": "cancelled",
    "progress": 0,
    "autoProgress": false,
    "effectiveProgress": 0,
