@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T07:57:57.308Z",
+ "savedAt": "2026-09-27T08:01:18.593Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -2643,12 +2643,22 @@
    {
     "id": "wf_lz1kwf4jq",
     "label": "SW72",
-    "value": "Work Resumed for SW72 at 1315h Currunty at 60%"
+    "value": "Completed"
    },
    {
     "id": "wf_u8ofupjxw",
     "label": "BP10 ",
-    "value": "Cable Dressing & Containment Works Curruntly at 70%"
+    "value": "Cable Dressing & Containment Works Completd"
+   },
+   {
+    "id": "wf_vdu7ml8gy",
+    "label": "BPD",
+    "value": "Cabinet Power On Comming up Next 1630h"
+   },
+   {
+    "id": "wf_1r5a4apeo",
+    "label": "BP10",
+    "value": "Cabinet Power On Comming up Next 1730h"
    }
   ]
  },
@@ -2737,7 +2747,7 @@
    "id": "g_19h9wcdg7",
    "name": "Tool Box Meetings/Briefing (FSC2)",
    "color": "#e0740b",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3033,7 +3043,7 @@
    "id": "g_8zb8lg5pi",
    "name": "C801B ACTIVITIES [FSC 2]",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -6388,10 +6398,10 @@
     "tm_vrrn1t603"
    ],
    "teamId": "tm_vrrn1t603",
-   "status": "not-started",
-   "progress": 0,
+   "status": "in-progress",
+   "progress": 5,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 5,
    "subtasks": [],
    "milestone": false,
    "notes": "Cabinet Relocation Team 1, 3 & 4\nSwitch Power Rail Team 1 & 2\nSI Team (For IR Test)\nITC Team (Cabinet Power Down)",
