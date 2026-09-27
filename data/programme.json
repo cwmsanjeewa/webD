@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T10:05:12.218Z",
+ "savedAt": "2026-09-27T10:07:08.244Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -3043,7 +3043,7 @@
    "id": "g_8zb8lg5pi",
    "name": "C801B ACTIVITIES [FSC 2]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3059,7 +3059,7 @@
    "id": "g_0wudekrar",
    "name": "Pre System Check",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3067,7 +3067,7 @@
    "id": "g_96ecbuue0",
    "name": "Cabinet Power On",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3147,7 +3147,7 @@
    "id": "g_a1al3yum0",
    "name": "SAT (FSC2)",
    "color": "#1273e0",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -7866,10 +7866,10 @@
     "tm_0osk8fb25"
    ],
    "teamId": "tm_0osk8fb25",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": true,
    "notes": "",
@@ -7877,7 +7877,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T18:06"
   },
   {
    "id": "t_g3phgbowa",
