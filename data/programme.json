@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T05:23:37.020Z",
+ "savedAt": "2026-09-27T05:31:37.961Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -2617,27 +2617,15 @@
  "watch": [
   {
    "kind": "group",
+   "id": "g_35nkjz9hi"
+  },
+  {
+   "kind": "group",
+   "id": "g_a5dsc4dju"
+  },
+  {
+   "kind": "group",
    "id": "g_ljlo4v024"
-  },
-  {
-   "kind": "group",
-   "id": "g_ntdc6wdad"
-  },
-  {
-   "kind": "group",
-   "id": "g_4scdn8s2y"
-  },
-  {
-   "kind": "group",
-   "id": "g_emzukip37"
-  },
-  {
-   "kind": "group",
-   "id": "g_ks6g5xeqe"
-  },
-  {
-   "kind": "group",
-   "id": "g_oijr6mjov"
   }
  ],
  "live": {
@@ -3040,7 +3028,7 @@
    "id": "g_8zb8lg5pi",
    "name": "C801B ACTIVITIES [FSC 2]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3048,7 +3036,7 @@
    "id": "g_ljlo4v024",
    "name": "Cabinet Relocation Works (FSC2)",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3101,6 +3089,14 @@
    "parentId": "g_ljlo4v024"
   },
   {
+   "id": "g_z3dms5znm",
+   "name": "BP10 - Cable dressing and cable containment modification works",
+   "color": "#0f8a4a",
+   "collapsed": false,
+   "categoryId": "cat_fsc2",
+   "parentId": "g_ljlo4v024"
+  },
+  {
    "id": "g_ntdc6wdad",
    "name": "Switch Power Rail Works (FSC2)",
    "color": "#d4356b",
@@ -3120,7 +3116,7 @@
    "id": "g_a5dsc4dju",
    "name": "SW 72",
    "color": "#d4356b",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ntdc6wdad"
   },
@@ -8624,7 +8620,7 @@
   },
   {
    "id": "t_mjmo051dy",
-   "groupId": "g_ljlo4v024",
+   "groupId": "g_z3dms5znm",
    "name": "BP10 - Cable dressing and cable containment modification works",
    "start": "2026-09-27T13:00",
    "end": "2026-10-01T17:00",
@@ -8636,9 +8632,9 @@
    "teamIds": [],
    "teamId": null,
    "status": "in-progress",
-   "progress": 35,
+   "progress": 50,
    "autoProgress": false,
-   "effectiveProgress": 35,
+   "effectiveProgress": 50,
    "subtasks": [],
    "milestone": false,
    "notes": "",
