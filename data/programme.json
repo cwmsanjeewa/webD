@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T08:07:07.947Z",
+ "savedAt": "2026-09-27T08:16:47.277Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -2643,7 +2643,7 @@
    {
     "id": "wf_lz1kwf4jq",
     "label": "SW72",
-    "value": "Completed"
+    "value": "Completed. Team is manually thowing the switch."
    },
    {
     "id": "wf_u8ofupjxw",
@@ -2787,7 +2787,7 @@
    "id": "g_oijr6mjov",
    "name": "SMRT Power Maintenance Works [FSC2]",
    "color": "#b0821a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -2795,7 +2795,7 @@
    "id": "g_qufaa5tvk",
    "name": "600V Switchboard-1 Shutdown Maintenance",
    "color": "#b0821a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_oijr6mjov"
   },
@@ -3019,7 +3019,7 @@
    "id": "g_ks6g5xeqe",
    "name": "R801 (COLAS RAIL) ACTIVITIES",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3051,7 +3051,7 @@
    "id": "g_ljlo4v024",
    "name": "Cabinet Relocation Works (FSC2)",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3067,7 +3067,7 @@
    "id": "g_96ecbuue0",
    "name": "Cabinet Power On",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3107,7 +3107,7 @@
    "id": "g_z3dms5znm",
    "name": "BP10 - Cable dressing and cable containment modification works",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3115,7 +3115,7 @@
    "id": "g_ntdc6wdad",
    "name": "Switch Power Rail Works (FSC2)",
    "color": "#d4356b",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -7866,10 +7866,10 @@
     "tm_0osk8fb25"
    ],
    "teamId": "tm_0osk8fb25",
-   "status": "not-started",
-   "progress": 0,
+   "status": "in-progress",
+   "progress": 25,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 25,
    "subtasks": [],
    "milestone": true,
    "notes": "",
