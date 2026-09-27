@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T08:35:31.097Z",
+ "savedAt": "2026-09-27T08:38:06.122Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -27,7 +27,7 @@
    "cat",
    "dur"
   ],
-  "lastTab": "schedule",
+  "lastTab": "live",
   "nav": "zoom",
   "teamsMode": "cards",
   "dashSort": {
@@ -2617,6 +2617,14 @@
  "watch": [
   {
    "kind": "group",
+   "id": "g_ljlo4v024"
+  },
+  {
+   "kind": "weather",
+   "id": "wx_lgam5po17"
+  },
+  {
+   "kind": "group",
    "id": "g_35nkjz9hi"
   },
   {
@@ -2625,11 +2633,11 @@
   },
   {
    "kind": "group",
-   "id": "g_ljlo4v024"
+   "id": "g_a1al3yum0"
   },
   {
-   "kind": "weather",
-   "id": "wx_lgam5po17"
+   "kind": "group",
+   "id": "g_6hrc541qt"
   }
  ],
  "live": {
@@ -3047,7 +3055,7 @@
    "id": "g_8zb8lg5pi",
    "name": "C801B ACTIVITIES [FSC 2]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3127,7 +3135,7 @@
    "id": "g_35nkjz9hi",
    "name": "SW 71",
    "color": "#d4356b",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ntdc6wdad"
   },
@@ -3135,7 +3143,7 @@
    "id": "g_a5dsc4dju",
    "name": "SW 72",
    "color": "#d4356b",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ntdc6wdad"
   },
@@ -3175,7 +3183,7 @@
    "id": "g_emzukip37",
    "name": "R801A (NEC) ACTIVITIES [FSC 2]",
    "color": "#d4356b",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
