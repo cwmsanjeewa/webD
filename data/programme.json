@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T01:07:04.288Z",
+ "savedAt": "2026-09-27T01:41:37.134Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -3030,7 +3030,7 @@
    "id": "g_8zb8lg5pi",
    "name": "C801B ACTIVITIES [FSC 2]",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3038,7 +3038,7 @@
    "id": "g_ljlo4v024",
    "name": "Cabinet Relocation Works (FSC2)",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3070,7 +3070,7 @@
    "id": "g_9kwxjtyvm",
    "name": "BPD [ OBC1]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3086,7 +3086,7 @@
    "id": "g_gk87kx7bc",
    "name": "BPD [ DIAG01 ]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -6630,9 +6630,9 @@
    ],
    "teamId": "tm_86jv8qrvn",
    "status": "in-progress",
-   "progress": 5,
+   "progress": 10,
    "autoProgress": false,
-   "effectiveProgress": 5,
+   "effectiveProgress": 10,
    "subtasks": [],
    "milestone": false,
    "notes": "",
