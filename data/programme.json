@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T02:05:41.835Z",
+ "savedAt": "2026-09-27T02:20:39.435Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -14,7 +14,7 @@
   "applyFilters": true
  },
  "view": {
-  "ppd": 15.537,
+  "ppd": 2252.269,
   "teamPpd": 48.956,
   "locPpd": 11.412,
   "criticalPath": true,
@@ -2790,13 +2790,21 @@
    "id": "g_qufaa5tvk",
    "name": "600V Switchboard-1 Shutdown Maintenance",
    "color": "#b0821a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_oijr6mjov"
   },
   {
    "id": "g_628wh6x9l",
    "name": "BP9 to BP10 for atgrade CCTV cm work",
+   "color": "#b0821a",
+   "collapsed": true,
+   "categoryId": "cat_fsc2",
+   "parentId": "g_oijr6mjov"
+  },
+  {
+   "id": "g_i1otnhive",
+   "name": "Depot Chasis Replacement 105 / 203",
    "color": "#b0821a",
    "collapsed": true,
    "categoryId": "cat_fsc2",
@@ -8582,6 +8590,32 @@
    "notes": "",
    "predecessors": [],
    "locationId": "lc_qrczf72z3",
+   "struck": false,
+   "struckNote": "",
+   "completedAt": null
+  },
+  {
+   "id": "t_c5d792rzr",
+   "groupId": "g_i1otnhive",
+   "name": "Depot Chasis Replacement 105 / 203",
+   "start": "2026-09-27T11:00",
+   "end": "2026-10-01T16:00",
+   "allDay": false,
+   "durationDays": 4.2083,
+   "durationLabel": "4d 5h",
+   "categoryId": "cat_fsc2",
+   "ownerId": null,
+   "teamIds": [],
+   "teamId": null,
+   "status": "not-started",
+   "progress": 0,
+   "autoProgress": false,
+   "effectiveProgress": 0,
+   "subtasks": [],
+   "milestone": false,
+   "notes": "",
+   "predecessors": [],
+   "locationId": null,
    "struck": false,
    "struckNote": "",
    "completedAt": null
