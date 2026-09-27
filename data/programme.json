@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T02:34:50.045Z",
+ "savedAt": "2026-09-27T02:44:23.533Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -3158,7 +3158,7 @@
    "id": "g_emzukip37",
    "name": "R801A (NEC) ACTIVITIES [FSC 2]",
    "color": "#d4356b",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -6637,10 +6637,10 @@
     "tm_86jv8qrvn"
    ],
    "teamId": "tm_86jv8qrvn",
-   "status": "in-progress",
-   "progress": 10,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 10,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -6648,7 +6648,7 @@
    "locationId": "lc_dfg044w9f",
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T10:44"
   },
   {
    "id": "t_h3g68elbn",
