@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T09:20:15.588Z",
+ "savedAt": "2026-09-27T09:30:47.934Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -14,7 +14,7 @@
   "applyFilters": true
  },
  "view": {
-  "ppd": 10.022,
+  "ppd": 610.402,
   "teamPpd": 48.956,
   "locPpd": 11.412,
   "criticalPath": false,
@@ -2616,20 +2616,8 @@
  ],
  "watch": [
   {
-   "kind": "group",
-   "id": "g_ljlo4v024"
-  },
-  {
    "kind": "weather",
    "id": "wx_lgam5po17"
-  },
-  {
-   "kind": "group",
-   "id": "g_35nkjz9hi"
-  },
-  {
-   "kind": "group",
-   "id": "g_a5dsc4dju"
   },
   {
    "kind": "group",
@@ -3127,7 +3115,7 @@
    "id": "g_ntdc6wdad",
    "name": "Switch Power Rail Works (FSC2)",
    "color": "#d4356b",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3135,7 +3123,7 @@
    "id": "g_35nkjz9hi",
    "name": "SW 71",
    "color": "#d4356b",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ntdc6wdad"
   },
@@ -3143,7 +3131,7 @@
    "id": "g_a5dsc4dju",
    "name": "SW 72",
    "color": "#d4356b",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ntdc6wdad"
   },
@@ -3151,7 +3139,7 @@
    "id": "g_x785j8k0c",
    "name": "Material Delevery & Unloading",
    "color": "#d4356b",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ntdc6wdad"
   },
@@ -3175,7 +3163,7 @@
    "id": "g_6hrc541qt",
    "name": "SIT (FSC2)",
    "color": "#9333c4",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
