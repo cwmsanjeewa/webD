@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T00:50:23.145Z",
+ "savedAt": "2026-09-27T01:07:04.288Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -35,7 +35,7 @@
    "team": "az"
   },
   "sort": {
-   "key": "start",
+   "key": "manual",
    "dir": 1
   },
   "colors": {
@@ -2638,6 +2638,10 @@
   {
    "kind": "group",
    "id": "g_x785j8k0c"
+  },
+  {
+   "kind": "group",
+   "id": "g_4scdn8s2y"
   }
  ],
  "live": {
@@ -2743,6 +2747,14 @@
    "parentId": null
   },
   {
+   "id": "g_9k31msvnw",
+   "name": "Go/No-Go (Milestones) (FSC2)",
+   "color": "#b0821a",
+   "collapsed": true,
+   "categoryId": "cat_fsc2",
+   "parentId": null
+  },
+  {
    "id": "g_bvuiia2y7",
    "name": "SMRT SWITCH MAINTENANCE WORKS [FSC 1]",
    "color": "#1273e0",
@@ -2789,14 +2801,6 @@
    "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_oijr6mjov"
-  },
-  {
-   "id": "g_9k31msvnw",
-   "name": "Go/No-Go (Milestones) (FSC2)",
-   "color": "#b0821a",
-   "collapsed": true,
-   "categoryId": "cat_fsc2",
-   "parentId": null
   },
   {
    "id": "g_f5yeuzfkj",
@@ -3010,7 +3014,7 @@
    "id": "g_4svpe5pkk",
    "name": "All Transformers Related Activities",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ks6g5xeqe"
   },
@@ -3026,7 +3030,7 @@
    "id": "g_8zb8lg5pi",
    "name": "C801B ACTIVITIES [FSC 2]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3154,7 +3158,7 @@
    "id": "g_3g6jwtdmr",
    "name": "STIPA and SPL Measurement(FSC2)",
    "color": "#6b7a90",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_emzukip37"
   }
@@ -6557,7 +6561,7 @@
   {
    "id": "t_osbvz24wj",
    "groupId": "g_3g6jwtdmr",
-   "name": "BP09",
+   "name": "BP09 - STIPA and SPL Measurement",
    "start": "2026-09-27T14:00",
    "end": "2026-09-27T16:00",
    "allDay": false,
@@ -6585,7 +6589,7 @@
   {
    "id": "t_e5ayoinf4",
    "groupId": "g_3g6jwtdmr",
-   "name": "BP08",
+   "name": "BP08 - STIPA and SPL Measurement",
    "start": "2026-09-27T16:30",
    "end": "2026-09-27T18:30",
    "allDay": false,
@@ -6613,7 +6617,7 @@
   {
    "id": "t_t8yt8mwtg",
    "groupId": "g_3g6jwtdmr",
-   "name": "BP01",
+   "name": "BP01 - STIPA and SPL Measurement",
    "start": "2026-09-27T08:30",
    "end": "2026-09-27T10:30",
    "allDay": false,
@@ -6641,7 +6645,7 @@
   {
    "id": "t_h3g68elbn",
    "groupId": "g_3g6jwtdmr",
-   "name": "BP05",
+   "name": "BP05 -STIPA and SPL Measurement",
    "start": "2026-09-27T11:00",
    "end": "2026-09-27T13:00",
    "allDay": false,
@@ -7057,10 +7061,10 @@
     "tm_hawztq4hg"
    ],
    "teamId": "tm_hawztq4hg",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7068,7 +7072,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T08:51"
   },
   {
    "id": "t_mhg393f22",
