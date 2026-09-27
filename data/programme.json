@@ -1,11 +1,11 @@
 {
  "format": "gantt-studio",
  "version": 3,
- "revision": "AO",
+ "revision": "AP",
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T02:20:39.435Z",
+ "savedAt": "2026-09-27T02:34:50.045Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -14,7 +14,7 @@
   "applyFilters": true
  },
  "view": {
-  "ppd": 2252.269,
+  "ppd": 6.514,
   "teamPpd": 48.956,
   "locPpd": 11.412,
   "criticalPath": true,
@@ -2782,7 +2782,7 @@
    "id": "g_oijr6mjov",
    "name": "SMRT Power Maintenance Works [FSC2]",
    "color": "#b0821a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3014,7 +3014,7 @@
    "id": "g_ks6g5xeqe",
    "name": "R801 (COLAS RAIL) ACTIVITIES",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
