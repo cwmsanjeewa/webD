@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T02:44:23.533Z",
+ "savedAt": "2026-09-27T03:07:22.638Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -14,7 +14,7 @@
   "applyFilters": true
  },
  "view": {
-  "ppd": 6.514,
+  "ppd": 610.402,
   "teamPpd": 48.956,
   "locPpd": 11.412,
   "criticalPath": true,
@@ -1912,41 +1912,31 @@
    "lon": 103.76472,
    "tz": "Asia/Singapore",
    "snap": {
-    "at": "2026-09-27T01:54:47.839Z",
+    "at": "2026-09-27T02:51:15.051Z",
     "cur": {
-     "t": "2026-09-27T09:45",
-     "temp": 25.4,
-     "feels": 31.2,
-     "rh": 96,
-     "code": 80,
-     "cloud": 97,
-     "mm": 0.6,
-     "rain": 0.4,
-     "wind": 5.4,
-     "gust": 14.8,
-     "dir": 268,
-     "vis": 2260,
-     "press": 1014.4,
+     "t": "2026-09-27T10:45",
+     "temp": 26.8,
+     "feels": 32.7,
+     "rh": 91,
+     "code": 53,
+     "cloud": 100,
+     "mm": 0.2,
+     "rain": 0,
+     "wind": 6.6,
+     "gust": 19.4,
+     "dir": 227,
+     "vis": 3760,
+     "press": 1014.8,
      "day": true
     },
     "air": {
-     "pm25": 26.9,
-     "pm10": 27.5,
-     "aqi": 48,
-     "usaqi": 112,
-     "uv": 1.1
+     "pm25": 27.8,
+     "pm10": 28.4,
+     "aqi": 49,
+     "usaqi": 111,
+     "uv": 2
     },
     "hours": [
-     {
-      "t": "2026-09-27T09:00",
-      "temp": 25.1,
-      "pop": 67,
-      "mm": 1.5,
-      "code": 80,
-      "wind": 5.5,
-      "gust": 15.1,
-      "vis": 1480
-     },
      {
       "t": "2026-09-27T10:00",
       "temp": 25.6,
@@ -2296,6 +2286,16 @@
       "wind": 3.1,
       "gust": 6.1,
       "vis": 6340
+     },
+     {
+      "t": "2026-09-28T21:00",
+      "temp": 25.9,
+      "pop": 34,
+      "mm": 0,
+      "code": 2,
+      "wind": 4.5,
+      "gust": 8.3,
+      "vis": 5380
      }
     ],
     "days": [
@@ -3038,7 +3038,7 @@
    "id": "g_8zb8lg5pi",
    "name": "C801B ACTIVITIES [FSC 2]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3046,7 +3046,7 @@
    "id": "g_ljlo4v024",
    "name": "Cabinet Relocation Works (FSC2)",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3078,7 +3078,7 @@
    "id": "g_9kwxjtyvm",
    "name": "BPD [ OBC1]",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3094,7 +3094,7 @@
    "id": "g_gk87kx7bc",
    "name": "BPD [ DIAG01 ]",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3158,7 +3158,7 @@
    "id": "g_emzukip37",
    "name": "R801A (NEC) ACTIVITIES [FSC 2]",
    "color": "#d4356b",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -8078,9 +8078,9 @@
    ],
    "teamId": "tm_4hswtynvq",
    "status": "in-progress",
-   "progress": 5,
+   "progress": 10,
    "autoProgress": false,
-   "effectiveProgress": 5,
+   "effectiveProgress": 10,
    "subtasks": [],
    "milestone": false,
    "notes": "",
