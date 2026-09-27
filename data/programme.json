@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T05:37:53.366Z",
+ "savedAt": "2026-09-27T06:49:34.324Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -3097,7 +3097,7 @@
    "id": "g_z3dms5znm",
    "name": "BP10 - Cable dressing and cable containment modification works",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3161,7 +3161,7 @@
    "id": "g_emzukip37",
    "name": "R801A (NEC) ACTIVITIES [FSC 2]",
    "color": "#d4356b",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3169,7 +3169,7 @@
    "id": "g_3g6jwtdmr",
    "name": "STIPA and SPL Measurement(FSC2)",
    "color": "#6b7a90",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_emzukip37"
   }
@@ -6668,10 +6668,10 @@
     "tm_86jv8qrvn"
    ],
    "teamId": "tm_86jv8qrvn",
-   "status": "in-progress",
-   "progress": 5,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 5,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -6679,7 +6679,7 @@
    "locationId": "lc_6s7h5j26u",
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T14:46"
   },
   {
    "id": "t_52gh41tke",
