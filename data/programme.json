@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T05:33:19.797Z",
+ "savedAt": "2026-09-27T05:37:53.366Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -2643,7 +2643,12 @@
    {
     "id": "wf_lz1kwf4jq",
     "label": "SW72",
-    "value": "Work Resumed for SW72 at 1315h"
+    "value": "Work Resumed for SW72 at 1315h Currunty at 60%"
+   },
+   {
+    "id": "wf_u8ofupjxw",
+    "label": "BP10 ",
+    "value": "Cable Dressing & Containment Works Curruntly at 70%"
    }
   ]
  },
