@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-26T23:49:07.530Z",
+ "savedAt": "2026-09-27T00:45:11.175Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -14,7 +14,7 @@
   "applyFilters": true
  },
  "view": {
-  "ppd": 21.633,
+  "ppd": 15.537,
   "teamPpd": 48.956,
   "locPpd": 11.176,
   "criticalPath": true,
@@ -3066,7 +3066,7 @@
    "id": "g_9kwxjtyvm",
    "name": "BPD [ OBC1]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -7085,10 +7085,10 @@
     "tm_tedxmf6nb"
    ],
    "teamId": "tm_tedxmf6nb",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7096,7 +7096,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T08:43"
   },
   {
    "id": "t_reahguq3b",
@@ -7113,10 +7113,10 @@
     "tm_tedxmf6nb"
    ],
    "teamId": "tm_tedxmf6nb",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": true,
    "notes": "",
@@ -7124,7 +7124,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T08:43"
   },
   {
    "id": "t_teta5zvtc",
@@ -7141,10 +7141,10 @@
     "tm_tedxmf6nb"
    ],
    "teamId": "tm_tedxmf6nb",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7152,7 +7152,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T08:43"
   },
   {
    "id": "t_l9k9boj9n",
@@ -7281,10 +7281,10 @@
     "tm_hksnio1la"
    ],
    "teamId": "tm_hksnio1la",
-   "status": "in-progress",
-   "progress": 30,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 30,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7292,7 +7292,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T08:43"
   },
   {
    "id": "t_qtvbmo9fq",
@@ -7309,10 +7309,10 @@
     "tm_hksnio1la"
    ],
    "teamId": "tm_hksnio1la",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": true,
    "notes": "",
@@ -7320,7 +7320,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T08:43"
   },
   {
    "id": "t_np0hx4rb2",
@@ -7337,10 +7337,10 @@
     "tm_tedxmf6nb"
    ],
    "teamId": "tm_tedxmf6nb",
-   "status": "in-progress",
-   "progress": 75,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 75,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7348,7 +7348,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T08:43"
   },
   {
    "id": "t_rqtwa2l7t",
@@ -8037,10 +8037,10 @@
     "tm_4hswtynvq"
    ],
    "teamId": "tm_4hswtynvq",
-   "status": "in-progress",
-   "progress": 90,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 90,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -8048,7 +8048,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T08:42"
   },
   {
    "id": "t_358fwu333",
