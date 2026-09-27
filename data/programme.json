@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T00:45:11.175Z",
+ "savedAt": "2026-09-27T00:49:18.863Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -3034,7 +3034,7 @@
    "id": "g_ljlo4v024",
    "name": "Cabinet Relocation Works (FSC2)",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3058,7 +3058,7 @@
    "id": "g_g3c44dmig",
    "name": "BP10 [ OBC1]",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3066,7 +3066,7 @@
    "id": "g_9kwxjtyvm",
    "name": "BPD [ OBC1]",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3074,7 +3074,7 @@
    "id": "g_2448jblnp",
    "name": "BPD [ RATC ]",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3082,7 +3082,7 @@
    "id": "g_gk87kx7bc",
    "name": "BPD [ DIAG01 ]",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3090,7 +3090,7 @@
    "id": "g_ntdc6wdad",
    "name": "Switch Power Rail Works (FSC2)",
    "color": "#d4356b",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3098,7 +3098,7 @@
    "id": "g_35nkjz9hi",
    "name": "SW 71",
    "color": "#d4356b",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ntdc6wdad"
   },
@@ -3130,7 +3130,7 @@
    "id": "g_4scdn8s2y",
    "name": "IR Test Works (FSC2)",
    "color": "#7a5af5",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3146,7 +3146,7 @@
    "id": "g_emzukip37",
    "name": "R801A (NEC) ACTIVITIES [FSC 2]",
    "color": "#d4356b",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -6954,10 +6954,10 @@
     "tm_c45jr3z1h"
    ],
    "teamId": "tm_c45jr3z1h",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "Depot\n1. East Bound Lead Track.\n2. West Bound Track",
@@ -6965,7 +6965,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T08:49"
   },
   {
    "id": "t_pspavq9jc",
@@ -6982,30 +6982,30 @@
     "tm_c45jr3z1h"
    ],
    "teamId": "tm_c45jr3z1h",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [
     {
      "id": "s_mmfner9jc",
      "title": "Turn Off TRA 0101",
-     "done": false
+     "done": true
     },
     {
      "id": "s_syb5dl9jc",
      "title": "Turn Off TRA 0104",
-     "done": false
+     "done": true
     },
     {
      "id": "s_j8lb9t9jc",
      "title": "Turn Off TRA 0105",
-     "done": false
+     "done": true
     },
     {
      "id": "s_oyzaog9jc",
      "title": "Turn Off TRA 0201",
-     "done": false
+     "done": true
     }
    ],
    "milestone": false,
@@ -7014,7 +7014,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T08:49"
   },
   {
    "id": "t_18bqcgqvj",
@@ -7225,10 +7225,10 @@
     "tm_ec1y0xa4j"
    ],
    "teamId": "tm_ec1y0xa4j",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7236,7 +7236,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T08:47"
   },
   {
    "id": "t_ukunzp29w",
@@ -7253,10 +7253,10 @@
     "tm_ec1y0xa4j"
    ],
    "teamId": "tm_ec1y0xa4j",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": true,
    "notes": "",
@@ -7264,7 +7264,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T08:47"
   },
   {
    "id": "t_haszsgphh",
@@ -7617,10 +7617,10 @@
     "tm_ec1y0xa4j"
    ],
    "teamId": "tm_ec1y0xa4j",
-   "status": "in-progress",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7628,7 +7628,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T08:47"
   },
   {
    "id": "t_lghbcivzt",
@@ -8065,10 +8065,10 @@
     "tm_4hswtynvq"
    ],
    "teamId": "tm_4hswtynvq",
-   "status": "not-started",
-   "progress": 0,
+   "status": "in-progress",
+   "progress": 5,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 5,
    "subtasks": [],
    "milestone": false,
    "notes": "",
