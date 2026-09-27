@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T08:01:18.593Z",
+ "savedAt": "2026-09-27T08:02:20.118Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -2747,7 +2747,7 @@
    "id": "g_19h9wcdg7",
    "name": "Tool Box Meetings/Briefing (FSC2)",
    "color": "#e0740b",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
