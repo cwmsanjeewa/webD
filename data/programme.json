@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T06:55:59.049Z",
+ "savedAt": "2026-09-27T07:07:23.449Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -2777,7 +2777,7 @@
    "id": "g_oijr6mjov",
    "name": "SMRT Power Maintenance Works [FSC2]",
    "color": "#b0821a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3121,7 +3121,7 @@
    "id": "g_a5dsc4dju",
    "name": "SW 72",
    "color": "#d4356b",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ntdc6wdad"
   },
@@ -3161,7 +3161,7 @@
    "id": "g_emzukip37",
    "name": "R801A (NEC) ACTIVITIES [FSC 2]",
    "color": "#d4356b",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -8081,9 +8081,9 @@
    ],
    "teamId": "tm_4hswtynvq",
    "status": "in-progress",
-   "progress": 60,
+   "progress": 75,
    "autoProgress": false,
-   "effectiveProgress": 60,
+   "effectiveProgress": 75,
    "subtasks": [],
    "milestone": false,
    "notes": "",
