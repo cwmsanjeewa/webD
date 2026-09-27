@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T07:07:23.449Z",
+ "savedAt": "2026-09-27T07:54:34.525Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -3033,7 +3033,7 @@
    "id": "g_8zb8lg5pi",
    "name": "C801B ACTIVITIES [FSC 2]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3105,7 +3105,7 @@
    "id": "g_ntdc6wdad",
    "name": "Switch Power Rail Works (FSC2)",
    "color": "#d4356b",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3121,7 +3121,7 @@
    "id": "g_a5dsc4dju",
    "name": "SW 72",
    "color": "#d4356b",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ntdc6wdad"
   },
@@ -8081,9 +8081,9 @@
    ],
    "teamId": "tm_4hswtynvq",
    "status": "in-progress",
-   "progress": 75,
+   "progress": 85,
    "autoProgress": false,
-   "effectiveProgress": 75,
+   "effectiveProgress": 85,
    "subtasks": [],
    "milestone": false,
    "notes": "",
