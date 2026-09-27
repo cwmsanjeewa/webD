@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T14:13:14.188Z",
+ "savedAt": "2026-09-27T14:56:33.530Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -1912,41 +1912,31 @@
    "lon": 103.76472,
    "tz": "Asia/Singapore",
    "snap": {
-    "at": "2026-09-27T13:56:42.689Z",
+    "at": "2026-09-27T14:30:50.464Z",
     "cur": {
-     "t": "2026-09-27T21:45",
-     "temp": 24.9,
-     "feels": 29.1,
-     "rh": 93,
+     "t": "2026-09-27T22:30",
+     "temp": 24.8,
+     "feels": 29,
+     "rh": 92,
      "code": 3,
      "cloud": 100,
      "mm": 0,
      "rain": 0,
-     "wind": 11.4,
-     "gust": 18.7,
-     "dir": 175,
-     "vis": 7520,
-     "press": 1013.2,
+     "wind": 10.9,
+     "gust": 19.4,
+     "dir": 173,
+     "vis": 6800,
+     "press": 1013.6,
      "day": false
     },
     "air": {
-     "pm25": 23.6,
-     "pm10": 24,
-     "aqi": 55,
-     "usaqi": 112,
+     "pm25": 22.4,
+     "pm10": 22.8,
+     "aqi": 54,
+     "usaqi": 109,
      "uv": 0
     },
     "hours": [
-     {
-      "t": "2026-09-27T21:00",
-      "temp": 25,
-      "pop": 4,
-      "mm": 0.1,
-      "code": 51,
-      "wind": 10.4,
-      "gust": 17.3,
-      "vis": 4280
-     },
      {
       "t": "2026-09-27T22:00",
       "temp": 24.8,
@@ -2296,6 +2286,16 @@
       "wind": 0,
       "gust": 8.3,
       "vis": 180
+     },
+     {
+      "t": "2026-09-29T09:00",
+      "temp": 26.4,
+      "pop": 15,
+      "mm": 0,
+      "code": 1,
+      "wind": 3.1,
+      "gust": 11.2,
+      "vis": 460
      }
     ],
     "days": [
@@ -3147,7 +3147,7 @@
    "id": "g_a1al3yum0",
    "name": "SAT (FSC2)",
    "color": "#1273e0",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3155,7 +3155,7 @@
    "id": "g_4scdn8s2y",
    "name": "IR Test Works (FSC2)",
    "color": "#7a5af5",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -5942,10 +5942,10 @@
     "tm_c45jr3z1h"
    ],
    "teamId": "tm_c45jr3z1h",
-   "status": "in-progress",
-   "progress": 25,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 25,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -5953,7 +5953,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T22:56"
   },
   {
    "id": "t_8dgw3u4k9",
@@ -5970,10 +5970,10 @@
     "tm_c45jr3z1h"
    ],
    "teamId": "tm_c45jr3z1h",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -5981,7 +5981,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T22:56"
   },
   {
    "id": "t_9la19czbs",
