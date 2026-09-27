@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T00:49:18.863Z",
+ "savedAt": "2026-09-27T00:50:23.145Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -3026,7 +3026,7 @@
    "id": "g_8zb8lg5pi",
    "name": "C801B ACTIVITIES [FSC 2]",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3130,7 +3130,7 @@
    "id": "g_4scdn8s2y",
    "name": "IR Test Works (FSC2)",
    "color": "#7a5af5",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3146,7 +3146,7 @@
    "id": "g_emzukip37",
    "name": "R801A (NEC) ACTIVITIES [FSC 2]",
    "color": "#d4356b",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -6625,10 +6625,10 @@
     "tm_86jv8qrvn"
    ],
    "teamId": "tm_86jv8qrvn",
-   "status": "not-started",
-   "progress": 0,
+   "status": "in-progress",
+   "progress": 5,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 5,
    "subtasks": [],
    "milestone": false,
    "notes": "",
