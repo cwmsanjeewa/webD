@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T03:07:22.638Z",
+ "savedAt": "2026-09-27T05:09:25.182Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -1912,65 +1912,35 @@
    "lon": 103.76472,
    "tz": "Asia/Singapore",
    "snap": {
-    "at": "2026-09-27T02:51:15.051Z",
+    "at": "2026-09-27T05:05:31.972Z",
     "cur": {
-     "t": "2026-09-27T10:45",
-     "temp": 26.8,
-     "feels": 32.7,
-     "rh": 91,
-     "code": 53,
-     "cloud": 100,
-     "mm": 0.2,
-     "rain": 0,
-     "wind": 6.6,
-     "gust": 19.4,
-     "dir": 227,
-     "vis": 3760,
-     "press": 1014.8,
+     "t": "2026-09-27T13:00",
+     "temp": 29.2,
+     "feels": 35.5,
+     "rh": 76,
+     "code": 51,
+     "cloud": 92,
+     "mm": 0.1,
+     "rain": 0.1,
+     "wind": 7.6,
+     "gust": 21.6,
+     "dir": 208,
+     "vis": 5820,
+     "press": 1013,
      "day": true
     },
     "air": {
-     "pm25": 27.8,
-     "pm10": 28.4,
-     "aqi": 49,
+     "pm25": 29.8,
+     "pm10": 30.5,
+     "aqi": 50,
      "usaqi": 111,
-     "uv": 2
+     "uv": 7.15
     },
     "hours": [
      {
-      "t": "2026-09-27T10:00",
-      "temp": 25.6,
-      "pop": 71,
-      "mm": 2.3,
-      "code": 80,
-      "wind": 5.2,
-      "gust": 15.1,
-      "vis": 2520
-     },
-     {
-      "t": "2026-09-27T11:00",
-      "temp": 27.1,
-      "pop": 76,
-      "mm": 0.9,
-      "code": 53,
-      "wind": 7.1,
-      "gust": 20.5,
-      "vis": 4180
-     },
-     {
-      "t": "2026-09-27T12:00",
-      "temp": 27.1,
-      "pop": 82,
-      "mm": 0.5,
-      "code": 53,
-      "wind": 5.5,
-      "gust": 21.2,
-      "vis": 4500
-     },
-     {
       "t": "2026-09-27T13:00",
       "temp": 29.2,
-      "pop": 88,
+      "pop": 94,
       "mm": 0.3,
       "code": 51,
       "wind": 7.6,
@@ -1980,7 +1950,7 @@
      {
       "t": "2026-09-27T14:00",
       "temp": 27.5,
-      "pop": 90,
+      "pop": 94,
       "mm": 5.2,
       "code": 95,
       "wind": 12.5,
@@ -1990,7 +1960,7 @@
      {
       "t": "2026-09-27T15:00",
       "temp": 28.1,
-      "pop": 85,
+      "pop": 91,
       "mm": 1.5,
       "code": 80,
       "wind": 13.4,
@@ -2000,7 +1970,7 @@
      {
       "t": "2026-09-27T16:00",
       "temp": 27.9,
-      "pop": 76,
+      "pop": 85,
       "mm": 0.5,
       "code": 53,
       "wind": 9.5,
@@ -2010,7 +1980,7 @@
      {
       "t": "2026-09-27T17:00",
       "temp": 28.5,
-      "pop": 65,
+      "pop": 75,
       "mm": 0.1,
       "code": 51,
       "wind": 7.9,
@@ -2020,7 +1990,7 @@
      {
       "t": "2026-09-27T18:00",
       "temp": 28.2,
-      "pop": 50,
+      "pop": 57,
       "mm": 0,
       "code": 2,
       "wind": 9.4,
@@ -2030,7 +2000,7 @@
      {
       "t": "2026-09-27T19:00",
       "temp": 27.2,
-      "pop": 34,
+      "pop": 35,
       "mm": 0,
       "code": 2,
       "wind": 6.7,
@@ -2040,7 +2010,7 @@
      {
       "t": "2026-09-27T20:00",
       "temp": 26.6,
-      "pop": 22,
+      "pop": 18,
       "mm": 0,
       "code": 2,
       "wind": 4,
@@ -2050,7 +2020,7 @@
      {
       "t": "2026-09-27T21:00",
       "temp": 26.4,
-      "pop": 19,
+      "pop": 12,
       "mm": 0,
       "code": 3,
       "wind": 1.1,
@@ -2060,7 +2030,7 @@
      {
       "t": "2026-09-27T22:00",
       "temp": 26.2,
-      "pop": 20,
+      "pop": 11,
       "mm": 0,
       "code": 3,
       "wind": 0.4,
@@ -2070,7 +2040,7 @@
      {
       "t": "2026-09-27T23:00",
       "temp": 25.8,
-      "pop": 22,
+      "pop": 10,
       "mm": 0,
       "code": 3,
       "wind": 0.3,
@@ -2080,7 +2050,7 @@
      {
       "t": "2026-09-28T00:00",
       "temp": 25.2,
-      "pop": 23,
+      "pop": 8,
       "mm": 0,
       "code": 3,
       "wind": 3.7,
@@ -2090,7 +2060,7 @@
      {
       "t": "2026-09-28T01:00",
       "temp": 25,
-      "pop": 23,
+      "pop": 7,
       "mm": 0,
       "code": 3,
       "wind": 2.3,
@@ -2100,7 +2070,7 @@
      {
       "t": "2026-09-28T02:00",
       "temp": 24.6,
-      "pop": 22,
+      "pop": 6,
       "mm": 0,
       "code": 3,
       "wind": 1.2,
@@ -2110,7 +2080,7 @@
      {
       "t": "2026-09-28T03:00",
       "temp": 24.5,
-      "pop": 18,
+      "pop": 5,
       "mm": 0,
       "code": 3,
       "wind": 1,
@@ -2120,7 +2090,7 @@
      {
       "t": "2026-09-28T04:00",
       "temp": 24.3,
-      "pop": 13,
+      "pop": 4,
       "mm": 0,
       "code": 3,
       "wind": 0.5,
@@ -2130,7 +2100,7 @@
      {
       "t": "2026-09-28T05:00",
       "temp": 24.2,
-      "pop": 8,
+      "pop": 4,
       "mm": 0,
       "code": 3,
       "wind": 1.1,
@@ -2140,7 +2110,7 @@
      {
       "t": "2026-09-28T06:00",
       "temp": 24.3,
-      "pop": 4,
+      "pop": 3,
       "mm": 0,
       "code": 3,
       "wind": 3,
@@ -2150,7 +2120,7 @@
      {
       "t": "2026-09-28T07:00",
       "temp": 24.6,
-      "pop": 1,
+      "pop": 2,
       "mm": 0,
       "code": 3,
       "wind": 2.7,
@@ -2160,7 +2130,7 @@
      {
       "t": "2026-09-28T08:00",
       "temp": 25.8,
-      "pop": 2,
+      "pop": 4,
       "mm": 0,
       "code": 3,
       "wind": 3.1,
@@ -2180,7 +2150,7 @@
      {
       "t": "2026-09-28T10:00",
       "temp": 29.6,
-      "pop": 20,
+      "pop": 16,
       "mm": 0,
       "code": 1,
       "wind": 10.7,
@@ -2190,7 +2160,7 @@
      {
       "t": "2026-09-28T11:00",
       "temp": 30.8,
-      "pop": 33,
+      "pop": 27,
       "mm": 0,
       "code": 2,
       "wind": 9.6,
@@ -2200,7 +2170,7 @@
      {
       "t": "2026-09-28T12:00",
       "temp": 31.6,
-      "pop": 51,
+      "pop": 46,
       "mm": 0,
       "code": 3,
       "wind": 10.7,
@@ -2210,7 +2180,7 @@
      {
       "t": "2026-09-28T13:00",
       "temp": 29.1,
-      "pop": 72,
+      "pop": 69,
       "mm": 3.6,
       "code": 95,
       "wind": 8.4,
@@ -2220,7 +2190,7 @@
      {
       "t": "2026-09-28T14:00",
       "temp": 29.8,
-      "pop": 88,
+      "pop": 86,
       "mm": 0.9,
       "code": 53,
       "wind": 7.1,
@@ -2230,7 +2200,7 @@
      {
       "t": "2026-09-28T15:00",
       "temp": 28.7,
-      "pop": 96,
+      "pop": 92,
       "mm": 1.8,
       "code": 80,
       "wind": 10.2,
@@ -2240,7 +2210,7 @@
      {
       "t": "2026-09-28T16:00",
       "temp": 28.3,
-      "pop": 98,
+      "pop": 91,
       "mm": 3,
       "code": 95,
       "wind": 7.3,
@@ -2250,7 +2220,7 @@
      {
       "t": "2026-09-28T17:00",
       "temp": 28.9,
-      "pop": 94,
+      "pop": 86,
       "mm": 0.5,
       "code": 53,
       "wind": 6.9,
@@ -2260,7 +2230,7 @@
      {
       "t": "2026-09-28T18:00",
       "temp": 28.8,
-      "pop": 81,
+      "pop": 75,
       "mm": 0.1,
       "code": 51,
       "wind": 4.2,
@@ -2270,7 +2240,7 @@
      {
       "t": "2026-09-28T19:00",
       "temp": 27.5,
-      "pop": 62,
+      "pop": 59,
       "mm": 0,
       "code": 1,
       "wind": 1,
@@ -2290,12 +2260,42 @@
      {
       "t": "2026-09-28T21:00",
       "temp": 25.9,
-      "pop": 34,
+      "pop": 33,
       "mm": 0,
       "code": 2,
       "wind": 4.5,
       "gust": 8.3,
       "vis": 5380
+     },
+     {
+      "t": "2026-09-28T22:00",
+      "temp": 25.5,
+      "pop": 22,
+      "mm": 0,
+      "code": 1,
+      "wind": 3.8,
+      "gust": 8.3,
+      "vis": 1280
+     },
+     {
+      "t": "2026-09-28T23:00",
+      "temp": 25.4,
+      "pop": 14,
+      "mm": 0,
+      "code": 3,
+      "wind": 4.4,
+      "gust": 7.2,
+      "vis": 200
+     },
+     {
+      "t": "2026-09-29T00:00",
+      "temp": 25.2,
+      "pop": 11,
+      "mm": 0,
+      "code": 3,
+      "wind": 2.5,
+      "gust": 10.8,
+      "vis": 240
      }
     ],
     "days": [
@@ -2305,7 +2305,7 @@
       "hi": 29.2,
       "lo": 23.8,
       "mm": 20.9,
-      "pop": 98,
+      "pop": 97,
       "wind": 13.4,
       "gust": 29.9,
       "sunrise": "2026-09-27T06:53",
@@ -2317,7 +2317,7 @@
       "hi": 31.6,
       "lo": 24.2,
       "mm": 9.9,
-      "pop": 98,
+      "pop": 92,
       "wind": 10.7,
       "gust": 30.6,
       "sunrise": "2026-09-28T06:52",
@@ -2329,7 +2329,7 @@
       "hi": 32.1,
       "lo": 23.6,
       "mm": 0.5,
-      "pop": 67,
+      "pop": 69,
       "wind": 10.8,
       "gust": 25.2,
       "sunrise": "2026-09-29T06:52",
@@ -2341,7 +2341,7 @@
       "hi": 32.1,
       "lo": 23.2,
       "mm": 9.2,
-      "pop": 86,
+      "pop": 96,
       "wind": 10.4,
       "gust": 24.5,
       "sunrise": "2026-09-30T06:52",
@@ -2353,7 +2353,7 @@
       "hi": 29.9,
       "lo": 23.3,
       "mm": 18.6,
-      "pop": 94,
+      "pop": 100,
       "wind": 7.4,
       "gust": 22,
       "sunrise": "2026-10-01T06:51",
@@ -2365,7 +2365,7 @@
       "hi": 30.3,
       "lo": 23,
       "mm": 5.4,
-      "pop": 92,
+      "pop": 96,
       "wind": 7.3,
       "gust": 26.3,
       "sunrise": "2026-10-02T06:51",
@@ -2790,7 +2790,7 @@
    "id": "g_qufaa5tvk",
    "name": "600V Switchboard-1 Shutdown Maintenance",
    "color": "#b0821a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_oijr6mjov"
   },
@@ -2798,7 +2798,7 @@
    "id": "g_628wh6x9l",
    "name": "BP9 to BP10 for atgrade CCTV cm work",
    "color": "#b0821a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_oijr6mjov"
   },
@@ -2806,7 +2806,7 @@
    "id": "g_i1otnhive",
    "name": "Depot Chasis Replacement 105 / 203",
    "color": "#b0821a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_oijr6mjov"
   },
@@ -3046,7 +3046,7 @@
    "id": "g_ljlo4v024",
    "name": "Cabinet Relocation Works (FSC2)",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -6609,10 +6609,10 @@
     "tm_86jv8qrvn"
    ],
    "teamId": "tm_86jv8qrvn",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -6620,7 +6620,7 @@
    "locationId": "lc_uxzojfm3v",
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T13:04"
   },
   {
    "id": "t_t8yt8mwtg",
@@ -7181,10 +7181,10 @@
     "tm_p9dxyxx17"
    ],
    "teamId": "tm_p9dxyxx17",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7192,7 +7192,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T13:06"
   },
   {
    "id": "t_zfuyz9nt4",
@@ -7209,10 +7209,10 @@
     "tm_p9dxyxx17"
    ],
    "teamId": "tm_p9dxyxx17",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": true,
    "notes": "",
@@ -7220,7 +7220,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T13:08"
   },
   {
    "id": "t_5ew74ee5i",
@@ -7377,10 +7377,10 @@
     "tm_p9dxyxx17"
    ],
    "teamId": "tm_p9dxyxx17",
-   "status": "not-started",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7388,7 +7388,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T13:08"
   },
   {
    "id": "t_busalripq",
@@ -7489,10 +7489,10 @@
     "tm_p9dxyxx17"
    ],
    "teamId": "tm_p9dxyxx17",
-   "status": "in-progress",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -7500,7 +7500,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T13:08"
   },
   {
    "id": "t_q7ypcbmxh",
@@ -8129,10 +8129,10 @@
    "ownerId": null,
    "teamIds": [],
    "teamId": null,
-   "status": "in-progress",
-   "progress": 5,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 5,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -8140,7 +8140,7 @@
    "locationId": "lc_p4o146n7i",
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T13:06"
   },
   {
    "id": "t_vokhwt7hu",
@@ -8452,9 +8452,9 @@
    "teamIds": [],
    "teamId": null,
    "status": "in-progress",
-   "progress": 5,
+   "progress": 80,
    "autoProgress": false,
-   "effectiveProgress": 5,
+   "effectiveProgress": 80,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -8478,9 +8478,9 @@
    "teamIds": [],
    "teamId": null,
    "status": "in-progress",
-   "progress": 5,
+   "progress": 80,
    "autoProgress": false,
-   "effectiveProgress": 5,
+   "effectiveProgress": 80,
    "subtasks": [],
    "milestone": false,
    "notes": "",
