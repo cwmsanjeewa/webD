@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T08:55:05.960Z",
+ "savedAt": "2026-09-27T09:17:52.771Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -1912,41 +1912,31 @@
    "lon": 103.76472,
    "tz": "Asia/Singapore",
    "snap": {
-    "at": "2026-09-27T08:35:21.127Z",
+    "at": "2026-09-27T09:08:31.017Z",
     "cur": {
-     "t": "2026-09-27T16:30",
-     "temp": 27.1,
-     "feels": 32.2,
-     "rh": 86,
+     "t": "2026-09-27T17:00",
+     "temp": 26.9,
+     "feels": 32,
+     "rh": 87,
      "code": 3,
-     "cloud": 100,
+     "cloud": 94,
      "mm": 0,
      "rain": 0,
-     "wind": 8.7,
+     "wind": 8.9,
      "gust": 18.7,
-     "dir": 173,
-     "vis": 8480,
-     "press": 1010.3,
+     "dir": 188,
+     "vis": 8500,
+     "press": 1010.2,
      "day": true
     },
     "air": {
-     "pm25": 30.6,
-     "pm10": 32.6,
-     "aqi": 53,
-     "usaqi": 109,
-     "uv": 2.6
+     "pm25": 31.1,
+     "pm10": 33.4,
+     "aqi": 55,
+     "usaqi": 108,
+     "uv": 1.05
     },
     "hours": [
-     {
-      "t": "2026-09-27T16:00",
-      "temp": 27.1,
-      "pop": 85,
-      "mm": 0.3,
-      "code": 51,
-      "wind": 8.3,
-      "gust": 18.7,
-      "vis": 8460
-     },
      {
       "t": "2026-09-27T17:00",
       "temp": 26.9,
@@ -2296,6 +2286,16 @@
       "wind": 3.3,
       "gust": 6.5,
       "vis": 480
+     },
+     {
+      "t": "2026-09-29T04:00",
+      "temp": 24.5,
+      "pop": 15,
+      "mm": 0,
+      "code": 3,
+      "wind": 4.6,
+      "gust": 9,
+      "vis": 340
      }
     ],
     "days": [
@@ -2767,7 +2767,7 @@
    "id": "g_9k31msvnw",
    "name": "Go/No-Go (Milestones) (FSC2)",
    "color": "#b0821a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -2799,7 +2799,7 @@
    "id": "g_oijr6mjov",
    "name": "SMRT Power Maintenance Works [FSC2]",
    "color": "#b0821a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3031,7 +3031,7 @@
    "id": "g_ks6g5xeqe",
    "name": "R801 (COLAS RAIL) ACTIVITIES",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3039,7 +3039,7 @@
    "id": "g_4svpe5pkk",
    "name": "All Transformers Related Activities",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_ks6g5xeqe"
   },
@@ -8420,10 +8420,10 @@
    "ownerId": null,
    "teamIds": [],
    "teamId": null,
-   "status": "in-progress",
-   "progress": 80,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 80,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -8431,7 +8431,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T17:17"
   },
   {
    "id": "t_ssrfxjihu",
@@ -8446,10 +8446,10 @@
    "ownerId": null,
    "teamIds": [],
    "teamId": null,
-   "status": "in-progress",
-   "progress": 80,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 80,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -8457,7 +8457,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T17:17"
   },
   {
    "id": "t_v08z2oxx8",
