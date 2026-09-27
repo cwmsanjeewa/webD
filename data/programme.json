@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T12:57:16.044Z",
+ "savedAt": "2026-09-27T12:58:03.994Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -2615,10 +2615,6 @@
   }
  ],
  "watch": [
-  {
-   "kind": "weather",
-   "id": "wx_lgam5po17"
-  },
   {
    "kind": "group",
    "id": "g_a1al3yum0"
