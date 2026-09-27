@@ -21,7 +21,7 @@ still asks first.
 
 | File | What it is |
 |---|---|
-| `index.html` | Gantt Studio, Revision AN. One self-contained file — no build, no dependencies, no server code. |
+| `index.html` | Gantt Studio, Revision AP. One self-contained file — no build, no dependencies, no server code. |
 | `config.json` | Where the page looks for the programme, what it calls itself, and the interval it starts on. |
 | `data/programme.json` | The programme itself. This is the file the Publish button rewrites. |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are. |
@@ -56,6 +56,20 @@ denominator a lost activity means anything against. Both say so when hovered.
 Settings → Pages → Source: **Deploy from a branch** → Branch: **main**, folder
 **/ (root)** → Save. A minute later the site is live at
 `https://OWNER.github.io/REPO/`.
+
+## Committing from the desktop copy
+
+The desktop file commits to this repository itself — there is a **Commit** button
+in the toolbar beside Export and Share. Set it up once: press it, paste the
+address of `data/programme.json` as it appears when you are looking at it on
+GitHub, press **Fill in**, add a fine-grained token with **Contents: Read and
+write**, and press **Check connection**. After that the button writes the file
+in one press (Ctrl/Cmd + Shift + G), and says when a commit is owed.
+
+The branch is taken from the repository rather than assumed, so a repository on
+`master` is not asked for `main`. Nothing is ever written blind: every commit
+reads the file's current SHA first and stops if somebody else has committed
+since the page was opened.
 
 ## Publishing an update
 

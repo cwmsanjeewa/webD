@@ -1248,7 +1248,13 @@ body.colsizing{cursor:col-resize;user-select:none}
 
 /* gauge */
 .dgauge{display:flex;flex-direction:column;align-items:center;gap:4px}
-.dgauge .needle{transition:transform 1.2s var(--ease);transform-origin:100px 92px}
+/* Revision AP — rotate(angle CX CY) already carries its centre.  A CSS
+   transform-origin on the same element is composed ON TOP of it, so the
+   two offsets add and the needle pivots at (origin + centre), off the
+   side of the card.  Pinned to (0,0) in view-box units, CSS adds nothing
+   and the attribute means what it says. */
+.dgauge .needle{transition:transform 1.2s var(--ease);
+  transform-box:view-box;transform-origin:0 0}
 .dverdict{
   display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:20px;font-weight:800;font-size:13px;
   margin-top:2px;
@@ -2978,7 +2984,8 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
   font-variant-numeric:tabular-nums;letter-spacing:.2px;
   paint-order:stroke;stroke:var(--surface-2);stroke-width:5px;stroke-linejoin:round;
 }
-.lchneedle{transition:transform 1.5s cubic-bezier(.34,1.32,.5,1);transform-origin:100px 92px}
+.lchneedle{transition:transform 1.5s cubic-bezier(.34,1.32,.5,1);
+  transform-box:view-box;transform-origin:0 0}
 .lchverd{
   flex:none;padding:6px 18px;border-radius:999px;font-size:16px;font-weight:800;letter-spacing:.3px;
 }
@@ -3475,6 +3482,18 @@ body.kscoped .kpi{min-width:70px;padding:6px 9px}
 }
 
 /* ══════════════════════════════════════════════════════════════
+   Revision AO · the commit button
+   ══════════════════════════════════════════════════════════════ */
+#bGhPub{gap:7px}
+#bGhPub:hover{filter:brightness(1.18)}
+#bGhPub:disabled{opacity:.65;cursor:default;filter:none}
+.ghpip{width:7px;height:7px;border-radius:50%;flex:none;background:transparent;margin-left:-1px}
+.ghpip.owed{background:#F5C451;box-shadow:0 0 0 2px rgba(245,196,81,.28)}
+.ghpip.done{background:#57D07F;box-shadow:0 0 0 2px rgba(87,208,127,.24)}
+body.ro #bGhPub{display:none}
+.ghstatus.warn{color:#8a6100}
+
+/* ══════════════════════════════════════════════════════════════
    Revision AN · dropping into a group, and being asked first
    ══════════════════════════════════════════════════════════════ */
 .dropbadge{
@@ -3640,7 +3659,7 @@ body.akcanc .kpi .lab{font-size:9px;letter-spacing:.5px}
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.1"/><path d="M19.4 14.6a1.6 1.6 0 0 0 .32 1.77l.06.06a1.9 1.9 0 1 1-2.69 2.69l-.06-.06a1.6 1.6 0 0 0-1.77-.32 1.6 1.6 0 0 0-.97 1.46V21a1.9 1.9 0 0 1-3.8 0v-.11a1.6 1.6 0 0 0-1.05-1.46 1.6 1.6 0 0 0-1.77.32l-.06.06a1.9 1.9 0 1 1-2.69-2.69l.06-.06a1.6 1.6 0 0 0 .32-1.77 1.6 1.6 0 0 0-1.46-.97H3a1.9 1.9 0 0 1 0-3.8h.11a1.6 1.6 0 0 0 1.46-1.05 1.6 1.6 0 0 0-.32-1.77l-.06-.06a1.9 1.9 0 1 1 2.69-2.69l.06.06a1.6 1.6 0 0 0 1.77.32H9a1.6 1.6 0 0 0 .97-1.46V3a1.9 1.9 0 0 1 3.8 0v.11a1.6 1.6 0 0 0 .97 1.46 1.6 1.6 0 0 0 1.77-.32l.06-.06a1.9 1.9 0 1 1 2.69 2.69l-.06.06a1.6 1.6 0 0 0-.32 1.77V9a1.6 1.6 0 0 0 1.46.97H21a1.9 1.9 0 0 1 0 3.8h-.11a1.6 1.6 0 0 0-1.46.97z"/></svg>
           <i class="gdot" id="ghDot"></i>
         </button>
-          <button class="sub subbtn" id="bAbout" type="button" title="Revision, release date and who built this">Rev AN · 25 Sep 2026</button>
+          <button class="sub subbtn" id="bAbout" type="button" title="Revision, release date and who built this">Rev AP · 27 Sep 2026</button>
         </div>
       </div>
     </div>
@@ -3819,6 +3838,12 @@ body.akcanc .kpi .lab{font-size:9px;letter-spacing:.5px}
       <button class="btn exp" id="bShare" title="Send a view-only copy to someone" style="background:linear-gradient(180deg,#0e8f80,#0a6d61);border-color:#095a50;color:#fff;box-shadow:0 2px 6px rgba(10,109,97,.3)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 15V3"/><path d="M8 7l4-4 4 4"/></svg>
         Share
+      </button>
+      <!-- Revision AO · the commit lives in the toolbar with the other
+           deliverables, not behind the gear on the revision line -->
+      <button class="btn exp" id="bGhPub" title="Commit the programme file to GitHub" style="background:linear-gradient(180deg,#30363d,#1c2128);border-color:#0d1117;color:#fff;box-shadow:0 2px 6px rgba(13,17,23,.32)">
+        <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span id="bGhPubLab">Commit</span><i class="ghpip" id="bGhPubPip"></i>
       </button>
       <button class="btn ghost icon" id="bMore" title="More…">
         <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="19" cy="12" r="1.8"/></svg>
@@ -5056,7 +5081,15 @@ body.akcanc .kpi .lab{font-size:9px;letter-spacing:.5px}
     <div class="body">
       <p class="abt-lead" style="margin-top:0">This writes the programme straight into your repository as a single commit. Everyone who has the web link picks it up automatically — the page they have open checks for a new version and offers them a Reload.</p>
 
+      <!-- Revision AO · four boxes typed by hand is four chances to mistype;
+           the address of the file already holds all four -->
       <div class="frow">
+        <div class="fld"><label>Paste the file's address on GitHub and the four boxes below fill themselves</label>
+          <input id="ghUrl" placeholder="https://github.com/owner/repo/blob/master/data/programme.json" spellcheck="false" autocomplete="off"></div>
+        <div class="fld" style="max-width:104px"><label>&nbsp;</label>
+          <button class="mini-btn pri" id="ghFromUrl" type="button" style="height:34px">Fill in</button></div>
+      </div>
+      <div class="frow" style="margin-top:10px">
         <div class="fld"><label>Owner (user or organisation)</label><input id="ghOwner" placeholder="your-github-name" spellcheck="false" autocomplete="off"></div>
         <div class="fld"><label>Repository</label><input id="ghRepo" placeholder="bplrt-fsc" spellcheck="false" autocomplete="off"></div>
       </div>
@@ -5072,6 +5105,7 @@ body.akcanc .kpi .lab{font-size:9px;letter-spacing:.5px}
         <div class="fld" style="max-width:118px"><label>&nbsp;</label>
           <button class="mini-btn" id="ghShow" type="button" style="height:34px">Show</button></div>
       </div>
+      <div class="ta-hint" style="margin-top:8px">Make one at <b>github.com → Settings → Developer settings → Personal access tokens → Fine-grained tokens</b>: give it access to this one repository, set <b>Repository permissions → Contents</b> to <b>Read and write</b>, and paste it here. Nothing else needs to be switched on.</div>
       <div class="ta-hint" id="ghTokNote" style="margin-top:8px">The token is kept in <b>this browser on this computer</b> and nowhere else. It is never written into the programme file, never committed, and never travels in a share link — so nobody opening the published page can publish with it.</div>
 
       <div class="ghstatus" id="ghStatus"></div>
@@ -5676,7 +5710,7 @@ const avColor=id=>'hsl('+hueOf(id)+' 52% 46%)';
    2 · STATE
    ══════════════════════════════════════════════════════════════ */
 const APP={
-  rev:'AN',
+  rev:'AP',
   revDate:'2026-09-20',
   released:'20 Sep 2026',
   product:'Gantt Studio',
@@ -5688,8 +5722,8 @@ const APP={
 const APP_REV='Revision '+APP.rev+' · '+APP.released;
 const APP_CREDIT=APP.devRole+' · '+APP.devMail+' · '+APP.devTel;
 
-const KEY='ganttStudio.revAN';
-const KEY_PREV=['ganttStudio.revAM','ganttStudio.revAL','ganttStudio.revAK','ganttStudio.revAJ','ganttStudio.revAI','ganttStudio.revAH','ganttStudio.revAG','ganttStudio.revAF','ganttStudio.revAE','ganttStudio.revAD','ganttStudio.revAC','ganttStudio.revAB','ganttStudio.revAA','ganttStudio.revZ','ganttStudio.revY','ganttStudio.revX','ganttStudio.revW','ganttStudio.revV','ganttStudio.revU','ganttStudio.revT','ganttStudio.revS','ganttStudio.revR','ganttStudio.revQ','ganttStudio.revP','ganttStudio.revO','ganttStudio.revN','ganttStudio.revM','ganttStudio.revL','ganttStudio.revK','ganttStudio.revJ','ganttStudio.revI','ganttStudio.revH','ganttStudio.revG','ganttStudio.revF','ganttStudio.revE','ganttStudio.revD','ganttStudio.revC','ganttStudio.revA'];   // earlier revisions carry over on first open
+const KEY='ganttStudio.revAP';
+const KEY_PREV=['ganttStudio.revAO','ganttStudio.revAN','ganttStudio.revAM','ganttStudio.revAL','ganttStudio.revAK','ganttStudio.revAJ','ganttStudio.revAI','ganttStudio.revAH','ganttStudio.revAG','ganttStudio.revAF','ganttStudio.revAE','ganttStudio.revAD','ganttStudio.revAC','ganttStudio.revAB','ganttStudio.revAA','ganttStudio.revZ','ganttStudio.revY','ganttStudio.revX','ganttStudio.revW','ganttStudio.revV','ganttStudio.revU','ganttStudio.revT','ganttStudio.revS','ganttStudio.revR','ganttStudio.revQ','ganttStudio.revP','ganttStudio.revO','ganttStudio.revN','ganttStudio.revM','ganttStudio.revL','ganttStudio.revK','ganttStudio.revJ','ganttStudio.revI','ganttStudio.revH','ganttStudio.revG','ganttStudio.revF','ganttStudio.revE','ganttStudio.revD','ganttStudio.revC','ganttStudio.revA'];   // earlier revisions carry over on first open
 let S = blank();
 
 function blank(){
@@ -10855,6 +10889,8 @@ document.addEventListener('keydown',e=>{
   if((e.ctrlKey||e.metaKey)&&k==='y'){ e.preventDefault(); redo(); return; }
   if((e.ctrlKey||e.metaKey)&&k==='s'){ e.preventDefault(); $('#bExport').click(); return; }
   if((e.ctrlKey||e.metaKey)&&k==='e'){ e.preventDefault(); openXl(); return; }
+  /* Revision AO — commit without reaching for the mouse */
+  if((e.ctrlKey||e.metaKey)&&e.shiftKey&&k==='g'){ e.preventDefault(); ghQuickPublish(); return; }
   if((e.ctrlKey||e.metaKey)&&k==='d'){ e.preventDefault(); applyTheme(themeIsDark()?'light':'dark'); return; }
   if(e.ctrlKey||e.metaKey||e.altKey) return;
   if(k==='1'){ setView('dash'); return; }
@@ -13715,28 +13751,35 @@ function renderDashboard(){
   don.appendChild(lg);
 
   /* ---------- health gauge ---------- */
-  const score=clamp(50+variance*2.4-M.late.length*6-M.block*4,0,100);
+  const score=Math.round(clamp(50+variance*2.4-M.late.length*6-M.block*4,0,100));
   const verdict = score>=68?['ok','On track']:(score>=42?['warn','At risk']:['bad','Behind plan']);
   const vcol = score>=68?C.done:(score>=42?C.prog:C.todo);
   $('#dHealthCap').innerHTML='Plan says <b>'+Math.round(M.planNow)+'%</b> by now · actual <b>'+Math.round(M.actual)+'%</b>';
   const gg=$('#dGauge'); gg.innerHTML='';
   const gs=sv('svg',{width:200,height:112,viewBox:'0 0 200 112'});
+  /* Revision AP — the dial's centre, named once and used by the arc, the
+     needle and the rotation alike */
+  const GX=100, GY=92, GR=74, GLEN=66;
   const arcPath=(a0,a1,r)=>{
-    const p0=[100+r*Math.cos(Math.PI-a0*Math.PI),92-r*Math.sin(Math.PI-a0*Math.PI)];
-    const p1=[100+r*Math.cos(Math.PI-a1*Math.PI),92-r*Math.sin(Math.PI-a1*Math.PI)];
+    const p0=[GX+r*Math.cos(Math.PI-a0*Math.PI),GY-r*Math.sin(Math.PI-a0*Math.PI)];
+    const p1=[GX+r*Math.cos(Math.PI-a1*Math.PI),GY-r*Math.sin(Math.PI-a1*Math.PI)];
     return 'M'+p0[0].toFixed(1)+' '+p0[1].toFixed(1)+' A'+r+' '+r+' 0 0 1 '+p1[0].toFixed(1)+' '+p1[1].toFixed(1);
   };
   [[0,.42,C.todo],[.42,.68,C.prog],[.68,1,C.done]].forEach(b=>{
-    gs.appendChild(sv('path',{d:arcPath(b[0],b[1],74),fill:'none',stroke:b[2],'stroke-width':15,opacity:.28}));
+    gs.appendChild(sv('path',{d:arcPath(b[0],b[1],GR),fill:'none',stroke:b[2],'stroke-width':15,opacity:.28}));
   });
-  gs.appendChild(sv('path',{d:arcPath(0,clamp(score/100,0.001,1),74),fill:'none',stroke:vcol,'stroke-width':15,'stroke-linecap':'round'}));
+  gs.appendChild(sv('path',{d:arcPath(0,clamp(score/100,0.001,1),GR),fill:'none',stroke:vcol,'stroke-width':15,'stroke-linecap':'round'}));
   const nd=sv('g',{class:'needle'});
-  nd.appendChild(sv('path',{d:'M100 92 L100 26',stroke:UI.ink||GC_.ink,'stroke-width':3,'stroke-linecap':'round'}));
-  nd.appendChild(sv('circle',{cx:100,cy:92,r:7,fill:UI.ink||GC_.ink}));
-  nd.setAttribute('transform','rotate(-90 100 92)');
+  nd.appendChild(sv('path',{d:'M'+GX+' '+GY+' L'+GX+' '+(GY-GLEN),
+    stroke:UI.ink||GC_.ink,'stroke-width':3,'stroke-linecap':'round'}));
+  nd.appendChild(sv('circle',{cx:GX,cy:GY,r:7,fill:UI.ink||GC_.ink}));
+  nd.appendChild(sv('circle',{cx:GX,cy:GY,r:2.8,fill:UI.surface||'#fff'}));
+  nd.setAttribute('transform','rotate(-90 '+GX+' '+GY+')');
   gs.appendChild(nd);
   gg.appendChild(gs);
-  setTimeout(()=>nd.setAttribute('transform','rotate('+(-90+score*1.8)+' 100 92)'),160);
+  /* the needle's whole journey is 180° across a 0–100 dial: 1.8° a point */
+  setTimeout(()=>nd.setAttribute('transform','rotate('+(-90+score*1.8).toFixed(2)+' '+GX+' '+GY+')'),160);
+  gs.dataset.score=score; gs.dataset.cx=GX; gs.dataset.cy=GY; gs.dataset.len=GLEN;
   const vd=el('div','dverdict '+verdict[0],verdict[1]);
   gg.appendChild(vd);
   const nt=el('div','dnote');
@@ -21208,8 +21251,9 @@ function liveCharts(host, sl){
     const mp=ptAt(score/100,RB);
     mk.setAttribute('cx',ptAt(0,RB)[0].toFixed(1)); mk.setAttribute('cy',ptAt(0,RB)[1].toFixed(1));
     svg.appendChild(mk);
+    const NLEN=RB-13;
     const nd=sv('g',{class:'lchneedle'});
-    nd.appendChild(sv('path',{d:'M'+CX+' '+CY+' L'+CX+' '+(CY-RB+13),
+    nd.appendChild(sv('path',{d:'M'+CX+' '+CY+' L'+CX+' '+(CY-NLEN),
       stroke:UI.ink||GC_.ink,'stroke-width':3.6,'stroke-linecap':'round'}));
     nd.appendChild(sv('circle',{cx:CX,cy:CY,r:9,fill:UI.ink||GC_.ink}));
     nd.appendChild(sv('circle',{cx:CX,cy:CY,r:3.6,fill:UI.surface||'#fff'}));
@@ -21227,8 +21271,9 @@ function liveCharts(host, sl){
       : (x.block ? '<b>'+x.block+'</b> blocked, nothing overdue'
                  : 'Nothing overdue, nothing blocked');
     b.appendChild(note);
+    svg.dataset.score=score; svg.dataset.cx=CX; svg.dataset.cy=CY; svg.dataset.len=NLEN;
     setTimeout(()=>{
-      nd.setAttribute('transform','rotate('+(-90+score*1.8).toFixed(1)+' '+CX+' '+CY+')');
+      nd.setAttribute('transform','rotate('+(-90+score*1.8).toFixed(2)+' '+CX+' '+CY+')');
       mk.setAttribute('cx',mp[0].toFixed(1)); mk.setAttribute('cy',mp[1].toFixed(1));
     },170);
   }
@@ -22193,7 +22238,14 @@ function ghSay(status, msg){
   if(status===404) return 'GitHub could not find it (404). Check the owner, the repository name, the branch and the file path — and, for a private repository, that this token is allowed to see it.';
   if(status===409) return 'The file on GitHub has moved on since this page loaded (409).';
   if(status===422) return 'GitHub would not accept the commit (422) — '+(msg||'the branch or the path may be wrong.');
-  if(!status)      return 'The browser could not reach api.github.com. Check the network, and any proxy or extension blocking it.';
+  if(!status){
+    /* Revision AO — opened straight off the disk, this is nearly always the
+       corporate proxy or an extension, not the page */
+    const local = (location.protocol === 'file:');
+    return 'The browser could not reach api.github.com.' +
+      (local ? '  This copy is running from a file on your own disk, which GitHub is happy to accept — so it is the network in between: a work proxy, a VPN, or an extension blocking the request.'
+             : '  Check the network, and any proxy or extension blocking it.');
+  }
   return 'GitHub answered '+status+' — '+(msg||'no reason given.');
 }
 async function ghFetch(path, opts){
@@ -22228,6 +22280,21 @@ async function ghVerify(){
   GH.push      = !!(rp.permissions && rp.permissions.push);
   GH.priv      = !!rp.private;
   GH.defBranch = rp.default_branch || 'main';
+  /* Revision AO — "main" was only ever a guess.  If the branch in the box is
+     not in this repository and the repository has a default, take the default
+     and say so, rather than letting every read come back 404. */
+  GH.branchNote = '';
+  if(GH.branch !== GH.defBranch){
+    let has = true;
+    try{ await ghFetch('/repos/'+encSeg(GH.owner)+'/'+encSeg(GH.repo)+'/branches/'+encSeg(GH.branch)); }
+    catch(e){ if(e.status===404) has = false; }
+    if(!has){
+      GH.branchNote = 'There is no branch called “'+GH.branch+'” here — switched to “'+GH.defBranch+'”, which is what this repository uses.';
+      GH.branch = GH.defBranch;
+      const f = $('#ghBranch'); if(f) f.value = GH.branch;
+      ghStore();
+    }
+  }
   GH.checked   = new Date();
   GH.ok        = GH.push;
   if(!GH.push) throw new Error('This token can read '+GH.owner+'/'+GH.repo+' but not write to it. Give it Contents: Read and write.');
@@ -22263,8 +22330,10 @@ function ghMessage(){
   const when = d.toLocaleString(undefined,{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
   const done = S.tasks.filter(t=>t.status==='done'&&!t.struck).length;
   const live = S.tasks.filter(t=>!t.struck).length;
+  const from = (location.protocol === 'file:') ? 'the desktop copy' : 'the published page';
   return 'Programme update — '+S.name+' · '+when+'\n\n'+
-         done+' of '+live+' activities complete.  Published from Gantt Studio Revision '+APP.rev+'.';
+         done+' of '+live+' activities complete.  Committed from '+from+
+         ' of Gantt Studio, Revision '+APP.rev+'.';
 }
 
 /* ---------- the publish itself ---------- */
@@ -22310,6 +22379,7 @@ async function ghPublish(opts){
 
 /* ══════════ the gear, the badge and the bar ══════════ */
 function ghPaint(){
+  try{ ghToolPaint(); }catch(e){}
   const dot = $('#ghDot');
   if(dot){
     dot.className = 'gdot' + (GH.ok ? (GH.dirty ? ' dirty' : ' on') : (GH.token ? ' bad' : ''));
@@ -22362,6 +22432,60 @@ function ghTouch(){                       /* something changed since the last pu
   GH.dirty = true; ghPaint();
 }
 
+/* ══════════ Revision AO · the toolbar button ══════════
+   Everything below this point already existed and already worked from a page
+   opened straight off the disk — GitHub's API answers a file:// origin the
+   same as any other.  What was missing was a way to reach it that did not
+   involve knowing the gear was there.                                    */
+function ghToolPaint(){
+  const b = $('#bGhPub'); if(!b) return;
+  const lab = $('#bGhPubLab'), pip = $('#bGhPubPip');
+  b.style.display = RO_ON ? 'none' : '';
+  b.disabled = !!GH.busy;
+  if(lab) lab.textContent = GH.busy ? 'Committing…'
+                          : (!ghReady() ? 'Set up commit'
+                          : (GH.dirty || !GH.pubAt ? 'Commit' : 'Committed'));
+  if(pip) pip.className = 'ghpip' + (!ghReady() ? '' : (GH.dirty || !GH.pubAt ? ' owed' : ' done'));
+  b.title = !ghReady()
+      ? 'Connect this programme to your GitHub repository, then commit with one press'
+      : (GH.dirty || !GH.pubAt
+         ? ('Commit the programme to ' + GH.owner + '/' + GH.repo + ' · ' + GH.branch + ' · ' + GH.path)
+         : ('Up to date with ' + GH.owner + '/' + GH.repo + ' — last commit ' +
+            (GH.pubAt ? GH.pubAt.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}) : '')));
+}
+
+/* not set up yet → the settings.  Set up → commit, and nothing in between. */
+async function ghQuickPublish(){
+  if(RO_ON) return roNope();
+  if(!ghReady()){
+    openGh();
+    ghStatusPaint('Fill these four in once, press Check connection, and after that the '+
+                  'Commit button in the toolbar writes the file in one press.', '');
+    return;
+  }
+  if(GH.busy) return;
+  ghToolPaint();
+  try{
+    if(!GH.ok) await ghVerify();
+    const res = await ghPublish({});
+    toast('Committed to ' + GH.owner + '/' + GH.repo + ' · ' + GH.branch + ' — ' + GH.path, 'ok');
+    return res;
+  }catch(err){
+    if(err.conflict){
+      /* the one case that must not be settled by a toast */
+      openGh();
+      const w = $('#ghConfWrap'); if(w) w.style.display = '';
+      const n = $('#ghConfNote');
+      if(n) n.textContent = 'Somebody else has committed to ' + GH.path +
+        ' since this page loaded it. Take their version first if you can, or overwrite it if you know yours is the one that counts.';
+    }else{
+      toast('Not committed — ' + err.message, 'err');
+      openGh();
+      ghStatusPaint(err.message, 'bad');
+    }
+  }finally{ ghToolPaint(); }
+}
+
 /* ══════════ the dialog ══════════ */
 function ghFill(){
   $('#ghOwner').value  = GH.owner;
@@ -22384,6 +22508,26 @@ function ghRead(){
   if(m){ GH.owner=m[1]; GH.repo=GH.repo||m[2].replace(/\.git$/,''); $('#ghOwner').value=GH.owner; $('#ghRepo').value=GH.repo; }
   GH.path = GH.path.replace(/^\/+/,'');
   ghStore();
+  try{ ghToolPaint(); }catch(e){}
+}
+
+/* ---------- Revision AO · one address, four boxes ---------- */
+function ghFromUrl(){
+  const raw = ($('#ghUrl') ? $('#ghUrl').value : '').trim();
+  if(!raw){ ghStatusPaint('Paste the address of the file as it appears in your browser when you are looking at it on GitHub.', 'bad'); return; }
+  const u = raw.replace(/^https?:\/\//i, '').replace(/^www\./i, '');
+  /* github.com/owner/repo/blob|raw|tree/branch/path…   ·   raw.githubusercontent.com/owner/repo/branch/path… */
+  let m = u.match(/^github\.com\/([^\/]+)\/([^\/]+)(?:\/(?:blob|raw|tree)\/([^\/]+)\/(.+?))?\/?(?:[?#].*)?$/i)
+       || u.match(/^raw\.githubusercontent\.com\/([^\/]+)\/([^\/]+)\/([^\/]+)\/(.+?)\/?(?:[?#].*)?$/i);
+  if(!m){ ghStatusPaint('That does not look like a GitHub address. It should read like https://github.com/owner/repo/blob/master/data/programme.json', 'bad'); return; }
+  const [, owner, repo, branch, path] = m;
+  $('#ghOwner').value = owner;
+  $('#ghRepo').value  = repo.replace(/\.git$/, '');
+  if(branch) $('#ghBranch').value = branch;
+  if(path)   $('#ghPath').value   = decodeURIComponent(path);
+  ghRead(); ghPaint();
+  ghStatusPaint(path ? 'Filled in. Now paste a token and press Check connection.'
+                     : 'Owner and repository filled in — add the branch and the file, then a token.', '');
 }
 function openGh(){
   ghFill();
@@ -22396,8 +22540,8 @@ async function ghCheckClick(){
   ghStatusPaint('Asking GitHub…','busy');
   try{
     await ghVerify();
-    ghStatusPaint('', '');
-    toast('Connected — '+GH.owner+'/'+GH.repo+' can be published to','ok');
+    ghStatusPaint(GH.branchNote || '', GH.branchNote ? 'warn' : '');
+    toast('Connected — '+GH.owner+'/'+GH.repo+' · '+GH.branch+' can be committed to','ok');
   }catch(err){
     GH.ok=false; ghPaint();
     ghStatusPaint(err.message,'bad');
@@ -22450,6 +22594,13 @@ function ghBind(){
   ghLoad();
   const g=$('#bGh');
   if(g) g.onclick=openGh;
+  const tb=$('#bGhPub');
+  if(tb) tb.onclick=()=>{ ghQuickPublish(); };
+  const fu=$('#ghFromUrl');
+  if(fu) fu.onclick=ghFromUrl;
+  const uu=$('#ghUrl');
+  if(uu) uu.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); ghFromUrl(); } });
+  try{ ghToolPaint(); }catch(e){}
   const sc=$('#ghScrim');
   if(!sc) return;
   $('#ghCheck').onclick   = ghCheckClick;
@@ -23607,6 +23758,32 @@ window.GanttStudio={
   get state(){return S;}, render:refreshAll, sample:loadSample, export:()=>serialize(),
   view:setView, actions:()=>actionRows(), xlsx:opts=>buildWorkbook(opts||{}),
   ppt:opts=>buildDeck(opts||{}), image:opts=>renderGanttImage(opts||{}), dash:()=>renderDashboard(),
+  /* ---------- Revision AP ---------- */
+  gauge:sel=>{
+    const svg=document.querySelector(sel); if(!svg) return null;
+    const g=svg.querySelector('.needle,.lchneedle'); if(!g) return null;
+    const CX=+svg.dataset.cx, CY=+svg.dataset.cy, LEN=+svg.dataset.len;
+    const sm=svg.getScreenCTM(), nm=g.getScreenCTM();
+    if(!sm||!nm) return null;
+    const at=(m,x,y)=>{ const p=svg.createSVGPoint(); p.x=x; p.y=y; const q=p.matrixTransform(m);
+                        return {x:q.x,y:q.y}; };
+    const dialCtr=at(sm,CX,CY);            /* where the arc's centre lands */
+    const hub    =at(nm,CX,CY);            /* where the needle's pivot lands */
+    const tip    =at(nm,CX,CY-LEN);        /* and where it is pointing */
+    /* 0 on this dial is due left and 100 due right, so the bearing is
+       measured anticlockwise from the left-hand horizon */
+    const deg=Math.atan2(hub.y-tip.y, tip.x-hub.x)*180/Math.PI;   /* 0=right, 90=up */
+    const shown=(180-deg)/1.8;                                    /* back to a score */
+    const box=svg.getBoundingClientRect();
+    return {score:+svg.dataset.score, shown:+shown.toFixed(2),
+            offBy:+(shown-(+svg.dataset.score)).toFixed(2),
+            hubOff:+Math.hypot(hub.x-dialCtr.x, hub.y-dialCtr.y).toFixed(2),
+            len:+Math.hypot(tip.x-hub.x, tip.y-hub.y).toFixed(1),
+            tipInside: tip.x>=box.left-1 && tip.x<=box.right+1 &&
+                       tip.y>=box.top-1  && tip.y<=box.bottom+1,
+            hubInside: hub.x>=box.left-1 && hub.x<=box.right+1 &&
+                       hub.y>=box.top-1  && hub.y<=box.bottom+1};
+  },
   rail:{go:railGo, pages:railPages, per:railPer, get page(){return RAIL.page;}, state:RAIL,
         /* ---------- Revision AM ---------- */
         stage:id=>railStage(id), get on(){return RAIL.stage;},
@@ -23794,7 +23971,21 @@ window.GanttStudio={
       config:()=>ghConfigText(), message:()=>ghMessage(), b64:ghB64,
       forget:ghForgetToken, touch:ghTouch, paint:ghPaint,
       get ready(){return ghReady();}, get editor(){return !!GH.editor;},
-      get dirty(){return !!GH.dirty;}, api:GH_API},
+      get dirty(){return !!GH.dirty;}, api:GH_API,
+      /* ---------- Revision AO ---------- */
+      commit:()=>ghQuickPublish(), fromUrl:()=>ghFromUrl(),
+      set:o=>{ Object.keys(o||{}).forEach(k=>{ if(k in GH) GH[k]=o[k]; });
+               const f={owner:'#ghOwner',repo:'#ghRepo',branch:'#ghBranch',path:'#ghPath',token:'#ghToken'};
+               Object.keys(f).forEach(k=>{ const el2=$(f[k]); if(el2) el2.value=GH[k]||''; });
+               ghStore(); ghPaint(); },
+      get cfg(){return {owner:GH.owner,repo:GH.repo,branch:GH.branch,path:GH.path,
+                        ok:GH.ok,dirty:GH.dirty,note:GH.branchNote||''};},
+      get button(){const b=$('#bGhPub'); if(!b) return null;
+                   return {label:($('#bGhPubLab')||{}).textContent,
+                           pip:($('#bGhPubPip')||{}).className,
+                           shown:getComputedStyle(b).display!=='none',
+                           title:b.title};},
+      get ready(){return ghReady();}},
 
   /* ---------- Revision AA ---------- */
   watch:{get list(){return watchClean().map(w=>({kind:w.kind,id:w.id,name:watchName(w)}));},
