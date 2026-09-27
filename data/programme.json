@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T08:50:42.716Z",
+ "savedAt": "2026-09-27T08:54:35.280Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -17,7 +17,7 @@
   "ppd": 610.402,
   "teamPpd": 48.956,
   "locPpd": 11.412,
-  "criticalPath": true,
+  "criticalPath": false,
   "autoSchedule": false,
   "gridWidth": 718,
   "wrapText": true,
@@ -2767,7 +2767,7 @@
    "id": "g_9k31msvnw",
    "name": "Go/No-Go (Milestones) (FSC2)",
    "color": "#b0821a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -2799,7 +2799,7 @@
    "id": "g_oijr6mjov",
    "name": "SMRT Power Maintenance Works [FSC2]",
    "color": "#b0821a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -2807,7 +2807,7 @@
    "id": "g_qufaa5tvk",
    "name": "600V Switchboard-1 Shutdown Maintenance",
    "color": "#b0821a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_oijr6mjov"
   },
@@ -3031,7 +3031,7 @@
    "id": "g_ks6g5xeqe",
    "name": "R801 (COLAS RAIL) ACTIVITIES",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": null
   },
@@ -3103,7 +3103,7 @@
    "id": "g_2448jblnp",
    "name": "BPD [ RATC ]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3111,7 +3111,7 @@
    "id": "g_gk87kx7bc",
    "name": "BPD [ DIAG01 ]",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3119,7 +3119,7 @@
    "id": "g_z3dms5znm",
    "name": "BP10 - Cable dressing and cable containment modification works",
    "color": "#0f8a4a",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ljlo4v024"
   },
@@ -3127,7 +3127,7 @@
    "id": "g_ntdc6wdad",
    "name": "Switch Power Rail Works (FSC2)",
    "color": "#d4356b",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3135,7 +3135,7 @@
    "id": "g_35nkjz9hi",
    "name": "SW 71",
    "color": "#d4356b",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ntdc6wdad"
   },
@@ -3143,7 +3143,7 @@
    "id": "g_a5dsc4dju",
    "name": "SW 72",
    "color": "#d4356b",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ntdc6wdad"
   },
@@ -3151,7 +3151,7 @@
    "id": "g_x785j8k0c",
    "name": "Material Delevery & Unloading",
    "color": "#d4356b",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_ntdc6wdad"
   },
@@ -3167,7 +3167,7 @@
    "id": "g_4scdn8s2y",
    "name": "IR Test Works (FSC2)",
    "color": "#7a5af5",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -7850,10 +7850,10 @@
     "tm_0osk8fb25"
    ],
    "teamId": "tm_0osk8fb25",
-   "status": "in-progress",
-   "progress": 25,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 25,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": true,
    "notes": "",
@@ -7861,7 +7861,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T16:53"
   },
   {
    "id": "t_n33aovxrr",
@@ -8150,10 +8150,10 @@
    "ownerId": null,
    "teamIds": [],
    "teamId": null,
-   "status": "in-progress",
-   "progress": 0,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -8161,7 +8161,7 @@
    "locationId": "lc_qrczf72z3",
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T16:54"
   },
   {
    "id": "t_5wb30xtln",
