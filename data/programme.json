@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T09:17:52.771Z",
+ "savedAt": "2026-09-27T09:16:40.288Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -14,7 +14,7 @@
   "applyFilters": true
  },
  "view": {
-  "ppd": 610.402,
+  "ppd": 7.198,
   "teamPpd": 48.956,
   "locPpd": 11.412,
   "criticalPath": false,
