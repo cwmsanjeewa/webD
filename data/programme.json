@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T10:07:08.244Z",
+ "savedAt": "2026-09-27T12:55:55.643Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -3051,7 +3051,7 @@
    "id": "g_ljlo4v024",
    "name": "Cabinet Relocation Works (FSC2)",
    "color": "#0f8a4a",
-   "collapsed": false,
+   "collapsed": true,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -3147,7 +3147,7 @@
    "id": "g_a1al3yum0",
    "name": "SAT (FSC2)",
    "color": "#1273e0",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -6678,10 +6678,10 @@
     "tm_9w7uinopk"
    ],
    "teamId": "tm_9w7uinopk",
-   "status": "in-progress",
-   "progress": 5,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 5,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -6689,7 +6689,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T20:55"
   },
   {
    "id": "t_2ltyuapez",
@@ -6706,10 +6706,10 @@
     "tm_qtbzyacim"
    ],
    "teamId": "tm_qtbzyacim",
-   "status": "in-progress",
-   "progress": 10,
+   "status": "done",
+   "progress": 100,
    "autoProgress": false,
-   "effectiveProgress": 10,
+   "effectiveProgress": 100,
    "subtasks": [],
    "milestone": false,
    "notes": "",
@@ -6717,7 +6717,7 @@
    "locationId": null,
    "struck": false,
    "struckNote": "",
-   "completedAt": null
+   "completedAt": "2026-09-27T20:55"
   },
   {
    "id": "t_smh7ohkgi",
