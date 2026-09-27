@@ -5,7 +5,7 @@
  "builtBy": "D&IS Project Technical Manager",
  "builtByMail": "sanjeewa.abeyrathne@alstomgroup.com",
  "name": "FSC",
- "savedAt": "2026-09-27T13:40:45.838Z",
+ "savedAt": "2026-09-27T13:54:11.493Z",
  "doc": {
   "company": "Day 2",
   "preparedBy": "Day 2",
@@ -14,7 +14,7 @@
   "applyFilters": true
  },
  "view": {
-  "ppd": 36.554,
+  "ppd": 305.66,
   "teamPpd": 48.956,
   "locPpd": 11.412,
   "criticalPath": false,
@@ -3159,7 +3159,7 @@
    "id": "g_6hrc541qt",
    "name": "SIT (FSC2)",
    "color": "#9333c4",
-   "collapsed": true,
+   "collapsed": false,
    "categoryId": "cat_fsc2",
    "parentId": "g_8zb8lg5pi"
   },
@@ -5910,10 +5910,10 @@
     "tm_c45jr3z1h"
    ],
    "teamId": "tm_c45jr3z1h",
-   "status": "not-started",
-   "progress": 0,
+   "status": "in-progress",
+   "progress": 20,
    "autoProgress": false,
-   "effectiveProgress": 0,
+   "effectiveProgress": 20,
    "subtasks": [],
    "milestone": false,
    "notes": "",
